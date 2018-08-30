@@ -173,10 +173,13 @@ country_event = {
 				save_event_target_as = vultaumar
 			}
 			event_target:vultaumar = {
-				enable_special_project = {
-					name = "nep_highway_vultaumar_explore"
-					location = THIS
-					owner = ROOT
+				random_system_planet = {
+					limit = { has_planet_flag = vultaum_homeworld }
+					enable_special_project = {
+						name = "nep_highway_vultaumar_explore"
+						location = THIS
+						owner = ROOT
+					}
 				}
 			}
 		}
@@ -227,10 +230,13 @@ country_event = {
 				save_event_target_as = yuhtaan
 			}
 			event_target:yuhtaan = {
-				enable_special_project = {
-					name = "nep_highway_yuhtaan_explore"
-					location = THIS
-					owner = ROOT
+				random_system_planet = {
+					limit = { has_planet_flag = yuht_homeworld }
+					enable_special_project = {
+						name = "nep_highway_yuhtaan_explore"
+						location = THIS
+						owner = ROOT
+					}
 				}
 			}
 		}
@@ -281,10 +287,13 @@ country_event = {
 				save_event_target_as = fen_habbanis
 			}
 			event_target:fen_habbanis = {
-				enable_special_project = {
-					name = "nep_highway_fen_habbanis_explore"
-					location = THIS
-					owner = ROOT
+				random_system_planet = {
+					limit = { has_planet_flag = first_league_homeworld }
+					enable_special_project = {
+						name = "nep_highway_fen_habbanis_explore"
+						location = THIS
+						owner = ROOT
+					}
 				}
 			}
 		}
@@ -335,10 +344,13 @@ country_event = {
 				save_event_target_as = irass
 			}
 			event_target:irass = {
-				enable_special_project = {
-					name = "nep_highway_irass_explore"
-					location = THIS
-					owner = ROOT
+				random_system_planet = {
+					limit = { has_planet_flag = irassian_homeworld }
+					enable_special_project = {
+						name = "nep_highway_irass_explore"
+						location = THIS
+						owner = ROOT
+					}
 				}
 			}
 		}
@@ -389,10 +401,12 @@ country_event = {
 				save_event_target_as = cybrex
 			}
 			event_target:cybrex = {
-				enable_special_project = {
-					name = "nep_highway_cybrex_explore"
-					location = THIS
-					owner = ROOT
+				random_system_planet = {		
+					enable_special_project = {
+						name = "nep_highway_cybrex_explore"
+						location = THIS
+						owner = ROOT
+					}
 				}
 			}
 		}
