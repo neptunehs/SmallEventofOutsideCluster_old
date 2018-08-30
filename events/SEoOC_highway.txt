@@ -1124,13 +1124,13 @@ ship_event = {
 	
 	immediate = {
 		if = {
-			limits = {
+			limit = {
 				NOT = { has_global_flag = malfunctioning_guards_created }
 			}
 			create_malfunctioning_guards_country = yes
 		}
-		any_country = {
-			limits = {
+		random_country = {
+			limit = {
 				has_country_flag = malfunctioning_guards
 			}
 			save_event_target_as = malfunctioning_guards_country
