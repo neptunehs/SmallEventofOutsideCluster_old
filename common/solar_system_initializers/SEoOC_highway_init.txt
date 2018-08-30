@@ -1,0 +1,930 @@
+### Highway Stations and Ways
+# Code By Neptunehs
+
+nep_highway_station_N = {
+	
+	name = "Station N"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_N
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_NNE = {
+	
+	name = "Station NNE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_NNE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_NE = {
+	
+	name = "Station NE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_NE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_ENE = {
+	
+	name = "Station ENE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_ENE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_E = {
+	
+	name = "Station E"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_E
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_ESE = {
+	
+	name = "Station ESE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_ESE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_SE = {
+	
+	name = "Station SE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_SE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_SSE = {
+	
+	name = "Station SSE"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_SSE
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_S = {
+	
+	name = "Station S"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_S
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_SSW = {
+	
+	name = "Station SSW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_SSW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_SW = {
+	
+	name = "Station SW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_SW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_WSW = {
+	
+	name = "Station WSW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_WSW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_W = {
+	
+	name = "Station W"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_W
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_WNW = {
+	
+	name = "Station WNW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_WNW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_NW = {
+	
+	name = "Station NW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_NW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_station_NNW = {
+	
+	name = "Station NNW"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		highway_station_system 
+		highway_station_NNW
+	}
+
+	planet = {
+      	count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+        has_ring = no
+    }
+	
+	planet = {
+        count = { min = 2 max = 5 }
+        class = random_non_colonizable
+        orbit_distance = { min = 120 max = 250 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 24 }
+
+		moon = {
+			count = { min = 0 max = 3 }
+			class = random_non_colonizable
+			orbit_angle = { min = 0 max = 270 }
+			orbit_distance = 2.5
+			size = { min = 3 max = 8 }
+		}
+    }
+}
+
+nep_highway_note_N = {
+	
+	name = "Highway Note N"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_N
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse N"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_NNE = {
+	
+	name = "Highway Note NNE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_NNE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse NNE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_NE = {
+	
+	name = "Highway Note NE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_NE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse NE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_ENE = {
+	
+	name = "Highway Note ENE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_ENE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse ENE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_E = {
+	
+	name = "Highway Note E"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_E
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse E"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_ESE = {
+	
+	name = "Highway Note ESE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_ESE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse ESE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_SE = {
+	
+	name = "Highway Note SE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_SE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse SE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_SSE = {
+	
+	name = "Highway Note SSE"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_SSE
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse SSE"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_S = {
+	
+	name = "Highway Note S"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_S
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse S"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_SSW = {
+	
+	name = "Highway Note SSW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_SSW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse SSW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_SW = {
+	
+	name = "Highway Note SW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_SW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse SW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_WSW = {
+	
+	name = "Highway Note WSW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_WSW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse WSW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_W = {
+	
+	name = "Highway Note W"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_W
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse W"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_WNW = {
+	
+	name = "Highway Note WNW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_WNW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse WNW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_NW = {
+	
+	name = "Highway Note NW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_NW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse NW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}
+
+nep_highway_note_NNW = {
+	
+	name = "Highway Note NNW"
+
+	class = "sc_hw_n"
+
+	flags = { 
+		highway_note_system 
+		highway_note_NNW
+	}
+
+	planet = {
+      	count = 1
+		name = "Lighthouse NNW"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+    }
+}

@@ -1,0 +1,26 @@
+# Highway Notes
+sc_hw_n = {
+	class 			= b_star #Why Stellaris don't have a Class O Star?
+	planet			= { key = pc_b_star }
+	spawn_odds 		= 0
+	num_planets 	= 0
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+
+	is_environmental_hazard = yes
+	modifier = {
+		ship_speed_mult = 1
+		ship_emergency_ftl_mult = 1
+		ship_windup_mult = -0.5
+		ship_winddown_mult = -0.5
+		ship_interstellar_speed_mult = 1
+	}
+}
