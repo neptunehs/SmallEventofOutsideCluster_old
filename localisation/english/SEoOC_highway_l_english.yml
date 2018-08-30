@@ -1,5 +1,14 @@
 ﻿l_english:
 
+ nep_ancient_corvette:0 "Ancient Corvette"
+ nep_ancient_corvette_plural:0 "Ancient Corvettes"
+ nep_ancient_destroyer:0 "Ancient Destroyer"
+ nep_ancient_destroyer_plural:0 "Ancient Destroyers"
+ nep_ancient_cruiser:0 "Ancient Cruiser"
+ nep_ancient_cruiser_plural:0 "Ancient Cruisers"
+ nep_ancient_battleship:0 "Ancient Battleship"
+ nep_ancient_battleship_plural:0 "Ancient Battleship"
+
  nep_highway.21.name:0 "nep_highway.21.name"
  nep_highway.21.desc:0 "nep_highway.21.desc"
  nep_highway.21.a:0 "nep_highway.21.a"

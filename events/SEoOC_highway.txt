@@ -592,10 +592,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 0
-						max_orientation_angle = 0
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 90
+						max_orientation_angle = 90
 						hyperlane = no
 						initializer = nep_highway_station_N
 					}
@@ -605,10 +605,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 22.5
-						max_orientation_angle = 22.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 67.5
+						max_orientation_angle = 67.5
 						hyperlane = no
 						initializer = nep_highway_station_NNE
 					}
@@ -618,8 +618,8 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
+						min_distance >= 480
+						max_distance <= 485
 						min_orientation_angle = 45
 						max_orientation_angle = 45
 						hyperlane = no
@@ -631,10 +631,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 67.5
-						max_orientation_angle = 67.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 22.5
+						max_orientation_angle = 22.5
 						hyperlane = no
 						initializer = nep_highway_station_ENE
 					}
@@ -644,10 +644,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 90
-						max_orientation_angle = 90
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 0
+						max_orientation_angle = 0
 						hyperlane = no
 						initializer = nep_highway_station_E
 					}
@@ -657,10 +657,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 112.5
-						max_orientation_angle = 112.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -22.5
+						max_orientation_angle = -22.5
 						hyperlane = no
 						initializer = nep_highway_station_ESE
 					}
@@ -670,10 +670,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 135
-						max_orientation_angle = 135
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -45
+						max_orientation_angle = -45
 						hyperlane = no
 						initializer = nep_highway_station_SE
 					}
@@ -683,10 +683,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 157.5
-						max_orientation_angle = 157.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -67.5
+						max_orientation_angle = -67.5
 						hyperlane = no
 						initializer = nep_highway_station_SSE
 					}
@@ -696,10 +696,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 180
-						max_orientation_angle = 180
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -90
+						max_orientation_angle = -90
 						hyperlane = no
 						initializer = nep_highway_station_S
 					}
@@ -709,10 +709,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 202.5
-						max_orientation_angle = 202.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -112.5
+						max_orientation_angle = -112.5
 						hyperlane = no
 						initializer = nep_highway_station_SSW
 					}
@@ -722,10 +722,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 225
-						max_orientation_angle = 225
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -135
+						max_orientation_angle = -135
 						hyperlane = no
 						initializer = nep_highway_station_SW
 					}
@@ -735,10 +735,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 247.5
-						max_orientation_angle = 247.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -157.5
+						max_orientation_angle = -157.5
 						hyperlane = no
 						initializer = nep_highway_station_WSW
 					}
@@ -748,10 +748,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 270
-						max_orientation_angle = 270
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -180
+						max_orientation_angle = -180
 						hyperlane = no
 						initializer = nep_highway_station_W
 					}
@@ -761,10 +761,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 292.5
-						max_orientation_angle = 292.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -202.5
+						max_orientation_angle = -202.5
 						hyperlane = no
 						initializer = nep_highway_station_WNW
 					}
@@ -774,10 +774,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 315
-						max_orientation_angle = 315
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -225
+						max_orientation_angle = -225
 						hyperlane = no
 						initializer = nep_highway_station_NW
 					}
@@ -787,10 +787,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 337.5
-						max_orientation_angle = 337.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -247.5
+						max_orientation_angle = -247.5
 						hyperlane = no
 						initializer = nep_highway_station_NNW
 					}
@@ -841,10 +841,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 0
-						max_orientation_angle = 0
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 90
+						max_orientation_angle = 90
 						hyperlane = no
 						initializer = nep_highway_station_N
 					}
@@ -854,10 +854,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 22.5
-						max_orientation_angle = 22.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 67.5
+						max_orientation_angle = 67.5
 						hyperlane = no
 						initializer = nep_highway_station_NNE
 					}
@@ -867,8 +867,8 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
+						min_distance >= 480
+						max_distance <= 485
 						min_orientation_angle = 45
 						max_orientation_angle = 45
 						hyperlane = no
@@ -880,10 +880,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 67.5
-						max_orientation_angle = 67.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 22.5
+						max_orientation_angle = 22.5
 						hyperlane = no
 						initializer = nep_highway_station_ENE
 					}
@@ -893,10 +893,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 90
-						max_orientation_angle = 90
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = 0
+						max_orientation_angle = 0
 						hyperlane = no
 						initializer = nep_highway_station_E
 					}
@@ -906,10 +906,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 112.5
-						max_orientation_angle = 112.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -22.5
+						max_orientation_angle = -22.5
 						hyperlane = no
 						initializer = nep_highway_station_ESE
 					}
@@ -919,10 +919,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 135
-						max_orientation_angle = 135
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -45
+						max_orientation_angle = -45
 						hyperlane = no
 						initializer = nep_highway_station_SE
 					}
@@ -932,10 +932,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 157.5
-						max_orientation_angle = 157.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -67.5
+						max_orientation_angle = -67.5
 						hyperlane = no
 						initializer = nep_highway_station_SSE
 					}
@@ -945,10 +945,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 180
-						max_orientation_angle = 180
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -90
+						max_orientation_angle = -90
 						hyperlane = no
 						initializer = nep_highway_station_S
 					}
@@ -958,10 +958,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 202.5
-						max_orientation_angle = 202.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -112.5
+						max_orientation_angle = -112.5
 						hyperlane = no
 						initializer = nep_highway_station_SSW
 					}
@@ -971,10 +971,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 225
-						max_orientation_angle = 225
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -135
+						max_orientation_angle = -135
 						hyperlane = no
 						initializer = nep_highway_station_SW
 					}
@@ -984,10 +984,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 247.5
-						max_orientation_angle = 247.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -157.5
+						max_orientation_angle = -157.5
 						hyperlane = no
 						initializer = nep_highway_station_WSW
 					}
@@ -997,10 +997,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 270
-						max_orientation_angle = 270
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -180
+						max_orientation_angle = -180
 						hyperlane = no
 						initializer = nep_highway_station_W
 					}
@@ -1010,10 +1010,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 292.5
-						max_orientation_angle = 292.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -202.5
+						max_orientation_angle = -202.5
 						hyperlane = no
 						initializer = nep_highway_station_WNW
 					}
@@ -1023,10 +1023,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 315
-						max_orientation_angle = 315
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -225
+						max_orientation_angle = -225
 						hyperlane = no
 						initializer = nep_highway_station_NW
 					}
@@ -1036,10 +1036,10 @@ country_event = {
 			10 = { 
 				no_scope = {
 					spawn_system = {
-						min_distance >= 490
-						max_distance <= 500
-						min_orientation_angle = 337.5
-						max_orientation_angle = 337.5
+						min_distance >= 480
+						max_distance <= 485
+						min_orientation_angle = -247.5
+						max_orientation_angle = -247.5
 						hyperlane = no
 						initializer = nep_highway_station_NNW
 					}
@@ -1103,7 +1103,7 @@ ship_event = {
 	
 	option = {
 		name = nep_highway.5.a
-		remove_point_of_interest = first_highway_station_system_poi.1
+		hidden_effect = { OWNER = { remove_point_of_interest = first_highway_station_system_poi.1 } }
 		enable_special_project = {
 			name = "nep_highway_first_station_explore"
 			location = FROM.random_system_planet
@@ -1174,10 +1174,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 0
-					max_orientation_angle = 0
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = 90-0
+					max_orientation_angle = 90-0
 					hyperlane = no
 					initializer = nep_highway_station_N
 				}
@@ -1194,10 +1194,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 22.5
-					max_orientation_angle = 22.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = 67.5
+					max_orientation_angle = 67.5
 					hyperlane = no
 					initializer = nep_highway_station_NNE
 				}
@@ -1214,8 +1214,8 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
+					min_distance >= 480
+					max_distance <= 485
 					min_orientation_angle = 45
 					max_orientation_angle = 45
 					hyperlane = no
@@ -1234,10 +1234,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 67.5
-					max_orientation_angle = 67.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = 22.5
+					max_orientation_angle = 22.5
 					hyperlane = no
 					initializer = nep_highway_station_ENE	
 				}
@@ -1254,10 +1254,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 90
-					max_orientation_angle = 90
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = 0
+					max_orientation_angle = 0
 					hyperlane = no
 					initializer = nep_highway_station_E
 				}
@@ -1274,10 +1274,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-						min_orientation_angle = 112.5
-						max_orientation_angle = 112.5
+					min_distance >= 480
+					max_distance <= 485
+						min_orientation_angle = -22.5
+						max_orientation_angle = -22.5
 						hyperlane = no
 						initializer = nep_highway_station_ESE
 				}
@@ -1294,10 +1294,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-						min_orientation_angle = 135
-						max_orientation_angle = 135
+					min_distance >= 480
+					max_distance <= 485
+						min_orientation_angle = -45
+						max_orientation_angle = -45
 						hyperlane = no
 						initializer = nep_highway_station_SE
 				}
@@ -1314,10 +1314,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 157.5
-					max_orientation_angle = 157.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -67.5
+					max_orientation_angle = -67.5
 					hyperlane = no
 					initializer = nep_highway_station_SSE
 				}
@@ -1334,10 +1334,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 180
-					max_orientation_angle = 180
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -90
+					max_orientation_angle = -90
 					hyperlane = no
 					initializer = nep_highway_station_S
 				}
@@ -1354,10 +1354,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 202.5
-					max_orientation_angle = 202.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -112.5
+					max_orientation_angle = -112.5
 					hyperlane = no
 					initializer = nep_highway_station_SSW
 				}
@@ -1374,10 +1374,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 225
-					max_orientation_angle = 225
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -135
+					max_orientation_angle = -135
 					hyperlane = no
 					initializer = nep_highway_station_SW
 				}
@@ -1394,10 +1394,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 247.5
-					max_orientation_angle = 247.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -157.5
+					max_orientation_angle = -157.5
 					hyperlane = no
 					initializer = nep_highway_station_WSW
 				}
@@ -1414,10 +1414,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 270
-					max_orientation_angle = 270
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -180
+					max_orientation_angle = -180
 					hyperlane = no
 					initializer = nep_highway_station_W
 				}
@@ -1434,10 +1434,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 292.5
-					max_orientation_angle = 292.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -202.5
+					max_orientation_angle = -202.5
 					hyperlane = no
 					initializer = nep_highway_station_WNW
 				}
@@ -1454,10 +1454,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 315
-					max_orientation_angle = 315
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -225
+					max_orientation_angle = -225
 					hyperlane = no
 					initializer = nep_highway_station_NW
 					}
@@ -1474,10 +1474,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 490
-					max_distance <= 500
-					min_orientation_angle = 337.5
-					max_orientation_angle = 337.5
+					min_distance >= 480
+					max_distance <= 485
+					min_orientation_angle = -247.5
+					max_orientation_angle = -247.5
 					hyperlane = no
 					initializer = nep_highway_station_NNW
 				}
@@ -1494,10 +1494,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 22.5
-					max_orientation_angle = 22.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = 90
+					max_orientation_angle = 90
 					hyperlane = no
 					initializer = nep_highway_note_N
 				}
@@ -1514,10 +1514,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 22.5
-					max_orientation_angle = 22.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = 67.5
+					max_orientation_angle = 67.5
 					hyperlane = no
 					initializer = nep_highway_note_NNE
 				}
@@ -1534,8 +1534,8 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
+					min_distance >= 495
+					max_distance <= 495
 					min_orientation_angle = 45
 					max_orientation_angle = 45
 					hyperlane = no
@@ -1554,10 +1554,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 67.5
-					max_orientation_angle = 67.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = 22.5
+					max_orientation_angle = 22.5
 					hyperlane = no
 					initializer = nep_highway_note_ENE	
 				}
@@ -1574,10 +1574,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 90
-					max_orientation_angle = 90
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = 0
+					max_orientation_angle = 0
 					hyperlane = no
 					initializer = nep_highway_note_E
 				}
@@ -1594,10 +1594,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-						min_orientation_angle = 112.5
-						max_orientation_angle = 112.5
+					min_distance >= 495
+					max_distance <= 495
+						min_orientation_angle = -22.5
+						max_orientation_angle = -22.5
 						hyperlane = no
 						initializer = nep_highway_note_ESE
 				}
@@ -1614,10 +1614,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-						min_orientation_angle = 135
-						max_orientation_angle = 135
+					min_distance >= 495
+					max_distance <= 495
+						min_orientation_angle = -45
+						max_orientation_angle = -45
 						hyperlane = no
 						initializer = nep_highway_note_SE
 				}
@@ -1634,10 +1634,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 157.5
-					max_orientation_angle = 157.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -67.5
+					max_orientation_angle = -67.5
 					hyperlane = no
 					initializer = nep_highway_note_SSE
 				}
@@ -1654,10 +1654,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 180
-					max_orientation_angle = 180
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -90
+					max_orientation_angle = -90
 					hyperlane = no
 					initializer = nep_highway_note_S
 				}
@@ -1674,10 +1674,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 202.5
-					max_orientation_angle = 202.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -112.5
+					max_orientation_angle = -112.5
 					hyperlane = no
 					initializer = nep_highway_note_SSW
 				}
@@ -1694,10 +1694,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 225
-					max_orientation_angle = 225
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -135
+					max_orientation_angle = -135
 					hyperlane = no
 					initializer = nep_highway_note_SW
 				}
@@ -1714,10 +1714,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 247.5
-					max_orientation_angle = 247.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -157.5
+					max_orientation_angle = -157.5
 					hyperlane = no
 					initializer = nep_highway_note_WSW
 				}
@@ -1734,10 +1734,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 270
-					max_orientation_angle = 270
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -180
+					max_orientation_angle = -180
 					hyperlane = no
 					initializer = nep_highway_note_W
 				}
@@ -1754,10 +1754,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 292.5
-					max_orientation_angle = 292.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -202.5
+					max_orientation_angle = -202.5
 					hyperlane = no
 					initializer = nep_highway_note_WNW
 				}
@@ -1774,10 +1774,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 315
-					max_orientation_angle = 315
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -225
+					max_orientation_angle = -225
 					hyperlane = no
 					initializer = nep_highway_note_NW
 					}
@@ -1794,10 +1794,10 @@ ship_event = {
 			}
 			no_scope = {
 				spawn_system = {
-					min_distance >= 540
-					max_distance <= 540
-					min_orientation_angle = 337.5
-					max_orientation_angle = 337.5
+					min_distance >= 495
+					max_distance <= 495
+					min_orientation_angle = -247.5
+					max_orientation_angle = -247.5
 					hyperlane = no
 					initializer = nep_highway_note_NNW
 				}
@@ -1978,7 +1978,7 @@ ship_event = {
 			to = event_target:highway_note_WSW
 		}
 		add_hyperlane = {
-			from = event_target:highway_note_SW
+			from = event_target:highway_note_WSW
 			to = event_target:highway_note_W
 		}
 		add_hyperlane = {
@@ -2063,6 +2063,14 @@ ship_event = {
 		}
 		event_target:highway_station_N = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2072,6 +2080,14 @@ ship_event = {
 		}
 		event_target:highway_station_NNE = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2080,7 +2096,16 @@ ship_event = {
 			}
 		}
 		event_target:highway_station_NE = {
-			random_neighbor_system = { 
+
+			random_neighbor_system = {
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2090,6 +2115,14 @@ ship_event = {
 		}
 		event_target:highway_station_ENE = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2099,6 +2132,14 @@ ship_event = {
 		}
 		event_target:highway_station_E = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2108,6 +2149,14 @@ ship_event = {
 		}
 		event_target:highway_station_ESE = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2117,6 +2166,14 @@ ship_event = {
 		}
 		event_target:highway_station_SE = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2126,6 +2183,14 @@ ship_event = {
 		}
 		event_target:highway_station_SSE = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2135,6 +2200,14 @@ ship_event = {
 		}
 		event_target:highway_station_S = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2144,6 +2217,14 @@ ship_event = {
 		}
 		event_target:highway_station_SSW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2153,6 +2234,14 @@ ship_event = {
 		}
 		event_target:highway_station_SW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2162,6 +2251,14 @@ ship_event = {
 		}
 		event_target:highway_station_WSW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2171,6 +2268,14 @@ ship_event = {
 		}
 		event_target:highway_station_W = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2180,6 +2285,14 @@ ship_event = {
 		}
 		event_target:highway_station_WNW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2189,6 +2302,14 @@ ship_event = {
 		}
 		event_target:highway_station_NW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2198,6 +2319,14 @@ ship_event = {
 		}
 		event_target:highway_station_NNW = {
 			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
 					from = this
@@ -2210,6 +2339,13 @@ ship_event = {
 	
 	option = {
 		name = nep_highway.7.a
-		end_event_chain = "nep_highway_chain"
+		every_country = {
+			if = {
+				limit = {
+					has_event_chain = "nep_highway_chain"
+				}
+			end_event_chain = "nep_highway_chain"
+			}
+		}
 	}
 }

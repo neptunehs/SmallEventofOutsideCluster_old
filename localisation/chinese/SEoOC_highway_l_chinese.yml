@@ -1,5 +1,14 @@
-﻿l_english:
+﻿l_chinese:
 
+ nep_ancient_corvette:0 "古代护卫舰"
+ nep_ancient_corvette_plural:0 "古代护卫舰"
+ nep_ancient_destroyer:0 "古代驱逐舰"
+ nep_ancient_destroyer_plural:0 "古代驱逐舰"
+ nep_ancient_cruiser:0 "古代巡洋舰"
+ nep_ancient_cruiser_plural:0 "古代巡洋舰"
+ nep_ancient_battleship:0 "古代战列舰"
+ nep_ancient_battleship_plural:0 "古代战列舰"
+ 
  nep_highway.21.name:0 "最后的记忆"
  nep_highway.21.desc:0 "我们的传感器无意中在§YVultaumar§!找到了一些奇怪的阴影。科学家们判断这应该是§YVultaum§!的史前文明留下来的小型遗迹，并且在初步探索后判断这个遗迹很完好，有探索的价值。"
  nep_highway.21.a:0 "探索并收集有用的东西。"

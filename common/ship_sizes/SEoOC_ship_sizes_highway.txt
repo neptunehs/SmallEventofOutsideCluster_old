@@ -27,7 +27,6 @@
 
 nep_ancient_corvette = {
 	formation_priority = @corvette_formation_priority
-	graphical_culture = {"ai_02"}
 	is_space_object = yes
 	max_speed = @speed_very_fast
 	acceleration = 0.35
@@ -60,7 +59,6 @@ nep_ancient_corvette = {
 
 nep_ancient_destroyer = {
 	formation_priority = @destroyer_formation_priority
-	graphical_culture = {"ai_02"}
 	max_speed = @speed_fast
 	acceleration = 0.3
 	rotation_speed = 0.2
@@ -92,7 +90,6 @@ nep_ancient_destroyer = {
 
 nep_ancient_cruiser = {
 	formation_priority = @cruiser_formation_priority
-	graphical_culture = {"ai_02"}
 	max_speed = @speed_default
 	acceleration = 0.25
 	rotation_speed = 0.175
