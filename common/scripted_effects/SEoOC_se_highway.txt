@@ -30,6 +30,7 @@ create_malfunctioning_guards_country = {
 		}
 	}
 	set_global_flag = malfunctioning_guards_created
+	save_global_event_target_as = malfunctioning_guards_country
 }
 
 malfunctioning_guards_spawn = {

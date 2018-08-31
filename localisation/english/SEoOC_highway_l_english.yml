@@ -101,5 +101,20 @@
  nep_highway.7.desc:0 "nep_highway.7.desc"
  nep_highway.7.a:0 "nep_highway.7.a"
  
+ nep_highway.8.name:0 "nep_highway.8.name"
+ nep_highway.8.desc:0 "nep_highway.8.desc"
+ nep_highway.8.a:0 "nep_highway.8.a" 
+ nep_highway.8.b:0 "nep_highway.8.b"
+ nep_highway.8.b.tooltip:0 "nep_highway.8.b.tooltip"
+ 
  nep_highway_chain_title:0 "nep_highway_chain_title"
  nep_highway_chain_desc:0 "nep_highway_chain_desc" 
+ 
+ sc_hw_n:1 "$pc_b_star$"
+ sc_hw_n_desc:1 "$pc_b_star_desc$"
+ 
+ sc_void_dummy:0 "Void Domain"
+ sc_void_dummy_desc:0 "Nothing here."
+ 
+ sc_grand_seal:0 "Grand Seal of Void"
+ sc_grand_seal_desc:0 "Who knows what's inside?"

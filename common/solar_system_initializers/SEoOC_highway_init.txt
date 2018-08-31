@@ -1,6 +1,3 @@
-### Highway Stations and Ways
-# Code By Neptunehs
-
 nep_highway_station_N = {
 	
 	name = "Station N"
@@ -611,6 +608,13 @@ nep_highway_note_N = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -632,6 +636,13 @@ nep_highway_note_NNE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -653,6 +664,13 @@ nep_highway_note_NE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -674,6 +692,13 @@ nep_highway_note_ENE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -695,6 +720,13 @@ nep_highway_note_E = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -716,6 +748,13 @@ nep_highway_note_ESE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -737,6 +776,13 @@ nep_highway_note_SE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -758,6 +804,13 @@ nep_highway_note_SSE = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -779,6 +832,13 @@ nep_highway_note_S = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -800,6 +860,13 @@ nep_highway_note_SSW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -821,6 +888,13 @@ nep_highway_note_SW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -842,6 +916,13 @@ nep_highway_note_WSW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -863,6 +944,13 @@ nep_highway_note_W = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -884,6 +972,13 @@ nep_highway_note_WNW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -905,6 +1000,13 @@ nep_highway_note_NW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }
 
@@ -926,5 +1028,12 @@ nep_highway_note_NNW = {
         orbit_distance = 0
         orbit_angle = 0
         size = { min = 30 max = 35 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
     }
 }

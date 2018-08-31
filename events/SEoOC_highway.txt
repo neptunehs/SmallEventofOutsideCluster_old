@@ -161,8 +161,13 @@ country_event = {
 
 	is_triggered_only = yes	
 	
-	immediate = {
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_highway_begin
+	}
 	
+	immediate = {
+
 	}
 	
 	option = {
@@ -201,7 +206,7 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_minerals = 1000		
+			add_energy = 3000		
 			add_unity = 9999
 			add_influence = 100
 		}
@@ -217,6 +222,11 @@ country_event = {
 	fire_only_once = yes
 
 	is_triggered_only = yes	
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_highway_begin
+	}
 	
 	immediate = {
 	
@@ -258,7 +268,7 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_minerals = 1000		
+			add_energy = 3000	
 			add_unity = 9999
 			add_influence = 100
 		}
@@ -274,6 +284,11 @@ country_event = {
 	fire_only_once = yes
 
 	is_triggered_only = yes	
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_highway_begin
+	}
 	
 	immediate = {
 	
@@ -315,7 +330,7 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_minerals = 1000		
+			add_energy = 3000		
 			add_unity = 9999
 			add_influence = 100
 		}
@@ -331,6 +346,11 @@ country_event = {
 	fire_only_once = yes
 
 	is_triggered_only = yes	
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_highway_begin
+	}
 	
 	immediate = {
 	
@@ -372,7 +392,7 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_minerals = 1000		
+			add_energy = 3000	
 			add_unity = 9999
 			add_influence = 100
 		}
@@ -388,6 +408,11 @@ country_event = {
 	fire_only_once = yes
 
 	is_triggered_only = yes	
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_highway_begin
+	}
 	
 	immediate = {
 	
@@ -428,7 +453,7 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_minerals = 1000		
+			add_energy = 3000	
 			add_unity = 9999
 			add_influence = 100
 		}
@@ -1089,13 +1114,14 @@ country_event = {
 	}
 }
 
+#Create highway station explore project 
 #on_entering_system target = first_highway_station_system 
 ship_event = {
 	id = nep_highway.5
 	title = "nep_highway.5.name"
 	desc = "nep_highway.5.desc"	
 	picture = GFX_evt_fleet_neutral
-	location = FROM	
+	location = THIS
 	
 	fire_only_once = yes
 	
@@ -1117,7 +1143,9 @@ ship_event = {
 	
 	option = {
 		name = nep_highway.5.a
-		hidden_effect = { OWNER = { remove_point_of_interest = first_highway_station_system_poi.1 } }
+		hidden_effect = { 
+			OWNER = { remove_point_of_interest = first_highway_station_system_poi.1 } 
+		}
 		enable_special_project = {
 			name = "nep_highway_first_station_explore"
 			location = FROM.random_system_planet
@@ -1134,7 +1162,7 @@ ship_event = {
 	picture = GFX_evt_fleet_evil
 	location = FROM	
 	
-	is_triggered_only = yes		
+	is_triggered_only = yes
 	
 	immediate = {
 		if = {
@@ -1147,7 +1175,6 @@ ship_event = {
 			limit = {
 				has_country_flag = malfunctioning_guards
 			}
-			save_event_target_as = malfunctioning_guards_country
 		}
 		event_target:malfunctioning_guards_country = {
 			malfunctioning_guards_spawn = yes
@@ -1190,8 +1217,8 @@ ship_event = {
 				spawn_system = {
 					min_distance >= 480
 					max_distance <= 485
-					min_orientation_angle = 90-0
-					max_orientation_angle = 90-0
+					min_orientation_angle = 90
+					max_orientation_angle = 90
 					hyperlane = no
 					initializer = nep_highway_station_N
 				}
@@ -2361,5 +2388,65 @@ ship_event = {
 			end_event_chain = "nep_highway_chain"
 			}
 		}
+		hidden_effect = { 
+			remove_global_flag = nep_highway_begin
+			OWNER = {
+				set_country_flag = nep_highway_founder
+				country_event = { id = nep_highway.8 days = 30} 
+			} 
+		}
 	}
 }
+
+country_event = {
+	id = nep_highway.8
+	title = "nep_highway.8.name"
+	desc = nep_highway.8.desc
+	picture = GFX_evt_news_room
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = nep_highway_founder
+	}
+	
+	immediate = {
+		set_global_flag = nep_highway_used
+	}
+	
+	option = {
+		name = nep_highway.8.a
+		add_modifier = { modifier = nep_highway_fee days = -1 }
+	}
+	
+	option = {
+		name = nep_highway.8.b
+		custom_tooltip = nep_highway.8.b.tooltip
+		hidden_effect = {
+			every_system = {
+				limit = { 
+					OR = {
+						has_star_flag = nep_highway_station
+						has_star_flag = nep_highway_note
+					}
+				}
+				any_ship = {
+					limit = { 
+						is_ship_class = shipclass_starbase
+					}
+					delete_ship = this
+				}
+				create_starbase = { owner = root }
+			}
+			every_country = {
+				limit = { NOT = { has_country_flag = nep_highway_founder } }
+				set_closed_borders = {
+					who = root
+					status = yes
+				}
+			}
+		}
+	}

@@ -1,5 +1,7 @@
 on_entering_system = {
 	events = {
 		nep_highway.5 #first enter station
+		nep_seal.2 #first enter ambient place
 	}
 }
+
