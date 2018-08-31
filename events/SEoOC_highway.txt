@@ -1145,6 +1145,12 @@ ship_event = {
 		name = nep_highway.5.a
 		hidden_effect = { 
 			OWNER = { remove_point_of_interest = first_highway_station_system_poi.1 } 
+			if = {
+				limit = {
+					NOT = { has_global_flag = malfunctioning_guards_created }
+				}
+				create_malfunctioning_guards_country = yes
+			}
 		}
 		enable_special_project = {
 			name = "nep_highway_first_station_explore"
@@ -1165,12 +1171,6 @@ ship_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = {
-				NOT = { has_global_flag = malfunctioning_guards_created }
-			}
-			create_malfunctioning_guards_country = yes
-		}
 		random_country = {
 			limit = {
 				has_country_flag = malfunctioning_guards
@@ -2431,15 +2431,22 @@ country_event = {
 					OR = {
 						has_star_flag = nep_highway_station
 						has_star_flag = nep_highway_note
-					}
+					}					
 				}
-				any_ship = {
-					limit = { 
-						is_ship_class = shipclass_starbase
+				every_fleet_in_system = {
+					limit = { 						
+						any_owned_ship = {
+							is_ship_class = shipclass_starbase
+						}
 					}
-					delete_ship = this
+					delete_fleet = this
 				}
-				create_starbase = { owner = root }
+				PREV = { 
+					create_starbase = { 
+						size = starbase_outpost
+						owner = root 
+					} 
+				}
 			}
 			every_country = {
 				limit = { NOT = { has_country_flag = nep_highway_founder } }
@@ -2450,3 +2457,4 @@ country_event = {
 			}
 		}
 	}
+}

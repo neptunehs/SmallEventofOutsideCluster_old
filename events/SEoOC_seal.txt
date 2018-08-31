@@ -62,7 +62,9 @@ ship_event = {
 	}
 	
 	immediate = {
-		remove_star_flag = nep_seal_ambient_poi
+		FROM = {
+			remove_star_flag = nep_seal_ambient_poi
+		}
 	}
 		
 	option = {
@@ -76,9 +78,9 @@ ship_event = {
 	
 	option = {
 		name = nep_seal.2.b
-		add_energy = -500
+		OWNER = { add_energy = -500 }
 		event_target:nep_seal_ambient = {
-			clear_global_event_target_as = nep_seal_ambient
+			clear_global_event_target = nep_seal_ambient
 			destroy_ambient_object = this
 		}
 #		owner = { country_event = nep.seal.29 days = 30 }
@@ -99,14 +101,14 @@ ship_event = {
 
 	immediate = {
 		event_target:nep_seal_ambient = {
-			clear_global_event_target_as = nep_seal_ambient
+			clear_global_event_target = nep_seal_ambient
 			destroy_ambient_object = this
 		}
 	}
 	
 	option = {
 		name = nep_seal.3.a
-		owner = { country_event = nep.seal.4 days = 360 random = 360 }
+		owner = { country_event = { id = nep_seal.4 days = 360 random = 360 } }
 	}
 }
 
@@ -122,12 +124,6 @@ country_event = {
 	is_triggered_only = yes	
 
 	immediate = {
-		if = {
-			limit = {
-				NOT = { has_global_flag = malfunctioning_guards_created }
-			}
-			create_malfunctioning_guards_country = yes
-		}
 		every_system = {
 			limit = {
 				has_star_flag = nep_highway_note
@@ -231,16 +227,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -261,17 +253,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -292,17 +279,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -323,17 +305,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -364,16 +341,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -394,17 +367,12 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
+									any_system = {
+											distance = {
+												source = prev
+												max_distance <= 95
+												min_distance >= 1
 											}
-										}
 									}
 								}
 							}
@@ -425,16 +393,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -456,16 +419,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -497,15 +455,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -527,16 +481,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -558,16 +507,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -589,16 +533,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -630,15 +569,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -660,16 +595,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -691,16 +621,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -722,16 +647,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -763,15 +683,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -793,16 +709,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -824,16 +735,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -855,16 +761,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -896,15 +797,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -926,16 +823,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_1 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -957,16 +849,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_2 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -988,16 +875,11 @@ country_event = {
 						if = {
 							limit = {
 								NOT = {
-									exists = {
-										random_system = {
-											limit = {
-												distance = {
-													source = prev
-													max_distance <= 95
-													min_distance >= 1
-												}
-												NOT = { has_star_flag = Step_to_the_Void_3 }
-											}
+									any_system = {
+										distance = {
+											source = prev
+											max_distance <= 95
+											min_distance >= 1
 										}
 									}
 								}
@@ -1027,11 +909,107 @@ country_event = {
 			event_chain = nep_seal_chain
 			location = event_target:nep_seal_system
 		}
-		hidden_effect = { set_country_flag = grand_seal_founder }
+		hidden_effect = { set_country_flag = nep_grand_seal_founder }
 	}
 	
 	option = {
 		name = nep_seal.6.b
-		end_event_chain = "nep_highway_chain"
+		end_event_chain = "nep_seal_chain"
+	}
+}
+
+#After survey
+ship_event = {
+	id = nep_seal.7
+	title = "nep_seal.7.name"
+	desc = "nep_seal.7.desc"	
+	picture = GFX_evt_black_hole
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OWNER = { has_country_flag = nep_grand_seal_founder }
+		FROM = { has_star_flag = nep_seal_system }
+	}
+	
+	immediate = {
+		FROM = {
+			random_system_planet = {
+				limit = { has_planet_flag = nep_grand_seal }
+				save_global_event_target_as = nep_grand_seal_planet
+			}
+		}
+	}
+	
+	option = {
+		name = nep_seal.7.a
+		hidden_effect = { 
+			OWNER = { remove_point_of_interest = grand_seal_system_poi.1 } 
+		}
+		enable_special_project = {
+			name = "nep_grand_seal_research"
+			location = event_target:nep_grand_seal_planet
+			owner = THIS.owner
+		}
+	}
+	
+	option = {
+		name = nep_seal.7.b
+		OWNER = { end_event_chain = "nep_seal_chain" }
+	}
+}
+
+#Final answer of grand seal
+country_event = {
+	id = nep_seal.8
+	title = "nep_seal.8.name"
+	desc = "nep_seal.8.desc"	
+	picture = GFX_evt_black_hole
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes	
+
+	immediate = {
+
+	}
+	
+	option = {
+		name = nep_seal.8.a
+		enable_special_project = {
+			name = "nep_grand_seal_final_answer"
+			location = event_target:nep_grand_seal_planet
+			owner = THIS
+		}
+	}
+}
+
+#Boss appear
+country_event = {
+	id = nep_seal.9
+	title = "nep_seal.9.name"
+	desc = "nep_seal.9.desc"	
+	picture = GFX_evt_dimensional_horror
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes	
+
+	immediate = {	
+		if = {
+			limit = {
+				NOT = { has_global_flag = seal_evil_country_created }
+			}
+			create_seal_evil_country = yes
+		}
+		event_target:nep_seal_system = { 
+			seal_boss_spawn = yes
+		}
+	}
+	
+	option = {
+		name = nep_seal.9.a
 	}
 }

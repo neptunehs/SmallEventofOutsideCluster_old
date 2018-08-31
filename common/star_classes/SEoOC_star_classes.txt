@@ -29,7 +29,7 @@ sc_hw_n = {
 #Step to the Void 
 #Thanks to LEX - Leviathan Events Xtended staff
 sc_void_dummy = {
-	class 			= void
+	class 			= void_domain
 	planet			= { key = pc_star_void_dummy_01 }
 	spawn_odds 		= 0
 	num_planets 	= 0
@@ -72,5 +72,6 @@ sc_grand_seal = {
 	is_environmental_hazard = yes
 	modifier = {
 		ship_shield_reduction = 1.0
+		ship_evasion_mult = -0.5
 	}
 }

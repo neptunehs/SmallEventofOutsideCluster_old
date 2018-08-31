@@ -1,0 +1,240 @@
+nep_seal_init = {
+	name = "Grand Seal of Void"
+
+	class = "sc_grand_seal"
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 10
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 20
+	}
+	
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 30
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 40
+	}
+	
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 50
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 70
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 80
+	}
+	
+	flags = {
+		nep_seal_system
+	}
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 100
+		has_ring = no
+		
+		flags = { nep_grand_seal } 
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+	
+	planet = {
+		class = "pc_black_hole"
+		name = "Sub Seal 1"
+		orbit_distance = 120
+		orbit_angle = -135
+		size = 20
+		has_ring = no
+		
+		flags = { nep_seal_1 } 
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+	
+	planet = {
+		class = "pc_black_hole"
+		name = "Sub Seal 2"
+		orbit_distance = 120
+		orbit_angle = 90
+		size = 20
+		has_ring = no
+		
+		flags = { nep_seal_2 } 
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+	
+	planet = {
+		class = "pc_black_hole"
+		name = "Sub Seal 3"
+		orbit_distance = 120
+		orbit_angle = -45
+		size = 20
+		has_ring = no
+		
+		flags = { nep_seal_3 } 
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_1 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		Step_to_the_Void_1
+	}
+	
+	planet = {
+		class = "pc_bwm_star_dummy"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_2 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		Step_to_the_Void_2
+	}
+	
+	planet = {
+		class = "pc_bwm_star_dummy"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_3 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		Step_to_the_Void_3
+	}
+	
+	planet = {
+		class = "pc_bwm_star_dummy"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_4 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		Step_to_the_Void_4
+	}
+	
+	planet = {
+		class = "pc_bwm_star_dummy"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_5 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		Step_to_the_Void_5
+	}
+	
+	planet = {
+		class = "pc_bwm_star_dummy"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}

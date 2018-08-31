@@ -1,0 +1,119 @@
+weapon_component_template = {
+	key = "SEAL_EVIL_PRIMARY_WEAPON"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	
+	damage = { min = 2540.0 max = 5080.0 }
+	windup = { min = 25.0 max = 45.0 }
+
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+
+	power = 0.0
+	cost = 0.0
+	
+	damage = { min = 2700.0 max = 5400.0 }
+	windup = { min = 28.0 max = 48.0 }
+	
+	total_fire_time = 180
+	
+	range = 140.0
+	accuracy = 1
+	tracking = 0
+
+	firing_arc = 15.0
+	min_range = 10.0
+	static_rotation = yes
+
+	tags = { weapon_type_energy }
+
+	target_weights = {		
+		starbase_outpost = 50
+		starbase_starport = 100
+		starbase_starhold = 1500
+		starbase_starfortress = 50000
+		starbase_citadel = 50000
+		starbase_swarm = 50000
+		starbase_ai = 50000
+		starbase_exd = 50000
+		starbase_marauder = 1500
+		ion_cannon = 25000
+		StrikeCruiser = 2000
+		Battlecruiser = 4000
+		Carrier = 30000
+		Dreadnought = 50000
+		titan = 50000
+		Flagship = 50000
+		supportship = 100000
+		starbase_stronghold = 50000
+		xl_cannon = 25000
+		
+		starbase_outpost = 50
+		starbase_starport = 100
+		starbase_starhold = 1500
+		starbase_starfortress = 50000
+		starbase_citadel = 50000
+		starbase_swarm = 50000
+		starbase_ai = 50000
+		starbase_exd = 50000
+		starbase_marauder = 1500
+		ion_cannon = 25000
+		StrikeCruiser = 2000
+		Battlecruiser = 4000
+		Carrier = 30000
+		Dreadnought = 50000
+		titan = 50000
+		Flagship = 50000
+		supportship = 100000
+		starbase_stronghold = 50000
+		xl_cannon = 25000
+
+		battleship = 50000
+		cruiser = 1500
+		destroyer = 500
+		corvette = 100
+		
+		military_station_large = 25000
+		military_station_medium = 1000
+		military_station_small = 50
+		
+		massive_ship_fallen_empire = 50000
+		large_ship_fallen_empire = 1500
+		small_ship_fallen_empire = 500
+		
+		military_station_large_fallen_empire = 25000
+		military_station_small_fallen_empire = 1000
+		
+		queen_swarm = 50000
+		large_ship_carrier_swarm = 1500
+		large_ship_swarm = 500
+		small_ship_swarm = 100
+		
+		
+		large_ship_ed = 50000
+		medium_ship_ed = 1500
+		small_ship_ed = 500
+		
+		dimensional_portal_ed = 100000
+		
+		large_ship_ai = 50000
+		small_ship_ai = 1500
+		
+		final_core_ai = 200000
+		core_ai = 100000
+		
+		military_station_large_ai = 25000
+		military_station_small_ai = 1000
+	}
+
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_hull
+	}
+	
+	hidden = yes
+	projectile_gfx = "dimensional_titan_laser"
+	tags = { weapon_type_energy }
+}

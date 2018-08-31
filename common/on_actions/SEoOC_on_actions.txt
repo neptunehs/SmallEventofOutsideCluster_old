@@ -5,3 +5,8 @@ on_entering_system = {
 	}
 }
 
+on_system_survey_ship = {
+	events = {
+		nep_seal.7 #Grand seal proje
+	}
+}

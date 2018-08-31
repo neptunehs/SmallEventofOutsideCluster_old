@@ -110,6 +110,49 @@
  nep_highway_chain_title:0 "nep_highway_chain_title"
  nep_highway_chain_desc:0 "nep_highway_chain_desc" 
  
+ nep_seal_evil:0 "Seal Evil"
+ nep_seal_evil_plural:0 "Seal Evil"
+ 
+ nep_seal.2.name:0 "nep_seal.2.name"
+ nep_seal.2.desc:0 "nep_seal.2.desc"
+ nep_seal.2.a:0 "nep_seal.2.a" 
+ nep_seal.2.b:0 "nep_seal.2.b" 
+ 
+ nep_seal.3.name:0 "nep_seal.3.name"
+ nep_seal.3.desc:0 "nep_seal.3.desc"
+ nep_seal.3.a:0 "nep_seal.3.a" 
+ 
+ nep_seal.4.name:0 "nep_seal.4.name"
+ nep_seal.4.desc:0 "nep_seal.4.desc"
+ nep_seal.4.a:0 "nep_seal.4.a" 
+ 
+ nep_seal.5.name:0 "nep_seal.5.name"
+ nep_seal.5.desc:0 "nep_seal.5.desc"
+ nep_seal.5.a:0 "nep_seal.5.a" 
+ nep_seal.5.b:0 "nep_seal.5.b" 
+ 
+ nep_seal.6.name:0 "nep_seal.6.name"
+ nep_seal.6.desc:0 "nep_seal.6.desc"
+ nep_seal.6.a:0 "nep_seal.6.a" 
+ nep_seal.6.b:0 "nep_seal.6.b" 
+ 
+ nep_seal.7.name:0 "nep_seal.7.name"
+ nep_seal.7.desc:0 "nep_seal.7.desc"
+ nep_seal.7.a:0 "nep_seal.7.a" 
+ nep_seal.7.b:0 "nep_seal.7.b"
+
+ nep_seal.8.name:0 "nep_seal.8.name"
+ nep_seal.8.desc:0 "nep_seal.8.desc"
+ nep_seal.8.a:0 "nep_seal.8.a" 
+ 
+ nep_seal.9.name:0 "nep_seal.9.name"
+ nep_seal.9.desc:0 "nep_seal.9.desc"
+ nep_seal.9.a:0 "nep_seal.9.a" 
+ 
+ nep_seal_chain_title:0 "nep_seal_chain_title"
+ nep_seal_chain_desc:0 "nep_seal_chain_desc" 
+ 
+ 
  sc_hw_n:1 "$pc_b_star$"
  sc_hw_n_desc:1 "$pc_b_star_desc$"
  
