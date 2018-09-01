@@ -25,7 +25,7 @@ country_event = {
 		set_global_flag = nep_seal_ambient_created
 		random_system = {
 			limit = {
-				has_star_flag = nep_highway_note
+				has_star_flag = highway_note_system
 			}
 			create_ambient_object = {
 				type = "small_debris_object"
@@ -126,12 +126,15 @@ country_event = {
 	immediate = {
 		every_system = {
 			limit = {
-				has_star_flag = nep_highway_note
+				has_star_flag = highway_note_system
 			}
-			malfunctioning_guards_spawn = yes
-			malfunctioning_guards_spawn = yes
-			malfunctioning_guards_spawn = yes
-			malfunctioning_guards_spawn = yes
+			random_system_planet = {
+				limit = { is_star = yes }
+				malfunctioning_guards_spawn = yes
+				malfunctioning_guards_spawn = yes
+				malfunctioning_guards_spawn = yes
+				malfunctioning_guards_spawn = yes
+			}
 		}
 		set_global_flag = malfunctioning_guards_again
 		set_country_flag = malfunctioning_guards_again_suffer

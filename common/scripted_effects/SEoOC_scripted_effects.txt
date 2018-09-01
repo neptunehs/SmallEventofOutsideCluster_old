@@ -3,36 +3,30 @@
 #######################################
 
 create_malfunctioning_guards_country = {
-	random_system = {
-		limit = {
-			has_star_flag = highway_station_system
-		}
-		random_system_planet = {
-			create_country = {
-				name = "Malfunctioning Guards"
-				type = nep_malfunctioning_guards
-				flag = {
-					icon = {
-						category = "ornate"
-						file = "flag_ornate_19.dds"
-					}
-					background= {
-						category = "backgrounds"
-						file = "00_solid.dds"
-					}
-					 colors={
-						"red"
-						"red"
-						"null"
-						"null"
-					}
-				}
+	create_country = {
+		name = "Malfunctioning Guards"
+		type = nep_malfunctioning_guards
+		auto_delete = no
+		flag = {
+			icon = {
+				category = "zoological"
+				file = "flag_zoological_1.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors={
+				"red"
+				"red"
+				"null"
+				"null"
 			}
 		}
-		last_created_country = {
-			set_country_flag = malfunctioning_guards
-			save_global_event_target_as = malfunctioning_guards_country
-		}
+	}
+	last_created_country = {
+		set_country_flag = malfunctioning_guards
+		save_global_event_target_as = malfunctioning_guards_country
 	}
 	set_global_flag = malfunctioning_guards_created
 }
@@ -43,13 +37,13 @@ malfunctioning_guards_spawn = {
 		settings = {
 			spawn_debris = no 
 		}
-		effect = {			
+		effect = {		
+			set_owner = event_target:malfunctioning_guards_country
 			while = {
 				count = 15
 				create_ship = {
 					name = "Malfunctioning Guard"
 					design = "Xeeeeh"
-					prefix = no
 				}
 			}
 			while = {
@@ -57,7 +51,6 @@ malfunctioning_guards_spawn = {
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Tes"
-					prefix = no
 				}
 			}
 			while = {
@@ -65,7 +58,6 @@ malfunctioning_guards_spawn = {
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Sekae"
-					prefix = no
 				}
 			}
 			while = {
@@ -73,15 +65,41 @@ malfunctioning_guards_spawn = {
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Deek"
-					prefix = no
 				}
 			}
 			
-			set_location = PERV.FROM
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
 			set_formation_scale = 2.0
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
+			
+			queue_actions = {	
+				repeat = {
+					find_closest_planet = {
+						trigger = {
+							id = "nep_Malfunctioning_Guards_temppoi.1"
+							is_star = no
+						}
+						found_planet = {
+							orbit_planet = THIS
+						}
+					}
+					find_closest_planet = {
+						trigger = {
+							id = "nep_Malfunctioning_Guards_temppoi.2"
+							is_star = yes
+						}
+						found_planet = {
+							orbit_planet = THIS
+						}
+					}
+				}
+			}						
 		}
 	}
 }
@@ -136,7 +154,7 @@ seal_boss_spawn = {
 				design = "Seal evil"
 				prefix = no
 			}	
-			set_location = PERV.FROM
+			set_location = PERV
 			set_formation_scale = 2.0
 			set_fleet_stance = aggressive
 			set_aggro_range = 500

@@ -1,0 +1,64 @@
+namespace = nep_test
+
+country_event = {
+	id = nep_test.1
+    hide_window = yes
+	is_triggered_only = yes
+#	fire_only_once = yes
+	location = root
+#	is_triggered_only = yes
+	
+	trigger = { always = no }
+
+	immediate = {
+	capital_scope = {
+	create_fleet = {
+		name = "Malfunctioning Guards"
+		settings = {
+			spawn_debris = no 
+		}
+		effect = {		
+			set_owner = ROOT
+			while = {
+				count = 15
+				create_ship = {
+					name = "Malfunctioning Guard"
+					design = "Xeeeeh"
+				}
+			}
+			while = {
+				count = 30
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Tes"
+				}
+			}
+			while = {
+				count = 60
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Sekae"
+				}
+			}
+			while = {
+				count = 140
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Deek"
+				}
+			}
+			
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+	}
+	}
+    }
+}

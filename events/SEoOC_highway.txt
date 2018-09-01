@@ -167,26 +167,21 @@ country_event = {
 	}
 	
 	immediate = {
-
+		random_system = {
+			limit = { has_star_flag = vultaumar }
+			random_system_planet = {
+				limit = { has_planet_flag = vultaum_homeworld }
+				save_event_target_as = vultaum_homeworld
+			}
+		}
 	}
 	
 	option = {
 		name = nep_highway.21.a
-		hidden_effect = {
-			random_system = {
-				limit = { has_star_flag = vultaumar }
-				save_event_target_as = vultaumar
-			}
-			event_target:vultaumar = {
-				random_system_planet = {
-					limit = { has_planet_flag = vultaum_homeworld }
-					enable_special_project = {
-						name = "nep_highway_vultaumar_explore"
-						location = THIS
-						owner = ROOT
-					}
-				}
-			}
+		enable_special_project = {
+			name = "nep_highway_vultaumar_explore"
+			location = event_target:vultaum_homeworld
+			owner = ROOT
 		}
 	}
 	
@@ -229,26 +224,21 @@ country_event = {
 	}
 	
 	immediate = {
-	
+		random_system = {
+			limit = { has_star_flag = yuhtaan }
+			random_system_planet = {
+				limit = { has_planet_flag = yuht_homeworld }
+				save_event_target_as = yuht_homeworld
+			}
+		}
 	}
 	
 	option = {
 		name = nep_highway.22.a
-		hidden_effect = {
-			random_system = {
-				limit = { has_star_flag = yuhtaan }
-				save_event_target_as = yuhtaan
-			}
-			event_target:yuhtaan = {
-				random_system_planet = {
-					limit = { has_planet_flag = yuht_homeworld }
-					enable_special_project = {
-						name = "nep_highway_yuhtaan_explore"
-						location = THIS
-						owner = ROOT
-					}
-				}
-			}
+		enable_special_project = {
+			name = "nep_highway_yuhtaan_explore"
+			location = event_target:yuht_homeworld
+			owner = ROOT
 		}
 	}
 	
@@ -291,26 +281,21 @@ country_event = {
 	}
 	
 	immediate = {
-	
+		random_system = {
+			limit = { has_star_flag = fen_habbanis }
+			random_system_planet = {
+				limit = { has_planet_flag = first_league_homeworld }
+				save_event_target_as = first_league_homeworld
+			}
+		}
 	}
 	
 	option = {
 		name = nep_highway.23.a
-		hidden_effect = {
-			random_system = {
-				limit = { has_star_flag = fen_habbanis }
-				save_event_target_as = fen_habbanis
-			}
-			event_target:fen_habbanis = {
-				random_system_planet = {
-					limit = { has_planet_flag = first_league_homeworld }
-					enable_special_project = {
-						name = "nep_highway_fen_habbanis_explore"
-						location = THIS
-						owner = ROOT
-					}
-				}
-			}
+		enable_special_project = {
+			name = "nep_highway_fen_habbanis_explore"
+			location = event_target:first_league_homeworld
+			owner = ROOT
 		}
 	}
 	
@@ -353,26 +338,21 @@ country_event = {
 	}
 	
 	immediate = {
-	
+		random_system = {
+			limit = { has_star_flag = irass }
+			random_system_planet = {
+				limit = { has_planet_flag = irassian_homeworld }
+				save_event_target_as = irassian_homeworld
+			}
+		}
 	}
 	
 	option = {
 		name = nep_highway.24.a
-		hidden_effect = {
-			random_system = {
-				limit = { has_star_flag = irass }
-				save_event_target_as = irass
-			}
-			event_target:irass = {
-				random_system_planet = {
-					limit = { has_planet_flag = irassian_homeworld }
-					enable_special_project = {
-						name = "nep_highway_irass_explore"
-						location = THIS
-						owner = ROOT
-					}
-				}
-			}
+		enable_special_project = {
+			name = "nep_highway_irass_explore"
+			location = event_target:irassian_homeworld
+			owner = ROOT
 		}
 	}
 	
@@ -415,25 +395,22 @@ country_event = {
 	}
 	
 	immediate = {
-	
+		random_planet = {
+			random_system = {
+				limit = { has_star_flag = cybrex }
+				random_system_planet = {	
+					save_event_target_as = cybrex_ring_site
+				}
+			}		
+		}
 	}
 	
 	option = {
 		name = nep_highway.25.a
-		hidden_effect = {
-			random_system = {
-				limit = { has_star_flag = cybrex }
-				save_event_target_as = cybrex
-			}
-			event_target:cybrex = {
-				random_system_planet = {		
-					enable_special_project = {
-						name = "nep_highway_cybrex_explore"
-						location = THIS
-						owner = ROOT
-					}
-				}
-			}
+		enable_special_project = {
+			name = "nep_highway_cybrex_explore"
+			location = event_target:cybrex_ring_site
+			owner = ROOT
 		}
 	}
 	
@@ -478,7 +455,7 @@ ship_event = {
 	option = {
 		name = nep_highway.31.a
 		custom_tooltip = nep_highway.31.a.tooltip
-		hidden_effect = { owner = { country_event = { id = nep_highway.4 } } }
+		hidden_effect = { owner = { country_event = { id = nep_highway.4 days = 30 random = 15  } } }
 	}
 
 	option = {
@@ -509,7 +486,7 @@ ship_event = {
 	option = {
 		name = nep_highway.32.a
 		custom_tooltip = nep_highway.32.a.tooltip
-		hidden_effect = { owner = { country_event = { id = nep_highway.4 } } }
+		hidden_effect = { owner = { country_event = { id = nep_highway.4 days = 30 random = 15  } } }
 	}
 
 	option = {
@@ -540,7 +517,7 @@ ship_event = {
 	option = {
 		name = nep_highway.33.a
 		custom_tooltip = nep_highway.33.a.tooltip
-		hidden_effect = { owner = { country_event = { id = nep_highway.4 } } }
+		hidden_effect = { owner = { country_event = { id = nep_highway.4 days = 30 random = 15  } } }
 	}
 
 	option = {
@@ -1138,23 +1115,27 @@ ship_event = {
 	}
 	
 	immediate = {
-	
+		if = {
+			limit = {
+				NOT = { has_global_flag = malfunctioning_guards_created }
+			}
+			create_malfunctioning_guards_country = yes
+		}
 	}
 	
 	option = {
 		name = nep_highway.5.a
 		hidden_effect = { 
 			OWNER = { remove_point_of_interest = first_highway_station_system_poi.1 } 
-			if = {
-				limit = {
-					NOT = { has_global_flag = malfunctioning_guards_created }
+			solar_system = { 
+				random_system_planet = {
+					save_event_target_as = nep_highway_first_station_explore_poi
 				}
-				create_malfunctioning_guards_country = yes
 			}
 		}
 		enable_special_project = {
 			name = "nep_highway_first_station_explore"
-			location = FROM.random_system_planet
+			location = event_target:nep_highway_first_station_explore_poi
 			owner = THIS.owner
 		}
 	}
@@ -1171,21 +1152,28 @@ ship_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		random_country = {
+		if = {
 			limit = {
-				has_country_flag = malfunctioning_guards
+				NOT = { has_global_flag = malfunctioning_guards_created }
 			}
+		create_malfunctioning_guards_country = yes
 		}
-		event_target:malfunctioning_guards_country = {
-			malfunctioning_guards_spawn = yes
-		}
+		malfunctioning_guards_spawn = yes
 	}
 	
 	option = {
+		hidden_effect = { 
+			solar_system = { 
+				random_system_planet = {
+					save_event_target_as = nep_highway_first_station_explore_poi
+				}
+			}
+		}
+		
 		name = nep_highway.6.a
 		enable_special_project = {
 			name = "nep_highway_first_station_explore"
-			location = FROM.random_system_planet
+			location = event_target:nep_highway_first_station_explore_poi
 			owner = THIS.owner
 		}
 	}
@@ -1204,6 +1192,7 @@ ship_event = {
 	is_triggered_only = yes		
 	
 	immediate = {
+		clear_global_event_target = nep_highway_first_station_explore_poi
 		set_spawn_system_batch = begin
 		if = {
 			limit = {
@@ -2389,7 +2378,6 @@ ship_event = {
 			}
 		}
 		hidden_effect = { 
-			remove_global_flag = nep_highway_begin
 			OWNER = {
 				set_country_flag = nep_highway_founder
 				country_event = { id = nep_highway.8 days = 30} 
@@ -2429,8 +2417,8 @@ country_event = {
 			every_system = {
 				limit = { 
 					OR = {
-						has_star_flag = nep_highway_station
-						has_star_flag = nep_highway_note
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
 					}					
 				}
 				every_fleet_in_system = {
@@ -2441,18 +2429,21 @@ country_event = {
 					}
 					delete_fleet = this
 				}
-				PREV = { 
-					create_starbase = { 
-						size = starbase_outpost
-						owner = root 
-					} 
+				every_system_planet = {
+					surveyed = { set_surveyed = yes surveyor = root }
+				}
+				create_starbase = { 
+					size = starbase_outpost
+					owner = root 
 				}
 			}
 			every_country = {
 				limit = { NOT = { has_country_flag = nep_highway_founder } }
-				set_closed_borders = {
-					who = root
-					status = yes
+				root = {
+					set_closed_borders = {
+						who = prev
+						status = yes
+					}
 				}
 			}
 		}
