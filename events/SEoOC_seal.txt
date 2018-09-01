@@ -78,7 +78,7 @@ ship_event = {
 	
 	option = {
 		name = nep_seal.2.b
-		OWNER = { add_energy = -500 }
+		OWNER = { add_energy = -100 }
 		event_target:nep_seal_ambient = {
 			clear_global_event_target = nep_seal_ambient
 			destroy_ambient_object = this
@@ -179,6 +179,7 @@ country_event = {
 	
 	option = {
 		name = nep_seal.5.b
+#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 200 random = 150} } }
 	}
 }
 
@@ -1011,5 +1012,6 @@ country_event = {
 	
 	option = {
 		name = nep_seal.9.a
+		end_event_chain = "nep_seal_chain"
 	}
 }

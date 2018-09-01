@@ -152,12 +152,5 @@
  nep_seal_chain_title:0 "nep_seal_chain_title"
  nep_seal_chain_desc:0 "nep_seal_chain_desc" 
  
- 
  sc_hw_n:1 "$pc_b_star$"
  sc_hw_n_desc:1 "$pc_b_star_desc$"
- 
- sc_void_dummy:0 "Void Domain"
- sc_void_dummy_desc:0 "Nothing here."
- 
- sc_grand_seal:0 "Grand Seal of Void"
- sc_grand_seal_desc:0 "Who knows what's inside?"
