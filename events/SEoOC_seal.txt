@@ -130,10 +130,10 @@ country_event = {
 			}
 			random_system_planet = {
 				limit = { is_star = yes }
-				malfunctioning_guards_spawn = yes
-				malfunctioning_guards_spawn = yes
-				malfunctioning_guards_spawn = yes
-				malfunctioning_guards_spawn = yes
+				malfunctioning_guards_spawn_static = yes
+				malfunctioning_guards_spawn_static = yes
+				malfunctioning_guards_spawn_static = yes
+				malfunctioning_guards_spawn_static = yes
 			}
 		}
 		set_global_flag = malfunctioning_guards_again
@@ -913,6 +913,76 @@ country_event = {
 			event_chain = nep_seal_chain
 			location = event_target:nep_seal_system
 		}
+		random_system = {
+			limit = {
+			has_star_flag = Step_to_the_Void_1
+			}
+			root = {
+				create_point_of_interest = {
+					id = grand_seal_system_poi.2
+					name = "grand_seal_system_poi_name"
+					desc = "grand_seal_system_poi_desc"
+					event_chain = nep_seal_chain
+					location = PREV
+				}
+			}
+		}
+		random_system = {
+			limit = {
+			has_star_flag = Step_to_the_Void_2
+			}
+			root = {
+				create_point_of_interest = {
+					id = grand_seal_system_poi.3
+					name = "grand_seal_system_poi_name"
+					desc = "grand_seal_system_poi_desc"
+					event_chain = nep_seal_chain
+					location = PREV
+				}
+			}
+		}
+		random_system = {
+			limit = {
+			has_star_flag = Step_to_the_Void_3
+			}
+			root = {
+				create_point_of_interest = {
+					id = grand_seal_system_poi.4
+					name = "grand_seal_system_poi_name"
+					desc = "grand_seal_system_poi_desc"
+					event_chain = nep_seal_chain
+					location = PREV
+				}
+			}
+		}
+		random_system = {
+			limit = {
+			has_star_flag = Step_to_the_Void_4
+			}
+			root = {
+				create_point_of_interest = {
+					id = grand_seal_system_poi.5
+					name = "grand_seal_system_poi_name"
+					desc = "grand_seal_system_poi_desc"
+					event_chain = nep_seal_chain
+					location = PREV
+				}
+			}
+		}
+		random_system = {
+			limit = {
+			has_star_flag = Step_to_the_Void_5
+			}
+			root = {
+				create_point_of_interest = {
+					id = grand_seal_system_poi.6
+					name = "grand_seal_system_poi_name"
+					desc = "grand_seal_system_poi_desc"
+					event_chain = nep_seal_chain
+					location = PREV
+				}
+			}
+		}
 		hidden_effect = { set_country_flag = nep_grand_seal_founder }
 	}
 	
@@ -950,7 +1020,14 @@ ship_event = {
 	option = {
 		name = nep_seal.7.a
 		hidden_effect = { 
-			OWNER = { remove_point_of_interest = grand_seal_system_poi.1 } 
+			OWNER = { 
+				remove_point_of_interest = grand_seal_system_poi.1 
+				remove_point_of_interest = grand_seal_system_poi.2 
+				remove_point_of_interest = grand_seal_system_poi.3 
+				remove_point_of_interest = grand_seal_system_poi.4 
+				remove_point_of_interest = grand_seal_system_poi.5 
+				remove_point_of_interest = grand_seal_system_poi.6 
+			} 
 		}
 		enable_special_project = {
 			name = "nep_grand_seal_research"
@@ -991,7 +1068,7 @@ country_event = {
 }
 
 #Boss appear
-country_event = {
+ship_event = {
 	id = nep_seal.9
 	title = "nep_seal.9.name"
 	desc = "nep_seal.9.desc"	
@@ -1008,13 +1085,62 @@ country_event = {
 			}
 			create_seal_evil_country = yes
 		}
-		event_target:nep_seal_system = { 
-			seal_boss_spawn = yes
-		}
+		seal_boss_spawn = yes
 	}
 	
 	option = {
 		name = nep_seal.9.a
-		end_event_chain = "nep_seal_chain"
+		owner = { end_event_chain = "nep_seal_chain" }
+	}
+}
+
+#Buff the boss
+country_event = {
+	id = nep_seal.90
+	hide_window = yes
+	
+	is_triggered_only = yes	
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_seal_evil
+			}
+			ship_event = { id = nep_seal.91 days = 3 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_seal.90 days = 3 } }
+			}
+		}
+#		FROM = {
+#			random_owned_ship = {
+#				limit = {
+#					is_ship_size = nep_seal_evil
+#				}
+#				ship_event = { id = nep_seal.91 days = 3 }
+#				if = {
+#					limit =	{ is_in_combat = yes }
+#					fleet = { fleet_event = { id = nep_seal.90 days = 3 } }
+#				}
+#			}
+#		}
+	}
+}
+			
+ship_event = {
+	id = nep_seal.91
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage < 1
+				has_hp_percentage > 0
+			}
+			repair_percentage = 0.5
+			ship_event = { id = nep_seal.91 days = 3 }
+		}
 	}
 }

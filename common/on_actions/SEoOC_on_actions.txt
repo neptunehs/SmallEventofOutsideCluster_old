@@ -10,3 +10,9 @@ on_system_survey_ship = {
 		nep_seal.7 #Grand seal proje
 	}
 }
+
+on_entering_battle = {
+	events = {
+		nep_seal.90		
+	}
+}

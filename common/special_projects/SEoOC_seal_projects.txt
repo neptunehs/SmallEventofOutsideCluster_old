@@ -69,7 +69,7 @@ special_project = {
 special_project = {
 	key = "nep_grand_seal_final_answer"
 	event_chain = "nep_seal_chain"
-	days_to_research = 1
+	days_to_research = 5
 	tech_department = society_technology
 	picture = GFX_evt_black_hole
 	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
@@ -82,7 +82,7 @@ special_project = {
 	}
 	
 	on_success = {
-		OWNER = {country_event = { id = nep_seal.9 } }
+		ship_event = { id = nep_seal.9 } 
 	}
 	
 	on_fail = {

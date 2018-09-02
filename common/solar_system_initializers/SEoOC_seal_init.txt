@@ -58,7 +58,7 @@ nep_seal_init = {
             }
 		}
 	}
-	
+		
 	planet = {
 		class = "pc_black_hole"
 		name = "Sub Seal 1"
@@ -77,6 +77,8 @@ nep_seal_init = {
 		}
 	}
 	
+	change_orbit = -120
+	
 	planet = {
 		class = "pc_black_hole"
 		name = "Sub Seal 2"
@@ -94,6 +96,8 @@ nep_seal_init = {
             }
 		}
 	}
+	
+	change_orbit = -120
 	
 	planet = {
 		class = "pc_black_hole"

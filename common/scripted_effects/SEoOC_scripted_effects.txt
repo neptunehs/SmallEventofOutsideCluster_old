@@ -107,37 +107,93 @@ malfunctioning_guards_spawn = {
 #######################################
 #  seal
 #######################################
-create_seal_evil_country = {
-	random_system = {
-		limit = {
-			has_star_flag = nep_seal_system
+malfunctioning_guards_spawn_static = {
+	create_fleet = {
+		name = "Malfunctioning Guards"
+		settings = {
+			spawn_debris = no 
 		}
-		random_system_planet = {
-			create_country = {
-				name = "Seal Evil"
-				type = nep_seal_evil_country
-				flag = {
-					icon = {
-						category = "spherical"
-						file = "flag_spherical_11.dds"
-					}
-					background= {
-						category = "backgrounds"
-						file = "00_solid.dds"
-					}
-					colors={
-						"black"
-						"black"
-						"null"
-						"null"
-					}
+		effect = {		
+			set_owner = event_target:malfunctioning_guards_country
+			while = {
+				count = 18
+				create_ship = {
+					name = "Malfunctioning Guard"
+					design = "Xeeeeh"
 				}
 			}
+			while = {
+				count = 32
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Tes"
+				}
+			}
+			while = {
+				count = 60
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Sekae"
+				}
+			}
+			while = {
+				count = 108
+				create_ship = {
+					name = "Malfunctioning Guards"
+					design = "Deek"
+				}
+			}
+			
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			
+			queue_actions = {	
+				find_closest_planet = {
+					trigger = {
+						id = "nep_Malfunctioning_Guards_temppoi.3"
+						is_star = yes
+					}
+					found_planet = {
+						orbit_planet = THIS
+					}
+				}
+			}						
 		}
-		last_created_country = {
-			set_country_flag = seal_evil_country
-			save_global_event_target_as = seal_evil_country
+	}
+}
+
+create_seal_evil_country = {
+	create_country = {
+		name = "Seal Evil"
+		type = nep_seal_evil_country
+		auto_delete = no
+		flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_11.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors={
+				"black"
+				"black"
+				"null"
+				"null"
+			}
 		}
+	}
+	last_created_country = {
+		set_country_flag = seal_evil_country
+		save_global_event_target_as = seal_evil_country
 	}
 	set_global_flag = seal_evil_country_created
 }
@@ -149,12 +205,16 @@ seal_boss_spawn = {
 			spawn_debris = no 
 		}
 		effect = {			
+			set_owner = event_target:seal_evil_country
 			create_ship = {
 				name = "Seal Evil"
 				design = "Seal evil"
-				prefix = no
 			}	
-			set_location = PERV
+			set_location = {
+				target = event_target:nep_grand_seal_planet
+				distance = 150
+				angle = random
+			}
 			set_formation_scale = 2.0
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
