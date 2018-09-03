@@ -27,7 +27,7 @@
 
 nep_seal_evil = {
 	graphical_culture = no
-	can_be_inspected = no
+	#can_be_inspected = no
 	is_space_object = yes
 	max_speed = 0.0
 	acceleration = 0.0
@@ -36,6 +36,8 @@ nep_seal_evil = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_upkeep_mult = -1
+		ship_armor_add = 100000
+		ship_armor_regen_add_static = 100000
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.50

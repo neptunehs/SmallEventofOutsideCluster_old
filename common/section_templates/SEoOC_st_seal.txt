@@ -9,7 +9,7 @@ ship_section_template = {
 		name = "PRIMARY_WEAPON_01"
 		slot_size = extra_large
 		slot_type = weapon
-		locatorname = "large_gun_01"
+		locatorname = "root"
 	}	
 	
 	component_slot = {

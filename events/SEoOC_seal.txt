@@ -1099,7 +1099,7 @@ country_event = {
 	id = nep_seal.90
 	hide_window = yes
 	
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	
 	immediate = {
 		random_owned_ship = {
@@ -1136,7 +1136,6 @@ ship_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_hp_percentage < 1
 				has_hp_percentage > 0
 			}
 			repair_percentage = 0.5

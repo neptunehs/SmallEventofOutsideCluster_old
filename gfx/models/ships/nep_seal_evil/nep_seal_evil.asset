@@ -7,7 +7,7 @@ entity = {
 	game_data = {
   		raytrace_projectiles = no
   		dissolve_on_death = 4.0
-		ship_color = hsv { 0.68 0.5 0.5 1.0 }
+		ship_color = hsv { 0.07 1.0 0.75 1.0 }
  	}
   
 	cull_radius = 10.0
