@@ -36,7 +36,7 @@ nep_seal_evil = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_upkeep_mult = -1
-		ship_armor_add = 100000
+		ship_armor_add = 500000
 		ship_armor_regen_add_static = 100000
 	}
 	ship_modifier = {

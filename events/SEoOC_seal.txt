@@ -1106,24 +1106,12 @@ country_event = {
 			limit = {
 				is_ship_size = nep_seal_evil
 			}
-			ship_event = { id = nep_seal.91 days = 3 }
+			ship_event = { id = nep_seal.91 }
 			if = {
 				limit =	{ is_in_combat = yes }
 				root = { country_event = { id = nep_seal.90 days = 3 } }
 			}
 		}
-#		FROM = {
-#			random_owned_ship = {
-#				limit = {
-#					is_ship_size = nep_seal_evil
-#				}
-#				ship_event = { id = nep_seal.91 days = 3 }
-#				if = {
-#					limit =	{ is_in_combat = yes }
-#					fleet = { fleet_event = { id = nep_seal.90 days = 3 } }
-#				}
-#			}
-#		}
 	}
 }
 			
@@ -1138,8 +1126,7 @@ ship_event = {
 			limit = {
 				has_hp_percentage > 0
 			}
-			repair_percentage = 0.5
-			ship_event = { id = nep_seal.91 days = 3 }
+			repair_percentage = 0.15
 		}
 	}
 }
