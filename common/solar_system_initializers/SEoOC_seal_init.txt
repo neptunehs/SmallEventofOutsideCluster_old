@@ -30,12 +30,52 @@ nep_seal_init = {
 	
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 70
+		radius = 60
 	}
 
 	asteroid_belt = {
 		type = crystal_asteroid_belt
+		radius = 70
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
 		radius = 80
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 90
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 100
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 110
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 120
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 130
+	}
+	
+		asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 140
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 150
 	}
 	
 	flags = {

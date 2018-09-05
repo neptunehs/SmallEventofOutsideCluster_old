@@ -1,0 +1,31 @@
+tech_sealportal_dive = {
+	cost = @repeatableTechBaseCost
+	area = physics
+	tier = 3
+	is_rare = yes
+	is reverse_engineerable = no
+	category = { particles }
+	weight = 0
+
+	potential = {
+		NOT = { has_global_flag = nep_sealportal_can_dive }
+	}
+
+	feature_flags = { sealportal_dive }
+
+	prereqfor_desc = {
+		custom = {
+			title = tech_sealportal_dive_title
+			desc = tech_sealportal_dive_desc
+		}
+	}
+	
+	modifier = {
+		ship_armor_mult = 0.1
+		ship_shield_mult = 0.1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}

@@ -1,0 +1,200 @@
+namespace = nep_dragon
+
+#Create cluster,portal(HIDDEN)
+country_event = {
+	id = nep_dragon.1
+	hidden = yes
+		
+	fire_only_once = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = nep_highway_founder
+		has_global_flag = nep_highway_used
+		has_global_flag = seal_evil_country_created
+		event_target:seal_evil_country = {
+			num_fleets < 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		#cluster
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 550
+				max_distance <= 560
+				min_orientation_angle = 133
+				max_orientation_angle = 135
+				hyperlane = no
+				initializer = nep_Aemethms_init
+			}
+		}
+		random_system = {
+			limit = {
+				has_star_flag = nep_dragon_system
+			}
+			save_global_event_target_as = nep_dragon_system
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				initializer = nep_Auriel_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -51.42
+				max_orientation_angle = -51.42
+				hyperlane = no
+				initializer = nep_Gabriel_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -102.85
+				max_orientation_angle = -102.85
+				hyperlane = no
+				initializer = nep_Sabriel_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -154.28
+				max_orientation_angle = -154.28
+				hyperlane = no
+				initializer = nep_Samuel_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -205.71
+				max_orientation_angle = -205.71
+				hyperlane = no
+				initializer = nep_Michael_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -257.14
+				max_orientation_angle = -257.14
+				hyperlane = no
+				initializer = nep_Jauiel_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = -308.57
+				max_orientation_angle = -308.57
+				hyperlane = no
+				initializer = nep_Anael_init
+			}
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Auriel_system }
+			save_event_target_as = nep_heptagram_system_1
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Gabriel_system }
+			save_event_target_as = nep_heptagram_system_2
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Sabriel_system }
+			save_event_target_as = nep_heptagram_system_3
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Samuel_system }
+			save_event_target_as = nep_heptagram_system_4
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Samuel_planet }
+			save_event_target_as = nep_heptagram_system_5
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Michael_system }
+			save_event_target_as = nep_heptagram_system_6
+		}
+		random_system = {
+			limit = { has_star_flag = nep_Jauiel_system }
+			save_event_target_as = nep_heptagram_system_7
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_1
+			to = event_target:nep_heptagram_system_2
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_2
+			to = event_target:nep_heptagram_system_3
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_3
+			to = event_target:nep_heptagram_system_4
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_4
+			to = event_target:nep_heptagram_system_5
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_6
+			to = event_target:nep_heptagram_system_5
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_6
+			to = event_target:nep_heptagram_system_7
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_1
+			to = event_target:nep_heptagram_system_7
+		}
+		
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_1
+			to = event_target:nep_heptagram_system_3
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_3
+			to = event_target:nep_heptagram_system_5
+		}		
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_5
+			to = event_target:nep_heptagram_system_7
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_7
+			to = event_target:nep_heptagram_system_2
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_2
+			to = event_target:nep_heptagram_system_4
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_4
+			to = event_target:nep_heptagram_system_6
+		}
+		add_hyperlane = {
+			from = event_target:nep_heptagram_system_1
+			to = event_target:nep_heptagram_system_6
+		}
+		set_spawn_system_batch = end
+		
+		#portal
+		event_target:nep_seal_system = {
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				orbit_distance = 5
+				orbit_angle = 134
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = nep_dragon.1.a
+		
+	}
