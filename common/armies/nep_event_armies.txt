@@ -1,0 +1,32 @@
+nep_Legnahcras_defensive_army = {
+	defensive = yes
+	damage = 7.0
+	health = 16.0
+	has_morale = no
+	morale_damage = 15.0
+	collateral_damage = 4.0
+	time = 500
+	maintenance = 0
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}
+
+nep_Legnahcras_assault_army = {
+	damage = 7.0
+	health = 16.0
+	has_morale = no
+	morale_damage = 15.0
+	collateral_damage = 4.0
+	time = 500
+	maintenance = 3
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}

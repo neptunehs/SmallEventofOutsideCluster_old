@@ -1,0 +1,24 @@
+special_project = {
+	key = "nep_dragon_shielded_planet"
+	event_chain = "nep_heptagram_chain"
+	days_to_research = 720
+	tech_department = physics_technology
+	picture = GFX_evt_shielded_planet
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	
+	on_success = {
+		ship_event = { id = nep_dragon.3 }
+	}
+	
+	on_fail = {
+
+	}
+}

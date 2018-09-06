@@ -182,7 +182,7 @@ country_event = {
 	
 	option = {
 		name = nep_seal.5.b
-#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 200 random = 150} } }
+#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 60 random = 10} } }
 	}
 }
 

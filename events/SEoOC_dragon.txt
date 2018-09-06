@@ -1,9 +1,11 @@
 namespace = nep_dragon
 
-#Create cluster,portal(HIDDEN)
+#Create cluster,portal
 country_event = {
 	id = nep_dragon.1
-	hidden = yes
+	title = "nep_dragon.1.name"
+	desc = "nep_dragon.1.desc"	
+	picture = GFX_evt_black_hole
 		
 	fire_only_once = yes
 	
@@ -113,15 +115,15 @@ country_event = {
 			save_event_target_as = nep_heptagram_system_4
 		}
 		random_system = {
-			limit = { has_star_flag = nep_Samuel_planet }
+			limit = { has_star_flag = nep_Michael_system }
 			save_event_target_as = nep_heptagram_system_5
 		}
 		random_system = {
-			limit = { has_star_flag = nep_Michael_system }
-			save_event_target_as = nep_heptagram_system_6
+			limit = { has_star_flag = nep_Jauiel_system }
+			save_global_event_target_as = nep_heptagram_system_6
 		}
 		random_system = {
-			limit = { has_star_flag = nep_Jauiel_system }
+			limit = { has_star_flag = nep_Anael_system }
 			save_event_target_as = nep_heptagram_system_7
 		}
 		add_hyperlane = {
@@ -186,15 +188,609 @@ country_event = {
 		#portal
 		event_target:nep_seal_system = {
 			spawn_natural_wormhole = {
-				bypass_type = wormhole
-				orbit_distance = 5
-				orbit_angle = 134
-				}
+				bypass_type = nep_sealportal
+				orbit_distance = 100
+				orbit_angle = -135
 			}
+		}
+		event_target:nep_heptagram_system_5 = {
+			spawn_natural_wormhole = {
+				bypass_type = nep_sealportal
+				orbit_distance = 200
+				orbit_angle = 135
+			}
+			link_wormholes = event_target:nep_seal_system
 		}
 	}
 	
 	option = {
 		name = nep_dragon.1.a
+		add_research_option = tech_sealportal_dive
+		set_global_flag = nep_dragon_begin
+		set_country_flag = nep_dragon_founder #...in future
+	}
+	
+	option = {
+		name = nep_dragon.1.b
+#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 50 random = 10} } }
+	}
+}
+
+
+country_event = {
+	id = nep_dragon.2
+	title = "nep_dragon.2.name"
+	desc = "nep_dragon.2.desc"	
+	picture = GFX_evt_black_hole
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_begin
+		has_country_flag = nep_dragon_founder
+		has_technology = tech_sealportal_dive
+		event_target:nep_heptagram_system_5 = {
+			any_ship_in_system = {
+				owner = root
+			}
+		}
+	}
+
+	immediate = {
 		
 	}
+	
+	option = {
+		name = nep_dragon.2.a
+		begin_event_chain = {
+			event_chain = "nep_heptagram_chain"
+			target = THIS
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Auriel_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Gabriel_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Sabriel_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Samuel_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Michael_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Jauiel_planet
+			owner = THIS.owner
+		}
+		enable_special_project = {
+			name = "nep_dragon_shielded_planet"
+			location = event_target:nep_Anael_planet
+			owner = THIS.owner
+		}
+	}
+}
+
+ship_event = {
+	id = nep_dragon.3
+	title = "nep_dragon.3.name"
+	desc = "nep_dragon.3.desc"	
+	picture = GFX_evt_gaia_planet
+	
+	is_triggered_only = yes	
+	
+	fire_only_once = yes
+		
+	immediate = {
+		solar_system = {
+			switch = {
+				trigger = has_star_flag
+				nep_Auriel_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Gabriel_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Sabriel_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Samuel_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Michael_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Jauiel_system = { root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Anael_planet
+					}
+				} } }
+				nep_Anael_system = {  root = { owner = {
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Auriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Gabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Sabriel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Samuel_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Michael_planet
+					}
+					abort_special_project = {
+						name = "nep_dragon_shielded_planet"
+						location = event_target:nep_Jauiel_planet
+					}
+				} } }
+			}
+		}
+	}
+	
+	option = {
+		name = nep_dragon.3.a
+		owner = {
+			end_event_chain = "nep_heptagram_chain"
+		}
+		hidden_effect = {
+			event_target:nep_Auriel_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Auriel_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Gabriel_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Gabriel_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Sabriel_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Sabriel_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Samuel_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Samuel_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Michael_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Michael_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Jauiel_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Jauiel_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+			event_target:nep_Anael_planet = {
+				change_pc = pc_gaia
+				set_planet_entity = {
+					entity = "gaia_planet_01_entity"
+				}
+				set_planet_flag = fallen_empire_world
+				add_modifier = {
+					modifier = "nep_Anael_modifier"
+					days = -1
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						num_adjacent_tiles = 2 
+					}
+					set_building = "nep_ruin_temple"
+				}
+			}
+		}
+	}
+	option = {
+		name = nep_dragon.3.b
+#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 50 random = 5} } }
+	}
+}
+
+#Legnahcras appears
+country_event = {
+	id = nep_dragon.4
+	title = "nep_dragon.4.name"
+	desc = "nep_dragon.4.desc"	
+	picture = GFX_evt_ground_combat
+		
+	fire_only_once = yes
+
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_dragon_begin
+		has_country_flag = nep_dragon_founder
+		AND = {
+			location = event_target:nep_Auriel_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Gabriel_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Sabriel_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Samuel_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Michael_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Jauiel_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+			location = event_target:nep_Anael_planet = {
+				owner = { has_country_flag = nep_dragon_founder }
+				has_building = nep_dragon_temple
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	immediate = {
+		create_country = {
+			name = "Legnahcras"
+			type = nep_Legnahcras_country
+			auto_delete = no
+			effect = {
+				establish_communications_no_message = root.owner
+			}
+		}
+		last_created_country = {
+			set_country_flag = Legnahcras_country
+			save_global_event_target_as = Legnahcras_country
+		}
+		event_target:nep_Auriel_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Gabriel_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Sabriel_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Samuel_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Michael_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Jauiel_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}		
+		event_target:nep_Anael_planet = {
+			while = {
+				count = 12
+				create_army = {
+					name = "Legnahcras existences"
+					owner = last_created
+					type = nep_Legnahcras_defensive_army
+				}
+			}
+		}
+	}
+	option = {
+		name = nep_dragon.4.a
+	}
+}
+
+country_event = {
+	id = nep_dragon.5
+	title = "nep_dragon.5.name"
+	desc = "nep_dragon.5.desc"	
+	picture = GFX_evt_victorious_army
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_dragon_begin
+		has_country_flag = nep_dragon_founder
+		event_target:Legnahcras_country = {
+			num_armies < 1
+	}
+	
+	option = {
+		name = nep_dragon.5.a
+		begin_event_chain = {
+			event_chain = "nep_dragon_chain"
+			target = THIS
+		}
+		
+	}
+}

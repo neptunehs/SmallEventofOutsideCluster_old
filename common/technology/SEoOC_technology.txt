@@ -1,7 +1,7 @@
 tech_sealportal_dive = {
 	cost = @repeatableTechBaseCost
 	area = physics
-	tier = 3
+	tier = 5
 	is_rare = yes
 	is reverse_engineerable = no
 	category = { particles }

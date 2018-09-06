@@ -1,0 +1,41 @@
+nep_ruin_temple = {
+	is_listed = no
+	icon = "building_old_ruins"
+
+	allow = {
+		always = no
+	}
+	
+	upgrades = {
+		nep_dragon_temple
+	}
+	
+	ai_replace = no
+	event_building = yes
+	
+	prerequisites = {
+	}
+}
+
+nep_dragon_temple = {
+	is_listed = no
+	icon = "building_nep_dragon_temple"
+
+
+	cost = {
+		minerals = 1000
+		energy = 1000
+	}
+	ai_replace = no
+	event_building = yes
+
+	produced_resources = {
+		unity = 14
+	}
+
+	required_resources = {
+		energy = 5
+	}	
+	prerequisites = {
+	}
+}

@@ -7,3 +7,13 @@ nep_seal_chain = {
 	picture = GFX_evt_black_hole
 	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
 }
+
+nep_heptagram_chain = {
+	picture = GFX_evt_shielded_planet
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+}
+
+nep_dragon_chain = {
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+}

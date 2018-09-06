@@ -111,7 +111,7 @@ nep_Auriel_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Auriel_modifier }
+		#modifiers = { nep_Auriel_modifier }
 		
 		flags = {
 			nep_Auriel_planet
