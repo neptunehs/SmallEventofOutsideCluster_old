@@ -147,7 +147,7 @@ nep_Auriel_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Gabriel_debuff = {
@@ -165,7 +165,7 @@ nep_Gabriel_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Sabriel_debuff = {
@@ -183,7 +183,7 @@ nep_Sabriel_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Samuel_debuff = {
@@ -201,7 +201,7 @@ nep_Samuel_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Michael_debuff = {
@@ -219,7 +219,7 @@ nep_Michael_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Jauiel_debuff = {
@@ -237,7 +237,7 @@ nep_Jauiel_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }
 
 nep_Anael_debuff = {
@@ -255,5 +255,5 @@ nep_Anael_debuff = {
 	planet_orbital_bombardment_damage = 0.75
 
 	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
-	icon_frame = 1
+	icon_frame = 7
 }

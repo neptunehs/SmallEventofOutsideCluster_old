@@ -116,11 +116,11 @@ country_event = {
 		}
 		random_system = {
 			limit = { has_star_flag = nep_Michael_system }
-			save_event_target_as = nep_heptagram_system_5
+			save_global_event_target_as = nep_heptagram_system_5
 		}
 		random_system = {
 			limit = { has_star_flag = nep_Jauiel_system }
-			save_global_event_target_as = nep_heptagram_system_6
+			save_event_target_as = nep_heptagram_system_6
 		}
 		random_system = {
 			limit = { has_star_flag = nep_Anael_system }

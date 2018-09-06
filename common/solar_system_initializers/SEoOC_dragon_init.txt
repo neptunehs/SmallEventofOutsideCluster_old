@@ -204,7 +204,7 @@ nep_Gabriel_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Gabriel_modifier }
+		#modifiers = { nep_Gabriel_modifier }
 		
 		flags = {
 			nep_Gabriel_planet
@@ -297,7 +297,7 @@ nep_Sabriel_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Sabriel_modifier }
+		#modifiers = { nep_Sabriel_modifier }
 		
 		flags = {
 			nep_Sabriel_planet
@@ -390,7 +390,7 @@ nep_Samuel_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Samuel_modifier }
+		#modifiers = { nep_Samuel_modifier }
 		
 		flags = {
 			nep_Samuel_planet
@@ -484,7 +484,7 @@ nep_Michael_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Michael_modifier }
+		#modifiers = { nep_Michael_modifier }
 		
 		flags = {
 			nep_Michael_planet
@@ -578,7 +578,7 @@ nep_Jauiel_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Jauiel_modifier }
+		#modifiers = { nep_Jauiel_modifier }
 		
 		flags = {
 			nep_Jauiel_planet
@@ -671,7 +671,7 @@ nep_Anael_init = {
 		size = 25
 		
 		tile_blockers = none
-		modifiers = { nep_Anael_modifier }
+		#modifiers = { nep_Anael_modifier }
 		
 		flags = {
 			nep_Anael_planet
