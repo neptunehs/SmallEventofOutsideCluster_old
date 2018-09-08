@@ -769,10 +769,11 @@ country_event = {
 	}
 }
 
+#research
 country_event = {
 	id = nep_dragon.5
 	title = "nep_dragon.5.name"
-	desc = "nep_dragon.5.desc"	
+	desc = "nep_dragon.5.desc"
 	picture = GFX_evt_victorious_army
 	
 	fire_only_once = yes
@@ -783,6 +784,7 @@ country_event = {
 		has_country_flag = nep_dragon_founder
 		event_target:Legnahcras_country = {
 			num_armies < 1
+		}
 	}
 	
 	option = {
@@ -791,6 +793,262 @@ country_event = {
 			event_chain = "nep_dragon_chain"
 			target = THIS
 		}
-		
+		enable_special_project = {
+			name = "nep_Legnahcras_research"
+			location = capital_scope
+			owner = ROOT
+		}		
+	}
+	option = {
+		name = nep_dragon.5.b
+#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 45 random = 5} } }
+	}
+}
+
+#Dragon appear
+country_event = {
+	id = nep_dragon.6
+	title = "nep_dragon.6.name"
+	desc = "nep_dragon.6.desc"
+	picture = GFX_evt_space_dragon
+
+	is_triggered_only = yes	
+
+	fire_only_once = yes
+	
+	immediate = {
+		random_planet = {
+			limit = {
+				has_planet_flag = nep_dragon_star
+				}
+			save_event_target_as = nep_dragon_star
+			}
+		create_country = {
+			name = "Heptagram Dragon"
+			type = nep_dragon_country
+			auto_delete = no
+			effect = {
+				establish_communications_no_message = root.owner
+			}
+		}
+		create_fleet = {
+			name = "Pentacles"
+			settings = {
+				spawn_debris = no 
+			}
+			set_owner = last_created
+			create_ship = {
+				name = "Heptagram Dragon"
+				design = "Heptagram Dragon"
+			}
+			while = {
+				count = 100
+				create_ship = {
+					name = "summoned babys"
+					design = "summoned babys"
+				}
+			}
+			set_location = event_target:nep_dragon_star
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+	}
+	option = {
+		name = nep_dragon.6.a
+		create_point_of_interest = {
+			id = nep_dragon_system_poi.1
+			name = "nep_dragon_system_poi_name"
+			desc = "nep_dragon_system_poi_desc"
+			event_chain = nep_dragon_chain
+			location = event_target:nep_dragon_star
+		}
+	}
+}
+
+#Buff the boss
+country_event = {
+	id = nep_dragon.60
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_dragon
+			}
+			ship_event = { id = nep_dragon.61 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_dragon.60 days = 3 } }
+			}
+		}
+	}
+}
+			
+ship_event = {
+	id = nep_dragon.61
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			repair_percentage = 0.25
+		}
+	}
+}
+
+#Get reward.ready(HIDDEN)
+country_event = {
+	id = nep_dragon.7
+	hidden_window = yes
+	fire_only_once = yes
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = nep_dragon_begin
+		has_country_flag = nep_dragon_founder
+		event_target:nep_dragon_country = {
+			num_fleets < 1
+		}
+	}
+	
+	immediate = {
+		set_global_flag = nep_dragon_end
+		set_country_flag = nep_dragon_summoner
+		remove_global_flag = nep_dragon_begin
+		remove_global_flag = nep_dragon_founder
+		every_country = {
+			if = {
+				limit = {
+					has_event_chain = "nep_dragon_chain"
+				}
+			end_event_chain = "nep_dragon_chain"
+			}
+		}
+		country_event = { id = nep_dragon.8 }
+	}
+}
+
+#Get reward.project
+country_event = {
+	id = nep_dragon.8
+	title = "nep_dragon.8.name"
+	desc = "nep_dragon.8.desc"
+	picture = GFX_evt_space_dragon
+
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		has_country_flag = nep_dragon_summoner
+		NOT = { any_owned_ship = { is_ship_size =  nep_dragon_reward } }
+	}
+	
+	immediate = {
+	
+	}
+	
+	#summon
+	option = {
+		name = nep_dragon.8.a
+		custom_tooltip = nep_dragon.8.b.tooltip
+		trigger = {
+			minerals >= 5000
+			energy >= 40000
+		}
+		add_minerals = -5000
+		add_energy = -40000
+		enable_special_project = {
+			name = "nep_dragon_summon"
+			location = event_target:nep_dragon_star
+			owner = ROOT
+		}
+	}
+	
+	#Maybe later
+	option = {
+		name = nep_dragon.8.b
+		custom_tooltip = nep_dragon.8.b.tooltip
+		hidden_effect = { remove_country_flag = nep_dragon_summoner }
+		country_event = { id = nep_dragon.81 days = 360 }
+	}
+	
+	#It's dangerous
+	option = {
+		name = nep_dragon.8.c
+		hidden_effect = { remove_country_flag = nep_dragon_summoner }
+	}
+}
+
+country_event = {
+	id = nep_dragon.81
+	hidden_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = nep_dragon_summoner
+		country_event = { id = nep_dragon.8 }
+	}
+}
+
+country_event = {
+	id = nep_dragon.82
+	hidden_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = nep_dragon_summoner
+		FromFrom ={ is_ship_size = nep_dragon_reward }
+	}
+	
+	immediate = {
+		country_event = { id = nep_dragon.8 }
+	}
+}
+
+planet_event = {
+	id = nep_dragon.9
+	title = "nep_dragon.9.name"
+	desc = "nep_dragon.9.desc"
+	picture = GFX_evt_space_dragon
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		any_country = {
+			has_country_flag = nep_dragon_summoner
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = nep_dragon_summoner
+			}
+			save_event_target_as = nep_dragon_summoner
+		}
+		create_fleet = {
+			name = "Pentacles"
+			settings = {
+				spawn_debris = no
+			}
+			set_owner = event_target:nep_dragon_summoner
+			create_ship = {
+				name = "Heptagram Dragon"
+				design = "Heptagram Dragon Rebirth"
+			}
+			set_location = this
+		}
 	}
 }

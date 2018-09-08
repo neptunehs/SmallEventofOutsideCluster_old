@@ -11,8 +11,16 @@ on_system_survey_ship = {
 	}
 }
 
+#boss buffs
 on_entering_battle = {
 	events = {
-		nep_seal.90		
+		nep_seal.90	
+		nep_dragon.60		
+	}
+}
+
+on_ship_destroyed_victim = {
+	events = {
+		nep_dragon.82
 	}
 }

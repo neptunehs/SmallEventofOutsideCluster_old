@@ -22,3 +22,40 @@ special_project = {
 
 	}
 }
+
+special_project = {
+	key = "nep_Legnahcras_research"
+	event_chain = "nep_dragon_chain"
+	days_to_research = 1080
+	tech_department = physics_technology
+	picture = GFX_evt_victorious_army
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = planet_event
+	
+	on_success = {
+		OWNER = { country_event = { id = nep_dragon.6 } }
+	}
+	
+	on_fail = {
+
+	}
+}
+
+special_project = {
+	key = "nep_dragon_summon"
+	days_to_research = 1080
+	tech_department = physics_technology
+	picture = GFX_evt_victorious_army
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = planet_event
+	
+	on_success = {
+		planet_event = { id = nep_dragon.9 } }
+	}
+	
+	on_fail = {
+
+	}
+}
