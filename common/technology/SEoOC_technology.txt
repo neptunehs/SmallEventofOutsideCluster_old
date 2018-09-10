@@ -3,7 +3,7 @@ tech_sealportal_dive = {
 	area = physics
 	tier = 5
 	is_rare = yes
-	is reverse_engineerable = no
+	is_reverse_engineerable = no
 	category = { particles }
 	weight = 0
 

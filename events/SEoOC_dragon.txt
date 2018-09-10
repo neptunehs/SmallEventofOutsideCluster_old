@@ -231,7 +231,10 @@ country_event = {
 		has_technology = tech_sealportal_dive
 		event_target:nep_heptagram_system_5 = {
 			any_ship_in_system = {
-				owner = root
+				exists = owner
+				owner = {
+					is_same_value = root
+				}
 			}
 		}
 	}
@@ -300,183 +303,183 @@ ship_event = {
 				trigger = has_star_flag
 				nep_Auriel_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Gabriel_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Sabriel_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Samuel_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Michael_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Jauiel_system = { root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Anael_planet
 					}
 				} } }
 				nep_Anael_system = {  root = { owner = {
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Auriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Gabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Sabriel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Samuel_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Michael_planet
 					}
 					abort_special_project = {
-						name = "nep_dragon_shielded_planet"
+						type = "nep_dragon_shielded_planet"
 						location = event_target:nep_Jauiel_planet
 					}
 				} } }
@@ -645,31 +648,31 @@ country_event = {
 		has_global_flag = nep_dragon_begin
 		has_country_flag = nep_dragon_founder
 		AND = {
-			location = event_target:nep_Auriel_planet = {
+			event_target:nep_Auriel_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Gabriel_planet = {
+			event_target:nep_Gabriel_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Sabriel_planet = {
+			event_target:nep_Sabriel_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Samuel_planet = {
+			event_target:nep_Samuel_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Michael_planet = {
+			event_target:nep_Michael_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Jauiel_planet = {
+			event_target:nep_Jauiel_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
-			location = event_target:nep_Anael_planet = {
+			event_target:nep_Anael_planet = {
 				owner = { has_country_flag = nep_dragon_founder }
 				has_building = nep_dragon_temple
 			}
@@ -836,8 +839,8 @@ country_event = {
 			settings = {
 				spawn_debris = no 
 			}
-			effect = {	
-				set_owner = last_created
+			effect = {
+				set_owner = last_created_country
 				create_ship = {
 					name = "Heptagram Dragon"
 					design = "Heptagram Dragon"
@@ -945,7 +948,7 @@ ship_event = {
 #Get reward.ready(HIDDEN)
 country_event = {
 	id = nep_dragon.7
-	hidden_window = yes
+	hide_window = yes
 	fire_only_once = yes
 	
 	trigger = {
@@ -1035,7 +1038,7 @@ country_event = {
 
 country_event = {
 	id = nep_dragon.81
-	hidden_window = yes
+	hide_window = yes
 
 	is_triggered_only = yes
 	
@@ -1047,7 +1050,7 @@ country_event = {
 
 country_event = {
 	id = nep_dragon.82
-	hidden_window = yes
+	hide_window = yes
 
 	is_triggered_only = yes
 	
@@ -1094,12 +1097,14 @@ planet_event = {
 			settings = {
 				spawn_debris = no
 			}
-			set_owner = event_target:nep_dragon_summoner
-			create_ship = {
-				name = "Heptagram Dragon"
-				design = "Heptagram Dragon Rebirth"
+			effect = {
+				set_owner = event_target:nep_dragon_summoner
+				create_ship = {
+					name = "Heptagram Dragon"
+					design = "Heptagram Dragon Rebirth"
+				}
+				set_location = this
 			}
-			set_location = this
 		}
 		event_target:nep_Auriel_planet = {
 			if = {
@@ -1187,10 +1192,14 @@ planet_event = {
 		}
 		planet_event = { id = nep_dragon.92 days = 1800 }
 	}
+	
+	option = {
+		name = nep_dragon.9.a
+	}
 }
 
 #summon failed
-ship_event = {
+planet_event = {
 	id = nep_dragon.91
 	title = "nep_dragon.91.name"
 	desc = "nep_dragon.91.desc"
@@ -1216,6 +1225,10 @@ ship_event = {
 				owner = this
 			}
 		}
+	}
+	
+	option = {
+		name = nep_dragon.9.a
 	}
 }
 
@@ -1259,7 +1272,7 @@ ship_event = {
 #Starforce return(HIDDEN)
 planet_event = {
 	id = nep_dragon.92
-	hidden_window = yes
+	hide_window = yes
 	
 	is_triggered_only = yes
 
@@ -1315,7 +1328,6 @@ planet_event = {
 					any_owned_ship = { is_ship_size = nep_dragon_reward }
 				}
 				country_event = { id = nep_dragon.93 }
-				}
 			}
 		}
 	}
@@ -1368,7 +1380,7 @@ country_event = {
 
 country_event = {
 	id = nep_dragon.931
-	hidden_window = yes
+	hide_window = yes
 
 	is_triggered_only = yes
 	
@@ -1411,12 +1423,14 @@ planet_event = {
 			settings = {
 				spawn_debris = no
 			}
-			set_owner = event_target:nep_dragon_kaier
-			create_ship = {
-				name = "Heptagram Dragon"
-				design = "Heptagram Dragon Kai"
+			effect = {
+				set_owner = event_target:nep_dragon_kaier
+				create_ship = {
+					name = "Heptagram Dragon"
+					design = "Heptagram Dragon Kai"
+				}
+				set_location = this
 			}
-			set_location = this
 		}
 		event_target:nep_Auriel_planet = {
 			if = {
@@ -1504,9 +1518,13 @@ planet_event = {
 		}
 		planet_event = { id = nep_dragon.92 days = 1800 }
 	}
+	
+	option = {
+		name = nep_dragon.94.a
+	}
 }
 
-ship_event = {
+planet_event = {
 	id = nep_dragon.941
 	title = "nep_dragon.941.name"
 	desc = "nep_dragon.941.desc"
@@ -1532,6 +1550,10 @@ ship_event = {
 				owner = this
 			}
 		}
+	}
+	
+	option = {
+		name = nep_dragon.941.a
 	}
 }
 
@@ -1611,7 +1633,7 @@ ship_event = {
 #Destroy Babys
 fleet_event = {
 	id = nep_dragon.999
-	hidden_window = yes
+	hide_window = yes
 
 	is_triggered_only = yes
 	

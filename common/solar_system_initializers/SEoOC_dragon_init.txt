@@ -134,10 +134,8 @@ nep_Auriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_dark_matter_deposit_3
+				}
 			}
 		}
 
@@ -150,10 +148,8 @@ nep_Auriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_pitharan_deposit_3
+				}
 			}
 		}		
 	}
@@ -227,10 +223,8 @@ nep_Gabriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_zro_deposit_3
+				}
 			}
 		}
 
@@ -243,10 +237,8 @@ nep_Gabriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_teldar_deposit_3
+				}
 			}
 		}		
 	}
@@ -320,10 +312,8 @@ nep_Sabriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_neutronium_deposit_3
+				}
 			}
 		}
 
@@ -336,10 +326,8 @@ nep_Sabriel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_garanthium_deposit_3
+				}
 			}
 		}		
 	}
@@ -413,10 +401,8 @@ nep_Samuel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_orillium_deposit_3
+				}
 			}
 		}
 
@@ -429,11 +415,9 @@ nep_Samuel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_pitharan_deposit_2
 				add_deposit = d_satramene_deposit_2
+				}
 			}
 		}		
 	}
@@ -507,10 +491,8 @@ nep_Michael_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_yurantic_deposit_3
+				}
 			}
 		}
 
@@ -523,11 +505,10 @@ nep_Michael_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_terraforming_gas_deposit_2
 				add_deposit = d_terraforming_fluid_deposit_2
+			
+				}
 			}
 		}		
 	}
@@ -601,10 +582,8 @@ nep_Jauiel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_aldar_deposit_3
+				}
 			}
 		}
 
@@ -617,10 +596,8 @@ nep_Jauiel_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_lythuric_deposit_3
+				}
 			}
 		}		
 	}
@@ -694,10 +671,8 @@ nep_Anael_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_engos_deposit_3
+				}
 			}
 		}
 
@@ -710,10 +685,8 @@ nep_Anael_init = {
 			init_effect = {
 				orbital_deposit_tile = {
 				clear_deposits = yes
-				}
-			}
-			orbital_deposit_tile = {
 				add_deposit = d_Anael_moon
+				}
 			}
 		}		
 	}
