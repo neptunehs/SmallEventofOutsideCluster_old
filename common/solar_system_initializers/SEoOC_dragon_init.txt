@@ -416,7 +416,7 @@ nep_Samuel_init = {
 				}
 			}
 			orbital_deposit_tile = {
-				add_deposit = d_orillium_deposit_2
+				add_deposit = d_orillium_deposit_3
 			}
 		}
 

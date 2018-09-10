@@ -9,22 +9,22 @@ ship_design = {
 		component = {
 			slot = "PRIMARY_WEAPON_01"
 			template = "SEAL_EVIL_PRIMARY_WEAPON"
-		}		
+		}
 		
 		component = {
 			slot = "PRIMARY_WEAPON_02"
 			template = "SEAL_EVIL_PRIMARY_WEAPON"
-		}	
+		}
 
 		component = {
 			slot = "PRIMARY_WEAPON_03"
 			template = "SEAL_EVIL_PRIMARY_WEAPON"
-		}		
+		}
 
 		component = {
 			slot = "PRIMARY_WEAPON_04"
 			template = "SEAL_EVIL_PRIMARY_WEAPON"
-		}		
+		}
 
 
 		component = {
@@ -318,7 +318,7 @@ ship_design = {
 		component = {
 			slot = "AUX_UTILITY_3"
 			template = "AUTO_REPAIR"
-		}		
+		}
 	}
 	required_component="COMBAT_COMPUTER_ARTILLERY_PRECOG"
 	required_component="GUARDIAN_SENSORS"

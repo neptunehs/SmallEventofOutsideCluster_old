@@ -821,7 +821,7 @@ country_event = {
 			limit = {
 				has_planet_flag = nep_dragon_star
 				}
-			save_event_target_as = nep_dragon_star
+			save_global_event_target_as = nep_dragon_star
 			}
 		create_country = {
 			name = "Heptagram Dragon"
@@ -836,23 +836,25 @@ country_event = {
 			settings = {
 				spawn_debris = no 
 			}
-			set_owner = last_created
-			create_ship = {
-				name = "Heptagram Dragon"
-				design = "Heptagram Dragon"
-			}
-			while = {
-				count = 100
+			effect = {	
+				set_owner = last_created
 				create_ship = {
-					name = "summoned babys"
-					design = "summoned babys"
+					name = "Heptagram Dragon"
+					design = "Heptagram Dragon"
 				}
+				while = {
+					count = 100
+					create_ship = {
+						name = "Summoned Babys"
+						design = "Summoned Babys"
+					}
+				}
+				set_location = event_target:nep_dragon_star
+				set_formation_scale = 2.0
+				set_fleet_stance = aggressive
+				set_aggro_range = 500
+				set_aggro_range_measure_from = self
 			}
-			set_location = event_target:nep_dragon_star
-			set_formation_scale = 2.0
-			set_fleet_stance = aggressive
-			set_aggro_range = 500
-			set_aggro_range_measure_from = self
 		}
 	}
 	option = {
@@ -904,6 +906,42 @@ ship_event = {
 	}
 }
 
+country_event = {
+	id = nep_dragon.62
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_dragon
+			}
+			ship_event = { id = nep_dragon.63 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_dragon.62 days = 10 } }
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = nep_dragon.63
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			create_dragon_babys = yes
+		}
+	}
+}
+
 #Get reward.ready(HIDDEN)
 country_event = {
 	id = nep_dragon.7
@@ -949,7 +987,14 @@ country_event = {
 	trigger = {
 		has_global_flag = nep_dragon_end
 		has_country_flag = nep_dragon_summoner
-		NOT = { any_owned_ship = { is_ship_size =  nep_dragon_reward } }
+		NOT = { 
+			any_owned_ship = { 
+				OR = {
+					is_ship_size =  nep_dragon_reward 
+					is_ship_size =  nep_dragon_reward_kai
+				}
+			}
+		}
 	}
 	
 	immediate = {
@@ -959,7 +1004,7 @@ country_event = {
 	#summon
 	option = {
 		name = nep_dragon.8.a
-		custom_tooltip = nep_dragon.8.b.tooltip
+		custom_tooltip = nep_dragon.8.a.tooltip
 		trigger = {
 			minerals >= 5000
 			energy >= 40000
@@ -1008,7 +1053,12 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = nep_dragon_summoner
-		FromFrom ={ is_ship_size = nep_dragon_reward }
+		FromFrom = { 
+			OR = {
+			is_ship_size = nep_dragon_reward 
+			is_ship_size = nep_dragon_reward_kai			
+			}
+		}
 	}
 	
 	immediate = {
@@ -1016,6 +1066,7 @@ country_event = {
 	}
 }
 
+#summon success
 planet_event = {
 	id = nep_dragon.9
 	title = "nep_dragon.9.name"
@@ -1039,7 +1090,7 @@ planet_event = {
 			save_event_target_as = nep_dragon_summoner
 		}
 		create_fleet = {
-			name = "Pentacles"
+			name = "Pentacle"
 			settings = {
 				spawn_debris = no
 			}
@@ -1050,5 +1101,521 @@ planet_event = {
 			}
 			set_location = this
 		}
+		event_target:nep_Auriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Auriel_modifier
+				}
+				remove_modifier = nep_Auriel_modifier
+				add_modifier = {
+					modifier = "nep_Auriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Gabriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Gabriel_modifier
+				}
+				remove_modifier = nep_Gabriel_modifier
+				add_modifier = {
+					modifier = "nep_Gabriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Sabriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Sabriel_modifier
+				}
+				remove_modifier = nep_Sabriel_modifier
+				add_modifier = {
+					modifier = "nep_Sabriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Samuel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Samuel_modifier
+				}
+				remove_modifier = nep_Samuel_modifier
+				add_modifier = {
+					modifier = "nep_Samuel_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Michael_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Michael_modifier
+				}
+				remove_modifier = nep_Michael_modifier
+				add_modifier = {
+					modifier = "nep_Michael_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Jauiel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Jauiel_modifier
+				}
+				remove_modifier = nep_Jauiel_modifier
+				add_modifier = {
+					modifier = "nep_Jauiel_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Anael_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Anael_modifier
+				}
+				remove_modifier = nep_Anael_modifier
+				add_modifier = {
+					modifier = "nep_Anael_debuff"
+					days = 1800
+				}
+			}
+		}
+		planet_event = { id = nep_dragon.92 days = 1800 }
+	}
+}
+
+#summon failed
+ship_event = {
+	id = nep_dragon.91
+	title = "nep_dragon.91.name"
+	desc = "nep_dragon.91.desc"
+	picture = GFX_evt_space_dragon
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		any_country = {
+			has_country_flag = nep_dragon_summoner
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = nep_dragon_summoner
+			}
+			enable_special_project = {
+				name = "nep_dragon_summon"
+				location = event_target:nep_dragon_star
+				owner = this
+			}
+		}
+	}
+}
+
+#Buff reward kai
+country_event = {
+	id = nep_dragon.910
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_dragon_reward
+			}
+			ship_event = { id = nep_dragon.911 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_dragon.910 days = 3 } }
+			}
+		}
+	}
+}
+			
+ship_event = {
+	id = nep_dragon.911
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			repair_percentage = 0.05
+		}
+	}
+}
+
+#Starforce return(HIDDEN)
+planet_event = {
+	id = nep_dragon.92
+	hidden_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:nep_Auriel_planet = {
+			add_modifier = {
+				modifier = "nep_Auriel_modifier"
+				days = -1
+			}
+		}
+		event_target:nep_Gabriel_planet = {
+			add_modifier = {
+				modifier = "nep_Gabriel_modifier"
+				days = -1
+			}
+		}
+		event_target:nep_Sabriel_planet = {
+			add_modifier = {
+				modifier = "nep_Sabriel_modifier"
+				days = -1
+			}
+		}
+		event_target:nep_Samuel_planet = {
+			add_modifier = {
+				modifier = "nep_Samuel_modifier"
+				days = -1
+			}
+		}		
+		event_target:nep_Michael_planet = {
+			add_modifier = {
+				modifier = "nep_Michael_modifier"
+				days = -1
+			}
+		}		
+		event_target:nep_Jauiel_planet = {
+			add_modifier = {
+				modifier = "nep_Jauiel_modifier"
+				days = -1
+			}
+		}		
+		event_target:nep_Anael_planet = {
+			add_modifier = {
+				modifier = "nep_Anael_modifier"
+				days = 1800
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = nep_dragon_summoner
+			}
+			if = {
+				limit = {
+					any_owned_ship = { is_ship_size = nep_dragon_reward }
+				}
+				country_event = { id = nep_dragon.93 }
+				}
+			}
+		}
+	}
+}
+
+#dragon_kai.project
+country_event = {
+	id = nep_dragon.93
+	title = "nep_dragon.93.name"
+	desc = "nep_dragon.93.desc"
+	picture = GFX_evt_space_dragon
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		has_country_flag = nep_dragon_summoner
+		any_owned_ship = { is_ship_size = nep_dragon_reward }
+		NOT = { any_owned_ship = { is_ship_size = nep_dragon_reward_kai } }
+	}
+	
+	immediate = {
+		set_country_flag = nep_dragon_kaier
+	}
+	
+	#agree
+	option = {
+		name = nep_dragon.93.a
+		enable_special_project = {
+			name = "nep_dragon_kaier"
+			location = event_target:nep_dragon_star
+			owner = ROOT
+		}
+	}
+	
+	#Maybe later
+	option = {
+		name = nep_dragon.93.b
+		custom_tooltip = nep_dragon.8.b.tooltip
+		hidden_effect = { remove_country_flag = nep_dragon_kaier }
+		country_event = { id = nep_dragon.931 days = 360 }
+	}
+	
+	#It's dangerous
+	option = {
+		name = nep_dragon.93.c
+		hidden_effect = { remove_country_flag = nep_dragon_kaier }
+	}
+}
+
+country_event = {
+	id = nep_dragon.931
+	hidden_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = nep_dragon_kaier
+		country_event = { id = nep_dragon.93 }
+	}
+}
+
+#kai success
+planet_event = {
+	id = nep_dragon.94
+	title = "nep_dragon.94.name"
+	desc = "nep_dragon.94.desc"
+	picture = GFX_evt_space_dragon
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		any_country = {
+			has_country_flag = nep_dragon_kaier
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = nep_dragon_kaier
+			}
+			save_event_target_as = nep_dragon_kaier
+		}
+		solar_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+		}
+		create_fleet = {
+			name = "Pentacle"
+			settings = {
+				spawn_debris = no
+			}
+			set_owner = event_target:nep_dragon_kaier
+			create_ship = {
+				name = "Heptagram Dragon"
+				design = "Heptagram Dragon Kai"
+			}
+			set_location = this
+		}
+		event_target:nep_Auriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Auriel_modifier
+				}
+				remove_modifier = nep_Auriel_modifier
+				add_modifier = {
+					modifier = "nep_Auriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Gabriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Gabriel_modifier
+				}
+				remove_modifier = nep_Gabriel_modifier
+				add_modifier = {
+					modifier = "nep_Gabriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Sabriel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Sabriel_modifier
+				}
+				remove_modifier = nep_Sabriel_modifier
+				add_modifier = {
+					modifier = "nep_Sabriel_debuff"
+					days = 1800
+				}
+			}
+		}
+		event_target:nep_Samuel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Samuel_modifier
+				}
+				remove_modifier = nep_Samuel_modifier
+				add_modifier = {
+					modifier = "nep_Samuel_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Michael_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Michael_modifier
+				}
+				remove_modifier = nep_Michael_modifier
+				add_modifier = {
+					modifier = "nep_Michael_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Jauiel_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Jauiel_modifier
+				}
+				remove_modifier = nep_Jauiel_modifier
+				add_modifier = {
+					modifier = "nep_Jauiel_debuff"
+					days = 1800
+				}
+			}
+		}		
+		event_target:nep_Anael_planet = {
+			if = {
+				limit = {
+					has_modifier = nep_Anael_modifier
+				}
+				remove_modifier = nep_Anael_modifier
+				add_modifier = {
+					modifier = "nep_Anael_debuff"
+					days = 1800
+				}
+			}
+		}
+		planet_event = { id = nep_dragon.92 days = 1800 }
+	}
+}
+
+ship_event = {
+	id = nep_dragon.941
+	title = "nep_dragon.941.name"
+	desc = "nep_dragon.941.desc"
+	picture = GFX_evt_space_dragon
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_end
+		any_country = {
+			has_country_flag = nep_dragon_kaier
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = nep_dragon_kaier
+			}
+			enable_special_project = {
+				name = "nep_dragon_kaier"
+				location = event_target:nep_dragon_star
+				owner = this
+			}
+		}
+	}
+}
+
+#Buff reward kai
+country_event = {
+	id = nep_dragon.9400
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_dragon_reward_kai
+			}
+			ship_event = { id = nep_dragon.9401 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_dragon.9400 days = 3 } }
+			}
+		}
+	}
+}
+			
+ship_event = {
+	id = nep_dragon.9401
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			repair_percentage = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.9402
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_ship = {
+			limit = {
+				is_ship_size = nep_dragon_reward_kai
+			}
+			ship_event = { id = nep_dragon.9403 }
+			if = {
+				limit =	{ is_in_combat = yes }
+				root = { country_event = { id = nep_dragon.9402 days = 10 } }
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = nep_dragon.9403
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			create_dragon_babys = yes
+		}
+	}
+}
+
+#Destroy Babys
+fleet_event = {
+	id = nep_dragon.999
+	hidden_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		delete_fleet = this
 	}
 }

@@ -46,13 +46,96 @@ special_project = {
 	key = "nep_dragon_summon"
 	days_to_research = 1080
 	tech_department = physics_technology
-	picture = GFX_evt_victorious_army
+	picture = GFX_evt_space_dragon
 	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 	
 	event_scope = planet_event
 	
 	on_success = {
-		planet_event = { id = nep_dragon.9 } }
+		if = {
+			limit = {
+				AND = {
+					event_target:nep_Auriel_planet = {
+						has_modifier = nep_Auriel_modifier
+					}
+					event_target:nep_Gabriel_planet = {
+						has_modifier = nep_Gabriel_modifier
+					}
+					event_target:nep_Sabriel_planet = {
+						has_modifier = nep_Sabriel_modifier
+					}
+					event_target:nep_Samuel_planet = {
+						has_modifier = nep_Samuel_modifier
+					}
+					event_target:nep_Michael_planet = {
+						has_modifier = nep_Michael_modifier
+					}
+					event_target:nep_Jauiel_planet = {
+						has_modifier = nep_Jauiel_modifier
+					}
+					event_target:nep_Anael_planet = {
+						has_modifier = nep_Anael_modifier
+					}
+				}
+			}
+			planet_event = { id = nep_dragon.9}
+		}
+		else = {
+			planet_event = { id = nep_dragon.91}		
+		}
+	}
+	
+	on_fail = {
+
+	}
+}
+
+special_project = {
+	key = "nep_dragon_kaier"
+	days_to_research = 1080
+	tech_department = physics_technology
+	picture = GFX_evt_space_dragon
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = planet_event
+	
+	on_success = {
+		if = {
+			limit = {
+				AND = {
+					event_target:nep_Auriel_planet = {
+						has_modifier = nep_Auriel_modifier
+					}
+					event_target:nep_Gabriel_planet = {
+						has_modifier = nep_Gabriel_modifier
+					}
+					event_target:nep_Sabriel_planet = {
+						has_modifier = nep_Sabriel_modifier
+					}
+					event_target:nep_Samuel_planet = {
+						has_modifier = nep_Samuel_modifier
+					}
+					event_target:nep_Michael_planet = {
+						has_modifier = nep_Michael_modifier
+					}
+					event_target:nep_Jauiel_planet = {
+						has_modifier = nep_Jauiel_modifier
+					}
+					event_target:nep_Anael_planet = {
+						has_modifier = nep_Anael_modifier
+					}
+					solar_system = {
+						any_ship_in_system = {
+							is_ship_size = nep_dragon_reward
+						}
+					}
+				}
+			}
+			planet_event = { id = nep_dragon.94}
+		}
+		else = {
+			planet_event = { id = nep_dragon.941}		
+		}
 	}
 	
 	on_fail = {

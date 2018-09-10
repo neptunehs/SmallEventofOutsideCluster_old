@@ -226,3 +226,33 @@ seal_boss_spawn = {
 #######################################
 #  dragon
 #######################################
+create_dragon_babys = {
+	create_fleet = {
+		name = "Summoned Babys"
+		settings = {
+			spawn_debris = no 
+		}
+		effect = {			
+			set_owner = prev.owner
+			while = {
+				count = 20
+				create_ship = {
+					name = "Summoned Babys"
+					design = "Summoned Babys"
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 10
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self	
+		}
+	}
+	last_created_fleet = {
+		fleet_event = { id = nep_dragon.999 days = 90 }
+	}
+}

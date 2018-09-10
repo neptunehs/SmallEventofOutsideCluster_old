@@ -146,7 +146,7 @@ nep_Auriel_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -164,7 +164,7 @@ nep_Gabriel_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -182,7 +182,7 @@ nep_Sabriel_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -200,7 +200,7 @@ nep_Samuel_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -218,7 +218,7 @@ nep_Michael_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -236,7 +236,7 @@ nep_Jauiel_debuff = {
 	tile_resource_engineering_research_mult = -0.05
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
 
@@ -254,6 +254,6 @@ nep_Anael_debuff = {
 	tile_resource_engineering_research_mult = -0.5
 	planet_orbital_bombardment_damage = 0.75
 
-	icon = "gfx/interface/icons/planet_debuffs/pm_holy_planet.dds"
+	icon = "gfx/interface/icons/planet_debuffs/pm_bleak.dds"
 	icon_frame = 7
 }
