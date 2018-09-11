@@ -44,7 +44,7 @@ special_project = {
 
 special_project = {
 	key = "nep_dragon_summon"
-	days_to_research = 1080
+	days_to_research = 30
 	tech_department = physics_technology
 	picture = GFX_evt_space_dragon
 	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
@@ -92,7 +92,7 @@ special_project = {
 
 special_project = {
 	key = "nep_dragon_kaier"
-	days_to_research = 1080
+	days_to_research = 30
 	tech_department = physics_technology
 	picture = GFX_evt_space_dragon
 	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"

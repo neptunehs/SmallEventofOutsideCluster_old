@@ -1,0 +1,151 @@
+﻿l_english:
+
+ nep_dragon:0 "七星龙"
+ nep_dragon_plural:0 "七星龙"
+ nep_dragon_baby:0 "被召唤的骁龙"
+ nep_dragon_baby_plural:0 "被召唤的骁龙"
+ nep_dragon_reward:0 "七星龙"
+ nep_dragon_reward_plural:0 "七星龙"
+ nep_dragon_reward_kai:0 "七星龙"
+ nep_dragon_reward_kai_plural:0 "七星龙"
+  
+ nep_dragon.1.name:0 "新的封印解开"
+ nep_dragon.1.desc:0 "§Y第一封印§!貌似出现了状况，对黑洞的观测让我们发现了一些违反了黑洞力学定律的状况————之前的观测明明证明了这是普通的黑洞，并不会违反。有理由相信它快解开了。可能是因为我们消灭了§Y封印的邪恶§!造成的震动，造成了§Y第一封印§!解开的契机吧？————虽然也可能是古代文明留下的程序，让它在这时候解开————经过科学家的计算，现在第一封印可能已经演变成一个很特殊的类似于虫洞的天体，我们可能可以通过它前往其他宙域——————但我们不知道通向何处。因为其特殊性，我们可能需要一些研究来让我们的船通过它，尤其是要抵抗住其内部的巨大压力————毕竟这玩意儿看起来依然是个黑洞。"
+ nep_dragon.1.a:0 "设立专项研究。" 
+ nep_dragon.1.b:0 "做好戒备应对，但不要去想这玩意儿的对面是什么了" 
+ 
+ nep_dragon.2.name:0 "七边形星团"
+ nep_dragon.2.desc:0 "我们成功的通过了§Y第一封印§!，出口是一个很奇怪的构成七边形的星团。不管怎么看，这都是人工形成的，而且还位于过去根本无法观测的地方。在我们的船队面前，是一个被防护罩裹住的星球，而且我们的传感器显示其他的几个星系也有。我们应该解开防护罩看看里面究竟是什么，又是谁干的。"
+ nep_dragon.2.a:0 "很好" 
+ 
+ nep_dragon.3.name:0 "防护罩的内部"
+ nep_dragon.3.desc:0 "这个防护罩似乎不是特别复杂，我们的科学家们已经找到了解开的办法了。防护罩内应该是一些盖亚星球————说不定很适合成为我们的新殖民地。另外，每个星球都有一个奇怪的遗迹在，说不定我们花点钱修复，可以让这些古代遗迹成为一些有用的设施？"
+ nep_dragon.3.a:0 "解开防护罩，盖亚星球不应该被浪费。"
+ nep_dragon.3.b:0 "被封印肯定是有理由的，比如说是因为那些遗迹。别管它们了。"
+ 
+ nep_dragon.4.name:0 "不明势力出现"
+ nep_dragon.4.desc:0 "一群不明势力突然在我们的7个新殖民地开始发起攻击。他们很巨大，也很强大，同时没人知道它们的起源。请立刻派出援军————如果不迅速行动，殖民地就要被毁了！"
+ nep_dragon.4.a:0 "将军们！准备战斗！" 
+ 
+ nep_dragon.5.name:0 "胜利！"
+ nep_dragon.5.desc:0 "“托我们伟大且英勇的战士们的福，对不明势力的战斗胜利了！看看他们英勇的战姿！”关掉电视后，在你面前放着的是对不明势力的研究计划————有时候真的觉得，我们的科学家的好奇心是不是太重了些呢？"
+ nep_dragon.5.a:0 "同意研究计划" 
+ nep_dragon.5.b:0 "否决研究计划" 
+ 
+ nep_dragon.6.name:0 "新的威胁？"
+ nep_dragon.6.desc:0 "科学家的研究并没办法让我们搞清这些不明势力的来源。但地毯式搜索还是有用的————我们找到了不明势力的来源，或者说，格纳库。里面有未启动的兵器。我们修改了一部分生体程序后成功的让它们变为我们的战力的一部分。研究也只能到这为止了，因为有新的状况必须应对—————同样是“勇敢”的科学家们的发现—————来自七星星团的中间的不明星系爆发了一股强大的能量反应。"
+ nep_dragon.6.a:0 "让部队做好战斗准备————根据过去的经验来看这准没好事。" 
+ 
+ nep_dragon.64.name:0 "被召唤的龙群"
+ nep_dragon.64.desc:0 "这个星系里有一条巨大的龙和一大堆的小型龙————宇宙中居然还能有这样的生物存在，宇宙真奇妙呢。然而不管怎么看，对面都不像是对我们友好的样子。而且能量反应来看这龙很强，如果要驱逐它，需要做好准备。"
+ nep_dragon.64.a:0 "接下来我们要屠龙？简直像是在神话中那样……" 
+
+ nep_dragon.8.name:0 "奖励时间？"
+ nep_dragon.8.desc.a:0 "有一个————不知道是好是坏的————消息，在我们屠龙后，我们的殖民地上的§Y奉龙殿§!突然开始了运作。目前来看，没有什么危险。运作中的奉龙殿展示了它们的使用方法：只要需要一笔可观的费用，以及星之力（我们暂时还不知道这是啥），我们就能召唤一只新的龙————但这只龙将接受我们的领导。还记得宇宙中心的大封印么？那里写着————“将§Y三个珠子§!与§Y龙§!献祭于这”，不知道这是不是就是龙呢？"
+ nep_dragon.8.desc.b:0 "我们的殖民地上的§Y奉龙殿§!开始了运作。只要需要一笔可观的费用，以及七个星球的星之力，我们就能召唤一只新的龙."
+ nep_dragon.8.a:0 "试试看召唤吧，费用在这里。" 
+ nep_dragon.8.a.tooltip:0 "做好准备后还需要一点时间来召唤。请确保召唤满足条件————即七个星球的星之力。"
+ nep_dragon.8.b:0 "我们现在没有那么多资源。" 
+ nep_dragon.8.b.tooltip:0 "将于360天后再询问。"
+ nep_dragon.8.c:0 "这太危险了。" 
+ 
+ nep_dragon.9.name:0 "召唤成功"
+ nep_dragon.9.desc:0 "我们成功召唤了一只七星龙————代价是七个星球因为失去了星之力变得贫瘠了。另外现在龙还没有达到最佳状态的样子，根据奉龙殿的信息，我们还需要给它再吸收一次星之力。星之力貌似会慢慢恢复，我们等一段时间吧。"
+ nep_dragon.9.a:0 "很好。" 
+ 
+ nep_dragon.91.name:0 "召唤失败"
+ nep_dragon.91.desc:0 "我们的召唤失败了，不过您可以随时再召唤。召唤前要确保我们的7个星系的星之力都恢复了。"
+ nep_dragon.91.a:0 "明白了" 
+ 
+ nep_dragon.93.name:0 "真龙降临"
+ nep_dragon.93.desc:0 "星之力应该已经恢复了。我们可以试着让龙再吸收来完全发挥其实力。"
+ nep_dragon.93.a:0 "试试看让它吸收吧。" 
+ nep_dragon.93.a.tooltip:0 "做好准备后还需要一点时间来吸收。请确保满足条件————七个星球的星之力必须恢复，同时我们的龙必须在中心星系。中心星系最好不要有其他的舰队，因为它们可能会无法承受星之力的奔流而毁灭。"
+ nep_dragon.93.b:0 "晚点再说吧。我们暂时无法承受失去它的可能性。" 
+ nep_dragon.93.b.tooltip:0 "将于360天后再询问。"
+ nep_dragon.93.c:0 "这太危险了。"
+ 
+ nep_dragon.94.name:0 "吸收成功"
+ nep_dragon.94.desc:0 "我们成功的七星龙变为它最强的状态。————代价是七个星球因为失去了星之力变得贫瘠了。希望它能在战争中发挥强大作用。"
+ nep_dragon.94.a:0 "很好。" 
+ 
+ nep_dragon.941.name:0 "吸收失败"
+ nep_dragon.941.desc:0 "我们的吸收计划失败了，不过您可以随时再执行。请确保我们的7个星系的星之力都恢复了，同时我们的龙必须在中心星系。"
+ nep_dragon.941.a:0 "明白了" 
+ 
+ nep_seal_chain_title:0 "封印"
+ nep_seal_chain_desc:0 "我们要知道到底被封印着的是什么东西。" 
+ 
+ nep_seal_debris_explore:0 "残骸研究"
+ nep_seal_debris_explore_DESC:0 "让我们看看这个上古残骸能找到啥？"
+ 
+ nep_malfunctioning_guards_research:0 "彻底研究不明势力"
+ nep_malfunctioning_guards_research_DESC:0 "彻底研究这些突然攻击我们的舰队哪里来的？又跟珠子有什么关系？"
+ 
+ nep_dragon_shielded_planet:0 "防护罩中的世界"
+ nep_dragon_shielded_planet_DESC:0 "科学家打算先探一下里面有什么，再决定是否解开它。"
+ 
+ nep_Legnahcras_research:0 "研究不明势力"
+ nep_Legnahcras_research_DESC:0 "“勇敢”的科学家们试图搞清这些不明势力是什么。"
+ 
+ nep_dragon_system_poi_name:0 "星团中心"
+ nep_dragon_system_poi_desc:0 "这儿就是不明能源反应的起源。"
+ 
+ sc_Aemethms:1 "$pc_black_hole$"
+ sc_Aemethms_desc:1 "$pc_black_hole_desc$"
+ 
+ nep_heptagram_chain_title:0 "神秘星团探索"
+ nep_heptagram_chain_desc:0 "不知道这个神秘的人造星团里有什么呢？"
+ 
+ nep_dragon_chain_title:0 "中间星系探索"
+ nep_dragon_chain_desc:0 "我们要探索能量反应的来源。可能会面临战斗，请做好准备。"
+ 
+ nep_ruin_temple:0 "损坏的设施"
+ nep_ruin_temple_desc:0 "修复下也许还能用？"
+ 
+ nep_dragon_temple:0 "奉龙殿"
+ nep_dragon_temple_desc:0 "被修复的远古遗迹。最近很受欢迎的旅行地点。有时候会原因不明的启动。"
+ 
+ NEP_DRAGON_PRIMARY_WEAPON:0 "Heptagram Dragon's Breath"
+ NEP_DRAGON_PRIMARY_WEAPON_DESC:0 "Heptagram Dragon's Breath" 
+ NEP_DRAGON_LARGE_GUN:0 "Heptagram Dragon's Wing Blaster Beam"
+ NEP_DRAGON_PRIMARY_WEAPON_DESC:0 "Heptagram Dragon's Wing Blaster Beam" 
+ NEP_DRAGON_MEDIUM_GUN:0 "Heptagram Dragon's Wing Skewer"
+ NEP_DRAGON_MEDIUM_GUN_DESC:0 "Heptagram Dragon's Wing Skewer"
+ NEP_DRAGON_SMALL_GUN:0 "Heptagram Dragon's Acid Blast"
+ NEP_DRAGON_SMALL_GUN_DESC:0 "Heptagram Dragon's Acid Blast"
+ NEP_DRAGON_TERTIARY_GUN:0 "Heptagram Dragon's Lightning"
+ NEP_DRAGON_TERTIARY_GUN_DESC:0 "Heptagram Dragon's Lightning"
+ 
+ nep_Auriel_modifier:0 "星之力"
+ nep_Auriel_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Gabriel_modifier:0 "星之力"
+ nep_Gabriel_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Sabriel_modifier:0 "星之力"
+ nep_Sabriel_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Samuel_modifier:0 "星之力"
+ nep_Samuel_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Michael_modifier:0 "星之力"
+ nep_Michael_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Jauiel_modifier:0 "星之力"
+ nep_Jauiel_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ nep_Anael_modifier:0 "星之力"
+ nep_Anael_modifier_desc:0 "满溢的星之力让这个星球在多个领域有更好的表现。"
+ 
+ nep_Auriel_debuff:0 "星之力不足"
+ nep_Auriel_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Gabriel_debuff:0 "星之力不足"
+ nep_Gabriel_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Sabriel_debuff:0 "星之力不足"
+ nep_Sabriel_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Samuel_debuff:0 "星之力不足"
+ nep_Samuel_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Michael_debuff:0 "星之力不足"
+ nep_Michael_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Jauiel_debuff:0 "星之力不足"
+ nep_Jauiel_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ nep_Anael_debuff:0 "星之力不足"
+ nep_Anael_debuff_desc:0 "星之力被吸收让这个星球各方面都显得很贫瘠。"
+ 
+ tech_sealportal_dive:0 "特殊天体传送研究"
+ tech_sealportal_dive_desc:0 "我们要研究一个方法让我们的舰队能够通过大封印那的特殊天体。而且这个天体的异常性让我们有机会在研究中得到关于强化我们的舰队装甲的更多资料。"

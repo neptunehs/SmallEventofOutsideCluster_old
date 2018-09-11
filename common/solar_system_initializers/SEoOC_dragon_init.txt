@@ -1,7 +1,7 @@
 nep_Aemethms_init = {
 	name = "Aemethms"
 
-	class = "sc_black_hole"
+	class = "sc_Aemethms"
 
 	asteroid_belt = {
 		type = crystal_asteroid_belt
@@ -104,7 +104,7 @@ nep_Auriel_init = {
 	
 	planet = {
 		name = "Auriel"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -120,9 +120,6 @@ nep_Auriel_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Auriel_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -193,7 +190,7 @@ nep_Gabriel_init = {
 	
 	planet = {
 		name = "Gabriel"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -209,9 +206,6 @@ nep_Gabriel_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Gabriel_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -282,7 +276,7 @@ nep_Sabriel_init = {
 	
 	planet = {
 		name = "Sabriel"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -298,9 +292,6 @@ nep_Sabriel_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Sabriel_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -371,7 +362,7 @@ nep_Samuel_init = {
 	
 	planet = {
 		name = "Samuel"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -387,9 +378,6 @@ nep_Samuel_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Samuel_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -461,7 +449,7 @@ nep_Michael_init = {
 	
 	planet = {
 		name = "Michael"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -477,9 +465,6 @@ nep_Michael_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Michael_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -552,7 +537,7 @@ nep_Jauiel_init = {
 	
 	planet = {
 		name = "Jauiel"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -568,9 +553,6 @@ nep_Jauiel_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Jauiel_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {
@@ -641,7 +623,7 @@ nep_Anael_init = {
 	
 	planet = {
 		name = "Anael"
-		orbit_distance = 15
+		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
 		orbit_angle = { min = 0 max = 360 }
@@ -657,9 +639,6 @@ nep_Anael_init = {
 		init_effect = {
 			save_global_event_target_as = nep_Anael_planet
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-            }
 		}
 		
 		moon = {

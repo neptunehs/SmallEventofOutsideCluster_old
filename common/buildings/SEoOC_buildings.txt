@@ -19,6 +19,7 @@ nep_ruin_temple = {
 
 nep_dragon_temple = {
 	is_listed = no
+	base_buildtime = 180
 	icon = "building_nep_dragon_temple"
 
 

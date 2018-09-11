@@ -42,6 +42,21 @@ l_english:
  nep_seal_chain_title:0 "nep_seal_chain_title"
  nep_seal_chain_desc:0 "nep_seal_chain_desc" 
  
+ nep_seal_debris_explore:0 "nep_seal_debris_explore"
+ nep_seal_debris_explore_DESC:0 "nep_seal_debris_explore_DESC"
+ 
+ nep_malfunctioning_guards_research:0 "nep_malfunctioning_guards_research"
+ nep_malfunctioning_guards_research_DESC:0 "nep_malfunctioning_guards_research_DESC"
+ 
+ nep_grand_seal_research:0 "nep_grand_seal_research"
+ nep_grand_seal_research_DESC:0 "nep_grand_seal_research_DESC"
+ 
+ nep_grand_seal_final_answer:0 "nep_grand_seal_final_answer_explore"
+ nep_grand_seal_final_answer_DESC:0 "nep_grand_seal_final_answer_DESC"
+ 
+ grand_seal_system_poi_name:0 "grand_seal_system_poi_name"
+ grand_seal_system_poi_desc:0 "grand_seal_system_poi_desc"
+ 
  sc_void_dummy:0 "Void Domain"
  sc_void_dummy_desc:0 "Nothing here."
  

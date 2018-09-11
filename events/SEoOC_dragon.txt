@@ -189,7 +189,7 @@ country_event = {
 		event_target:nep_seal_system = {
 			spawn_natural_wormhole = {
 				bypass_type = nep_sealportal
-				orbit_distance = 100
+				orbit_distance = 0
 				orbit_angle = -135
 			}
 		}
@@ -630,6 +630,9 @@ ship_event = {
 	}
 	option = {
 		name = nep_dragon.3.b
+		owner = {
+			end_event_chain = "nep_heptagram_chain"
+		}
 #		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 50 random = 5} } }
 	}
 }
@@ -701,7 +704,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -711,7 +714,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -721,7 +724,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -731,7 +734,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -741,7 +744,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -751,7 +754,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -761,7 +764,7 @@ country_event = {
 				count = 12
 				create_army = {
 					name = "Legnahcras existences"
-					owner = last_created
+					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
@@ -813,7 +816,7 @@ country_event = {
 	id = nep_dragon.6
 	title = "nep_dragon.6.name"
 	desc = "nep_dragon.6.desc"
-	picture = GFX_evt_space_dragon
+	picture = GFX_evt_engineering_research
 
 	is_triggered_only = yes	
 
@@ -859,7 +862,78 @@ country_event = {
 				set_aggro_range_measure_from = self
 			}
 		}
+		event_target:nep_Auriel_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Gabriel_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Sabriel_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Samuel_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Michael_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Jauiel_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}		
+		event_target:nep_Anael_planet = {
+			while = {
+				count = 2
+				create_army = {
+					name = "Legnahcras existences"
+					owner = root
+					type = nep_Legnahcras_assault_army
+				}
+			}
+		}
 	}
+	
 	option = {
 		name = nep_dragon.6.a
 		create_point_of_interest = {
@@ -869,6 +943,32 @@ country_event = {
 			event_chain = nep_dragon_chain
 			location = event_target:nep_dragon_star
 		}
+	}
+}
+
+#on_entering_system target = nep_seal_ambient_poi
+ship_event = {
+	id = nep_dragon.64
+	title = "nep_dragon.64.name"
+	desc = "nep_dragon.64.desc"	
+	picture = GFX_evt_space_dragon
+	location = THIS
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes		
+	
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+		FROM = {
+			has_star_flag = nep_dragon_star
+		}
+	}
+	
+	option = {
+		name = nep_seal.64.a
 	}
 }
 
@@ -981,7 +1081,18 @@ country_event = {
 country_event = {
 	id = nep_dragon.8
 	title = "nep_dragon.8.name"
-	desc = "nep_dragon.8.desc"
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = nep_dragon.8.notfirst }
+		}
+		text = "nep_dragon.8.desc.a"
+	}
+	desc = {
+		trigger = {
+			has_country_flag = nep_dragon.8.notfirst
+		}
+		text = "nep_dragon.8.desc.b"
+	}
 	picture = GFX_evt_space_dragon
 
 
@@ -1019,20 +1130,38 @@ country_event = {
 			location = event_target:nep_dragon_star
 			owner = ROOT
 		}
+		hidden_effect = { 
+			if = {
+				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
+				set_country_flag = nep_dragon.8.notfirst
+			}
+		}
 	}
 	
 	#Maybe later
 	option = {
 		name = nep_dragon.8.b
 		custom_tooltip = nep_dragon.8.b.tooltip
-		hidden_effect = { remove_country_flag = nep_dragon_summoner }
+		hidden_effect = { 
+			remove_country_flag = nep_dragon_summoner
+			if = {
+				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
+				set_country_flag = nep_dragon.8.notfirst
+			}
+		}
 		country_event = { id = nep_dragon.81 days = 360 }
 	}
 	
 	#It's dangerous
 	option = {
-		name = nep_dragon.8.c
-		hidden_effect = { remove_country_flag = nep_dragon_summoner }
+		name = nep_dragon.8.c		
+		hidden_effect = { 
+			remove_country_flag = nep_dragon_summoner
+			if = {
+				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
+				set_country_flag = nep_dragon.8.notfirst
+			}
+		}
 	}
 }
 
@@ -1232,7 +1361,7 @@ planet_event = {
 	}
 }
 
-#Buff reward kai
+#Buff reward
 country_event = {
 	id = nep_dragon.910
 	hide_window = yes

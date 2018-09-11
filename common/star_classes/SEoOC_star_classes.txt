@@ -75,3 +75,31 @@ sc_grand_seal = {
 		ship_evasion_mult = -0.5
 	}
 }
+
+#Aemethms
+sc_Aemethms = {
+	class 			= black_hole
+	icon_scale		= 3.0
+	planet			= { key = pc_black_hole }
+	spawn_odds 		= 0
+	num_planets 	= 0
+
+	pc_continental 	= { spawn_odds = 0 }
+	pc_desert		= { spawn_odds = 0 }
+	pc_tropical		= { spawn_odds = 0 }
+	pc_arid 		= { spawn_odds = 0 }
+	pc_ocean		= { spawn_odds = 0 }
+	pc_tundra		= { spawn_odds = 0 }
+	pc_arctic		= { spawn_odds = 0 }
+	pc_alpine		= { spawn_odds = 0 }
+	pc_savannah		= { spawn_odds = 0 }
+
+	is_environmental_hazard = yes
+	modifier = {
+		ship_sensor_range_add = -5
+		ship_accuracy_add = -0.1
+		ship_tracking_add = -0.1
+		ship_emergency_ftl_mult = 0.1
+		ship_disengage_chance_reduction = 0.1
+	}
+}

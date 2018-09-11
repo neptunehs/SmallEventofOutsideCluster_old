@@ -26,10 +26,6 @@ nep_sealportal = {
 			OR = {
 				# No ship can bear the gravitation in the seal hole
 				has_technology = tech_lgate_activation
-				# System's owner has not closed borders to you
-				from = { 
-					NOT = { has_closed_borders = root }
-				}
 			}
 		}
 	}
