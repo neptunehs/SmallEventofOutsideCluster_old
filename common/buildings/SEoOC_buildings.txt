@@ -12,6 +12,7 @@ nep_ruin_temple = {
 	
 	ai_replace = no
 	event_building = yes
+	immune_to_bombardment = yes
 	
 	prerequisites = {
 	}
@@ -29,6 +30,7 @@ nep_dragon_temple = {
 	}
 	ai_replace = no
 	event_building = yes
+	immune_to_bombardment = yes
 
 	produced_resources = {
 		unity = 14

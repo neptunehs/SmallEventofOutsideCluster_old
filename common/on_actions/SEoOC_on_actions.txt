@@ -29,3 +29,15 @@ on_ship_destroyed_victim = {
 		nep_dragon.82
 	}
 }
+
+on_planet_attackers_win = {
+	events = {
+		nep_dragon.997
+		nep_dragon.996
+		nep_dragon.995
+		nep_dragon.994
+		nep_dragon.993
+		nep_dragon.992
+		nep_dragon.991
+	}
+}

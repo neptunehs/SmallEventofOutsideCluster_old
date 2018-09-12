@@ -14,7 +14,8 @@ country_event = {
 		has_country_flag = nep_highway_founder
 		has_global_flag = nep_highway_used
 		has_global_flag = seal_evil_country_created
-		event_target:seal_evil_country = {
+		any_country = {
+			has_country_flag = seal_evil_country
 			num_fleets < 1
 		}
 	}
@@ -510,6 +511,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Auriel_temple
 				}
 			}
 			event_target:nep_Gabriel_planet = {
@@ -529,6 +531,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Gabriel_temple
 				}
 			}
 			event_target:nep_Sabriel_planet = {
@@ -548,6 +551,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Sabriel_temple
 				}
 			}
 			event_target:nep_Samuel_planet = {
@@ -567,6 +571,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Samuel_temple
 				}
 			}
 			event_target:nep_Michael_planet = {
@@ -586,6 +591,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Michael_temple
 				}
 			}
 			event_target:nep_Jauiel_planet = {
@@ -605,6 +611,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Jauiel_temple
 				}
 			}
 			event_target:nep_Anael_planet = {
@@ -624,6 +631,7 @@ ship_event = {
 						num_adjacent_tiles = 2 
 					}
 					set_building = "nep_ruin_temple"
+					save_global_event_target_as = nep_Anael_temple
 				}
 			}
 		}
@@ -696,12 +704,11 @@ country_event = {
 			}
 		}
 		last_created_country = {
-			set_country_flag = Legnahcras_country
 			save_global_event_target_as = Legnahcras_country
 		}
 		event_target:nep_Auriel_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -711,7 +718,7 @@ country_event = {
 		}		
 		event_target:nep_Gabriel_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -721,7 +728,7 @@ country_event = {
 		}		
 		event_target:nep_Sabriel_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -731,7 +738,7 @@ country_event = {
 		}		
 		event_target:nep_Samuel_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -741,7 +748,7 @@ country_event = {
 		}		
 		event_target:nep_Michael_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -751,7 +758,7 @@ country_event = {
 		}		
 		event_target:nep_Jauiel_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
@@ -761,13 +768,16 @@ country_event = {
 		}		
 		event_target:nep_Anael_planet = {
 			while = {
-				count = 12
+				count = 13
 				create_army = {
 					name = "Legnahcras existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
 			}
+		}
+		event_target:Legnahcras_country = {
+			set_country_flag = Legnahcras_country
 		}
 	}
 	option = {
@@ -788,20 +798,25 @@ country_event = {
 		is_ai = no
 		has_global_flag = nep_dragon_begin
 		has_country_flag = nep_dragon_founder
-		event_target:Legnahcras_country = {
+		any_country = {
+			has_country_flag = Legnahcras_country
 			num_armies < 1
 		}
+	}
+	
+	immediate = {
+	
 	}
 	
 	option = {
 		name = nep_dragon.5.a
 		begin_event_chain = {
 			event_chain = "nep_dragon_chain"
-			target = THIS
+			target = ROOT
 		}
 		enable_special_project = {
 			name = "nep_Legnahcras_research"
-			location = capital_scope
+			location = ROOT.capital_scope
 			owner = ROOT
 		}		
 	}
@@ -837,13 +852,16 @@ country_event = {
 				establish_communications_no_message = root.owner
 			}
 		}
+		last_created_country = {
+			save_global_event_target_as = nep_dragon_country
+		}
 		create_fleet = {
 			name = "Pentacles"
 			settings = {
 				spawn_debris = no 
 			}
 			effect = {
-				set_owner = last_created_country
+				set_owner = event_target:nep_dragon_country
 				create_ship = {
 					name = "Heptagram Dragon"
 					design = "Heptagram Dragon"
@@ -861,6 +879,9 @@ country_event = {
 				set_aggro_range = 500
 				set_aggro_range_measure_from = self
 			}
+		}
+		event_target:nep_dragon_country = {
+			set_country_flag = nep_dragon_country
 		}
 		event_target:nep_Auriel_planet = {
 			while = {
@@ -1055,7 +1076,8 @@ country_event = {
 		is_ai = no
 		has_global_flag = nep_dragon_begin
 		has_country_flag = nep_dragon_founder
-		event_target:nep_dragon_country = {
+		any_country = {
+			has_country_flag = nep_dragon_country
 			num_fleets < 1
 		}
 	}
@@ -1755,6 +1777,189 @@ ship_event = {
 				has_hp_percentage > 0
 			}
 			create_dragon_babys = yes
+		}
+	}
+}
+
+#restore temples
+country_event = {
+	id = nep_dragon.991
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Auriel_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Auriel_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.992
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Gabriel_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Gabriel_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.993
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Sabriel_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Sabriel_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.994
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Samuel_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Samuel_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.995
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Michael_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Michael_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.996
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Jauiel_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Jauiel_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_dragon.997
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			has_planet_flag = nep_Anael_planet
+			NOT = { has_building = nep_dragon_temple }
+		}
+	}
+	
+	immediate = {
+		event_target:nep_Anael_temple = {
+			if = {
+				limit = {
+					has_blocker = yes
+				}
+				remove_blocker = yes
+				set_building = nep_ruin_temple
+			}
 		}
 	}
 }
