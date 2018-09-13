@@ -878,6 +878,10 @@ country_event = {
 				set_fleet_stance = aggressive
 				set_aggro_range = 500
 				set_aggro_range_measure_from = self
+				add_modifier = {
+					modifier = nep_dragon_boss_buff
+					days = -1
+				}
 			}
 		}
 		event_target:nep_dragon_country = {
@@ -985,6 +989,9 @@ ship_event = {
 		}
 		FROM = {
 			has_star_flag = nep_dragon_star
+			any_ship_in_system = {
+				is_ship_size = nep_dragon
+			}
 		}
 	}
 	
@@ -1000,16 +1007,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_dragon_in_battle
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_dragon
 			}
-			ship_event = { id = nep_dragon.61 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_dragon.60 days = 3 } }
-			}
+			set_global_flag = nep_dragon_in_battle
+			ship_event = { id = nep_dragon.61 days = 3 }
 		}
 	}
 }
@@ -1027,6 +1037,18 @@ ship_event = {
 			}
 			repair_percentage = 0.25
 		}
+		else = {
+			remove_global_flag = nep_dragon_in_battle
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_dragon.61 days = 3 }
+		}
+		else = {
+			remove_global_flag = nep_dragon_in_battle
+		}
 	}
 }
 
@@ -1036,20 +1058,23 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_dragon_in_battle_2
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_dragon
 			}
-			ship_event = { id = nep_dragon.63 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_dragon.62 days = 10 } }
-			}
+			set_global_flag = nep_dragon_in_battle_2
+			ship_event = { id = nep_dragon.63 days = 10 }
 		}
 	}
 }
-
+			
 ship_event = {
 	id = nep_dragon.63
 	hide_window = yes
@@ -1062,6 +1087,18 @@ ship_event = {
 				has_hp_percentage > 0
 			}
 			create_dragon_babys = yes
+		}
+		else = {
+			remove_global_flag = nep_dragon_in_battle_2
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_dragon.63 days = 10 }
+		}
+		else = {
+			remove_global_flag = nep_dragon_in_battle_2
 		}
 	}
 }
@@ -1390,16 +1427,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_dragon_r_in_battle
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_dragon_reward
 			}
-			ship_event = { id = nep_dragon.911 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_dragon.910 days = 3 } }
-			}
+			set_global_flag = nep_dragon_r_in_battle
+			ship_event = { id = nep_dragon.911 days = 3 }
 		}
 	}
 }
@@ -1416,6 +1456,18 @@ ship_event = {
 				has_hp_percentage > 0
 			}
 			repair_percentage = 0.05
+		}
+		else = {
+			remove_global_flag = nep_dragon_r_in_battle
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_dragon.911 days = 3 }
+		}
+		else = {
+			remove_global_flag = nep_dragon_r_in_battle
 		}
 	}
 }
@@ -1715,16 +1767,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_dragon_rk_in_battle
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_dragon_reward_kai
 			}
-			ship_event = { id = nep_dragon.9401 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_dragon.9400 days = 3 } }
-			}
+			set_global_flag = nep_dragon_rk_in_battle
+			ship_event = { id = nep_dragon.9401 days = 3 }
 		}
 	}
 }
@@ -1740,7 +1795,19 @@ ship_event = {
 			limit = {
 				has_hp_percentage > 0
 			}
-			repair_percentage = 0.1
+			repair_percentage = 0.25
+		}
+		else = {
+			remove_global_flag = nep_dragon_rk_in_battle
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_dragon.9401 days = 3 }
+		}
+		else = {
+			remove_global_flag = nep_dragon_rk_in_battle
 		}
 	}
 }
@@ -1751,20 +1818,23 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_dragon_rk_in_battle_2
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_dragon_reward_kai
 			}
-			ship_event = { id = nep_dragon.9403 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_dragon.9402 days = 10 } }
-			}
+			set_global_flag = nep_dragon_rk_in_battle_2
+			ship_event = { id = nep_dragon.9403 days = 10 }
 		}
 	}
 }
-
+			
 ship_event = {
 	id = nep_dragon.9403
 	hide_window = yes
@@ -1777,6 +1847,18 @@ ship_event = {
 				has_hp_percentage > 0
 			}
 			create_dragon_babys = yes
+		}
+		else = {
+			remove_global_flag = nep_dragon_rk_in_battle_2
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_dragon.9403 days = 10 }
+		}
+		else = {
+			remove_global_flag = nep_dragon_rk_in_battle_2
 		}
 	}
 }

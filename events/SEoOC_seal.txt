@@ -1101,16 +1101,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_global_flag = nep_seal_evil_in_battle
+		}
+	}
+	
 	immediate = {
 		random_owned_ship = {
 			limit = {
 				is_ship_size = nep_seal_evil
 			}
-			ship_event = { id = nep_seal.91 }
-			if = {
-				limit =	{ is_in_combat = yes }
-				root = { country_event = { id = nep_seal.90 days = 3 } }
-			}
+			set_global_flag = nep_seal_evil_in_battle
+			ship_event = { id = nep_seal.91 days = 3 }
 		}
 	}
 }
@@ -1127,6 +1130,18 @@ ship_event = {
 				has_hp_percentage > 0
 			}
 			repair_percentage = 0.15
+		}
+		else = {
+			remove_global_flag = nep_seal_evil_in_battle
+		}
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			ship_event = { id = nep_seal.91 days = 3 }
+		}
+		else = {
+			remove_global_flag = nep_seal_evil_in_battle
 		}
 	}
 }

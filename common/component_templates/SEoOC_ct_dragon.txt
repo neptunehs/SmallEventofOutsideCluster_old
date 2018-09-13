@@ -10,7 +10,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 5040.0 max = 7580.0 }
+	damage = { min = 7040.0 max = 10580.0 }
 	windup = { min = 12.0 max = 24.0 }
 	
 	total_fire_time = 36
@@ -19,7 +19,8 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.5
 	
-	armor_penetration = 1.0
+	shield_penetration = 1.5
+	armor_penetration = 1.5
 
 	
 	#firing_arc = 15.0
@@ -52,7 +53,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 600.0 max = 1000.0 }
+	damage = { min = 1600.0 max = 2800.0 }
 	windup = { min = 21.0 max = 33.0 }
 	
 	total_fire_time = 42
@@ -94,7 +95,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 250.0 max = 500.0 }
+	damage = { min = 500.0 max = 750.0 }
 	windup = { min = 3.0 max = 15.5 }
 	
 	total_fire_time = 24
@@ -136,7 +137,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 120.0 max = 190.0 }
+	damage = { min = 240.0 max = 380.0 }
 	windup = { min = 1.0 max = 12.5 }
 	
 	total_fire_time = 16
@@ -178,7 +179,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 40.0 max = 80.0 }
+	damage = { min = 60.0 max = 90.0 }
 	windup = { min = 0 max = 0 }
 	
 	total_fire_time = 5

@@ -152,6 +152,11 @@ special_project = {
 						has_modifier = nep_Anael_modifier
 						has_building = nep_dragon_temple
 					}
+					solar_system = {
+						any_ship_in_system = {
+							is_ship_size = nep_dragon_reward
+						}
+					}
 				}
 			}
 			planet_event = { id = nep_dragon.94}

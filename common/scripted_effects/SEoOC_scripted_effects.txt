@@ -209,6 +209,12 @@ seal_boss_spawn = {
 			create_ship = {
 				name = "Seal Evil"
 				design = "Seal evil"
+				effect = {
+					add_modifier = {
+						modifier = nep_seal_evil_buff
+						days = -1
+					}
+				}
 			}	
 			set_location = {
 				target = event_target:nep_grand_seal_planet
@@ -253,6 +259,6 @@ create_dragon_babys = {
 		}
 	}
 	last_created_fleet = {
-		fleet_event = { id = nep_dragon.999 days = 90 }
+		fleet_event = { id = nep_dragon.999 days = 45 }
 	}
 }

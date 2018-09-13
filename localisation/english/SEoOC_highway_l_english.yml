@@ -107,31 +107,31 @@
  nep_highway.8.b:0 "This is our military priority!Fake News!"
  nep_highway.8.b.tooltip:0 "Automatically build starbases across all relevant stars throughout the Surround-Galaxy Highway and close border to all countries."
  
- nep_highway_chain_title:0 "nep_highway_chain_title"
- nep_highway_chain_desc:0 "nep_highway_chain_desc" 
+ nep_highway_chain_title:0 "Mysterious Highway"
+ nep_highway_chain_desc:0 "What does the "highway" we find in the records of the ruins mean?" 
  
- nep_highway_vultaumar_explore:0 "nep_highway_vultaumar_explore"
- nep_highway_vultaumar_explore_DESC:0 "nep_highway_vultaumar_explore_DESC"
+ nep_highway_vultaumar_explore:0 "Explore Vultaumar Relic"
+ nep_highway_vultaumar_explore_DESC:0 "Explore vultaumar relic.See if we can find something useful?"
  
- nep_highway_yuhtaan_explore:0 "nep_highway_yuhtaan_explore"
- nep_highway_yuhtaan_explore_DESC:0 "nep_highway_yuhtaan_explore_DESC"
+ nep_highway_yuhtaan_explore:0 "Explore Yuhtaan Relic"
+ nep_highway_yuhtaan_explore_DESC:0 "Explore Yuhtaan relic.See if we can find something useful?"
  
- nep_highway_fen_habbanis_explore:0 "nep_highway_fen_habbanis_explore"
- nep_highway_fen_habbanis_explore_DESC:0 "nep_highway_fen_habbanis_explore_DESC"
+ nep_highway_fen_habbanis_explore:0 "Explore Vultaumar Relic"
+ nep_highway_fen_habbanis_explore_DESC:0 "Explore vultaumar relic.See if we can find something useful?"
  
- nep_highway_irass_explore:0 "nep_highway_irass_explore"
- nep_highway_irass_explore_DESC:0 "nep_highway_irass_explore_DESC"
+ nep_highway_irass_explore:0 "Explore Irass Relic"
+ nep_highway_irass_explore_DESC:0 "Explore Irass relic.See if we can find something useful?"
  
- nep_highway_cybrex_explore:0 "nep_highway_cybrex_explore"
- nep_highway_cybrex_explore_DESC:0 "nep_highway_cybrex_explore_DESC" 
+ nep_highway_cybrex_explore:0 "Explore Cybrex Relic"
+ nep_highway_cybrex_explore_DESC:0 "Explore Cybrex relic.See if we can find something useful?" 
  
- nep_highway_first_station_explore:0 "nep_highway_first_station_explore"
- nep_highway_first_station_explore_DESC:0 "nep_highway_first_station_explore_DESC"
+ nep_highway_first_station_explore:0 "Explore "Station" of "Highway""
+ nep_highway_first_station_explore_DESC:0 "What is the “highway” and “station” mentioned in the record?"
  
  first_highway_station_system_poi_name:0 "Poisition of interest"
- first_highway_station_system_poi_desc:0 "first_highway_station_system_poi_desc"
+ first_highway_station_system_poi_desc:0 "Here is where the record is mentioned."
  
- nep_highway_fee:0 "nep_highway_fee"
+ nep_highway_fee:0 "Economic Benefit of Surround-Galaxy Highway"
  
  sc_hw_n:1 "$pc_b_star$"
  sc_hw_n_desc:1 "$pc_b_star_desc$"
