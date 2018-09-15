@@ -5,10 +5,10 @@ Stellarid mod without any new models.Not completed.
 
 2.Seal of void:95% localisation
 
-3.Hexagram Dragon:0%
+3.Hexagram Dragon:95%
 
 4.Invasion of Karh'en:0%
 
-5.Arena of ???(No idea):0%
-
 6.Seal of void break:0%
+
+(I won't do 5 before I have any ideas)
