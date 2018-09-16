@@ -163,7 +163,7 @@ country_event = {
 		add_hyperlane = {
 			from = event_target:nep_heptagram_system_3
 			to = event_target:nep_heptagram_system_5
-		}		
+		}
 		add_hyperlane = {
 			from = event_target:nep_heptagram_system_5
 			to = event_target:nep_heptagram_system_7
@@ -294,7 +294,7 @@ ship_event = {
 	desc = "nep_dragon.3.desc"	
 	picture = GFX_evt_gaia_planet
 	
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	
 	fire_only_once = yes
 		

@@ -89,7 +89,7 @@ nep_Auriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -175,7 +175,7 @@ nep_Gabriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -261,7 +261,7 @@ nep_Sabriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -347,7 +347,7 @@ nep_Samuel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -434,7 +434,7 @@ nep_Michael_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -522,7 +522,7 @@ nep_Jauiel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -608,7 +608,7 @@ nep_Anael_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 120 max = 250 }
+        orbit_distance = { min = 70 max = 180 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 

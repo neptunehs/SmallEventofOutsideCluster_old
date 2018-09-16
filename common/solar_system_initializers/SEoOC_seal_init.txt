@@ -168,7 +168,7 @@ nep_step_1 = {
 	}
 	
 	planet = {
-		class = "pc_bwm_star_dummy"
+		class = "pc_star_void_dummy_01"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = 1
@@ -193,7 +193,7 @@ nep_step_2 = {
 	}
 	
 	planet = {
-		class = "pc_bwm_star_dummy"
+		class = "pc_star_void_dummy_01"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = 1
@@ -218,7 +218,7 @@ nep_step_3 = {
 	}
 	
 	planet = {
-		class = "pc_bwm_star_dummy"
+		class = "pc_star_void_dummy_01"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = 1
@@ -243,7 +243,7 @@ nep_step_4 = {
 	}
 	
 	planet = {
-		class = "pc_bwm_star_dummy"
+		class = "pc_star_void_dummy_01"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = 1
@@ -268,7 +268,7 @@ nep_step_5 = {
 	}
 	
 	planet = {
-		class = "pc_bwm_star_dummy"
+		class = "pc_star_void_dummy_01"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = 1

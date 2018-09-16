@@ -101,3 +101,303 @@ country_event = {
 		}
 		}
 }
+
+country_event = {
+	id = nep_test.3
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+		
+	immediate = {
+		capital_scope = {
+			set_variable = { which = "vari1" value = 1 }
+			random_system = {
+				set_variable = { which = "vari1" value = 2 }
+				random_rim_system = {
+					set_variable = { which = "vari1" value = 3 }
+					if = {
+						limit = {
+							check_variable = { which = "vari1" value = 1 }
+						}
+						log = "[This.GetName] = 1"
+					}
+					if = {
+						limit = {
+							check_variable = { which = "vari1" value = 2 }
+						}
+						log = "[This.GetName] = 2"
+					}
+					if = {
+						limit = {
+							check_variable = { which = "vari1" value = 3 }
+						}
+						log = "[This.GetName] = 3"
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { which = "vari1" value = 1 }
+					}
+					log = "[This.GetName] = 1"
+				}
+				if = {
+					limit = {
+						check_variable = { which = "vari1" value = 2 }
+					}
+					log = "[This.GetName] = 2"
+				}
+				if = {
+					limit = {
+						check_variable = { which = "vari1" value = 3 }
+					}
+					log = "[This.GetName] = 3"
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = "vari1" value = 1 }
+				}
+				log = "[This.GetName] = 1"
+			}
+			if = {
+				limit = {
+					check_variable = { which = "vari1" value = 2 }
+				}
+				log = "[This.GetName] = 2"
+			}
+			if = {
+				limit = {
+					check_variable = { which = "vari1" value = 3 }
+				}
+				log = "[This.GetName] = 3"
+			}	
+		}
+	}
+}
+
+country_event = {
+	id = nep_test.4
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+
+	immediate = {
+		capital_scope = {
+			solar_system = {
+			random_system = {
+				limit = {
+					distance = {
+						source = prev
+						use_bypasses = no
+						min_jumps = 2
+						max_jumps = 6
+					}
+				}
+				if = {
+					limit = { has_hyperlane_to = prev }
+					log = "2~6:[This.GetName] = yes"
+				}
+				else = {
+					log = "2~6:[This.GetName] = no"
+				}
+			}
+			random_system = {
+				limit = {
+					distance = {
+						source = prev
+						use_bypasses = no
+						min_jumps = 1
+						max_jumps = 1
+					}
+				}
+				if = {
+					limit = { has_hyperlane_to = prev }
+					log = "1:[This.GetName] = yes"
+				}
+				else = {
+					log = "1:[This.GetName] = no"
+				}
+			}
+			random_system = {
+				limit = {
+					distance = {
+						source = prev
+						use_bypasses = no
+						min_jumps = 0
+						max_jumps = 0
+					}
+				}
+				if = {
+					limit = { exists = this }
+					log = "0:[This.GetName] = yes"
+				}
+				else = {
+					log = "0: = no"
+				}
+			}
+		}}
+	}
+}
+
+country_event = {
+	id = nep_test.5
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+
+	immediate = {
+		#cluster
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 565
+				max_distance <= 575
+				min_orientation_angle = 314
+				max_orientation_angle = 316
+				hyperlane = no
+				initializer = nep_Central_init
+			}
+		}
+		random_system = { 
+			limit = { has_star_flag = nep_Central_system }
+			spawn_system = {
+				min_distance >= 15
+				max_distance <= 35
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Centaury_init
+			}
+			spawn_system = {
+				min_distance >= 15
+				max_distance <= 35
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Magellan_init
+			}
+			spawn_system = {
+				min_distance >= 15
+				max_distance <= 35
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Orion_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Aurora_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Tra_init
+			}
+			spawn_system = {
+				min_distance >= 15
+				max_distance <= 35
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Andromeda_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Persei_init
+			}
+			spawn_system = {
+				min_distance >= 20
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Trantor_init
+			}
+			spawn_system = {
+				min_distance >= 30
+				max_distance <= 50
+				min_orientation_angle = 0
+				max_orientation_angle = 360
+				hyperlane = no
+				initializer = nep_Exterior_init
+			}
+		}
+		while = {
+			limit = {
+				any_system = {
+					has_star_flag = nep_Krahen_cluster
+					check_variable = { which = hyperlane_num value < 3 }
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = nep_Krahen_cluster
+					check_variable = { which = hyperlane_num value < 3 }
+				}
+				random_system = {
+					limit = {
+						NOT = { 
+							is_same_value = prev 
+							has_hyperlane_to = prev
+						}
+						has_star_flag = nep_Krahen_cluster
+						check_variable = { which = hyperlane_num value < 3 }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+					change_variable = { which = hyperlane_num value = 1 }
+				}
+				change_variable = { which = hyperlane_num value = 1 }
+			}
+		}
+		set_spawn_system_batch = end
+	}
+}
+
+country_event = {
+	id = nep_test.6
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+	
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = nep_Krahen_cluster }
+			random_system = {
+				limit = {
+					distance = {
+						source = prev
+						use_bypasses = no
+						min_jumps = 9
+						max_jumps = 9
+					}
+					has_star_flag = nep_Krahen_cluster
+				}
+				if = {
+					limit = { exists = this }
+					log = "[This.GetName] - [Prev.GetName]"
+				}
+				else = {
+					log = "Nope."				
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+# Disabled Gateway
+nep_sealgate_ruined = {
+	entity = "deactivated_gateway_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = no
+	bypass_type = nep_sealgate
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+
+	potential = {
+		always = no
+	}
+}
+
+# Restored Gateway
+nep_sealgate_restored = {
+	entity = "reactivated_gateway_entity"
+	construction_entity = "gateway_portal_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = no
+	
+	potential = {
+		has_technology = tech_gateway_activation
+		has_technology = tech_sealportal_dive
+		has_technology = tech_gateway_construction
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technologys_sealgate"
+			from = { 
+				has_technology = tech_gateway_activation
+				has_technology = tech_sealportal_dive
+				has_technology = tech_gateway_construction
+			}
+		}
+	}
+	upgrade_from = {
+		nep_sealgate_ruined
+	}
+	build_time = 720
+	build_cost = {
+		minerals = 5000
+		energy = 10000
+	}
+	construction_blocks_others = no
+	bypass_type = nep_sealgate
+	on_build_complete = {
+		random_system = {
+			limit = {
+				has_star_flag = nep_Krahen_cluster
+				NOT = {
+					has_star_flag = nep_Central_system
+					has_star_flag = nep_Exterior_system
+				}
+			}
+			spawn_megastructure = {
+				#name = ""
+				type = nep_sealgate_restored
+				orbit_angle = { min = 0 max = 360 }
+				orbit_distance = 150
+			}
+			every_megastructure = {
+				limit = {
+					is_megastructure_type = nep_sealgate_restored
+				}
+				activate_gateway = this
+			}
+			from = { set_country_flag = nep_sealgates_activated }
+		}
+	}
+}

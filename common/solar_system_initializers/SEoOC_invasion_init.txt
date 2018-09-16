@@ -1,0 +1,382 @@
+nep_Central_init = {
+
+	name = "Central"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+		nep_Central_system
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Centaury_init = {
+
+	name = "Centaury"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Magellan_init = {
+
+	name = "Magellan"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Orion_init = {
+
+	name = "Orion"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Tra_init = {
+
+	name = "Tra"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Aurora_init = {
+
+	name = "Aurora"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Andromeda_init = {
+
+	name = "Andromeda"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+
+nep_Persei_init = {
+
+	name = "Persei"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Trantor_init = {
+
+	name = "Trantor"
+
+	class = "rl_standard_stars"
+
+	flags = { 
+		nep_Krahen_cluster
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}
+
+nep_Exterior_init = {
+
+	name = "Exterior"
+
+	class = "rl_standard_stars"
+
+	flags = {
+		nep_Krahen_cluster
+		nep_Exterior_system
+	}
+
+	planet = {
+        class = "pc_star_void_dummy_01"
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 1
+        has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+        count = { min = 4 max = 9 }
+        class = "rl_habitable_normal"
+        orbit_distance = { min = 70 max = 180 }
+      	orbit_angle = { min = 0 max = 360 }
+        size = { min = 8 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+    }
+}

@@ -25,8 +25,51 @@ nep_sealportal = {
 			# Wormhole can be used if...
 			OR = {
 				# No ship can bear the gravitation in the seal hole
-				has_technology = tech_lgate_activation
+				has_technology = tech_sealportal_dive
 			}
+		}
+	}
+}
+
+nep_sealgate = {
+	name = NEP_SEALGATE_GALACTIC
+	is_pathfind = yes
+	uses_action = no
+	always_active = no
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0			# 0 means instant
+	icon_frame = 29
+	remember_instances = no 	# whether countries remember meeting a specific instance of that type, or if they just remember seeing the type in general
+	galactic_map_tooltip_header = NEP_SEALGATE_GALACTIC
+	galactic_map_tooltip_desc = NEP_SEALGATE_GALACTIC_DESC
+	connection_type = scripted_connection
+	animation_time = 1
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+
+	country_can_use = {
+		custom_tooltip = {
+			fail_text = NEP_SEALGATE_COUNTRY_CANNOT_USE
+			OR = {
+				has_global_flag = nep_sealgates_activated_globally
+				has_country_flag = nep_sealgates_activated
+			}
+		}
+	}
+	
+	scripted_connection = {
+	
+		# defines endpoints that can only reach the "nexus"
+		node = {
+			# system scope
+			NOT = { has_star_flag = nep_Krahen_cluster }
+		}
+	
+		# defines endpoint(s) that can reach all "nodes" (but not other nexuses)
+		nexus = {
+			# system scope
+			has_star_flag = nep_Krahen_cluster
 		}
 	}
 }

@@ -209,12 +209,6 @@ seal_boss_spawn = {
 			create_ship = {
 				name = "Seal Evil"
 				design = "Seal evil"
-				effect = {
-					add_modifier = {
-						modifier = nep_seal_evil_buff
-						days = -1
-					}
-				}
 			}	
 			set_location = {
 				target = event_target:nep_grand_seal_planet
@@ -225,6 +219,10 @@ seal_boss_spawn = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self	
+			add_modifier = {
+				modifier = nep_dragon_boss_buff
+				days = -1
+			}
 		}
 	}
 }
