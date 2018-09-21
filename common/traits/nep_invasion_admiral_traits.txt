@@ -1,0 +1,15 @@
+leader_trait_krahen_admiral = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_mercenary_warrior.dds" 
+	modifier = {
+		ship_evasion_mult = 0.1
+		ship_fire_rate_mult = 0.1
+		ship_weapon_damage_mult = 0.1
+		ship_weapon_fire_rate_mult = 0.1
+	}
+	leader_trait = yes
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}

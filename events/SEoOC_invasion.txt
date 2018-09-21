@@ -152,7 +152,7 @@ country_event = {
 	}
 }
 
-#Create cluster,portal
+#Create krahen,on_system_first_visited
 country_event = {
 	id = nep_inva.2
 	title = "nep_inva.2.name"
@@ -170,7 +170,38 @@ country_event = {
 	}
 	
 	immediate = {
-		
-		
+		create_species = {
+			name = Krah'en
+			class = random_non_machine
+			portrait = random
+			traits = trait_krahen
+		}
+		create_country = {
+			name = "Krah'en Empire"
+			species = last_created
+			type = nep_krahen_country
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_10.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors={
+					"red"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			set_country_flag = krahen_country
+			save_global_event_target_as = krahen_country
+		}
+		set_global_flag = nep_karhen_begin
 	}
 }

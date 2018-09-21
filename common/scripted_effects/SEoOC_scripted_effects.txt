@@ -260,3 +260,368 @@ create_dragon_babys = {
 		fleet_event = { id = nep_dragon.999 days = 45 }
 	}
 }
+
+#######################################
+#  invasion
+#######################################
+create_krahen_invader_static = {
+	create_fleet = {
+		name = "Krah'en Invader"
+		effect = {		
+			set_owner = event_target:krahen_country
+			while = {
+				count = 40
+				create_ship = {
+					name = "Krah'en Invader"
+					design = "NAME_Krah'en_Battleship"
+				}
+			}
+			while = {
+				count = 80
+				create_ship = {
+					name = "Krah'en Invader"
+					design = "NAME_Krah'en_Heavy_Destroyer"
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+		}
+	}
+}
+
+create_krahen_invader = {
+	create_fleet = {
+		name = "Krah'en Invader"
+		effect = {		
+			set_owner = event_target:krahen_country
+			while = {
+				count = 60
+				create_ship = {
+					name = "Krah'en Invader"
+					design = "NAME_Krah'en_Battleship"
+				}
+			}
+			create_leader = {
+				type = admiral
+				species = root.owner_species
+				name = random
+				skill = 10
+				traits = {
+					trait = leader_trait_krahen_admiral
+					trait = leader_trait_aggressive
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			
+			queue_actions = {
+				repeat = {
+					wait = {
+						duration = 5
+						random = 10
+					}
+					find_random_system = {
+						trigger = {
+							id = "nep_krahen.trigger.1"
+							has_access_fleet = yes
+							distance = {
+								source = FROMFROM
+								use_bypasses = yes
+								min_jumps = 1
+								max_jumps = 2
+							}
+							OR = {
+								any_ship_in_system = {
+									is_ship_class = shipclass_starbase
+									NOT = { owner = { is_same_value = event_target:krahen_country } }
+								}
+								any_planet = {
+									has_owner = yes
+									is_colony = yes
+									NOT = { owner = { is_same_value = event_target:krahen_country } }
+								}
+							}
+						}
+						found_system = {
+							random_system_planet = {
+								limit = {
+									has_owner = yes
+									is_colony = yes
+									NOT = { owner = { is_same_value = event_target:krahen_country } }
+								}
+								move_to = this
+								orbit_planet = THIS
+								while = {
+									limit = {
+										OR = {
+											is_colony = yes
+											NOT = { owner = { is_same_value = event_target:krahen_country } }
+										}
+									}
+									wait = {
+										duration = 30
+									}
+								}
+							}
+							move_to = this
+						}
+						failed = {
+							find_random_system = {
+								trigger = {
+									id = "nep_krahen.trigger.1"
+									has_access_fleet = yes
+									distance = {
+										source = FROMFROM
+										use_bypasses = yes
+										min_jumps = 1
+										max_jumps = 2
+									}
+									OR = {
+										any_ship_in_system = {
+											is_ship_class = shipclass_starbase
+											NOT = { owner = { is_same_value = event_target:krahen_country } }
+										}
+										any_planet = {
+											has_owner = yes
+											is_colony = yes
+											NOT = { owner = { is_same_value = event_target:krahen_country } }
+										}
+									}
+								}
+								found_system = {
+									random_system_planet = {
+										limit = {
+											has_owner = yes
+											is_colony = yes
+											NOT = { owner = { is_same_value = event_target:krahen_country } }
+										}
+										move_to = this
+										orbit_planet = THIS
+										while = {
+											limit = {
+												OR = {
+													is_colony = yes
+													NOT = { owner = { is_same_value = event_target:krahen_country } }
+												}
+											}
+											wait = {
+												duration = 30
+											}
+										}
+									}
+									move_to = this
+								}
+								failed = {
+									find_random_system = {
+										trigger = {
+											id = "nep_krahen.trigger.2"
+											has_access_fleet = yes
+											distance = {
+												source = FROMFROM
+												use_bypasses = yes
+												min_jumps = 2
+												max_jumps = 3
+											}
+											OR = {
+												any_ship_in_system = {
+													is_ship_class = shipclass_starbase
+													NOT = { owner = { is_same_value = event_target:krahen_country } }
+												}
+												any_planet = {
+													has_owner = yes
+													is_colony = yes
+													NOT = { owner = { is_same_value = event_target:krahen_country } }
+												}
+											}
+										}
+										found_system = {
+											random_system_planet = {
+												limit = {
+													has_owner = yes
+													is_colony = yes
+													NOT = { owner = { is_same_value = event_target:krahen_country } }
+												}
+												move_to = this
+												orbit_planet = THIS
+												while = {
+													limit = {
+														OR = {
+															is_colony = yes
+															NOT = { owner = { is_same_value = event_target:krahen_country } }
+														}
+													}
+													wait = {
+														duration = 30
+													}
+												}
+											}
+											move_to = this
+										}
+										failed = {
+											find_random_system = {
+												trigger = {
+													id = "nep_krahen.trigger.3"
+													has_access_fleet = yes
+													distance = {
+														source = FROMFROM
+														use_bypasses = yes
+														min_jumps = 3
+														max_jumps = 4
+													}
+													OR = {
+														any_ship_in_system = {
+															is_ship_class = shipclass_starbase
+															NOT = { owner = { is_same_value = event_target:krahen_country } }
+														}
+														any_planet = {
+															has_owner = yes
+															is_colony = yes
+															NOT = { owner = { is_same_value = event_target:krahen_country } }
+														}
+													}
+												}
+												found_system = {
+													random_system_planet = {
+														limit = {
+															has_owner = yes
+															is_colony = yes
+															NOT = { owner = { is_same_value = event_target:krahen_country } }
+														}
+														move_to = this
+														orbit_planet = THIS
+														while = {
+															limit = {
+																OR = {
+																	is_colony = yes
+																	NOT = { owner = { is_same_value = event_target:krahen_country } }
+																}
+															}
+															wait = {
+																duration = 30
+															}
+														}
+													}
+													move_to = this
+												}
+												failed = {
+													find_random_system = {
+														trigger = {
+															id = "nep_krahen.trigger.4"
+															has_access_fleet = yes
+															distance = {
+																source = FROMFROM
+																use_bypasses = yes
+																min_jumps = 4
+																max_jumps = 5
+															}
+															OR = {
+																any_ship_in_system = {
+																	is_ship_class = shipclass_starbase
+																	NOT = { owner = { is_same_value = event_target:krahen_country } }
+																}
+																any_planet = {
+																	has_owner = yes
+																	is_colony = yes
+																	NOT = { owner = { is_same_value = event_target:krahen_country } }
+																}
+															}
+														}
+														found_system = {
+															random_system_planet = {
+																limit = {
+																	has_owner = yes
+																	is_colony = yes
+																	NOT = { owner = { is_same_value = event_target:krahen_country } }
+																}
+																move_to = this
+																orbit_planet = THIS
+																while = {
+																	limit = {
+																		OR = {
+																			is_colony = yes
+																			NOT = { owner = { is_same_value = event_target:krahen_country } }
+																		}
+																	}
+																	wait = {
+																		duration = 30
+																	}
+																}
+															}
+															move_to = this
+														}
+														failed = {
+															find_random_system = {
+																trigger = {
+																	id = "nep_krahen.trigger.5"
+																	has_access_fleet = yes
+																	distance = {
+																		source = FROMFROM
+																		use_bypasses = yes
+																		min_jumps = 1
+																		max_jumps = 5
+																	}
+																	any_ship_in_system = {
+																		NOR = {
+																			is_ship_class = shipclass_starbase
+																			owner = { is_same_value = event_target:krahen_country } 
+																		}
+																	}
+																}
+																found_system = {
+																	random_fleet_in_system = {
+																		trigger = {
+																			any_ship = {
+																				owner = { is_same_value = event_target:krahen_country }
+																			}
+																		}
+																		move_to = this
+																	}
+																}
+																failed = {
+																	find_random_system = {
+																		trigger = {
+																			id = "nep_krahen.trigger.6"
+																			has_access_fleet = yes
+																			distance = {
+																				source = FROMFROM
+																				use_bypasses = yes
+																				min_jumps = 1
+																				max_jumps = 5
+																			}
+																		}
+																		found_system = {
+																			move_to = this
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

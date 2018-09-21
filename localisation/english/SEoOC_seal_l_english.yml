@@ -3,12 +3,12 @@ l_english:
  nep_seal_evil:0 "Seal Evil"
  nep_seal_evil_plural:0 "Seal Evil"
  
- nep_seal.2.name:0 "nep_seal.2.name"
- nep_seal.2.desc:0 "nep_seal.2.desc"
- nep_seal.2.a:0 "nep_seal.2.a" 
- nep_seal.2.b:0 "nep_seal.2.b" 
+ nep_seal.2.name:0 "Dangerous Roadblock"
+ nep_seal.2.desc:0 "In [From.GetName] our ship almost hit a pile of wrecks that don't know where to come. After all, there are no other ships passing by after the highway is opened. Sciencists think that this is the wreckage left by ancient times. Maybe we should analyze whether there is something valuable inside? At least, we have to do the cleanup - the end of the roadblock itself reveals that this pile of things must be cleared."
+ nep_seal.2.a:0 "Let the scientists do the "cleanup" work, I believe they can do better." 
+ nep_seal.2.b:0 "Let the cleanup team set off, although it will cost a few energy credit..." 
  
- nep_seal.3.name:0 "nep_seal.3.name"
+ nep_seal.3.name:0 ""Cleanup" Complete"
  nep_seal.3.desc:0 "nep_seal.3.desc"
  nep_seal.3.a:0 "nep_seal.3.a" 
  

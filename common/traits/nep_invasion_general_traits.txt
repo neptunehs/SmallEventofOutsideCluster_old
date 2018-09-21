@@ -1,0 +1,15 @@
+leader_trait_krahen_general = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	immortal_leaders = yes
+	modifier = {
+		army_morale = 10
+		army_damage_mult = 0.15
+		army_disengage_chance_mult = -1
+	}
+	leader_trait = yes
+	leader_class = { general }
+	initial = no
+	randomized = no
+}
