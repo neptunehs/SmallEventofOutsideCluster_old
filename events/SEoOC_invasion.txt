@@ -199,9 +199,145 @@ country_event = {
 			}
 		}
 		last_created_country = {
-			set_country_flag = krahen_country
-			save_global_event_target_as = krahen_country
+			set_country_flag = nep_krahen_country
+			save_global_event_target_as = nep_krahen_country
 		}
 		set_global_flag = nep_karhen_begin
+		create_krahen_invader_defender = yes
+	}
+}
+
+#Krah'en crisis begin (HIDDEN)
+country_event = {
+	id = nep_inva.30
+	hide_window = yes
+	
+	trigger = {
+		has_global_flag = nep_karhen_begin
+		any_country = {
+			has_country_flag = nep_krahen_country
+			num_fleets < 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	immediate = {
+		set_global_flag = nep_krahen_crisis
+		#create krahen colony&invader force
+		every_system = {
+			limit = { 
+				has_star_flag = nep_Krahen_cluster
+				NOT = { any_ship_in_system = { owner = has_country_flag = nep_krahen_country } }
+			}
+			create_starbase = {
+				size = nep_heavy_starbase
+				owner = event_target:nep_krahen_country
+			}
+			if = {
+				limit = { NOT = { has_star_flag = nep_Exterior_star } }
+				random_system_planet = {
+					limit = {
+						is_colony = no
+					}
+					create_colony = {
+						owner = event_target:nep_krahen_country
+						species = event_target:nep_krahen_country
+						ethos = owner
+					}
+				}
+				random_system_planet = {
+					limit = {
+						is_colony = no
+					}
+					create_colony = {
+						owner = event_target:nep_krahen_country
+						species = event_target:nep_krahen_country
+						ethos = owner
+					}
+					create_krahen_buildings = yes
+					create_krahen_invader = yes
+					create_krahen_invader = yes
+				}
+				random_system_planet = {
+					limit = {
+						is_colony = no
+					}
+					create_colony = {
+						owner = event_target:nep_krahen_country
+						species = event_target:nep_krahen_country
+						ethos = owner
+					}
+					create_krahen_buildings = yes
+					create_krahen_invader = yes
+					create_krahen_invader = yes
+				}
+			}
+		}
+		
+		#create krahen portal&defender force
+		random_system = {
+			limit = { has_star_flag = nep_Central_system }
+			random_system_planet = {
+				limit = { is_colony = yes }
+				create_fleet = {
+					name = "NAME_Portal_to_God'Emperor"
+					effect = {
+						set_owner = event_target:nep_krahen_country
+						create_ship = {
+							name = "NAME_Portal_to_God'Emperor"
+							design = "NAME_nep_krahen_portal"
+							prefix = no
+							upgradable = no
+						}
+						set_event_locked = yes
+					}
+					set_fleet_flag = nep_krahen_portal_1
+				}
+				
+			}
+		}
+		
+		#diplomatic
+		every_playable_country = {
+			country_event = { id = nep_inva.31 }
+		}
+	}
+}
+
+#Krah'en crisis diplomatic
+country_event = {
+	id = nep_inva.31
+	title = "nep_inva.31.name"
+	desc = "nep_inva.31.desc"
+
+	diplomatic = yes
+	
+	is_triggered_only = yes
+		
+	picture_event_data = {
+		portrait = event_target:nep_krahen_country
+		planet_background = event_target:nep_krahen_country
+		graphical_culture = event_target:nep_krahen_country
+		city_level = event_target:nep_krahen_country
+		room = event_target:nep_krahen_country
+	}
+	
+	option = {
+		name = nep_inva.31.a
+		response_text = nep_inva.3.a.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = nep_inva.31.b
+		response_text = nep_inva.3.b.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = nep_inva.31.c
 	}
 }

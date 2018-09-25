@@ -38,7 +38,68 @@ nep_dragon_temple = {
 
 	required_resources = {
 		energy = 5
-	}	
+	}
+	
 	prerequisites = {
+	}
+}
+
+nep_adv_tank_factory = {
+	is_listed = no
+	base_buildtime = 180
+	icon = "building_nep_heavy_fortress"
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+	}
+	
+	ai_replace = no
+	event_building = yes
+	immune_to_bombardment = yes
+	
+	destroy_if = {
+		exists = owner
+		NOT = { owner = { has_country_flag = nep_krahen_country } }
+	}
+}
+
+nep_heavy_fortress = {
+	is_listed = no
+	base_buildtime = 180
+	icon = "building_nep_heavy_fortress"
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+	}
+	
+	ai_replace = no
+	event_building = yes
+	immune_to_bombardment = yes
+	
+	destroy_if = {
+		exists = owner
+		NOT = { owner = { has_country_flag = nep_krahen_country } }
+	}
+}
+
+nep_planetary_gun = {
+	is_listed = no
+	base_buildtime = 180
+	icon = "building_nep_heavy_fortress"
+	
+	cost = {
+		minerals = 1000
+		energy = 1000
+	}
+	
+	ai_replace = no
+	event_building = yes
+	immune_to_bombardment = yes
+	
+	destroy_if = {
+		exists = owner
+		NOT = { owner = { has_country_flag = nep_krahen_country } }
 	}
 }
