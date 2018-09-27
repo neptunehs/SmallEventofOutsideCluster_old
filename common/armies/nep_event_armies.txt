@@ -30,3 +30,51 @@ nep_Legnahcras_assault_army = {
 		always = no
 	}
 }
+
+nep_krahen_anti_grav = {
+	damage = 6.0
+	health = 8.0
+	has_morale = no
+	morale_damage = 3.0
+	collateral_damage = 1.0
+	time = 500
+	maintenance = 0
+	icon_frame = 4
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}
+
+nep_krahen_heavy_fortress = {
+	damage = 16.0
+	health = 28.0
+	has_morale = no
+	morale_damage = 4.0
+	collateral_damage = 2.5
+	time = 500
+	maintenance = 0
+	icon_frame = 4
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}
+
+nep_krahen_heavy_fortress_2 = {
+	damage = 16.0
+	health = 28.0
+	has_morale = no
+	morale_damage = 4.0
+	collateral_damage = 2.5
+	time = 500
+	maintenance = 0
+	icon_frame = 4
+	has_species = no
+	
+	potential = {
+		always = no
+	}
+}

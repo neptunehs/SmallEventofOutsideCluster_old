@@ -264,9 +264,9 @@ create_dragon_babys = {
 #######################################
 #  invasion
 #######################################
-create_krahen_invader_defender = {
+create_krahen_defender = {
 	create_fleet = {
-		name = "Krah'en Invader"
+		name = "Krah'en Defender"
 		effect = {		
 			set_owner = event_target:nep_krahen_country
 			while = {
@@ -303,6 +303,13 @@ create_krahen_invader_defender = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
+			
+			set_fleet_flag = nep_krahen_defender
+			
+			settings = {
+				can_change_leader = no
+				uses_naval_capacity = no
+			}
 			
 			queue_actions = {
 				repeat = {
@@ -348,6 +355,11 @@ create_krahen_invader = {
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
 			set_fleet_bombardment_stance = armageddon
+			
+			settings = {
+				can_change_leader = no
+				uses_naval_capacity = no
+			}
 			
 			queue_actions = {
 				repeat = {
@@ -675,7 +687,7 @@ create_krahen_buildings = {
 			has_building = no
 			has_grown_pop = no
 		}
-		set_building = "nep_heavy_fortress"
+		set_building = "nep_heavy_fortress_2"
 		create_pop = {
 			species = owner
 		}
@@ -689,6 +701,81 @@ create_krahen_buildings = {
 		set_building = "nep_planetary_gun"
 		create_pop = {
 			species = owner
+		}
+	}
+}
+
+create_krahen_transport = {
+	create_fleet = {
+		name = "NAME_Prethoryn_Armies"
+		effect = {
+			set_owner = event_target:prethoryn
+			while = {
+				count = 20
+				create_army_transport = {
+					ship_name = "NAME_nep_Krahen_Transport"
+					army_name = "NAME_nep_Krahen_Invaders"
+					army_type = "nep_krahen_anti_grav"
+					species = event_target:nep_krahen_country
+				}
+			}
+			create_leader = {
+				type = general
+				species = root.owner_species
+				name = random
+				skill = 10
+				traits = {
+					trait = leader_trait_krahen_general
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = PREV
+				distance = 20
+				angle = random 
+			}
+			settings = {
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+}
+
+create_krahen_constructor = {
+	create_fleet = {
+		effect = {
+			create_ship = {
+				name = random
+				design = nep_krahen_constructor
+			}
+			set_owner = event_target:nep_krahen_country
+			set_fleet_stance = evasive
+			set_location = {
+				target = PREV
+				distance = 20
+				angle = random 
+			}
+		}
+	}
+}
+
+create_krahen_colonizer = {
+	create_fleet = {
+		effect = {
+			create_ship = {
+				name = random
+				design = nep_krahen_colonizer
+				colonizer_species = event_target:nep_krahen_country
+			}
+			set_owner = event_target:nep_krahen_country
+			set_fleet_stance = evasive
+			set_location = {
+				target = PREV
+				distance = 20
+				angle = random 
+			}
 		}
 	}
 }

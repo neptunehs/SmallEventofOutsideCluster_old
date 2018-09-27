@@ -12,6 +12,12 @@ on_system_survey_ship = {
 	}
 }
 
+on_yearly_pulse = {
+	events = {
+		nep_inva.46
+	}
+}
+
 #boss buffs
 on_entering_battle = {
 	events = {
@@ -26,6 +32,8 @@ on_entering_battle = {
 
 on_ship_destroyed_victim = {
 	events = {
+		nep_inva.43
+		nep_inva.51
 		nep_dragon.82
 	}
 }
@@ -39,11 +47,32 @@ on_planet_attackers_win = {
 		nep_dragon.993
 		nep_dragon.992
 		nep_dragon.991
+		nep_inva.41
+		nep_inva.42
+
 	}
 }
 
+on_colonized = {
+	events = {
+		nep_inva.45
+	}
+}
 on_system_first_visited = {
 	events = {
 		nep_inva.2
+	}
+}
+
+on_custom_diplomacy = {
+	events = {
+		nep_inva.32
+		nep_inva.33
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		nep_inva.44
 	}
 }
