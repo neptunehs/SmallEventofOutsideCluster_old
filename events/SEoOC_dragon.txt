@@ -292,7 +292,7 @@ ship_event = {
 	id = nep_dragon.3
 	title = "nep_dragon.3.name"
 	desc = "nep_dragon.3.desc"	
-	picture = GFX_evt_gaia_planet
+	picture = GFX_evt_gaia
 	
 	is_triggered_only = yes
 	

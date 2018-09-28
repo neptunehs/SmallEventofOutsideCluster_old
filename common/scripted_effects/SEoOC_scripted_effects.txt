@@ -625,19 +625,33 @@ create_krahen_invader = {
 																	}
 																}
 																failed = {
-																	find_random_system = {
-																		trigger = {
+																	find_closest_system = {
+																		trigget = {
 																			id = "nep_krahen.trigger.7"
 																			has_access_fleet = yes
-																			distance = {
-																				source = FROMFROM
-																				use_bypasses = yes
-																				min_jumps = 1
-																				max_jumps = 5
+																			any_ship_in_system = {
+																				owner = { is_same_value = event_target:nep_krahen_country } 
 																			}
 																		}
-																		found_system = {
-																			move_to = this
+																	}
+																	found_system = {
+																		move_to = this
+																	}
+																	failed = {
+																		find_random_system = {
+																			trigger = {
+																				id = "nep_krahen.trigger.7"
+																				has_access_fleet = yes
+																				distance = {
+																					source = FROMFROM
+																					use_bypasses = yes
+																					min_jumps = 1
+																					max_jumps = 5
+																				}
+																			}
+																			found_system = {
+																				move_to = this
+																			}
 																		}
 																	}
 																}
@@ -707,9 +721,9 @@ create_krahen_buildings = {
 
 create_krahen_transport = {
 	create_fleet = {
-		name = "NAME_Prethoryn_Armies"
+		name = "NAME_Krahen_Armies"
 		effect = {
-			set_owner = event_target:prethoryn
+			set_owner = event_target:nep_krahen_country
 			while = {
 				count = 20
 				create_army_transport = {
