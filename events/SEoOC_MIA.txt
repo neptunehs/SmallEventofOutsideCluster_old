@@ -67,6 +67,10 @@ ship_event = {
 			country_event = { id = nep_mia.9 days = 3 }
 		}
 	}
+	
+	option = {
+		name = OK
+	}
 }
 
 ship_event = {
@@ -99,6 +103,10 @@ ship_event = {
 			country_event = { id = nep_mia.9 days = 3 }
 		}
 	}
+	
+	option = {
+		name = OK
+	}
 }
 
 ship_event = {
@@ -130,6 +138,10 @@ ship_event = {
 			}
 			country_event = { id = nep_mia.9 days = 3 }
 		}
+	}
+	
+	option = {
+		name = OK
 	}
 }
 

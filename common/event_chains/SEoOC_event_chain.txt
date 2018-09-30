@@ -34,3 +34,8 @@ nep_krahen_invasion_chain = {
 		}
 	}
 }
+
+nep_finalweapon_chain = {
+	picture = GFX_evt_black_hole
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+}

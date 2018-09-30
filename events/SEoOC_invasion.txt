@@ -1124,6 +1124,12 @@ event = {
 		}
 		
 		event_target:nep_Krahen_country = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = 1000
+				min = 900
+				max = 1000
+			}
 			every_planet_within_border = {
 				limit = {
 					is_colony = yes

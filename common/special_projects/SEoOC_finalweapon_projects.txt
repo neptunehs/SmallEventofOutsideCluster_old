@@ -1,0 +1,39 @@
+special_project = {
+	key = "nep_grand_seal_final_answer_2"
+	event_chain = "nep_finalweapon_chain"
+	days_to_research = 30
+	tech_department = society_technology
+	picture = GFX_evt_black_hole
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		fleet_power = 500000
+		leader = admiral
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				any_system = {
+					has_star_flag = nep_seal_system
+					any_ship_in_system = {
+						OR = {
+							is_ship_size = nep_dragon_reward
+							is_ship_size = nep_dragon_reward_kai
+						}
+					}
+				}
+			}
+			ship_event = { id = nep_finalweapon.4 }
+		}
+		else = {
+			ship_event = { id = nep_finalweapon.3 }
+		}
+	}
+	
+	on_fail = {
+
+	}
+}

@@ -104,6 +104,7 @@ ship_event = {
 			clear_global_event_target = nep_seal_ambient
 			destroy_ambient_object = this
 		}
+		owner = { set_country_flag = nep_first_orb_get } 
 	}
 	
 	option = {

@@ -401,3 +401,34 @@ country_event = {
 		}
 	}
 }
+
+fleet_event = {
+	id = nep_test.7
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+	
+	immediate = {
+		add_modifier = {
+			modifier = fleet_force_disparity_effect
+			days = -1
+		}
+	}
+}
+
+planet_event = {
+	id = nep_test.8
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+	
+	immediate = {
+		solar_system = {
+			every_system_planet = {
+				remove_planet = yes
+			}
+		}
+	}
+}

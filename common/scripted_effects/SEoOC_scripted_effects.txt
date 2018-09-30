@@ -773,3 +773,73 @@ create_krahen_colonizer = {
 		}
 	}
 }
+
+create_finalweapon_fleet = {
+	create_leader = {
+		type = admiral
+		species = prev.owner_species
+		name = random
+		skill = 10
+		traits = {
+			trait = leader_trait_aggressive
+		}
+	}
+	create_fleet = {
+		name = "NAME_nep_corrupted_finalweapons"
+		settings = {
+			spawn_debris = no 
+			can_change_leader = no
+			uses_naval_capacity = no
+		}
+		effect = {
+			set_owner = event_target:nep_finalweapon_country
+			while = {
+				count = 3
+				create_ship = {
+					name = "NAME_Corrupted_Finalweapon"
+					design = "NAME_nep_finalweapon"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = event_target:nep_grand_seal_planet
+				distance = 30
+				angle = random
+			}
+			set_formation_scale = 1.6
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+			
+			set_fleet_flag = nep_corrupted_finalweapons
+		}
+	}
+}
+
+create_finalweapon_bomb_fleet = {
+	create_fleet = {
+		name = "NAME_nep_star_bomb"
+		settings = {
+			spawn_debris = no
+			can_change_leader = no
+			uses_naval_capacity = no
+		}
+		effect = {
+			set_owner = event_target:nep_finalweapon_country
+			while = {
+				create_ship = {
+					name = "NAME_nep_star_bomb"
+					design = "NAME_nep_star_bomb"
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 1
+				angle = random
+			}
+
+			set_event_locked = yes
+		}
+	}
+}
