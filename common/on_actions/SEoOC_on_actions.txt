@@ -1,8 +1,17 @@
+on_game_start = {
+	events = {
+		nep_mia.1
+	}
+}
+
 on_entering_system = {
 	events = {
 		nep_highway.5 #first enter station
 		nep_seal.2 #first enter ambient place
 		nep_dragon.64 #first enter dragon system
+		nep_mia.2
+		nep_mia.3
+		nep_mia.4
 	}
 }
 

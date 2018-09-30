@@ -2,7 +2,7 @@ nep_Aemethms_init = {
 	name = "Aemethms"
 
 	class = "sc_Aemethms"
-
+	
 	asteroid_belt = {
 		type = crystal_asteroid_belt
 		radius = 10

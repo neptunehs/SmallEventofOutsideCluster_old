@@ -1,0 +1,147 @@
+namespace = nep_mia
+
+#on game start
+event = {
+	id = nep_mia.1
+	hide_window = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_country = {
+			name = " "
+			type = nep_mia_country
+			flag = {
+				background = {
+    		        category = "backgrounds"
+    		        file = "00_solid.dds"
+    		    }
+    		    colors = {
+    		        "black"
+    		        "null"
+    		        "null"
+    		        "null"
+    		    }
+			}
+			effect = {
+				establish_communications_no_message = root.owner
+				establish_contact = { who = root.owner location = root.solar_system }
+			}
+		}
+		last_created_country = {
+			save_global_event_target_as =  nep_mia_country
+		}
+	}
+}
+
+ship_event = {
+	id = nep_mia.2
+	title = "nep_mia.2.name"
+	desc = "nep_mia.2.desc"
+	picture = GFX_evt_unknown_ships
+	
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_not_pass_sealportal
+		from = {
+			has_star_flag = nep_heptagram_cluster
+		}
+	}
+	
+	immediate = {
+		from = {			
+			create_starbase = {
+				size = nep_starbase_invinsible
+				owner = event_target:nep_mia_country
+			}
+		}
+		event_target:nep_mia_country = {
+			set_closed_borders = {
+				who = root.fromfrom
+				status = yes
+			}
+			country_event = { id = nep_mia.9 days = 3 }
+		}
+	}
+}
+
+ship_event = {
+	id = nep_mia.3
+	title = "nep_mia.3.name"
+	desc = "nep_mia.3.desc"
+	picture = GFX_evt_unknown_ships
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_not_pass_Aemethms
+		from = {
+			has_star_flag = nep_dragon_system
+		}
+	}
+	
+	immediate = {
+		from = {			
+			create_starbase = {
+				size = nep_starbase_invinsible
+				owner = event_target:nep_mia_country
+			}
+		}
+		event_target:nep_mia_country = {
+			set_closed_borders = {
+				who = root.fromfrom
+				status = yes
+			}
+			country_event = { id = nep_mia.9 days = 3 }
+		}
+	}
+}
+
+ship_event = {
+	id = nep_mia.4
+	title = "nep_mia.4.name"
+	desc = "nep_mia.4.desc"
+	picture = GFX_evt_unknown_ships
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_sealgate_appeared
+		from = {
+			has_star_flag = nep_krahen_system
+		}
+	}
+	
+	immediate = {
+		from = {			
+			create_starbase = {
+				size = nep_starbase_invinsible
+				owner = event_target:nep_mia_country
+			}
+		}
+		event_target:nep_mia_country = {
+			set_closed_borders = {
+				who = root.fromfrom
+				status = yes
+			}
+			country_event = { id = nep_mia.9 days = 3 }
+		}
+	}
+}
+
+country_event = {
+	id = nep_mia.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_starbase = {
+			delete_ship = this
+		}
+	}
+}

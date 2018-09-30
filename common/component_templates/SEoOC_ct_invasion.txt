@@ -6,7 +6,6 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_laser_5"
 	icon_frame = 1
-	color = { 0.4 1.8 0.5 1 }
 	
 	power = -17
 	cost = 28
@@ -42,7 +41,6 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_plasma_3"
 	icon_frame = 1
-	color = { 0.4 1.8 0.5 1 }
 	
 	power = -17
 	cost = 28
@@ -110,13 +108,13 @@ utility_component_template = {
 	size = medium
 	icon = "GFX_ship_part_sensor_4"
 	icon_frame = 1
-	power = @power4
-	cost = @cost4
-	sensor_range = @sensor4
-	hyperlane_range = @hyperlane4
+	power = 0
+	cost = 0
+	sensor_range = 4
+	hyperlane_range = 8
 	
 	ship_modifier = {
-		ship_tracking_add = @hit4
+		ship_tracking_add = 15
 	}
 
 	component_set = "sensor_components"
@@ -127,8 +125,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_hyper_drive_3"
 	icon_frame = 1
-	power = @power3
-	cost = @cost3
+	power = 0
+	cost = 0
 	ftl = yes
 	ship_modifier = {
 		ship_windup_mult = -0.5
@@ -147,8 +145,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
-	power = @power0
-	cost = @cost0
+	power = 0
+	cost = 0
 	ship_behavior = "swarm"
 	
 	class_restriction = { shipclass_military }
@@ -165,8 +163,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
-	power = @power0
-	cost = @cost0
+	power = 0
+	cost = 0
 	ship_behavior = "picket"
 
 	class_restriction = { shipclass_military }
@@ -183,9 +181,20 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
-	power = @power0
-	cost = @cost0
+	power = 0
+	cost = 0
 	ship_behavior = "line"
+	
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.20
+		ship_accuracy_add = 20
+		ship_tracking_add = 20
+	}
 
 	class_restriction = { shipclass_military }
 	size_restriction = { cruiser battleship }
@@ -218,12 +227,10 @@ utility_component_template = {
 		}
 		modifier = {
 			ship_evasion_mult = -0.10
-		}
-		ship_modifier = {
 			ship_fire_rate_mult = -0.20
 			ship_weapon_range_mult = -0.20
 			ship_accuracy_add = -20
-			ship_tracking_add = -30
+			ship_tracking_add = -20
 		}
 		
 		graphics = {
@@ -248,8 +255,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
-	power = @power_5
-	cost = @cost5
+	power = 0
+	cost = 0
 	modifier = {
 		ship_base_speed_mult = 1.00
 		ship_evasion_add = 20
@@ -268,8 +275,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
-	power = @destroyer_power_5
-	cost = @destroyer_cost5
+	power = 0
+	cost = 0
 	modifier = {
 		ship_base_speed_mult = 1.00
 		ship_evasion_add = 16
@@ -287,8 +294,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
-	power = @cruiser_power_5
-	cost = @cruiser_cost5
+	power = 0
+	cost = 0
 	modifier = {
 		ship_base_speed_mult = 1.00
 		ship_evasion_add = 12
@@ -307,8 +314,8 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_thruster_5"
 	icon_frame = 1
-	power = @battleship_power_5
-	cost = @battleship_cost5
+	power = 0
+	cost = 0
 	modifier = {
 		ship_base_speed_mult = 1.00
 		ship_evasion_add = 8
@@ -342,8 +349,8 @@ utility_component_template = {
 			id = hostile_advance_ecm_aura
 			priority = 1
 		}
-		ship_modifier = {
-			explosive_weapon_damage_mult = -0.8
+		modifier = {
+			weapon_type_explosive_weapon_damage_mult = -0.8
 		}
 		
 		graphics = {
@@ -369,16 +376,30 @@ weapon_component_template = {
 	entity = "invisible_turret_entity"
 	type = instant
 	
-	icon = "GFX_ship_part_arc_emitter_2"
+	icon = "GFX_ship_part_nep_destructor_ray"
 	icon_frame = 1
 	
-	firing_arc = 35.0
-	min_range = 10.0
-	static_rotation = yes
+	power = 60
+	cost = 60
+	
+	damage = { min = 20000.0 max = 40000.0 }
+	windup = { min = 100.0 max = 200.0 }
+
+	total_fire_time = 200
+
+	range = 250.0
+	accuracy = 1
+	tracking = 1
+	
+	hull_damage = 1
+	shield_penetration = 1
+	armor_penetration = 1
+
+	hidden = yes
 	use_ship_kill_target = no
 	
-	prerequisites = { "tech_arc_emitter_2" }
-	component_set = "ARC_EMITTER_2"
+	prerequisites = { "tech_nep_destructor_ray" }
+	component_set = "DESTRUCTOR_RAY"
 	projectile_gfx = "focused_arc_emitter"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
@@ -392,32 +413,32 @@ strike_craft_component_template = {
 	
 	weapon_type = point_defence
 	projectile_gfx = "scout_laser_1"
-	power = @power1
-	cost = @cost1
+	power = 0
+	cost = 0
 	
-	count = @count
-	regeneration_per_day = @regen
-	launch_time = @launch_time
+	count = 100
+	regeneration_per_day = 0.01
+	launch_time = 1.2
 	
-	damage = { min = 2 max = 4 }
+	damage = { min = 12 max = 24 }
 	cooldown = 2.0
-	range = @attack_range
+	range = 80
 	accuracy = 1.00
 	tracking = 0.50
 	
-	health = 30
+	health = 1
 	armor = 0
 	shield = 0
-	evasion = 0.50
+	evasion = 0.80
 	
-	speed = @speed1
-	rotation_speed = 0.1
-	acceleration = 0.5
+	speed = 400
+	rotation_speed = 0.2
+	acceleration = 0.6
 	
 	shield_penetration = 1
 	armor_damage = 1.50
 	
-	ship_behavior = "fighters_behavior"
+	ship_behavior = "bombers_behavior"
 	
 	icon = "GFX_ship_part_strike_craft_scout_1"
 	icon_frame = 1

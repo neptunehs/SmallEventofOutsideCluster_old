@@ -265,32 +265,25 @@ create_dragon_babys = {
 #  invasion
 #######################################
 create_krahen_defender = {
+	create_leader = {
+		type = admiral
+		species = root.owner_species
+		name = random
+		skill = 10
+		traits = {
+			trait = leader_trait_krahen_admiral
+			trait = leader_trait_aggressive
+		}
+	}
 	create_fleet = {
 		name = "Krah'en Defender"
 		effect = {		
 			set_owner = event_target:nep_krahen_country
 			while = {
-				count = 40
+				count = 60
 				create_ship = {
 					name = "Krah'en Defender"
 					design = "NAME_Krah'en_Battleship"
-				}
-			}
-			while = {
-				count = 80
-				create_ship = {
-					name = "Krah'en Defender"
-					design = "NAME_Krah'en_Heavy_Destroyer"
-				}
-			}
-			create_leader = {
-				type = admiral
-				species = root.owner_species
-				name = random
-				skill = 10
-				traits = {
-					trait = leader_trait_krahen_admiral
-					trait = leader_trait_aggressive
 				}
 			}
 			assign_leader = last_created_leader
@@ -306,11 +299,6 @@ create_krahen_defender = {
 			
 			set_fleet_flag = nep_krahen_defender
 			
-			settings = {
-				can_change_leader = no
-				uses_naval_capacity = no
-			}
-			
 			queue_actions = {
 				repeat = {
 					wait = {
@@ -319,10 +307,24 @@ create_krahen_defender = {
 				}
 			}
 		}
+		settings = {
+			can_change_leader = no
+			uses_naval_capacity = no
+		}
 	}
 }
 
 create_krahen_invader = {
+	create_leader = {
+		type = admiral
+		species = root.owner_species
+		name = random
+		skill = 10
+		traits = {
+			trait = leader_trait_krahen_admiral
+			trait = leader_trait_aggressive
+		}
+	}
 	create_fleet = {
 		name = "Krah'en Invader"
 		effect = {		
@@ -332,16 +334,6 @@ create_krahen_invader = {
 				create_ship = {
 					name = "Krah'en Invader"
 					design = "NAME_Krah'en_Battleship"
-				}
-			}
-			create_leader = {
-				type = admiral
-				species = root.owner_species
-				name = random
-				skill = 10
-				traits = {
-					trait = leader_trait_krahen_admiral
-					trait = leader_trait_aggressive
 				}
 			}
 			assign_leader = last_created_leader
@@ -356,72 +348,36 @@ create_krahen_invader = {
 			set_aggro_range_measure_from = self
 			set_fleet_bombardment_stance = armageddon
 			
-			settings = {
-				can_change_leader = no
-				uses_naval_capacity = no
-			}
-			
 			queue_actions = {
 				repeat = {
 					wait = {
 						duration = 5
 						random = 10
 					}
-					find_random_system = {
+					find_closest_planet = {
 						trigger = {
-							id = "nep_krahen.trigger.1"
-							has_access_fleet = yes
-							distance = {
-								source = FROMFROM
-								use_bypasses = yes
-								min_jumps = 1
-								max_jumps = 2
-							}
-							OR = {
-								any_ship_in_system = {
-									is_ship_class = shipclass_starbase
-									NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-								}
-								any_planet = {
-									has_owner = yes
-									is_colony = yes
-									NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-								}
-							}
+							id = "nep_krahen.trigger.0"
+							has_owner = yes
+							is_colony = yes
+							NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
 						}
-						found_system = {
-							random_system_planet = {
-								limit = {
-									has_owner = yes
-									is_colony = yes
-									NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-								}
-								move_to = this
-								orbit_planet = THIS
-								while = {
-									limit = {
-										OR = {
-											is_colony = yes
-											NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-										}
-									}
-									wait = {
-										duration = 30
-									}
-								}
+						found_planet = {
+							orbit_planet = THIS
+							wait = {
+								duration = 30
+								random = 10
 							}
-							move_to = this
 						}
 						failed = {
 							find_random_system = {
 								trigger = {
-									id = "nep_krahen.trigger.2"
+									id = "nep_krahen.trigger.1"
 									has_access_fleet = yes
 									distance = {
 										source = FROMFROM
 										use_bypasses = yes
-										min_jumps = 2
-										max_jumps = 3
+										min_jumps = 0
+										max_jumps = 2
 									}
 									OR = {
 										any_ship_in_system = {
@@ -436,38 +392,32 @@ create_krahen_invader = {
 									}
 								}
 								found_system = {
-									random_system_planet = {
-										limit = {
+									find_closest_planet = {
+										trigger = {
+											id = "nep_krahen.trigger.11"
 											has_owner = yes
 											is_colony = yes
 											NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
 										}
-										move_to = this
-										orbit_planet = THIS
-										while = {
-											limit = {
-												OR = {
-													is_colony = yes
-													NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-												}
-											}
-											wait = {
-												duration = 30
-											}
+										found_planet = {
+											move_to = this
+											orbit_planet = THIS
+										}
+										failed = { 
+											move_to = prev
 										}
 									}
-									move_to = this
 								}
 								failed = {
 									find_random_system = {
 										trigger = {
-											id = "nep_krahen.trigger.3"
+											id = "nep_krahen.trigger.2"
 											has_access_fleet = yes
 											distance = {
 												source = FROMFROM
 												use_bypasses = yes
-												min_jumps = 3
-												max_jumps = 4
+												min_jumps = 2
+												max_jumps = 3
 											}
 											OR = {
 												any_ship_in_system = {
@@ -482,38 +432,32 @@ create_krahen_invader = {
 											}
 										}
 										found_system = {
-											random_system_planet = {
-												limit = {
+											find_closest_planet = {
+												trigger = {
+													id = "nep_krahen.trigger.21"
 													has_owner = yes
 													is_colony = yes
 													NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
 												}
-												move_to = this
-												orbit_planet = THIS
-												while = {
-													limit = {
-														OR = {
-															is_colony = yes
-															NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-														}
-													}
-													wait = {
-														duration = 30
-													}
+												found_planet = {
+													move_to = this
+													orbit_planet = THIS
+												}
+												failed = {
+														move_to = prev
 												}
 											}
-											move_to = this
 										}
 										failed = {
 											find_random_system = {
 												trigger = {
-													id = "nep_krahen.trigger.4"
+													id = "nep_krahen.trigger.3"
 													has_access_fleet = yes
 													distance = {
 														source = FROMFROM
 														use_bypasses = yes
-														min_jumps = 4
-														max_jumps = 5
+														min_jumps = 3
+														max_jumps = 4
 													}
 													OR = {
 														any_ship_in_system = {
@@ -528,38 +472,33 @@ create_krahen_invader = {
 													}
 												}
 												found_system = {
-													random_system_planet = {
-														limit = {
+													find_closest_planet = {
+														trigger = {
+															id = "nep_krahen.trigger.31"
 															has_owner = yes
 															is_colony = yes
 															NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
 														}
-														move_to = this
-														orbit_planet = THIS
-														while = {
-															limit = {
-																OR = {
-																	is_colony = yes
-																	NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-																}
-															}
-															wait = {
-																duration = 30
-															}
+														found_planet = {
+															move_to = this
+															orbit_planet = THIS
+														}
+														failed = {
+															move_to = prev
 														}
 													}
-													move_to = this
+
 												}
 												failed = {
 													find_random_system = {
 														trigger = {
-															id = "nep_krahen.trigger.5"
+															id = "nep_krahen.trigger.4"
 															has_access_fleet = yes
 															distance = {
 																source = FROMFROM
 																use_bypasses = yes
-																min_jumps = 5
-																max_jumps = 6
+																min_jumps = 4
+																max_jumps = 5
 															}
 															OR = {
 																any_ship_in_system = {
@@ -573,85 +512,122 @@ create_krahen_invader = {
 																}
 															}
 														}
-														found_system = {
-															random_system_planet = {
-																limit = {
+														found_system = {									
+															find_closest_planet = {
+																trigger = {
+																	id = "nep_krahen.trigger.41"
 																	has_owner = yes
 																	is_colony = yes
 																	NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																}															
+																found_planet = {
+																	move_to = this
+																	orbit_planet = THIS
 																}
-																move_to = this
-																orbit_planet = THIS
-																while = {
-																	limit = {
-																		OR = {
-																			is_colony = yes
-																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
-																		}
-																	}
-																	wait = {
-																		duration = 30
-																	}
+																failed = {
+																	move_to = prev
 																}
 															}
-															move_to = this
 														}
 														failed = {
 															find_random_system = {
 																trigger = {
-																	id = "nep_krahen.trigger.6"
+																	id = "nep_krahen.trigger.5"
 																	has_access_fleet = yes
 																	distance = {
 																		source = FROMFROM
 																		use_bypasses = yes
-																		min_jumps = 1
-																		max_jumps = 5
+																		min_jumps = 5
+																		max_jumps = 6
 																	}
-																	any_ship_in_system = {
-																		NOR = {
+																	OR = {
+																		any_ship_in_system = {
 																			is_ship_class = shipclass_starbase
-																			owner = { is_same_value = event_target:nep_krahen_country } 
+																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																		}
+																		any_planet = {
+																			has_owner = yes
+																			is_colony = yes
+																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
 																		}
 																	}
 																}
-																found_system = {
-																	random_fleet_in_system = {
-																		limit = {
-																			any_ship = {
-																				owner = { is_same_value = event_target:nep_krahen_country }
-																			}
+																found_system = {									
+																	find_closest_planet = {
+																		trigger = {
+																			id = "nep_krahen.trigger.51"
+																			has_owner = yes
+																			is_colony = yes
+																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																		}																		
+																		found_planet = {
+																			move_to = this
+																			orbit_planet = THIS
 																		}
-																		move_to = this
+																		failed = {
+																			move_to = prev
+																		}
 																	}
 																}
 																failed = {
-																	find_closest_system = {
-																		trigget = {
-																			id = "nep_krahen.trigger.7"
+																	find_random_system = {
+																		trigger = {
+																			id = "nep_krahen.trigger.6"
 																			has_access_fleet = yes
-																			any_ship_in_system = {
-																				owner = { is_same_value = event_target:nep_krahen_country } 
+																			distance = {
+																				source = FROMFROM
+																				use_bypasses = yes
+																				min_jumps = 1
+																				max_jumps = 5
 																			}
-																		}
-																	}
-																	found_system = {
-																		move_to = this
-																	}
-																	failed = {
-																		find_random_system = {
-																			trigger = {
-																				id = "nep_krahen.trigger.7"
-																				has_access_fleet = yes
-																				distance = {
-																					source = FROMFROM
-																					use_bypasses = yes
-																					min_jumps = 1
-																					max_jumps = 5
+																			any_ship_in_system = {
+																				NOR = {
+																					is_ship_class = shipclass_starbase
+																					owner = { is_same_value = event_target:nep_krahen_country } 
 																				}
 																			}
-																			found_system = {
-																				move_to = this
+																		}
+																		found_system = {
+																			find_closest_planet = {
+																				trigger = {
+																					id = "nep_krahen.trigger.61"
+																					is_star = yes
+																				}
+																				found_planet = {
+																					move_to = this
+																				}
 																			}
+																		}
+																		failed = {
+																			find_closest_system = {
+																				trigger = {
+																					id = "nep_krahen.trigger.7"
+																					has_access_fleet = yes
+																					any_ship_in_system = {
+																						NOT = { owner = { is_same_value = event_target:nep_krahen_country } } 
+																					}
+																				}
+																				found_system = {
+																					move_to = this
+																				}
+																				failed = {
+																					find_random_system = {
+																						trigger = {
+																							id = "nep_krahen.trigger.8"
+																							has_access_fleet = yes
+																							distance = {
+																								source = FROMFROM
+																								use_bypasses = yes
+																								min_jumps = 1
+																								max_jumps = 5
+																							}
+																						}
+																						found_system = {
+																							move_to = this
+																						}
+																					}
+																				}
+																			}																			
 																		}
 																	}
 																}
@@ -662,12 +638,16 @@ create_krahen_invader = {
 											}
 										}
 									}
-								}								
+								}
 							}
 						}
 					}
 				}
 			}
+		}			
+		settings = {
+			can_change_leader = no
+			uses_naval_capacity = no
 		}
 	}
 }
@@ -720,6 +700,15 @@ create_krahen_buildings = {
 }
 
 create_krahen_transport = {
+	create_leader = {
+		type = general
+		species = root.owner_species
+		name = random
+		skill = 10
+		traits = {
+			trait = leader_trait_krahen_general
+		}
+	}
 	create_fleet = {
 		name = "NAME_Krahen_Armies"
 		effect = {
@@ -733,26 +722,17 @@ create_krahen_transport = {
 					species = event_target:nep_krahen_country
 				}
 			}
-			create_leader = {
-				type = general
-				species = root.owner_species
-				name = random
-				skill = 10
-				traits = {
-					trait = leader_trait_krahen_general
-				}
-			}
 			assign_leader = last_created_leader
 			set_location = {
 				target = PREV
 				distance = 20
 				angle = random 
 			}
-			settings = {
-				can_change_leader = no
-				uses_naval_capacity = no
-				spawn_debris = no
-			}
+		}
+		settings = {
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
 		}
 	}
 }

@@ -1,0 +1,13 @@
+﻿l_english:
+
+ nep_starbase_invinsible:0 ""
+ nep_starbase_invinsible_plural:0 ""
+ 
+ nep_mia.2.name:0 "我们的船失踪了"
+ nep_mia.2.desc:0 "我们前往[From.GetName]的船因为星况不明而失踪。"
+ 
+ nep_mia.3.name:0 "我们的船失踪了"
+ nep_mia.3.desc:0 "我们前往[From.GetName]的船因为星况不明而失踪。"
+ 
+ nep_mia.4.name:0 "我们的船失踪了"
+ nep_mia.4.desc:0 "我们前往[From.GetName]的船因为星况不明而失踪。"

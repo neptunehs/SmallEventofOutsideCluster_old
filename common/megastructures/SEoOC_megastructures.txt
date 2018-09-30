@@ -56,11 +56,16 @@ nep_sealgate_restored = {
 					has_star_flag = nep_Exterior_system
 				}
 			}
-			spawn_megastructure = {
-				#name = ""
-				type = nep_sealgate_restored
-				orbit_angle = { min = 0 max = 360 }
-				orbit_distance = 150
+			random_system_planet = {
+				limit = { is_star = yes }
+				from = {
+					spawn_megastructure = {
+						name = "Seal Gate"
+						type = nep_sealgate_restored
+						location = prevprev
+						orbit_angle = 186
+						orbit_distance = 150
+				}
 			}
 			every_megastructure = {
 				limit = {

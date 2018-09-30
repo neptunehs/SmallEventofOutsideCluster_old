@@ -1,0 +1,6 @@
+component_set = {
+	key = "nep_DESTRUCTOR_RAY"
+	
+	icon = "GFX_ship_part_nep_destructor_ray"
+	icon_frame = 1	
+}

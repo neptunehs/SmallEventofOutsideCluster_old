@@ -1,234 +1,234 @@
-ship_section_template = {
-	key = "NEP_KRAHEN_CORVETTE_MID_1"
-	ship_size = corvette
-	fits_on_slot = mid
-	entity = "NEP_ANCIENT_CORVETTE_MID_1_entity"
-	icon = "GFX_ship_part_core_mid"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_CORVETTE_MID_1"
+	# ship_size = corvette
+	# fits_on_slot = mid
+	# entity = "NEP_ANCIENT_CORVETTE_MID_1_entity"
+	# icon = "GFX_ship_part_core_mid"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_01"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_01"
+	# }
 	
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_01"
-	}
+	# component_slot = {
+		# name = "SMALL_GUN_01"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_01"
+	# }
 	
-	small_utility_slots = 3
-	aux_utility_slots = 1
+	# small_utility_slots = 3
+	# aux_utility_slots = 1
 	
-	cost = 60
-}
+	# cost = 60
+# }
 
-ship_section_template = {
-	key = "NEP_KRAHEN_DESTROYER_BOW_1"
-	ship_size = destroyer
-	fits_on_slot = bow
-	should_draw_components = yes
-	entity = "NEP_ANCIENT_DESTROYER_BOW_1_entity"
-	icon = "GFX_ship_part_core_bow"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_DESTROYER_BOW_1"
+	# ship_size = destroyer
+	# fits_on_slot = bow
+	# should_draw_components = yes
+	# entity = "NEP_ANCIENT_DESTROYER_BOW_1_entity"
+	# icon = "GFX_ship_part_core_bow"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_01"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_01"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_02"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_02"
-	}	
+	# component_slot = {
+		# name = "MEDIUM_GUN_02"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_02"
+	# }	
 
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_01"
-	}
+	# component_slot = {
+		# name = "SMALL_GUN_01"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_01"
+	# }
 	
-	small_utility_slots = 6
+	# small_utility_slots = 6
 	
-	cost = 60
-}
+	# cost = 60
+# }
 
-ship_section_template = {
-	key = "NEP_KRAHEN_DESTROYER_STERN_1"
-	ship_size = destroyer
-	fits_on_slot = stern
-	should_draw_components = yes
-	entity = "NEP_ANCIENT_DESTROYER_STERN_1_entity"
-	icon = "GFX_ship_part_core_stern"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_DESTROYER_STERN_1"
+	# ship_size = destroyer
+	# fits_on_slot = stern
+	# should_draw_components = yes
+	# entity = "NEP_ANCIENT_DESTROYER_STERN_1_entity"
+	# icon = "GFX_ship_part_core_stern"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 
-	component_slot = {
-		name = "SMALL_GUN_01"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_01"
-	}
+	# component_slot = {
+		# name = "SMALL_GUN_01"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_01"
+	# }
 	
-	component_slot = {
-		name = "SMALL_GUN_02"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_02"
-	}
+	# component_slot = {
+		# name = "SMALL_GUN_02"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_02"
+	# }
 	
-	component_slot = {
-		name = "SMALL_GUN_03"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_03"
-	}
+	# component_slot = {
+		# name = "SMALL_GUN_03"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_03"
+	# }
 	
-	aux_utility_slots = 1
+	# aux_utility_slots = 1
 	
-	cost = 60
-}
+	# cost = 60
+# }
 
-ship_section_template = {
-	key = "NEP_KRAHEN_CRUISER_BOW_1"
-	ship_size = cruiser
-	fits_on_slot = bow
-	should_draw_components = yes
-	entity = "NEP_ANCIENT_CRUISER_BOW_1_entity"
-	icon = "GFX_ship_part_core_bow"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_CRUISER_BOW_1"
+	# ship_size = cruiser
+	# fits_on_slot = bow
+	# should_draw_components = yes
+	# entity = "NEP_ANCIENT_CRUISER_BOW_1_entity"
+	# icon = "GFX_ship_part_core_bow"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_01"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_01"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_02"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_02"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_02"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_02"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_03"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_03"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_03"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_03"
+	# }
 	
-	medium_utility_slots = 4
+	# medium_utility_slots = 4
 	
-	cost = 100
-}
+	# cost = 100
+# }
 
-ship_section_template = {
-	key = "NEP_KRAHEN_CRUISER_MID_1"
-	ship_size = cruiser
-	fits_on_slot = mid
-	should_draw_components = yes
-	entity = "NEP_ANCIENT_CRUISER_MID_1_entity"
-	icon = "GFX_ship_part_core_mid"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_CRUISER_MID_1"
+	# ship_size = cruiser
+	# fits_on_slot = mid
+	# should_draw_components = yes
+	# entity = "NEP_ANCIENT_CRUISER_MID_1_entity"
+	# icon = "GFX_ship_part_core_mid"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_01"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_01"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_01"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_02"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_02"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_02"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_02"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_03"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_03"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_03"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_03"
+	# }
 	
-	component_slot = {
-		name = "MEDIUM_GUN_04"
-		slot_size = medium
-		slot_type = weapon
-		locatorname = "medium_gun_04"
-	}
+	# component_slot = {
+		# name = "MEDIUM_GUN_04"
+		# slot_size = medium
+		# slot_type = weapon
+		# locatorname = "medium_gun_04"
+	# }
 	
-	medium_utility_slots = 4
+	# medium_utility_slots = 4
 	
-	cost = 100
-}
+	# cost = 100
+# }
 
-ship_section_template = {
-	key = "NEP_KRAHEN_CRUISER_STERN_1"
-	ship_size = cruiser
-	fits_on_slot = stern
-	should_draw_components = yes
-	entity = "NEP_ANCIENT_CRUISER_STERN_1_entity"
-	icon = "GFX_ship_part_core_stern"
+# ship_section_template = {
+	# key = "NEP_KRAHEN_CRUISER_STERN_1"
+	# ship_size = cruiser
+	# fits_on_slot = stern
+	# should_draw_components = yes
+	# entity = "NEP_ANCIENT_CRUISER_STERN_1_entity"
+	# icon = "GFX_ship_part_core_stern"
 	
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+	# ai_weight = {
+		# modifier = {
+			# factor = 0
+		# }
+	# }
 
-	component_slot = {
-		name = "PD_01"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_01"
-	}
-	component_slot = {
-		name = "PD_02"
-		slot_size = point_defence
-		slot_type = weapon
-		locatorname = "small_gun_02"
-	}
+	# component_slot = {
+		# name = "PD_01"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_01"
+	# }
+	# component_slot = {
+		# name = "PD_02"
+		# slot_size = point_defence
+		# slot_type = weapon
+		# locatorname = "small_gun_02"
+	# }
 	
-	aux_utility_slots = 2
+	# aux_utility_slots = 2
 	
-	cost = 100
-}
+	# cost = 100
+# }
 
 
 ship_section_template = {
@@ -358,4 +358,110 @@ ship_section_template = {
 	aux_utility_slots = 2
 	
 	cost = 150
+}
+
+ship_section_template = {
+	key = "NEP_HEAVY_SPACEBASE_SECTION"
+	ship_size = nep_heavy_spacebase
+
+	fits_on_slot = "core"
+	should_draw_components = yes
+	entity = "starbase_citadel_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_05"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_06"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_07"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_08"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_08"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_09"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_09"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_010"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_010"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_011"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_011"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_012"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_012"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_013"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_013"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 26
+	aux_utility_slots = 1
 }
