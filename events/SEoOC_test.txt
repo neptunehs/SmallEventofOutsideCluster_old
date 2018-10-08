@@ -86,6 +86,9 @@ country_event = {
 			create_ship = {
 				name = "Seal Evil"
 				design = "Seal evil"
+				effect = {
+					#set_disabled = yes
+				}
 			}	
 			set_location = {
 				target = prev
@@ -96,12 +99,29 @@ country_event = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self	
+			
+			#set_event_locked = yes
+			fleet_event = { id = nep_test.21 days = 3 }
 		}
 	}
 		}
 		}
 }
 
+fleet_event = {
+	id = nep_test.21
+    hide_window = yes
+	is_triggered_only = yes
+#	fire_only_once = yes
+	location = root
+#	is_triggered_only = yes
+	
+	trigger = { always = no }
+	
+	immediate = {
+		set_event_locked = yes
+	}	
+}
 country_event = {
 	id = nep_test.3
     hide_window = yes
@@ -431,4 +451,7 @@ planet_event = {
 			}
 		}
 	}
+}
+ship_event = {
+	id = nep.test
 }

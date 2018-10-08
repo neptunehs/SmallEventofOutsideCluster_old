@@ -1,17 +1,16 @@
-on_game_start = {
-	events = {
-		nep_mia.1
-	}
-}
-
 on_entering_system = {
 	events = {
 		nep_highway.5 #first enter station
 		nep_seal.2 #first enter ambient place
 		nep_dragon.64 #first enter dragon system
+	}
+}
+
+on_entering_system_fleet = {
+	events = {
+		nep_mia.1
 		nep_mia.2
 		nep_mia.3
-		nep_mia.4
 	}
 }
 
@@ -36,6 +35,8 @@ on_entering_battle = {
 		nep_dragon.910
 		nep_dragon.9400
 		nep_dragon.9402
+		nep_finalweapon.71
+		nep_dragon.72
 	}
 }
 
@@ -43,7 +44,14 @@ on_ship_destroyed_victim = {
 	events = {
 		nep_inva.43
 		nep_inva.51
-		nep_dragon.82
+		nep_dragon.81
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		nep_finalweapon.81
+		nep_finalweapon.82
 	}
 }
 

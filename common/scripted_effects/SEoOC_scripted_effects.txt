@@ -78,6 +78,11 @@ malfunctioning_guards_spawn = {
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
 			
+			add_modifier = {
+				modifier = fleet_force_disparity_effect
+				days = -1
+			}
+			
 			queue_actions = {	
 				repeat = {
 					find_closest_planet = {
@@ -774,6 +779,10 @@ create_krahen_colonizer = {
 	}
 }
 
+#######################################
+#  finalweapon
+#######################################
+
 create_finalweapon_fleet = {
 	create_leader = {
 		type = admiral
@@ -796,8 +805,8 @@ create_finalweapon_fleet = {
 			while = {
 				count = 3
 				create_ship = {
-					name = "NAME_Corrupted_Finalweapon"
-					design = "NAME_nep_finalweapon"
+					name = "NAME_nep_Corrupted_Finalweapon"
+					design = "NAME_nep_finalweapon_design"
 				}
 			}
 			assign_leader = last_created_leader
@@ -806,6 +815,12 @@ create_finalweapon_fleet = {
 				distance = 30
 				angle = random
 			}
+			
+			add_modifier = {
+				modifier = fleet_force_disparity_effect
+				days = -1
+			}
+			
 			set_formation_scale = 1.6
 			set_fleet_stance = aggressive
 			set_aggro_range = 500

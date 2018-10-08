@@ -6,3 +6,32 @@ d_Anael_moon = {
 	orbital_weight = { weight = 0 }
 	drop_weight = { weight = 0 }
 }
+
+d_broken_seal_1 = {
+	resources = {
+		society_research = 400
+		engineering_research = 400
+		physics_research = 400
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_broken_seal_2 = {
+	resources = {
+		minerals = 1250
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_broken_seal_3 = {
+	resources = {
+		energy = 1250
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}

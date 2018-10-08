@@ -277,3 +277,11 @@ nep_Anael_debuff = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
 	icon_frame = 7
 }
+
+##########################################################################
+# Finalweapon
+##########################################################################
+
+nep_finalweapon_debuff = {
+	damage_vs_country_type_nep_finalweapon_country_mult = -0.99
+}

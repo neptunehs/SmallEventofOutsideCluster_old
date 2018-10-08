@@ -17,7 +17,9 @@ country_event = {
 	}
 	
 	immediate = {
-		event = { id = nep_finalweapon.4001 days = 7200 random = 720 }
+		event_target:nep_grand_seal_planet = {
+			planet_event = { id = nep_finalweapon.4001 days = 7200 random = 720 }
+		}
 	}
 	
 	option = {
@@ -112,7 +114,11 @@ country_event = {
 	immediate = {
 		set_global_flag = nep_finalweapon_begin
 		event = { id = nep_finalweapon.5 }
-		event = { id = nep_finalweapon.6 days = 600 }		
+		event = { id = nep_finalweapon.6 days = 400 }
+		every_playable_country = {
+			limit = { NOT = { is_same_value = root } }
+			country_event = { id = nep_finalweapon.4002 }
+		}
 	}
 	
 	option = {
@@ -121,7 +127,7 @@ country_event = {
 }
 
 #unnormal break seal
-event = {
+planet_event = {
 	id = nep_finalweapon.4001
 	hide_window = yes
 	
@@ -129,24 +135,26 @@ event = {
 	
 	is_triggered_only = yes
 	
-	trigger = {
-		NOT = { has_global_flag = nep_finalweapon_begin }
-	}
-	
 	immediate = {
-		set_global_flag = nep_finalweapon_begin
-		random_system = {
-			limit = { has_star_flag = nep_seal_system }
-			every_fleet_in_system = { destroy_fleet = this }
-		}
-		event = { id = nep_finalweapon.5 }
-		event = { id = nep_finalweapon.6 days = 5 }
-		every_playable_country = {
-			country_event = { id = nep_finalweapon.4002 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = nep_finalweapon_begin }
+			}
+			set_global_flag = nep_finalweapon_begin
+			random_system = {
+				limit = { has_star_flag = nep_seal_system }
+				every_fleet_in_system = { destroy_fleet = this }
+			}
+			event = { id = nep_finalweapon.5 }
+			event = { id = nep_finalweapon.6 days = 5 }
+			every_playable_country = {
+				country_event = { id = nep_finalweapon.4002 }
+			}
 		}
 	}
 }
 
+#Notifiction
 country_event = {
 	id = nep_finalweapon.4002
 	title = "nep_finalweapon.4002.name"
@@ -161,9 +169,17 @@ country_event = {
 	
 	option = {
 		name = nep_finalweapon.4002.a
+		if = {
+			limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
+			begin_event_chain = {
+				event_chain = nep_finalweapon_chain
+				target = root
+			}
+		}
 	}
 }
 
+#Corrupted finalweapon small crisis begin.
 event = {
 	id = nep_finalweapon.5
 	hide_window = yes
@@ -212,12 +228,11 @@ event = {
 			create_finalweapon_fleet = yes
 			create_finalweapon_fleet = yes
 		}
-		every_playable_country = {
-			limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
-		}
+		set_global_flag = nep_corrupted_finalweapons_begin
 	}
 }
 
+#6X:Corrupted finalweapon actions
 event = {
 	id = nep_finalweapon.6
 	hide_window = yes
@@ -232,6 +247,7 @@ event = {
 	}
 }
 
+#find a victim system
 fleet_event = {
 	id = nep_finalweapon.61
 	hide_window = yes
@@ -263,12 +279,19 @@ fleet_event = {
 						angle = random
 					}
 					every_playable_country = {
+						limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
+						begin_event_chain = {
+							event_chain = nep_finalweapon_chain
+							target = this
+						}
+					}
+					every_playable_country = {
 						create_point_of_interest = {
 							id = nep_finalweapon_poi_2
 							name = "nep_finalweapon_poi"
 							desc = "nep_finalweapon_poi_desc"
 							event_chain = "nep_finalweapon_chain"
-							location = prev
+							location = root
 						}
 					}
 				}
@@ -281,6 +304,7 @@ fleet_event = {
 	}
 }
 
+#Create a bomb
 fleet_event = {
 	id = nep_finalweapon.62
 	hide_window = yes
@@ -305,11 +329,50 @@ fleet_event = {
 	
 	immediate = {
 		solar_system = {
-			
+			every_system_planet = {	remove_planet = yes }
+			every_fleet_in_system = { destroy_fleet = this }
+			asteroids_distance = 10
+			asteroids_distance = 20
+			asteroids_distance = 30
+			asteroids_distance = 40
+			asteroids_distance = 50
+			asteroids_distance = 60
+			asteroids_distance = 70
+			asteroids_distance = 80
+			asteroids_distance = 90
+			asteroids_distance = 100
+			asteroids_distance = 110
+			asteroids_distance = 120
+			asteroids_distance = 130
+			asteroids_distance = 140
+			asteroids_distance = 150
+			every_playable_country = {
+					country_event = { id = nep_finalweapon.631 }
+				}
+			}
+			set_name = " "
 		}
 	}
 }
 
+#notificion
+country_event = {
+	id = nep_finalweapon.631
+	title = "nep_finalweapon.631.name"
+	desc = "nep_finalweapon.631.desc"
+	picture = GFX_evt_exploding_planet
+	location = from.solar_system
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = nep_finalweapon.631.a
+	}
+}
+
+#Return to grand seal
 fleet_event = {
 	id = nep_finalweapon.64
 	hide_window = yes
@@ -326,6 +389,13 @@ fleet_event = {
 			angle = random
 		}
 		every_playable_country = {
+			limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
+			begin_event_chain = {
+				event_chain = nep_finalweapon_chain
+				target = this
+			}
+		}
+		every_playable_country = {
 			create_point_of_interest = {
 				id = nep_finalweapon_poi_2
 				name = "nep_finalweapon_poi"
@@ -334,6 +404,350 @@ fleet_event = {
 				location = root
 			}
 		}
-		fleet_event = { id = nep_finalweapon.61 days = 200 }		
+		fleet_event = { id = nep_finalweapon.61 days = 200 }	
+	}
+}
+
+#7X:battles between finalweapon
+#debuff
+fleet_event = {
+	id = nep_finalweapon.71
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		FromFrom = { has_fleet_flag = nep_corrupted_finalweapons } 
+	}
+	
+	immediate = {
+		FromFromFrom = {
+			add_modifier = {
+				modifier = nep_finalweapon_debuff
+				days = 21
+			}
+		}
+	}
+}
+
+#Buff finalweapons,includes reward
+country_event = {
+	id = nep_finalweapon.72
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		fromfrom = {
+			any_owned_ship = {
+				is_ship_size = nep_finalweapons
+			}
+			NOT = {
+				has_fleet_flag = nep_finalweapons_in_battle
+			}
+		}
+	}
+	
+	immediate = {
+		fromfrom = {
+			set_fleet_flag = nep_finalweapons_in_battle
+			every_owned_ship = {
+				limit = {
+					is_ship_size = nep_finalweapons
+				}
+				ship_event = { id = nep_finalweapon.7201 days = 3 }
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = nep_finalweapon.7201
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_hp_percentage > 0
+			}
+			repair_percentage = 0.3
+		}
+		else = {
+			fleet = {
+				if = {
+					limit = {
+						NOT = {
+							any_owned_ship = {
+								is_ship_size = nep_finalweapons
+							}
+						}
+					}
+					remove_fleet_flag = nep_finalweapons_in_battle
+				}
+			}
+		}
+		if = {
+			limit = {
+				fleet = { is_in_combat = yes }
+			}
+			ship_event = { id = nep_finalweapon.7201 days = 3 }
+		}
+		else = {
+			fleet = { remove_fleet_flag = nep_finalweapons_in_battle }
+		}
+	}
+}
+
+#8X:everything ends
+country_event = {
+	id = nep_finalweapon.81
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_corrupted_finalweapons_begin
+		from = {
+			is_country_type = nep_finalweapon_country
+			num_fleets >= 1
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+			}
+			set_country_flag = nep_corrupted_finalweapons_defeater
+		}
+	}
+}
+
+country_event = {
+	id = nep_finalweapon.82
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_corrupted_finalweapons_begin
+		from = {
+			is_country_type = nep_finalweapon_country
+			num_fleets < 1
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+			}
+			set_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		remove_global_flag = nep_corrupted_finalweapons_begin
+		#set_global_flag = nep_corrupted_finalweapons_end
+		every_playable_country = {
+			country_event = { id = nep_finalweapon.8 }
+		}
+	}
+}
+
+country_event = {
+	id = nep_finalweapon.8
+	title = "nep_finalweapon.8.name"
+	desc = {
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		text = nep_finalweapon.8.desc.a
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = nep_dragon_summoner }
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		text = nep_finalweapon.8.desc.b
+	}
+	desc = {
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+		}
+		text = nep_finalweapon.8.desc.c
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				has_country_flag = nep_dragon_summoner
+				has_country_flag = nep_corrupted_finalweapons_defeater }
+			}
+		}
+		text = nep_finalweapon.8.desc.d
+	}
+	picture = GFX_evt_exploding_ship
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		#disconcerting
+		name = nep_finalweapon.8.a
+		trigger = {
+			NOR = {
+				has_country_flag = nep_dragon_summoner
+				has_country_flag = nep_corrupted_finalweapons_defeater }
+			}
+		}
+	}
+	
+	option = {
+		#a victory
+		name = nep_finalweapon.8.b
+		trigger = {
+			NOT = { has_country_flag = nep_dragon_summoner }
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+			min = @tier5unitymin
+			max = @tier5unitymax
+		}
+	}
+	
+	option = {
+		#we don't have enough power
+		name = nep_finalweapon.8.c
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+		}
+		add_monthly_resource_mult = {
+			add_influence = -1000
+		}
+	}
+	
+	option = {
+		#get reward project
+		name = nep_finalweapon.8.d
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		enable_special_project = {
+			name = "nep_finalweapon_reward_project"
+			location = event_target:nep_grand_seal_planet
+			owner = root
+		}
+	}
+	
+	option = {
+		#brow up seals
+		name = nep_finalweapon.8.e
+		custom_tooltip = nep_finalweapon.8.tooltip.e
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+		hidden_effect = {
+			event_target:nep_seal_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					remove_planet = yes
+				}
+				random_system_planet = {
+					change_pc = pc_asteroid
+					clear_deposits = yes
+					add_deposit = d_broken_seal_1
+				}
+				random_system_planet = {
+					limit = { NOT = { is_planet_class = pc_asteroid } }
+					change_pc = pc_asteroid
+					clear_deposits = yes
+					add_deposit = d_broken_seal_2
+				}
+				random_system_planet = {
+					limit = { NOT = { is_planet_class = pc_asteroid } }
+					change_pc = pc_asteroid
+					clear_deposits = yes
+					add_deposit = d_broken_seal_3
+				}
+				every_system_megastructure = { remove_megastructure = yes }
+				every_fleet_in_system = { destroy_fleet = this }
+				asteroids_distance = 10
+				asteroids_distance = 20
+				asteroids_distance = 30
+				asteroids_distance = 40
+				asteroids_distance = 50
+				asteroids_distance = 60
+				asteroids_distance = 70
+				asteroids_distance = 80
+				asteroids_distance = 90
+				asteroids_distance = 100
+				asteroids_distance = 110
+				asteroids_distance = 120
+				asteroids_distance = 130
+				asteroids_distance = 140
+				asteroids_distance = 150
+			}
+		}
+	}
+	
+	option = {
+		#Don't mind
+		name = nep_finalweapon.8.f
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			has_country_flag = nep_corrupted_finalweapons_defeater
+		}
+	}
+}
+
+ship_event = {
+	id = nep_finalweapon.9
+	title = "nep_finalweapon.9.name"
+	desc = "nep_finalweapon.9.desc"
+	picture = GFX_evt_ship_in_orbit
+		
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+		create_fleet = {
+			name = "NAME_nep_finalweapon"
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_nep_finalweapon_ship"
+					design = "NAME_nep_finalweapon_design"
+				}
+				assign_leader = last_created_leader
+				set_location = {
+					target = event_target:nep_grand_seal_planet
+					distance = 30
+					angle = random
+				}
+				
+				add_modifier = {
+					modifier = fleet_force_disparity_effect
+					days = -1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = nep_finalweapon.9.a
 	}
 }

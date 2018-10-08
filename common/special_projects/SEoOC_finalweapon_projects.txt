@@ -37,3 +37,28 @@ special_project = {
 
 	}
 }
+
+special_project = {
+	key = "nep_finalweapon_reward_project"
+	days_to_research = 1200
+	tech_department = society_technology
+	picture = GFX_evt_unspeakable_horror
+	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	
+
+	on_success = {
+		ship_event = { id = nep_finalweapon.9 }
+	}
+	
+	on_fail = {
+
+	}
+}
