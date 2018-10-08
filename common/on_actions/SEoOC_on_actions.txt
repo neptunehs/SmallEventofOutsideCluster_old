@@ -36,7 +36,7 @@ on_entering_battle = {
 		nep_dragon.9400
 		nep_dragon.9402
 		nep_finalweapon.71
-		nep_dragon.72
+		nep_finalweapon.72
 	}
 }
 
@@ -44,7 +44,7 @@ on_ship_destroyed_victim = {
 	events = {
 		nep_inva.43
 		nep_inva.51
-		nep_dragon.81
+		nep_dragon.82
 	}
 }
 
