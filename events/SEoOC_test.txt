@@ -452,6 +452,3 @@ planet_event = {
 		}
 	}
 }
-ship_event = {
-	id = nep.test
-}

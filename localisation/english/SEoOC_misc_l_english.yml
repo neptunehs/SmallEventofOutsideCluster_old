@@ -1,0 +1,4 @@
+﻿l_english:
+
+ nep_mia.1.name:0 "Our fleets got MIA"
+ nep_mia.1.desc:0 "我们前往[From.GetName]的船因为星况不明而失踪。"

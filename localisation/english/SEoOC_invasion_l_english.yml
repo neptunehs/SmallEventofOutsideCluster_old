@@ -1,0 +1,86 @@
+﻿l_english:
+
+ nep_krahen_battleship:0 "Battleship"
+ nep_krahen_battleship_plural:0 "Battleships"
+ 
+ nep_heavy_spacebase:0 "Heavy Spacebase"
+ nep_heavy_spacebase_plural:0 "Heavy Spacebases"
+ 
+ nep_inva.1.name:0 "Grand Seal:Situation Update"
+ nep_inva.1.desc:0 "nep_inva.1.desc"
+ nep_inva.1.a:0 "nep_inva.1.a"
+ 
+ nep_inva.2.name:0 "Unknown Hostile!"
+ nep_inva.2.desc:0 "nep_inva.2.desc"
+ nep_inva.2.a:0 "nep_inva.2.a"
+ 
+ nep_inva.31.name:0 "Krah'en Empire"
+ nep_inva.31.desc:0 "nep_inva.31.desc"
+ nep_inva.31.a:0 "nep_inva.31.a"
+ nep_inva.31.a.response:0 "nep_inva.31.a.response"
+ nep_inva.31.b:0 "nep_inva.31.b"
+ nep_inva.31.b.response:0 "nep_inva.31.b.response"
+ nep_inva.31.c:0 "nep_inva.31.c"
+
+ nep_inva.32.name:0 "???"
+ nep_inva.32.desc:0 "…………………………/n…………………………/n/n§Y<无人应答>§!"
+ nep_inva.32.a:0 "nep_inva.32.a"
+ nep_inva.32.a.response:0 "…………………………/n…………………………/n/n§Y<无人应答>§!"
+ nep_inva.32.b:0 "nep_inva.32.b"
+ nep_inva.32.c:0 "Terminate Transmission."
+ 
+ nep_inva.33.name:0 "Krah'en Empire"
+ nep_inva.33.desc:0 "nep_inva.33.desc"
+ nep_inva.33.a:0 "nep_inva.33.a"
+ nep_inva.33.a.response:0 "nep_inva.33.a.response"
+ nep_inva.33.b:0 "nep_inva.33.b"
+
+ nep_inva.420.name:0 "Blind Devotion"
+ nep_inva.420.desc:0 "nep_inva.420.desc"
+ nep_inva.420.a:0 "It's horrible."
+ nep_inva.420.b:0 "nep_inva.420.b"
+ 
+ nep_inva.53.name:0 "A Great Victory!"
+ nep_inva.53.desc:0 "nep_inva.53.desc"
+ nep_inva.53.a:0 "nep_inva.53.a"
+ 
+ nep_inva.54.name:0 "nep_inva.54.name"
+ nep_inva.54.desc:0 "nep_inva.54.desc"
+ nep_inva.54.a:0 "OK"
+ 
+ nep_inva.6.name:0 "nep_inva.6.name"
+ nep_inva.6.desc:0 "nep_inva.6.desc"
+ nep_inva.6.a:0 "nep_inva.6.a"
+ 
+ nep_krahen_invasion_chain_title:0 "Krah'en Empire Invasion"
+ nep_krahen_invasion_chain_desc:0 "nep_krahen_invasion_chain_desc" 
+ 
+ annexed_worlds:0 "Annexed Worlds"
+ liberated_worlds:0 "Liberated_Worlds"
+ krahen_overrun_us:0 "Krah'en Empire Fleets Overrun by Our Forces"
+ krahen_overrun_others:0 "Krah'en Empire Fleets Overrun by Other Country Forces"
+ krahen_overruns:0 "Fleets Overrun by Krah'en Empire Forces"
+ 
+ nep_krahen_explore:0 "nep_krahen_explore"
+ nep_krahen_explore_desc:0 "ep_krahen_explore_desc"
+ 
+ nep_adv_tank_factory:0 "Adv.tank Factory"
+ nep_adv_tank_factory_desc:0 "nep_adv_tank_factory_desc"
+ 
+ nep_heavy_fortress:0 "Heavy Fortress"
+ nep_heavy_fortress_desc:0 "nep_heavy_fortress_desc"
+ 
+ nep_heavy_fortress_2:0 "Heavy Fortress"
+ nep_heavy_fortress_2_desc:0 "nep_heavy_fortress_desc"
+ 
+ nep_planetary_gun:0 "Planetary Gun"
+ nep_planetary_gun_desc:0 "nep_planetary_gun_desc"
+ 
+ nep_sealgate_ruined:0 "Unfinished Megastructure"
+ nep_sealgate_ruined_DESC:0 "nep_sealgate_ruined_DESC"
+ nep_sealgate_ruined_MEGASTRUCTURE_DETAILS:0 "nep_sealgate_ruined_MEGASTRUCTURE_DETAILS"
+ 
+ nep_sealgate_restored:0 "Sealgate"
+ nep_sealgate_restored_DESC:0 "nep_sealgate_restored_DESC"
+ 
+ 

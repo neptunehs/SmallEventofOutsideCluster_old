@@ -113,8 +113,13 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = nep_finalweapon_begin
-		event = { id = nep_finalweapon.5 }
-		event = { id = nep_finalweapon.6 days = 400 }
+		random_fleet = {
+			any_ship
+		}
+		event_target:nep_grand_seal_planet = {
+			planet_event = { id = nep_finalweapon.5 }
+			planet_event = { id = nep_finalweapon.6 days = 400 }
+		}
 		every_playable_country = {
 			limit = { NOT = { is_same_value = root } }
 			country_event = { id = nep_finalweapon.4002 }
@@ -145,8 +150,8 @@ planet_event = {
 				limit = { has_star_flag = nep_seal_system }
 				every_fleet_in_system = { destroy_fleet = this }
 			}
-			event = { id = nep_finalweapon.5 }
-			event = { id = nep_finalweapon.6 days = 5 }
+			planet_event = { id = nep_finalweapon.5 }
+			planet_event = { id = nep_finalweapon.6 days = 5 }
 			every_playable_country = {
 				country_event = { id = nep_finalweapon.4002 }
 			}
@@ -180,7 +185,7 @@ country_event = {
 }
 
 #Corrupted finalweapon small crisis begin.
-event = {
+planet_event = {
 	id = nep_finalweapon.5
 	hide_window = yes
 	
@@ -212,17 +217,15 @@ event = {
     		        file = "00_solid.dds"
     		    }
     		    colors = {
-    		        "white"
+    		        "black"
     		        "null"
     		        "null"
     		        "null"
     		    }
 			}
-			effect = {
-    			save_event_target_as = nep_finalweapon_country
-    		}
 		}
-		event_target:nep_finalweapon_country = {
+		last_created_country = {
+			save_global_event_target_as = nep_finalweapon_country
 			create_finalweapon_fleet = yes
 			create_finalweapon_fleet = yes
 			create_finalweapon_fleet = yes
@@ -233,16 +236,20 @@ event = {
 }
 
 #6X:Corrupted finalweapon actions
-event = {
+planet_event = {
 	id = nep_finalweapon.6
 	hide_window = yes
 	
 	is_triggered_only = yes
 
 	immediate = {
-		every_fleet = {
-			has_fleet_flag = nep_corrupted_finalweapons
-			fleet_event = { id = nep_finalweapon.61 }
+		solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					has_fleet_flag = nep_corrupted_finalweapons
+				}
+				fleet_event = { id = nep_finalweapon.61 }
+			}
 		}
 	}
 }
@@ -273,27 +280,29 @@ fleet_event = {
 				}
 				random_system_planet = {
 					limit = { is_star = yes }
-					root.set_location = {
-						target = this
-						distance = 0
-						angle = random
-					}
-					every_playable_country = {
-						limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
-						begin_event_chain = {
-							event_chain = nep_finalweapon_chain
+					root = {
+						set_location = {
 							target = this
+							distance = 0
+							angle = random
 						}
 					}
-					every_playable_country = {
-						create_point_of_interest = {
-							id = nep_finalweapon_poi_2
-							name = "nep_finalweapon_poi"
-							desc = "nep_finalweapon_poi_desc"
-							event_chain = "nep_finalweapon_chain"
-							location = root
-						}
-					}
+				}
+			}
+			every_playable_country = {
+				limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
+				begin_event_chain = {
+					event_chain = nep_finalweapon_chain
+					target = this
+				}
+			}
+			every_playable_country = {
+				create_point_of_interest = {
+					id = nep_finalweapon_poi_2
+					name = "nep_finalweapon_poi"
+					desc = "nep_finalweapon_poi_desc"
+					event_chain = "nep_finalweapon_chain"
+					location = root
 				}
 			}
 			fleet_event = { id = nep_finalweapon.62 days = 150 }
@@ -331,24 +340,72 @@ fleet_event = {
 		solar_system = {
 			every_system_planet = {	remove_planet = yes }
 			every_fleet_in_system = { destroy_fleet = this }
-			asteroids_distance = 10
-			asteroids_distance = 20
-			asteroids_distance = 30
-			asteroids_distance = 40
-			asteroids_distance = 50
-			asteroids_distance = 60
-			asteroids_distance = 70
-			asteroids_distance = 80
-			asteroids_distance = 90
-			asteroids_distance = 100
-			asteroids_distance = 110
-			asteroids_distance = 120
-			asteroids_distance = 130
-			asteroids_distance = 140
-			asteroids_distance = 150
+			add_asteroid_belt = {
+				type = crystal_asteroid_belt
+				radius = 10
+			}
+			add_asteroid_belt = {
+				type = crystal_asteroid_belt
+				radius = 20
+			}
+			add_asteroid_belt = {
+				type = crystal_asteroid_belt
+				radius = 30
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 40
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 40
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 50
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 60
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 70
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 80
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 90
+			}
+			add_asteroid_belt = {
+				type = rocky_asteroid_belt
+				radius = 100
+			}
+			add_asteroid_belt = {
+				type = icy_asteroid_belt
+				radius = 120
+			}
+			add_asteroid_belt = {
+				type = icy_asteroid_belt
+				radius = 130
+			}
+			add_asteroid_belt = {
+				type = icy_asteroid_belt
+				radius = 140
+			}
+			add_asteroid_belt = {
+				type = icy_asteroid_belt
+				radius = 150
+			}
+			add_asteroid_belt = {
+				type = icy_asteroid_belt
+				radius = 110
+			}
 			every_playable_country = {
-					country_event = { id = nep_finalweapon.631 }
-				}
+				country_event = { id = nep_finalweapon.631 }
 			}
 			set_name = " "
 		}
@@ -383,10 +440,12 @@ fleet_event = {
 		every_playable_country = {
 			remove_point_of_interest = nep_finalweapon_poi_2
 		}
-		root.set_location = {
-			target = event_target:nep_grand_seal_planet
-			distance = 0
-			angle = random
+		root = {
+			set_location = {
+				target = event_target:nep_grand_seal_planet
+				distance = 0
+				angle = random
+			}
 		}
 		every_playable_country = {
 			limit = { NOT = { has_event_chain = nep_finalweapon_chain } }
@@ -440,7 +499,7 @@ country_event = {
 	trigger = {
 		fromfrom = {
 			any_owned_ship = {
-				is_ship_size = nep_finalweapons
+				is_ship_size = nep_finalweapon
 			}
 			NOT = {
 				has_fleet_flag = nep_finalweapons_in_battle
@@ -453,7 +512,7 @@ country_event = {
 			set_fleet_flag = nep_finalweapons_in_battle
 			every_owned_ship = {
 				limit = {
-					is_ship_size = nep_finalweapons
+					is_ship_size = nep_finalweapon
 				}
 				ship_event = { id = nep_finalweapon.7201 days = 3 }
 			}
@@ -480,7 +539,7 @@ ship_event = {
 					limit = {
 						NOT = {
 							any_owned_ship = {
-								is_ship_size = nep_finalweapons
+								is_ship_size = nep_finalweapon
 							}
 						}
 					}
@@ -501,6 +560,7 @@ ship_event = {
 }
 
 #8X:everything ends
+#on_ship_destroyed_perp
 country_event = {
 	id = nep_finalweapon.81
 	hide_window = yes
@@ -582,7 +642,7 @@ country_event = {
 		trigger = {
 			NOR = {
 				has_country_flag = nep_dragon_summoner
-				has_country_flag = nep_corrupted_finalweapons_defeater }
+				has_country_flag = nep_corrupted_finalweapons_defeater
 			}
 		}
 		text = nep_finalweapon.8.desc.d
@@ -603,7 +663,7 @@ country_event = {
 		trigger = {
 			NOR = {
 				has_country_flag = nep_dragon_summoner
-				has_country_flag = nep_corrupted_finalweapons_defeater }
+				has_country_flag = nep_corrupted_finalweapons_defeater
 			}
 		}
 	}
@@ -618,8 +678,6 @@ country_event = {
 		add_monthly_resource_mult = {
 			resource = unity
 			value = @tier5unityreward
-			min = @tier5unitymin
-			max = @tier5unitymax
 		}
 	}
 	
@@ -630,9 +688,7 @@ country_event = {
 			has_country_flag = nep_dragon_summoner
 			NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
 		}
-		add_monthly_resource_mult = {
-			add_influence = -1000
-		}
+		add_influence = -1000
 	}
 	
 	option = {
@@ -667,38 +723,93 @@ country_event = {
 				}
 				random_system_planet = {
 					change_pc = pc_asteroid
-					clear_deposits = yes
-					add_deposit = d_broken_seal_1
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_broken_seal_1
+					}
 				}
 				random_system_planet = {
 					limit = { NOT = { is_planet_class = pc_asteroid } }
 					change_pc = pc_asteroid
-					clear_deposits = yes
-					add_deposit = d_broken_seal_2
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_broken_seal_2
+					}
 				}
 				random_system_planet = {
 					limit = { NOT = { is_planet_class = pc_asteroid } }
 					change_pc = pc_asteroid
-					clear_deposits = yes
-					add_deposit = d_broken_seal_3
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_broken_seal_3
+					}
 				}
 				every_system_megastructure = { remove_megastructure = yes }
 				every_fleet_in_system = { destroy_fleet = this }
-				asteroids_distance = 10
-				asteroids_distance = 20
-				asteroids_distance = 30
-				asteroids_distance = 40
-				asteroids_distance = 50
-				asteroids_distance = 60
-				asteroids_distance = 70
-				asteroids_distance = 80
-				asteroids_distance = 90
-				asteroids_distance = 100
-				asteroids_distance = 110
-				asteroids_distance = 120
-				asteroids_distance = 130
-				asteroids_distance = 140
-				asteroids_distance = 150
+				add_asteroid_belt = {
+					type = crystal_asteroid_belt
+					radius = 10
+				}
+				add_asteroid_belt = {
+					type = crystal_asteroid_belt
+					radius = 20
+				}
+				add_asteroid_belt = {
+					type = crystal_asteroid_belt
+					radius = 30
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 40
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 40
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 50
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 60
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 70
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 80
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 90
+				}
+				add_asteroid_belt = {
+					type = rocky_asteroid_belt
+					radius = 100
+				}
+				add_asteroid_belt = {
+					type = icy_asteroid_belt
+					radius = 120
+				}
+				add_asteroid_belt = {
+					type = icy_asteroid_belt
+					radius = 130
+				}
+				add_asteroid_belt = {
+					type = icy_asteroid_belt
+					radius = 140
+				}
+				add_asteroid_belt = {
+					type = icy_asteroid_belt
+					radius = 150
+				}
+				add_asteroid_belt = {
+					type = icy_asteroid_belt
+					radius = 110
+				}
 			}
 		}
 	}

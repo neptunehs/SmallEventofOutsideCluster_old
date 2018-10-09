@@ -16,7 +16,7 @@ fleet_event = {
 	}
 	
 	immediate = {
-		order_force_return = yes
+		order_forced_return = yes
 	}
 	
 	option = {
@@ -40,7 +40,7 @@ fleet_event = {
 	}
 	
 	immediate = {
-		order_force_return = yes
+		order_forced_return = yes
 	}
 	
 	option = {
@@ -64,7 +64,7 @@ fleet_event = {
 	}
 	
 	immediate = {
-		order_force_return = yes
+		order_forced_return = yes
 	}
 	
 	option = {

@@ -845,7 +845,7 @@ create_finalweapon_bomb_fleet = {
 			while = {
 				create_ship = {
 					name = "NAME_nep_star_bomb"
-					design = "NAME_nep_star_bomb"
+					design = "NAME_nep_star_bomb_design"
 				}
 			}
 			set_location = {

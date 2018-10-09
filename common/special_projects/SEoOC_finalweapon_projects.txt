@@ -26,10 +26,10 @@ special_project = {
 					}
 				}
 			}
-			ship_event = { id = nep_finalweapon.4 }
+			owner = { country_event = { id = nep_finalweapon.4 } }
 		}
 		else = {
-			ship_event = { id = nep_finalweapon.3 }
+			owner = { country_event = { id = nep_finalweapon.3 } }
 		}
 	}
 	

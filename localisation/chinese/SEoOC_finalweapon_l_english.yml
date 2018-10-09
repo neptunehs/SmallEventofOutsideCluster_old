@@ -1,27 +1,25 @@
 ﻿l_english:
 
- nep_dragon:0 "七星龙"
- nep_dragon_plural:0 "七星龙"
- nep_dragon_baby:0 "被召唤的骁龙"
- nep_dragon_baby_plural:0 "被召唤的骁龙"
- nep_dragon_reward:0 "七星龙"
- nep_dragon_reward_plural:0 "七星龙"
- nep_dragon_reward_kai:0 "七星龙"
- nep_dragon_reward_kai_plural:0 "七星龙"
+ nep_finalweapon:0 "最终兵器"
+ nep_finalweapon_plural:0 "最终兵器"
+ nep_star_bomb:0 "星爆弹"
+ nep_star_bomb_plural:0 "星爆弹"
+ 
+ nep_finalweapon_chain_title:0 "最终兵器"
+ nep_finalweapon_chain_desc:0 "我们总算可以解开这个最大的封印了。里面是不是真的有之前说的最终兵器呢？"
   
- nep_dragon.1.name:0 "新的封印解开"
- nep_dragon.1.desc:0 "§Y第一封印§!貌似出现了状况，对黑洞的观测让我们发现了一些违反了黑洞力学定律的状况————之前的观测明明证明了这是普通的黑洞，并不会违反。有理由相信它快解开了。可能是因为我们消灭了§Y封印的邪恶§!造成的震动，造成了§Y第一封印§!解开的契机吧？————虽然也可能是古代文明留下的程序，让它在这时候解开————经过科学家的计算，现在第一封印可能已经演变成一个很特殊的类似于虫洞的天体，我们可能可以通过它前往其他宙域——————但我们不知道通向何处。因为其特殊性，我们可能需要一些研究来让我们的船通过它，尤其是要抵抗住其内部的巨大压力————毕竟这玩意儿看起来依然是个黑洞。"
- nep_dragon.1.a:0 "设立专项研究。" 
- nep_dragon.1.b:0 "做好戒备应对，但不要去想这玩意儿的对面是什么了" 
+ nep_finalweapon.1.name:0 "时间到了"
+ nep_finalweapon.1.desc:0 "我们已经集齐了之前祭坛上面要求的所有要素。现在也许是时候解开大封印了。"
+ nep_finalweapon.1.a:0 "事到如今也用不着担心啥了。着手解开吧。" 
+ nep_finalweapon.1.b:0 "还是别了吧。事情已经够多了。" 
  
- nep_dragon.2.name:0 "七边形星团"
- nep_dragon.2.desc:0 "我们成功的通过了§Y第一封印§!，出口是一个很奇怪的构成七边形的星团。不管怎么看，这都是人工形成的，而且还位于过去根本无法观测的地方。在我们的船队面前，是一个被防护罩裹住的星球，而且我们的传感器显示其他的几个星系也有。我们应该解开防护罩看看里面究竟是什么，又是谁干的。"
- nep_dragon.2.a:0 "很好" 
+ nep_finalweapon.2.name:0 "封印即将解开？"
+ nep_finalweapon.2.desc:0 "我们把龙跟宝玉都放在了祭坛要求的地方，祭坛开始了正常运作。接下来应该只要进行一系列安全手续就能够解开封印了。当然，按照惯例，还是准备好足够的战力再解开吧。"
+ nep_finalweapon.2.a:0 "做好准备吧。" 
  
- nep_dragon.3.name:0 "防护罩的内部"
- nep_dragon.3.desc:0 "这个防护罩似乎不是特别复杂，我们的科学家们已经找到了解开的办法了。防护罩内应该是一些盖亚星球————说不定很适合成为我们的新殖民地。另外，每个星球都有一个奇怪的遗迹在，说不定我们花点钱修复，可以让这些古代遗迹成为一些有用的设施？"
- nep_dragon.3.a:0 "解开防护罩，盖亚星球不应该被浪费。"
- nep_dragon.3.b:0 "被封印肯定是有理由的，比如说是因为那些遗迹。别管它们了。"
+ nep_finalweapon.3.name:0 "解开失败"
+ nep_finalweapon.3.desc:0 "我们进行了解开的手续，但是解开失败了。看来龙是不可或缺的，我们就不要想着保存它了————反正接下来再召唤就是。"
+ nep_finalweapon.3.a:0 "好吧。"
  
  nep_dragon.4.name:0 "不明势力出现"
  nep_dragon.4.desc:0 "一群不明势力突然在我们的7个新殖民地开始发起攻击。他们很巨大，也很强大，同时没人知道它们的起源。请立刻派出援军————如果不迅速行动，殖民地就要被毁了！"
@@ -72,30 +70,6 @@
  nep_dragon.941.name:0 "吸收失败"
  nep_dragon.941.desc:0 "我们的吸收计划失败了，不过您可以随时再执行。请确保我们的7个星系的星之力都恢复了，同时我们的龙必须在中心星系。"
  nep_dragon.941.a:0 "明白了"
- 
- nep_dragon_shielded_planet:0 "防护罩中的世界"
- nep_dragon_shielded_planet_DESC:0 "科学家打算先探一下里面有什么，再决定是否解开它。"
- 
- nep_Legnahcras_research:0 "研究不明势力"
- nep_Legnahcras_research_DESC:0 "“勇敢”的科学家们试图搞清这些不明势力是什么。"
- 
- nep_dragon_system_poi_name:0 "星团中心"
- nep_dragon_system_poi_desc:0 "这儿就是不明能源反应的起源。"
- 
- sc_Aemethms:1 "$pc_black_hole$"
- sc_Aemethms_desc:1 "$pc_black_hole_desc$"
- 
- nep_heptagram_chain_title:0 "神秘星团探索"
- nep_heptagram_chain_desc:0 "不知道这个神秘的人造星团里有什么呢？"
- 
- nep_dragon_chain_title:0 "中间星系探索"
- nep_dragon_chain_desc:0 "我们要探索能量反应的来源。可能会面临战斗，请做好准备。"
- 
- nep_ruin_temple:0 "损坏的设施"
- nep_ruin_temple_desc:0 "修复下也许还能用？"
- 
- nep_dragon_temple:0 "奉龙殿"
- nep_dragon_temple_desc:0 "被修复的远古遗迹。最近很受欢迎的旅行地点。有时候会原因不明的启动。"
  
  NEP_DRAGON_PRIMARY_WEAPON:0 "Heptagram Dragon's Breath"
  NEP_DRAGON_PRIMARY_WEAPON_DESC:0 "Heptagram Dragon's Breath" 
