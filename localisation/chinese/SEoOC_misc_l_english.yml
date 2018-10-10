@@ -2,3 +2,5 @@
 
  nep_mia.1.name:0 "我们的船失踪了"
  nep_mia.1.desc:0 "我们前往[From.GetName]的船因为星况不明而失踪。"
+
+ effect_every_combatant_fleet:0 "Every Combatant"

@@ -1200,6 +1200,46 @@ event = {
 					}
 				}
 			}
+			every_planet_within_border = {
+				limit = {
+					is_colony = yes
+					has_owner = yes
+					owner = { has_country_flag = nep_Krahen_country }
+					has_ground_combat = no
+					any_tile = { 
+						has_building = "nep_planetary_gun"
+						has_pop = yes
+					}
+					NOT = { any_fleet_in_orbit = { is_ship_size = nep_planetary_gun_invisible } }
+				}
+				create_fleet = {
+					name = "NAME_nep_planetary_gun_invisible"
+					settings = {
+						spawn_debris = no 
+					}
+					effect = {
+						set_owner = event_target:nep_Krahen_country	
+						create_ship = {
+							name = "NAME_nep_planetary_gun_invisible"
+							design = "NAME_nep_planetary_gun_design"
+						}
+						set_location = {
+							target = prev
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_aggro_range = 250
+						set_aggro_range_measure_from = self
+
+						queue_actions = {	
+							repeat = {
+								orbit_planet = prev
+							}
+						}
+					}
+				}
+			}
 		}
 		while = {
 			count = 3

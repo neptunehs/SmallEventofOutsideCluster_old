@@ -36,7 +36,9 @@ tech_nep_destructor_ray = {
 	tier = 4
 	category = { particles }
 	ai_update_type = military	
-	weight = 1
+	weight = 0
+
+	potential = { always = no }
 	
 	weight_modifier = {
 		modifier = {

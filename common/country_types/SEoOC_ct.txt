@@ -253,31 +253,31 @@ nep_krahen_country = {
 	# }
 # }
 
-nep_mia_country = {
-	share_communications = no
-	default_ships = no
-	government = no
-	enforces_borders = yes
-	show_in_contacts_list = no
-	has_complete_sensor = yes
-	custom_starbase = nep_starbase_invinsible
-	ai = {
-		enabled = no
-	}
-	faction = {
-		hostile = no
-		needs_border_access = yes
-		generate_borders = yes
-		needs_colony = no
-		auto_delete = no
-	}
-	modules = {
-		standard_event_module = {} # Needed for events
-		exclusive_diplomacy_module = {
-			contact_rule = script_only
-		}
-	}
-}
+# nep_mia_country = {
+	# share_communications = no
+	# default_ships = no
+	# government = no
+	# enforces_borders = yes
+	# show_in_contacts_list = no
+	# has_complete_sensor = yes
+	# custom_starbase = nep_starbase_invinsible
+	# ai = {
+		# enabled = no
+	# }
+	# faction = {
+		# hostile = no
+		# needs_border_access = yes
+		# generate_borders = yes
+		# needs_colony = no
+		# auto_delete = no
+	# }
+	# modules = {
+		# standard_event_module = {} # Needed for events
+		# exclusive_diplomacy_module = {
+			# contact_rule = script_only
+		# }
+	# }
+# }
 
 nep_finalweapon_country = {
 	is_space_critter = yes

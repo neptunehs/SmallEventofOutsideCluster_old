@@ -113,10 +113,18 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = nep_finalweapon_begin
-		random_fleet = {
-			any_ship
-		}
 		event_target:nep_grand_seal_planet = {
+			random_fleet_in_system = {
+				limit = { 
+					any_ship = {						
+						OR = {
+							is_ship_size = nep_dragon_reward
+							is_ship_size = nep_dragon_reward_kai
+						}
+					}
+				}
+				destroy_fleet = this
+			}
 			planet_event = { id = nep_finalweapon.5 }
 			planet_event = { id = nep_finalweapon.6 days = 400 }
 		}
@@ -321,9 +329,14 @@ fleet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		create_finalweapon_bomb_fleet = yes
-		last_created_fleet = { 
-			fleet_event = { id = nep_finalweapon.63 days = 150 }
+		if = {
+			limit = {
+				num_ships >= 2
+			}		
+			create_finalweapon_bomb_fleet = yes
+			last_created_fleet = { 
+				fleet_event = { id = nep_finalweapon.63 days = 150 }
+			}
 		}
 		fleet_event = { id = nep_finalweapon.64 days = 50 }
 	}
@@ -468,15 +481,56 @@ fleet_event = {
 }
 
 #7X:battles between finalweapon
-#debuff
-fleet_event = {
+#71X:barrier debuff
+#on_entering_battle,first fleet enter a battle
+country_event = {
 	id = nep_finalweapon.71
 	hide_window = yes
 	
 	is_triggered_only = yes
 
 	trigger = {
-		FromFrom = { has_fleet_flag = nep_corrupted_finalweapons } 
+		FromFrom = { 
+			has_fleet_flag = nep_corrupted_finalweapons
+			NOT = { has_fleet_flag = nep_corrupted_finalweapons_in_battle }
+		} 
+	}
+	
+	immediate = {
+		FromFrom = {
+			set_fleet_flag = nep_corrupted_finalweapons_in_battle
+			set_fleet_flag = nep_corrupted_finalweapons_barrier_inuse
+			fleet_event = { id = nep_finalweapon.712 days = 21 }
+		}
+		FromFromFrom = {
+			add_modifier = {
+				modifier = nep_finalweapon_debuff
+				days = 21
+			}
+		}
+		From = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = nep_finalweapon_barrier_seen }
+				}
+				set_country_flag = nep_finalweapon_barrier_seen
+				country_event = { id = nep_finalweapon.713 }
+			}
+		}
+	}
+}
+
+#on_entering_battle,other fleet enter a battle
+country_event = {
+	id = nep_finalweapon.711
+	hide_window = yes
+	
+	trigger = {
+		FromFrom = { 
+			has_fleet_flag = nep_corrupted_finalweapons
+			has_fleet_flag = nep_corrupted_finalweapons_in_battle
+			has_fleet_flag = nep_corrupted_finalweapons_barrier_inuse
+		} 
 	}
 	
 	immediate = {
@@ -486,10 +540,87 @@ fleet_event = {
 				days = 21
 			}
 		}
+		From = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = nep_finalweapon_barrier_seen }
+				}
+				set_country_flag = nep_finalweapon_barrier_seen
+				country_event = { id = nep_finalweapon.713 }
+			}
+		}
+	}
+}
+
+#times up
+fleet_event = {
+	id = nep_finalweapon.712
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_fleet_flag = nep_corrupted_finalweapons_barrier_inuse
+	}
+	immediate = {
+		if = {
+			limit = { has_fleet_flag = nep_corrupted_finalweapons_barrier_inuse }
+			remove_fleet_flag = nep_corrupted_finalweapons_barrier_inuse
+			every_combatant_fleet = {
+				limit = {
+					NOT = { any_combatant_fleet = { has_fleet_flag = nep_corrupted_finalweapons_barrier_inuse } }
+				}
+				remove_modifier = "nep_finalweapon_debuff" 
+			}
+		}
+	}
+}
+
+#notificion
+country_event = {
+	id = nep_finalweapon.713
+	title = "nep_finalweapon.713.name"
+	desc = "nep_finalweapon.713.desc"
+	picture = GFX_evt_unknown_ships
+	location = fromfrom
+	
+	is_triggered_only = yes
+	
+	immediate = { }
+	
+	option = {
+		name = nep_finalweapon.713.a
+	}
+}
+
+#clear flags,on_space_battle_won
+country_event = {
+	id = nep_finalweapon.714
+	hide_window = yes
+	
+	trigger = {
+		FromFrom = { 
+			has_fleet_flag = nep_corrupted_finalweapons
+			has_fleet_flag = nep_corrupted_finalweapons_in_battle
+		} 
+	}
+	
+	immediate = {
+		FromFrom = {
+			if = {
+				limit = { has_fleet_flag = nep_corrupted_finalweapons_in_battle }
+				remove_fleet_flag = nep_corrupted_finalweapons_in_battle
+			}
+			if = {
+				limit = { has_fleet_flag = nep_corrupted_finalweapons_barrier_inuse }
+				remove_fleet_flag = nep_corrupted_finalweapons_barrier_inuse
+			}
+		}
 	}
 }
 
 #Buff finalweapons,includes reward
+#on_entering_battle
 country_event = {
 	id = nep_finalweapon.72
 	hide_window = yes
@@ -498,7 +629,7 @@ country_event = {
 	
 	trigger = {
 		fromfrom = {
-			any_owned_ship = {
+			any_ship = {
 				is_ship_size = nep_finalweapon
 			}
 			NOT = {
@@ -510,9 +641,10 @@ country_event = {
 	immediate = {
 		fromfrom = {
 			set_fleet_flag = nep_finalweapons_in_battle
-			every_owned_ship = {
+			every_ship = {
 				limit = {
 					is_ship_size = nep_finalweapon
+					fleet = { is_same_value = root.fromfrom }
 				}
 				ship_event = { id = nep_finalweapon.7201 days = 3 }
 			}
@@ -560,7 +692,7 @@ ship_event = {
 }
 
 #8X:everything ends
-#on_ship_destroyed_perp
+#count cfw defeater,on_ship_destroyed_perp
 country_event = {
 	id = nep_finalweapon.81
 	hide_window = yes
@@ -585,6 +717,7 @@ country_event = {
 	}
 }
 
+#final fleet crashed
 country_event = {
 	id = nep_finalweapon.82
 	hide_window = yes
@@ -614,6 +747,7 @@ country_event = {
 	}
 }
 
+#reward
 country_event = {
 	id = nep_finalweapon.8
 	title = "nep_finalweapon.8.name"
@@ -635,8 +769,23 @@ country_event = {
 		trigger = {
 			has_country_flag = nep_dragon_summoner
 			NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+			NOR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence
+			}
 		}
 		text = nep_finalweapon.8.desc.c
+	}
+	desc = {
+		trigger = {
+			has_country_flag = nep_dragon_summoner
+			NOT = { has_country_flag = nep_corrupted_finalweapons_defeater }
+			OR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence
+			}
+		}
+		text = nep_finalweapon.8.desc.ca
 	}
 	desc = {
 		trigger = {
@@ -843,7 +992,6 @@ ship_event = {
 					name = "NAME_nep_finalweapon_ship"
 					design = "NAME_nep_finalweapon_design"
 				}
-				assign_leader = last_created_leader
 				set_location = {
 					target = event_target:nep_grand_seal_planet
 					distance = 30

@@ -106,8 +106,8 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 1680.0 max = 3740.0 }
-	windup = { min = 28.0 max = 36.0 }
+	damage = { min = 1280.0 max = 3140.0 }
+	windup = { min = 21.0 max = 32.0 }
 
 	total_fire_time = 120
 
@@ -201,7 +201,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 220.0 max = 540.0 }
+	damage = { min = 310.0 max = 780.0 }
 	windup = { min = 2.5 max = 18.0 }
 
 	total_fire_time = 18
@@ -285,7 +285,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 180.0 max = 340.0 }
+	damage = { min = 190.0 max = 350.0 }
 	windup = { min = 1.5 max = 12.0 }
 
 	total_fire_time = 8
@@ -369,7 +369,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 65.0 max = 98.0 }
+	damage = { min = 65.0 max = 88.0 }
 	windup = { min = 0 max = 0 }
 	
 	total_fire_time = 5

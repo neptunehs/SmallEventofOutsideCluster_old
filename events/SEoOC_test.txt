@@ -452,3 +452,175 @@ planet_event = {
 		}
 	}
 }
+
+country_event = {
+	id = nep_test.9
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+
+	immediate = {
+		create_fleet = {
+			name = "Krah'en Invader"
+			effect = {		
+				set_owner = root
+				while = {
+					count = 60
+					create_ship = {
+						name = "Krah'en Invader"
+						design = "NAME_Krah'en_Battleship"
+					}
+				}
+				set_location = {
+					target = root.capital_scope
+					distance = 150
+					angle = random
+				}
+				set_formation_scale = 2.0
+				set_fleet_stance = aggressive
+				set_aggro_range = 500
+				set_aggro_range_measure_from = self
+				set_fleet_bombardment_stance = armageddon
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_test.10
+    hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { always = no }
+
+	immediate = {
+
+		create_fleet = {
+			name = "NAME_nep_corrupted_finalweapons"
+			settings = {
+				spawn_debris = no 
+				can_change_leader = no
+				uses_naval_capacity = no
+			}
+			effect = {
+				set_owner = root
+				while = {
+					count = 3
+					create_ship = {
+						name = "NAME_nep_Corrupted_Finalweapon"
+						design = "NAME_nep_finalweapon_design"
+					}
+				}
+				
+				set_location = {
+					target = root.capital_scope
+					distance = 30
+					angle = random
+				}
+				
+				add_modifier = {
+					modifier = fleet_force_disparity_effect
+					days = -1
+				}
+				
+				set_formation_scale = 1.6
+				set_fleet_stance = aggressive
+				set_aggro_range = 500
+				set_aggro_range_measure_from = self
+				set_fleet_bombardment_stance = armageddon
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nep_test.11
+    hide_window = yes
+	is_triggered_only = yes
+#	fire_only_once = yes
+	location = root
+#	is_triggered_only = yes
+	
+	trigger = { always = no }
+
+	immediate = {
+		create_species = {
+			name = random
+			class = ROBOT
+			portrait = default_robot
+			namelist = "AI"
+			traits = {
+				trait = trait_mechanical
+			}
+		}
+		create_country = {
+			name = "NAME_finalweapon_country"
+			type = nep_finalweapon_country
+			species = last_created
+			flag = {
+			    icon = {
+    		        category = "special"
+    		        file = "unknown.dds"
+    		    }
+    		    background = {
+    		        category = "backgrounds"
+    		        file = "00_solid.dds"
+    		    }
+    		    colors = {
+    		        "black"
+    		        "null"
+    		        "null"
+    		        "null"
+    		    }
+			}
+		}
+			create_leader = {
+				type = admiral
+				species = prev.owner_species
+				name = random
+				skill = 10
+				traits = {
+					trait = leader_trait_aggressive
+				}
+			}
+			create_fleet = {
+				name = "NAME_nep_corrupted_finalweapons"
+				settings = {
+					spawn_debris = no 
+					can_change_leader = no
+					uses_naval_capacity = no
+				}
+				effect = {
+					set_owner = last_created_country
+					while = {
+						count = 3
+						create_ship = {
+							name = "NAME_nep_Corrupted_Finalweapon"
+							design = "NAME_nep_finalweapon_design"
+						}
+					}
+					assign_leader = last_created_leader
+					set_location = {
+						target = root.capital_scope
+						distance = 30
+						angle = random
+					}
+					
+					add_modifier = {
+						modifier = fleet_force_disparity_effect
+						days = -1
+					}
+					
+					set_formation_scale = 1.6
+					set_fleet_stance = aggressive
+					set_aggro_range = 500
+					set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = armageddon
+					
+					set_fleet_flag = nep_corrupted_finalweapons
+				}
+			}
+	}
+}

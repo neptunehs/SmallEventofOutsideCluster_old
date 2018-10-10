@@ -215,3 +215,8 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_03" } }
 	}
 }
+
+entity = {
+	name = "nep_planetary_gun_invisible_entity"
+	scale = 1
+}
