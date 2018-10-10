@@ -525,6 +525,8 @@ country_event = {
 	id = nep_finalweapon.711
 	hide_window = yes
 	
+	is_triggered_only = yes
+	
 	trigger = {
 		FromFrom = { 
 			has_fleet_flag = nep_corrupted_finalweapons
@@ -597,6 +599,8 @@ country_event = {
 country_event = {
 	id = nep_finalweapon.714
 	hide_window = yes
+	
+	is_triggered_only = yes
 	
 	trigger = {
 		FromFrom = { 
