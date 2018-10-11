@@ -77,8 +77,8 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	
-	power = -17
-	cost = 28
+	power = 0
+	cost = 0
 	
 	damage = { min = 335.0 max = 480.0 }
 	windup = { min = 2.0 max = 20.0 }
@@ -383,8 +383,8 @@ weapon_component_template = {
 	icon = "GFX_ship_part_nep_destructor_ray"
 	icon_frame = 1
 	
-	power = 60
-	cost = 60
+	power = 1000
+	cost = 1000
 	
 	damage = { min = 23000.0 max = 64000.0 }
 	windup = { min = 180.0 max = 210.0 }
@@ -424,7 +424,7 @@ strike_craft_component_template = {
 	
 	damage = { min = 12 max = 24 }
 	cooldown = 2.0
-	range = 80
+	range = 30
 	accuracy = 1.00
 	tracking = 0.50
 	
@@ -456,11 +456,26 @@ utility_component_template = {
 	power = 0
 	cost = 0
 	modifier = {
-		ship_shield_add = 8000
-		ship_shield_regen_add_static = 16.5 #Regeneration per day
+		ship_shield_add = 4320
+		ship_shield_regen_add_static = 432 #Regeneration per day
 	}
 	component_set = "nep_MAGNETIC_SHIELD"
 }
+
+utility_component_template = {
+	key = "nep_MAGNETIC_SHIELD_BASE"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	modifier = {
+		ship_shield_add = 19440
+		ship_shield_regen_add_static = 1944 #Regeneration per day
+	}
+	component_set = "nep_MAGNETIC_SHIELD"
+}
+
 
 weapon_component_template = {
 	key = "nep_PLANETARY_GUN_GUN"

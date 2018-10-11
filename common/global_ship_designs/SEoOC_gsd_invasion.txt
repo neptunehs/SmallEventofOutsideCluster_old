@@ -727,7 +727,7 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_1"
-			template = "nep_MAGNETIC_SHIELD"
+			template = "nep_MAGNETIC_SHIELD_BASE"
 		}
 	}
 

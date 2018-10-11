@@ -6,23 +6,10 @@ country_event = {
 	title = "nep_dragon.1.name"
 	desc = "nep_dragon.1.desc"	
 	picture = GFX_evt_black_hole
-		
+	
+	is_triggered_only = yes
+	
 	fire_only_once = yes
-	
-	trigger = {
-		is_ai = no
-		has_country_flag = nep_highway_founder
-		has_global_flag = nep_highway_used
-		has_global_flag = seal_evil_country_created
-		any_country = {
-			has_country_flag = seal_evil_country
-			num_fleets < 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 90
-	}
 	
 	immediate = {
 		#cluster
@@ -214,7 +201,11 @@ country_event = {
 	
 	option = {
 		name = nep_dragon.1.b
-#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 50 random = 10} } }
+		hidden_effect = { 			
+			event_target:nep_grand_seal_planet = {
+				planet_event = { id = nep_finalweapon.4001 days = 18000 random = 3600 }
+			}
+		}
 	}
 }
 
@@ -642,7 +633,11 @@ ship_event = {
 		owner = {
 			end_event_chain = "nep_heptagram_chain"
 		}
-#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 50 random = 5} } }
+		hidden_effect = { 
+			event_target:nep_grand_seal_planet = {
+				planet_event = { id = nep_finalweapon.4001 days = 18000 random = 1800 }
+			}
+		}
 	}
 }
 
@@ -823,7 +818,11 @@ country_event = {
 	}
 	option = {
 		name = nep_dragon.5.b
-#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 45 random = 5} } }
+		hidden_effect = { 
+			event_target:nep_grand_seal_planet = {
+				planet_event = { id = nep_finalweapon.4001 days = 16000 random = 1800 }
+			}
+		}
 	}
 }
 
@@ -1145,13 +1144,13 @@ country_event = {
 	title = "nep_dragon.8.name"
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = nep_dragon.8.notfirst }
+			NOT = { has_country_flag = nep_dragon_8_notfirst }
 		}
 		text = "nep_dragon.8.desc.a"
 	}
 	desc = {
 		trigger = {
-			has_country_flag = nep_dragon.8.notfirst
+			has_country_flag = nep_dragon_8_notfirst
 		}
 		text = "nep_dragon.8.desc.b"
 	}
@@ -1166,8 +1165,8 @@ country_event = {
 		NOT = { 
 			any_owned_ship = { 
 				OR = {
-					is_ship_size =  nep_dragon_reward 
-					is_ship_size =  nep_dragon_reward_kai
+					is_ship_size = nep_dragon_reward
+					is_ship_size = nep_dragon_reward_kai
 				}
 			}
 		}
@@ -1194,8 +1193,8 @@ country_event = {
 		}
 		hidden_effect = { 
 			if = {
-				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
-				set_country_flag = nep_dragon.8.notfirst
+				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
+				set_country_flag = nep_dragon_8_notfirst
 			}
 		}
 	}
@@ -1207,8 +1206,8 @@ country_event = {
 		hidden_effect = { 
 			remove_country_flag = nep_dragon_summoner
 			if = {
-				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
-				set_country_flag = nep_dragon.8.notfirst
+				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
+				set_country_flag = nep_dragon_8_notfirst
 			}
 		}
 		country_event = { id = nep_dragon.81 days = 360 }
@@ -1220,8 +1219,8 @@ country_event = {
 		hidden_effect = { 
 			remove_country_flag = nep_dragon_summoner
 			if = {
-				limit = { NOT = { has_country_flag = nep_dragon.8.notfirst } }
-				set_country_flag = nep_dragon.8.notfirst
+				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
+				set_country_flag = nep_dragon_8_notfirst
 			}
 		}
 	}

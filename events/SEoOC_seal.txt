@@ -7,18 +7,15 @@ country_event = {
 	id = nep_seal.1
 	hide_window = yes
 	
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 	
 	trigger = {
 		is_ai = no
 		has_country_flag = nep_highway_founder
 		has_global_flag = nep_highway_used
-		has_technology = "tech_sensors_4"
 		NOT = { has_global_flag = nep_seal_ambient_created }
-	}
-	
-	mean_time_to_happen = {
-		days = 90
 	}
 	
 	immediate = {
@@ -183,7 +180,7 @@ country_event = {
 	
 	option = {
 		name = nep_seal.5.b
-#		hidden_effect = { country_event = { id = { nep_finalweapon.X  years = 60 random = 10} } }
+		hidden_effect = { country_event = { id = nep_finalweapon.4000 days = 21600 random = 4000 } }
 	}
 }
 
@@ -1022,12 +1019,12 @@ ship_event = {
 		name = nep_seal.7.a
 		hidden_effect = { 
 			OWNER = { 
-				remove_point_of_interest = grand_seal_system_poi.1 
-				remove_point_of_interest = grand_seal_system_poi.2 
-				remove_point_of_interest = grand_seal_system_poi.3 
-				remove_point_of_interest = grand_seal_system_poi.4 
-				remove_point_of_interest = grand_seal_system_poi.5 
-				remove_point_of_interest = grand_seal_system_poi.6 
+				remove_point_of_interest = grand_seal_system_poi.1
+				remove_point_of_interest = grand_seal_system_poi.2
+				remove_point_of_interest = grand_seal_system_poi.3
+				remove_point_of_interest = grand_seal_system_poi.4
+				remove_point_of_interest = grand_seal_system_poi.5
+				remove_point_of_interest = grand_seal_system_poi.6
 			} 
 		}
 		enable_special_project = {
@@ -1118,7 +1115,7 @@ country_event = {
 		}
 	}
 }
-			
+
 ship_event = {
 	id = nep_seal.91
 	hide_window = yes
@@ -1143,6 +1140,46 @@ ship_event = {
 		}
 		else = {
 			remove_global_flag = nep_seal_evil_in_battle
+		}
+	}
+}
+
+
+#A link to the dragon,on_ship_destroyed_perp
+country_event = {
+	id = nep_seal.10
+	hide_window = yes
+				
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = seal_evil_country_created
+		From = { has_country_flag = seal_evil_country }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = nep_highway_founder
+					FromFromFrom = { 
+						any_combatant_fleet = {
+							owner = { has_country_flag = nep_highway_founder }
+						}
+					}
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = nep_highway_founder }
+				country_event = { id = nep_dragon.1 days = 90 random = 30 }
+			}
+		}
+		else = {
+			event_target:nep_grand_seal_planet = {
+				planet_event = { id = nep_finalweapon.4001 days = 19800 random = 3600 }
+			}
 		}
 	}
 }

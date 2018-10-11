@@ -175,9 +175,10 @@ country_event = {
 	immediate = {
 		if = {
 			event_target:nep_grand_seal_planet = {
-				planet_event = { id = nep_finalweapon.4001 }
+				planet_event = { id = nep_finalweapon.4001 days = 7200 random = 1800 }
+			}
 		}
-	}	
+	}
 }
 
 #Create krahen,on_system_first_visited
@@ -1544,8 +1545,8 @@ ship_event = {
 				}
 				set_event_locked = yes
 			}
+			remove_star_flag = nep_krahen_portal_system_unlocked
 		}
-		remove_star_flag = nep_krahen_portal_system_unlocked
 	}
 }
 

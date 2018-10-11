@@ -57,6 +57,7 @@ on_ship_destroyed_perp = {
 	events = {
 		nep_finalweapon.81
 		nep_finalweapon.82
+		nep_seal.10
 	}
 }
 

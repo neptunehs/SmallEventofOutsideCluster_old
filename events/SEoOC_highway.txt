@@ -12,14 +12,20 @@ namespace = nep_highway
 #15-25-35:cybrex
 
 country_event = {
-	id = nep_highway.11
+	id = nep_highway.1
 	hide_window = yes
 
 	fire_only_once = yes
-
+	
 	trigger = {
 		is_ai = no
-		has_country_flag = vultaum_world_found
+		OR = {
+			has_country_flag = vultaum_world_found
+			has_country_flag = yuht_world_found
+			has_country_flag = league_world_found
+			has_country_flag = irassian_world_found
+			has_country_flag = cybrex_world_found
+		}
 		OR = {
 			has_technology = "tech_sensors_3"
 			has_technology = "tech_sensors_4"
@@ -35,121 +41,156 @@ country_event = {
 	
 	immediate = {	
 		set_global_flag = nep_highway_begin
-		country_event = { id = nep_highway.21 } 
+		switch = {
+			trigger = has_country_flag
+			vultaum_world_found = { country_event = { id = nep_highway.21 } }
+			yuht_world_found = { country_event = { id = nep_highway.22 } }
+			league_world_found = { country_event = { id = nep_highway.23 } } 
+			irassian_world_found = { country_event = { id = nep_highway.24 } } 
+			cybrex_world_found = { country_event = { id = nep_highway.25 } }
+		}		
 	}
 }
 
-country_event = {
-	id = nep_highway.12
-	hide_window = yes
+# country_event = {
+	# id = nep_highway.11
+	# hide_window = yes
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		is_ai = no
-		has_country_flag = yuht_world_found
-		OR = {
-			has_technology = "tech_sensors_3"
-			has_technology = "tech_sensors_4"
-		}
-		NOT = {
-			has_global_flag = nep_highway_begin
-		}
-	}
+	# trigger = {
+		# is_ai = no
+		# has_country_flag = vultaum_world_found
+		# OR = {
+			# has_technology = "tech_sensors_3"
+			# has_technology = "tech_sensors_4"
+		# }
+		# NOT = {
+			# has_global_flag = nep_highway_begin
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	# mean_time_to_happen = {
+		# years = 5
+	# }
 	
-	immediate = {	
-		set_global_flag = nep_highway_begin
-		country_event = { id = nep_highway.22 } 
-	}
-}
+	# immediate = {	
+		# set_global_flag = nep_highway_begin
+		# country_event = { id = nep_highway.21 } 
+	# }
+# }
 
-country_event = {
-	id = nep_highway.13
-	hide_window = yes
+# country_event = {
+	# id = nep_highway.12
+	# hide_window = yes
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		is_ai = no
-		has_country_flag = league_world_found
-		OR = {
-			has_technology = "tech_sensors_3"
-			has_technology = "tech_sensors_4"
-		}
-		NOT = {
-			has_global_flag = nep_highway_begin
-		}
-	}
+	# trigger = {
+		# is_ai = no
+		# has_country_flag = yuht_world_found
+		# OR = {
+			# has_technology = "tech_sensors_3"
+			# has_technology = "tech_sensors_4"
+		# }
+		# NOT = {
+			# has_global_flag = nep_highway_begin
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	# mean_time_to_happen = {
+		# years = 5
+	# }
 	
-	immediate = {	
-		set_global_flag = nep_highway_begin
-		country_event = { id = nep_highway.23 } 
-	}
-}
+	# immediate = {	
+		# set_global_flag = nep_highway_begin
+		# country_event = { id = nep_highway.22 } 
+	# }
+# }
 
-country_event = {
-	id = nep_highway.14
-	hide_window = yes
+# country_event = {
+	# id = nep_highway.13
+	# hide_window = yes
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		is_ai = no
-		has_country_flag = irassian_world_found
-		OR = {
-			has_technology = "tech_sensors_3"
-			has_technology = "tech_sensors_4"
-		}
-		NOT = {
-			has_global_flag = nep_highway_begin
-		}
-	}
+	# trigger = {
+		# is_ai = no
+		# has_country_flag = league_world_found
+		# OR = {
+			# has_technology = "tech_sensors_3"
+			# has_technology = "tech_sensors_4"
+		# }
+		# NOT = {
+			# has_global_flag = nep_highway_begin
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	# mean_time_to_happen = {
+		# years = 5
+	# }
 	
-	immediate = {	
-		set_global_flag = nep_highway_begin
-		country_event = { id = nep_highway.24 } 
-	}
-}
+	# immediate = {	
+		# set_global_flag = nep_highway_begin
+		# country_event = { id = nep_highway.23 } 
+	# }
+# }
 
-country_event = {
-	id = nep_highway.15
-	hide_window = yes
+# country_event = {
+	# id = nep_highway.14
+	# hide_window = yes
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		is_ai = no
-		has_country_flag = cybrex_world_found
-		OR = {
-			has_technology = "tech_sensors_3"
-			has_technology = "tech_sensors_4"
-		}
-		NOT = {
-			has_global_flag = nep_highway_begin
-		}
-	}
+	# trigger = {
+		# is_ai = no
+		# has_country_flag = irassian_world_found
+		# OR = {
+			# has_technology = "tech_sensors_3"
+			# has_technology = "tech_sensors_4"
+		# }
+		# NOT = {
+			# has_global_flag = nep_highway_begin
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	# mean_time_to_happen = {
+		# years = 5
+	# }
 	
-	immediate = {	
-		set_global_flag = nep_highway_begin
-		country_event = { id = nep_highway.25 } 
-	}
-}
+	# immediate = {	
+		# set_global_flag = nep_highway_begin
+		# country_event = { id = nep_highway.24 } 
+	# }
+# }
+
+# country_event = {
+	# id = nep_highway.15
+	# hide_window = yes
+
+	# fire_only_once = yes
+
+	# trigger = {
+		# is_ai = no
+		# has_country_flag = cybrex_world_found
+		# OR = {
+			# has_technology = "tech_sensors_3"
+			# has_technology = "tech_sensors_4"
+		# }
+		# NOT = {
+			# has_global_flag = nep_highway_begin
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# years = 5
+	# }
+	
+	# immediate = {	
+		# set_global_flag = nep_highway_begin
+		# country_event = { id = nep_highway.25 } 
+	# }
+# }
 
 country_event = {
 	id = nep_highway.21
@@ -2403,6 +2444,7 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = nep_highway_used
+		country_event = { id = nep_seal.1 days = 90 random = 15} #A link to the seal
 	}
 	
 	option = {
