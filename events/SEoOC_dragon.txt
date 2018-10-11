@@ -1135,6 +1135,7 @@ country_event = {
 			}
 		}
 		country_event = { id = nep_dragon.8 }
+		country_event = { id = nep_inva.1 days = 180 random = 180 }
 	}
 }
 
