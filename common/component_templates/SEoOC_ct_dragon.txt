@@ -29,6 +29,7 @@ weapon_component_template = {
 	
 	hidden = yes
 	use_ship_kill_target = no
+	prerequisites = { "tech_nep_dragon_tech" }
 
 	tags = { weapon_type_energy }
 	
@@ -71,6 +72,7 @@ weapon_component_template = {
 	
 	hidden = yes
 	use_ship_kill_target = no
+	prerequisites = { "tech_nep_dragon_tech" }
 
 	tags = { weapon_type_energy }
 	
@@ -113,6 +115,7 @@ weapon_component_template = {
 	
 	hidden = yes
 	use_ship_kill_target = no
+	prerequisites = { "tech_nep_dragon_tech" }
 
 	tags = { weapon_type_energy }
 	
@@ -155,6 +158,7 @@ weapon_component_template = {
 	
 	hidden = yes
 	use_ship_kill_target = no
+	prerequisites = { "tech_nep_dragon_tech" }
 
 	tags = { weapon_type_energy }
 	
@@ -195,6 +199,7 @@ weapon_component_template = {
 	
 	hidden = yes
 	use_ship_kill_target = no
+	prerequisites = { "tech_nep_dragon_tech" }
 
 	tags = { weapon_type_energy }
 	

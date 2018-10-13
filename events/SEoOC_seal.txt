@@ -106,7 +106,7 @@ ship_event = {
 	
 	option = {
 		name = nep_seal.3.a
-		owner = { country_event = { id = nep_seal.4 days = 360 random = 360 } }
+		hidden_effect = { owner = { country_event = { id = nep_seal.4 days = 360 random = 360 } } }
 	}
 }
 
@@ -145,16 +145,41 @@ country_event = {
 
 #malfunctioning guards ends
 country_event = {
+	id = nep_seal.500
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = malfunctioning_guards_again
+		event_target:malfunctioning_guards_country = {
+			num_fleets < 1
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = { has_country_flag = malfunctioning_guards_again_suffer }
+			country_event = { id = nep_seal.5 }
+		}
+	}
+}
+
+country_event = {
 	id = nep_seal.5
 	title = "nep_seal.5.name"
 	desc = "nep_seal.5.desc"	
 	picture = GFX_evt_exploding_ship
 	
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 	
 	trigger = {
-		has_country_flag = malfunctioning_guards_again_suffer
 		has_global_flag = malfunctioning_guards_again
+		has_country_flag = malfunctioning_guards_again_suffer
 		event_target:malfunctioning_guards_country = {
 			num_fleets < 1
 		}

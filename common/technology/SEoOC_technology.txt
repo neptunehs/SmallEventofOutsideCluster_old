@@ -33,7 +33,7 @@ tech_sealportal_dive = {
 tech_nep_destructor_ray = {
 	area = physics
 	cost = 120000
-	tier = 4
+	tier = 5
 	category = { particles }
 	ai_update_type = military	
 	weight = 0
@@ -75,5 +75,65 @@ tech_nep_destructor_ray = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
+	}
+}
+
+tech_nep_sealevil_tech = {
+	area = physics
+	cost = 120000
+	tier = 5
+	category = { particles }
+	ai_update_type = military	
+	weight = 0
+
+	potential = { always = no }
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_nep_dragon_tech = {
+	area = physics
+	cost = 120000
+	tier = 5
+	category = { particles }
+	ai_update_type = military	
+	weight = 0
+
+	potential = { always = no }
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_nep_krahen_tech = {
+	area = physics
+	cost = 120000
+	tier = 5
+	category = { particles }
+	ai_update_type = military	
+	weight = 0
+
+	potential = { always = no }
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_nep_finalweapon_tech = {
+	area = physics
+	cost = 120000
+	tier = 5
+	category = { particles }
+	ai_update_type = military	
+	weight = 0
+
+	potential = { always = no }
+
+	weight_modifier = {
+		factor = 0
 	}
 }

@@ -223,9 +223,10 @@ seal_boss_spawn = {
 			set_formation_scale = 2.0
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
-			set_aggro_range_measure_from = self	
+			set_aggro_range_measure_from = self
+
 			add_modifier = {
-				modifier = nep_dragon_boss_buff
+				modifier = nep_seal_evil_buff
 				days = -1
 			}
 		}

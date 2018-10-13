@@ -224,7 +224,7 @@ country_event = {
 	}
 }
 
-#Corrupted finalweapon small crisis begin.
+#Corrupted finalweapon mini crisis begin.
 planet_event = {
 	id = nep_finalweapon.5
 	hide_window = yes

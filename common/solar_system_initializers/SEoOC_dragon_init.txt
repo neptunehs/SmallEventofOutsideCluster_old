@@ -89,7 +89,7 @@ nep_Auriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -97,7 +97,7 @@ nep_Auriel_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -125,7 +125,7 @@ nep_Auriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -139,7 +139,7 @@ nep_Auriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -177,7 +177,7 @@ nep_Gabriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -185,7 +185,7 @@ nep_Gabriel_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -213,7 +213,7 @@ nep_Gabriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -227,7 +227,7 @@ nep_Gabriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -263,7 +263,7 @@ nep_Sabriel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -271,7 +271,7 @@ nep_Sabriel_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -299,7 +299,7 @@ nep_Sabriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -313,7 +313,7 @@ nep_Sabriel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -349,7 +349,7 @@ nep_Samuel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -357,7 +357,7 @@ nep_Samuel_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -385,7 +385,7 @@ nep_Samuel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -399,7 +399,7 @@ nep_Samuel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -436,7 +436,7 @@ nep_Michael_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -444,7 +444,7 @@ nep_Michael_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -472,7 +472,7 @@ nep_Michael_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -486,7 +486,7 @@ nep_Michael_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -524,7 +524,7 @@ nep_Jauiel_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -532,7 +532,7 @@ nep_Jauiel_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -560,7 +560,7 @@ nep_Jauiel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -574,7 +574,7 @@ nep_Jauiel_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -610,7 +610,7 @@ nep_Anael_init = {
 	planet = {
         count = { min = 2 max = 5 }
         class = random_non_colonizable
-        orbit_distance = { min = 70 max = 180 }
+        orbit_distance = { min = 50 max = 140 }
       	orbit_angle = { min = 0 max = 360 }
         size = { min = 8 max = 24 }
 
@@ -618,7 +618,7 @@ nep_Anael_init = {
 			count = { min = 0 max = 3 }
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 2.5
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 		}
     }
@@ -646,7 +646,7 @@ nep_Anael_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {
@@ -660,7 +660,7 @@ nep_Anael_init = {
 		moon = {
 			class = random_non_colonizable
 			orbit_angle = { min = 0 max = 270 }
-			orbit_distance = 3
+			orbit_distance = 5
 			size = { min = 3 max = 8 }
 			
 			init_effect = {

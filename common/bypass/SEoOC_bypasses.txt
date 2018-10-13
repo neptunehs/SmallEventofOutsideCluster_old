@@ -29,6 +29,7 @@ nep_sealportal = {
 			}
 		}
 	}
+	on_action = "on_entering_sealportal"
 }
 
 nep_sealgate = {

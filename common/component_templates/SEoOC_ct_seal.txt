@@ -32,6 +32,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	tags = { weapon_type_energy }
+	prerequisites = { "tech_nep_sealevil_tech" }
 	
 
 	ai_tags = {

@@ -9,10 +9,10 @@
  nep_dragon_reward_kai:0 "Heptagram Dragon"
  nep_dragon_reward_kai_plural:0 "Heptagram Dragons"
   
- nep_dragon.1.name:0 "nep_dragon.1.name"
- nep_dragon.1.desc:0 "nep_dragon.1.desc"
- nep_dragon.1.a:0 "nep_dragon.1.a" 
- nep_dragon.1.b:0 "nep_dragon.1.b" 
+ nep_dragon.1.name:0 "A New Seal Broke"
+ nep_dragon.1.desc:0 "Something happened in §Yseal 1§!,Observations of black holes have led us to discover some violations of the laws of black hole mechanics.But previous observations have proved that this is an ordinary black hole and does not violate it.It's reasonable to believe that this is also a seal, and it will soon be broke.Maybe it is because we have eliminated the §Yseal evil§!, which caused the seal to broke. Or the procedure left by ancient civilizations, let it broke at this time.As scientists says,§Yseal 1§! may have evolved into a very special wormhole-like celestial body. We may be able to travel to other areas through it,but we don't know where to go. We may need some research to get our ship through it, especially to resist the enormous pressure inside it,after all,this seal still looks like a black hole."
+ nep_dragon.1.a:0 "Establish special research project." 
+ nep_dragon.1.b:0 "Keep alert, but don't think more about what's the opposite of it." 
  
  nep_dragon.2.name:0 "Heptagram Cluster"
  nep_dragon.2.desc:0 "nep_dragon.2.desc"

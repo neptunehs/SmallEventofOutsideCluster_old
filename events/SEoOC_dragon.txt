@@ -210,72 +210,71 @@ country_event = {
 }
 
 
-country_event = {
+fleet_event = {
 	id = nep_dragon.2
 	title = "nep_dragon.2.name"
 	desc = "nep_dragon.2.desc"	
 	picture = GFX_evt_black_hole
 	
 	fire_only_once = yes
+
+	is_triggered_only = yes
 	
 	trigger = {
-		has_global_flag = nep_dragon_begin
-		has_country_flag = nep_dragon_founder
-		has_technology = tech_sealportal_dive
-		event_target:nep_heptagram_system_5 = {
-			any_ship_in_system = {
-				exists = owner
-				owner = {
-					is_same_value = root
-				}
-			}
+		owner = {
+			has_global_flag = nep_dragon_begin
+			has_country_flag = nep_dragon_founder
+			has_technology = tech_sealportal_dive
 		}
+		has_global_flag = nep_not_pass_sealportal
 	}
 
 	immediate = {
-		remove_country_flag = nep_not_pass_sealportal
+		remove_global_flag = nep_not_pass_sealportal
 	}
 	
 	option = {
 		name = nep_dragon.2.a
-		begin_event_chain = {
-			event_chain = "nep_heptagram_chain"
-			target = THIS
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Auriel_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Gabriel_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Sabriel_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Samuel_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Michael_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Jauiel_planet
-			owner = THIS.owner
-		}
-		enable_special_project = {
-			name = "nep_dragon_shielded_planet"
-			location = event_target:nep_Anael_planet
-			owner = THIS.owner
+		owner = {
+			begin_event_chain = {
+				event_chain = "nep_heptagram_chain"
+				target = THIS
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Auriel_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Gabriel_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Sabriel_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Samuel_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Michael_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Jauiel_planet
+				owner = THIS.owner
+			}
+			enable_special_project = {
+				name = "nep_dragon_shielded_planet"
+				location = event_target:nep_Anael_planet
+				owner = THIS.owner
+			}
 		}
 	}
 }
@@ -491,7 +490,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Auriel_modifier"
 					days = -1
@@ -511,7 +510,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Gabriel_modifier"
 					days = -1
@@ -531,7 +530,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Sabriel_modifier"
 					days = -1
@@ -551,7 +550,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Samuel_modifier"
 					days = -1
@@ -571,7 +570,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Michael_modifier"
 					days = -1
@@ -591,7 +590,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Jauiel_modifier"
 					days = -1
@@ -611,7 +610,7 @@ ship_event = {
 				set_planet_entity = {
 					entity = "gaia_planet_01_entity"
 				}
-				set_planet_flag = fallen_empire_world
+				reroll_planet = yes
 				add_modifier = {
 					modifier = "nep_Anael_modifier"
 					days = -1
@@ -642,6 +641,81 @@ ship_event = {
 }
 
 #Legnahcras appears
+planet_event = {
+	id = nep_dragon.4000
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_dragon_begin
+		OWNER = {
+			is_ai = no
+			has_country_flag = nep_dragon_founder
+		}
+		OR = {
+			has_planet_flag = nep_Auriel_planet
+			has_planet_flag = nep_Gabriel_planet
+			has_planet_flag = nep_Sabriel_planet
+			has_planet_flag = nep_Samuel_planet
+			has_planet_flag = nep_Michael_planet
+			has_planet_flag = nep_Jauiel_planet
+			has_planet_flag = nep_Anael_planet
+		}
+		from = {
+			OR = {
+				has_building = nep_ruin_temple
+				has_building = nep_dragon_temple
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					event_target:nep_Auriel_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Gabriel_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Sabriel_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Samuel_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Michael_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Jauiel_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+					event_target:nep_Anael_planet = {
+						exists = owner
+						owner = { has_country_flag = nep_dragon_founder }
+						has_building = nep_dragon_temple
+					}
+				}
+			}
+			OWNER = { country_event = {	id = nep_dragon.4 days = 180 random = 360 } }
+		}
+	}
+}
+
 country_event = {
 	id = nep_dragon.4
 	title = "nep_dragon.4.name"
@@ -649,46 +723,8 @@ country_event = {
 	picture = GFX_evt_ground_combat
 		
 	fire_only_once = yes
-
-	trigger = {
-		is_ai = no
-		has_global_flag = nep_dragon_begin
-		has_country_flag = nep_dragon_founder
-		AND = {
-			event_target:nep_Auriel_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Gabriel_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Sabriel_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Samuel_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Michael_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Jauiel_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-			event_target:nep_Anael_planet = {
-				owner = { has_country_flag = nep_dragon_founder }
-				has_building = nep_dragon_temple
-			}
-		}
-	}
 	
-	mean_time_to_happen = {
-		days = 360
-	}
+	is_triggered_only = yes
 
 	immediate = {
 		create_country = {
@@ -972,7 +1008,7 @@ country_event = {
 	}
 }
 
-#on_entering_system target = nep_seal_ambient_poi
+#on_entering_system target = nep_dragon_star
 ship_event = {
 	id = nep_dragon.64
 	title = "nep_dragon.64.name"
@@ -989,7 +1025,7 @@ ship_event = {
 			is_ai = no
 		}
 		FROM = {
-			has_star_flag = nep_dragon_star
+			has_star_flag = nep_dragon_system
 			any_ship_in_system = {
 				is_ship_size = nep_dragon
 			}
@@ -997,7 +1033,7 @@ ship_event = {
 	}
 	
 	option = {
-		name = nep_seal.64.a
+		name = nep_dragon.64.a
 	}
 }
 
@@ -1030,6 +1066,10 @@ ship_event = {
 	hide_window = yes
 				
 	is_triggered_only = yes
+	
+	trigger = {
+		exists = this
+	}
 	
 	immediate = {
 		if = {
@@ -1081,6 +1121,10 @@ ship_event = {
 	hide_window = yes
 				
 	is_triggered_only = yes
+	
+	trigger = {
+		exists = this
+	}
 	
 	immediate = {
 		if = {
@@ -1209,8 +1253,8 @@ country_event = {
 				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
 				set_country_flag = nep_dragon_8_notfirst
 			}
+			country_event = { id = nep_dragon.81 days = 360 }
 		}
-		country_event = { id = nep_dragon.81 days = 360 }
 	}
 	
 	#It's dangerous
@@ -1248,8 +1292,8 @@ country_event = {
 		has_country_flag = nep_dragon_summoner
 		FromFrom = { 
 			OR = {
-			is_ship_size = nep_dragon_reward 
-			is_ship_size = nep_dragon_reward_kai			
+				is_ship_size = nep_dragon_reward 
+				is_ship_size = nep_dragon_reward_kai			
 			}
 		}
 	}
@@ -1260,7 +1304,7 @@ country_event = {
 }
 
 #summon success
-planet_event = {
+country_event = {
 	id = nep_dragon.9
 	title = "nep_dragon.9.name"
 	desc = "nep_dragon.9.desc"
@@ -1276,24 +1320,22 @@ planet_event = {
 	}
 
 	immediate = {
-		random_country = {
-			limit = {
-				has_country_flag = nep_dragon_summoner
-			}
-			save_event_target_as = nep_dragon_summoner
-		}
 		create_fleet = {
 			name = "Pentacle"
 			settings = {
 				spawn_debris = no
 			}
 			effect = {
-				set_owner = event_target:nep_dragon_summoner
+				set_owner = root
 				create_ship = {
 					name = "Heptagram Dragon"
 					design = "Heptagram Dragon Rebirth"
 				}
-				set_location = this
+				set_location = {
+					target = event_target:nep_dragon_star
+					distance = 1
+					angle = random
+				}
 			}
 		}
 		event_target:nep_Auriel_planet = {
@@ -1380,7 +1422,7 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = nep_dragon.92 days = 1800 }
+		country_event = { id = nep_dragon.92 days = 1800 }
 	}
 	
 	option = {
@@ -1389,7 +1431,7 @@ planet_event = {
 }
 
 #summon failed
-planet_event = {
+country_event = {
 	id = nep_dragon.91
 	title = "nep_dragon.91.name"
 	desc = "nep_dragon.91.desc"
@@ -1399,21 +1441,14 @@ planet_event = {
 	
 	trigger = {
 		has_global_flag = nep_dragon_end
-		any_country = {
-			has_country_flag = nep_dragon_summoner
-		}
+		has_country_flag = nep_dragon_summoner
 	}
 
 	immediate = {
-		random_country = {
-			limit = {
-				has_country_flag = nep_dragon_summoner
-			}
-			enable_special_project = {
-				name = "nep_dragon_summon"
-				location = event_target:nep_dragon_star
-				owner = this
-			}
+		enable_special_project = {
+			name = "nep_dragon_summon"
+			location = event_target:nep_dragon_star
+			owner = this
 		}
 	}
 	
@@ -1475,7 +1510,7 @@ ship_event = {
 }
 
 #Starforce return(HIDDEN)
-planet_event = {
+country_event = {
 	id = nep_dragon.92
 	hide_window = yes
 	
@@ -1596,7 +1631,7 @@ country_event = {
 }
 
 #kai success
-planet_event = {
+country_event = {
 	id = nep_dragon.94
 	title = "nep_dragon.94.name"
 	desc = "nep_dragon.94.desc"
@@ -1606,19 +1641,11 @@ planet_event = {
 	
 	trigger = {
 		has_global_flag = nep_dragon_end
-		any_country = {
-			has_country_flag = nep_dragon_kaier
-		}
+		has_country_flag = nep_dragon_kaier
 	}
 
 	immediate = {
-		random_country = {
-			limit = {
-				has_country_flag = nep_dragon_kaier
-			}
-			save_event_target_as = nep_dragon_kaier
-		}
-		solar_system = {
+		event_target:nep_dragon_system = {
 			every_fleet_in_system = {
 				delete_fleet = this
 			}
@@ -1629,12 +1656,16 @@ planet_event = {
 				spawn_debris = no
 			}
 			effect = {
-				set_owner = event_target:nep_dragon_kaier
+				set_owner = root
 				create_ship = {
 					name = "Heptagram Dragon"
 					design = "Heptagram Dragon Kai"
 				}
-				set_location = this
+				set_location = {
+					target = event_target:nep_dragon_star
+					distance = 1
+					angle = random
+				}
 			}
 		}
 		event_target:nep_Auriel_planet = {
@@ -1721,7 +1752,7 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = nep_dragon.92 days = 1800 }
+		country_event = { id = nep_dragon.92 days = 1800 }
 	}
 	
 	option = {
@@ -1729,7 +1760,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+country_event = {
 	id = nep_dragon.941
 	title = "nep_dragon.941.name"
 	desc = "nep_dragon.941.desc"
@@ -2054,6 +2085,10 @@ fleet_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
+	
+	trigger = {
+		exists = this
+	}
 	
 	immediate = {
 		delete_fleet = this

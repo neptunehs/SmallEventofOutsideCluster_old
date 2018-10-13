@@ -105,11 +105,24 @@ on_space_battle_won = {
 		nep_finalweapon.714
 		nep_inva.210
 		nep_inva.47
+		nep_seal.500
 	}
 }
 
 on_planet_zero_pops = {
 	events = {
 		nep_inva.472
+	}
+}
+
+on_entering_sealportal = {
+	events = {
+		nep_dragon.2
+	}
+}
+
+on_building_upgraded = {
+	events = {
+		nep_dragon.4000
 	}
 }

@@ -92,10 +92,16 @@ special_project = {
 					}
 				}
 			}
-			planet_event = { id = nep_dragon.9}
+			random_country = {
+				limit = { has_country_flag = nep_dragon_summoner } 
+				country_event = { id = nep_dragon.9 }
+			}
 		}
 		else = {
-			planet_event = { id = nep_dragon.91}		
+			random_country = {
+				limit = { has_country_flag = nep_dragon_summoner } 
+				country_event = { id = nep_dragon.91 }
+			}
 		}
 	}
 	
@@ -159,10 +165,16 @@ special_project = {
 					}
 				}
 			}
-			planet_event = { id = nep_dragon.94}
+			random_country = {
+				limit = { has_country_flag = nep_dragon_kaier } 
+				country_event = { id = nep_dragon.94 }
+			}
 		}
 		else = {
-			planet_event = { id = nep_dragon.941}		
+			random_country = {
+				limit = { has_country_flag = nep_dragon_kaier } 
+				country_event = { id = nep_dragon.941 }
+			}		
 		}
 	}
 	
