@@ -108,7 +108,7 @@ tech_nep_dragon_tech = {
 	}
 }
 
-tech_nep_krahen_tech = {
+tech_nep_Krahen_tech = {
 	area = physics
 	cost = 120000
 	tier = 5

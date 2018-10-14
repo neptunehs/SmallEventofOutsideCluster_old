@@ -27,7 +27,7 @@
 @speed_extreme_fast = 225
 @speed_ultimate_fast = 260
 
-# nep_krahen_corvette = {
+# nep_Krahen_corvette = {
 	# formation_priority = @corvette_formation_priority
 	# is_space_object = yes
 	# max_speed = @speed_extreme_fast
@@ -59,7 +59,7 @@
 	# is_designable = no
 # }
 
-# nep_krahen_destroyer = {
+# nep_Krahen_destroyer = {
 	# formation_priority = @destroyer_formation_priority
 	# max_speed = @speed_very_fast
 	# acceleration = 0.3
@@ -92,7 +92,7 @@
 # }
 
 
-# nep_krahen_cruiser = {
+# nep_Krahen_cruiser = {
 	# formation_priority = @cruiser_formation_priority
 	# max_speed = @speed_fast
 	# acceleration = 0.25
@@ -126,7 +126,7 @@
 	# is_designable = no
 # }
 
-nep_krahen_battleship = {
+nep_Krahen_battleship = {
 	formation_priority = @battleship_formation_priority
 	max_speed = @speed_default
 	acceleration = 0.2

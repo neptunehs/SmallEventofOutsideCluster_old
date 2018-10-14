@@ -31,7 +31,7 @@ nep_Legnahcras_assault_army = {
 	}
 }
 
-nep_krahen_anti_grav = {
+nep_Krahen_anti_grav = {
 	damage = 6.0
 	health = 8.0
 	has_morale = no
@@ -47,7 +47,7 @@ nep_krahen_anti_grav = {
 	}
 }
 
-nep_krahen_heavy_fortress = {
+nep_Krahen_heavy_fortress = {
 	damage = 16.0
 	health = 28.0
 	has_morale = no
@@ -63,7 +63,7 @@ nep_krahen_heavy_fortress = {
 	}
 }
 
-nep_krahen_heavy_fortress_2 = {
+nep_Krahen_heavy_fortress_2 = {
 	damage = 16.0
 	health = 28.0
 	has_morale = no

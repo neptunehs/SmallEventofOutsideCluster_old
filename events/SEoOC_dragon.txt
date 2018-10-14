@@ -1645,9 +1645,10 @@ country_event = {
 	}
 
 	immediate = {
-		event_target:nep_dragon_system = {
+		random_system = {
+			limit = { has_star_flag = nep_dragon_system }
 			every_fleet_in_system = {
-				delete_fleet = this
+				destroy_fleet = this
 			}
 		}
 		create_fleet = {

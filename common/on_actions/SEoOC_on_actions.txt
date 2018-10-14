@@ -83,7 +83,6 @@ on_colonized = {
 }
 on_system_first_visited = {
 	events = {
-		nep_inva.2
 	}
 }
 
@@ -115,14 +114,27 @@ on_planet_zero_pops = {
 	}
 }
 
-on_entering_sealportal = {
+on_entering_nepsealportal = {
 	events = {
 		nep_dragon.2
 	}
 }
 
+on_entering_nepsealgate = {
+	events = {
+		nep_inva.2
+	}
+}
+
+
 on_building_upgraded = {
 	events = {
 		nep_dragon.4000
+	}
+}
+
+on_megastructure_upgraded = {
+	events = {
+		nep_inva.1002
 	}
 }

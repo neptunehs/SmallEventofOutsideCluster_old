@@ -59,7 +59,7 @@ fleet_event = {
 	trigger = {
 		has_global_flag = nep_sealgate_appeared
 		solar_system = {
-			has_star_flag = nep_krahen_system
+			has_star_flag = nep_Krahen_system
 		}
 	}
 	

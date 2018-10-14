@@ -23,7 +23,6 @@ nep_sealgate_restored = {
 	
 	potential = {
 		has_technology = tech_gateway_activation
-		has_technology = tech_sealportal_dive
 		has_technology = tech_gateway_construction
 	}
 	
@@ -32,7 +31,6 @@ nep_sealgate_restored = {
 			fail_text = "requires_technologys_sealgate"
 			from = { 
 				has_technology = tech_gateway_activation
-				has_technology = tech_sealportal_dive
 				has_technology = tech_gateway_construction
 			}
 		}
@@ -47,33 +45,4 @@ nep_sealgate_restored = {
 	}
 	construction_blocks_others = no
 	bypass_type = nep_sealgate
-	on_build_complete = {
-		random_system = {
-			limit = {
-				has_star_flag = nep_Krahen_cluster
-				NOT = {
-					has_star_flag = nep_Central_system
-					has_star_flag = nep_Exterior_system
-				}
-			}
-			random_system_planet = {
-				limit = { is_star = yes }
-				from = {
-					spawn_megastructure = {
-						name = "Seal Gate"
-						type = nep_sealgate_restored
-						location = prevprev
-						orbit_angle = 186
-						orbit_distance = 150
-				}
-			}
-			every_megastructure = {
-				limit = {
-					is_megastructure_type = nep_sealgate_restored
-				}
-				activate_gateway = this
-			}
-			from = { set_country_flag = nep_sealgates_activated }
-		}
-	}
 }

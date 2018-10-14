@@ -1,11 +1,11 @@
 # ship_design = {
 	# name = "NAME_Krahen_Heavy_Corvette"
-	# ship_size = nep_krahen_corvette
+	# ship_size = nep_Krahen_corvette
 	# hide_size = yes
 	# is_event_design = yes
 	
 	# section = {
-		# template = "NEP_KRAHEN_CORVETTE_MID_1"
+		# template = "NEP_Krahen_CORVETTE_MID_1"
 		# slot = "mid"	
 	
 		# component = {
@@ -44,12 +44,12 @@
 
 # ship_design = {
 	# name = "NAME_Krah'en_Heavy_Destroyer"
-	# ship_size = nep_krahen_destroyer
+	# ship_size = nep_Krahen_destroyer
 	# hide_size = yes
 	# is_event_design = yes
 
 	# section = {
-		# template = "NEP_KRAHEN_DESTROYER_BOW_1"
+		# template = "NEP_Krahen_DESTROYER_BOW_1"
 		# slot = "bow"	
 	
 		# component = {
@@ -91,7 +91,7 @@
 	# }
 	
 	# section = {
-		# template = "NEP_KRAHEN_DESTROYER_STERN_1"
+		# template = "NEP_Krahen_DESTROYER_STERN_1"
 		# slot = "stern"	
 	
 		# component = {
@@ -122,11 +122,11 @@
 	
 # ship_design = {
 	# name = "NAME_Krah'en_Heavy_Cruiser"
-	# ship_size = nep_krahen_cruiser
+	# ship_size = nep_Krahen_cruiser
 	# hide_size = yes
 	# is_event_design = yes
 	# section = {
-		# template = "NEP_KRAHEN_CRUISER_BOW_1"
+		# template = "NEP_Krahen_CRUISER_BOW_1"
 		# slot = "bow"	
 	
 		# component = {
@@ -160,7 +160,7 @@
 	# }	
 	
 	# section = {
-		# template = "NEP_KRAHEN_CRUISER_MID_1"
+		# template = "NEP_Krahen_CRUISER_MID_1"
 		# slot = "mid"	
 	
 		# component = {
@@ -198,7 +198,7 @@
 	# }
 	
 	# section = {
-		# template = "NEP_KRAHEN_CRUISER_STERN_1"
+		# template = "NEP_Krahen_CRUISER_STERN_1"
 		# slot = "stern"	
 	
 		# component = {
@@ -229,11 +229,11 @@
 	
 ship_design = {
 	name = "NAME_Krah'en_Battleship"
-	ship_size = nep_krahen_battleship
+	ship_size = nep_Krahen_battleship
 	hide_size = yes
 	is_event_design = yes
 	section = {
-		template = "NEP_KRAHEN_BATTLESHIP_BOW_1"
+		template = "NEP_Krahen_BATTLESHIP_BOW_1"
 		slot = "bow"	
 	
 		component = {
@@ -255,7 +255,7 @@ ship_design = {
 	}	
 	
 	section = {
-		template = "NEP_KRAHEN_BATTLESHIP_MID_1"
+		template = "NEP_Krahen_BATTLESHIP_MID_1"
 		slot = "mid"	
 	
 		component = {
@@ -341,7 +341,7 @@ ship_design = {
 	}
 	
 	section = {
-		template = "NEP_KRAHEN_BATTLESHIP_STERN_1"
+		template = "NEP_Krahen_BATTLESHIP_STERN_1"
 		slot = "stern"	
 	
 		component = {

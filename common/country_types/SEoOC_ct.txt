@@ -81,10 +81,10 @@ nep_dragon_country = {
 	}
 }
 
-nep_krahen_country = {
+nep_Krahen_country = {
 	attack_unarmed_orbital_stations = yes
-	scaled_difficulty_bonuses = 3.0	# scales to setting
-	end_game_crisis = yes
+	#scaled_difficulty_bonuses = 3.0	# scales to setting
+	#end_game_crisis = yes
 	destroys_starbases = yes
 	needs_survey = no
 	has_complete_sensor = yes
@@ -137,9 +137,9 @@ nep_krahen_country = {
 	# playable = no
 	# enforces_borders = no
 	# minimalist_contacts_list_profile = yes
-	# custom_starbase = nep_starbase_krahen
+	# custom_starbase = nep_starbase_Krahen
 	# targets = { 
-		# nep_krahen_country
+		# nep_Krahen_country
 	# }
 	# government = no
 	# ai = {
@@ -179,9 +179,9 @@ nep_krahen_country = {
 	# playable = no
 	# enforces_borders = no
 	# minimalist_contacts_list_profile = yes
-	# custom_starbase = nep_starbase_krahen
+	# custom_starbase = nep_starbase_Krahen
 	# targets = { 
-		# nep_krahen_country
+		# nep_Krahen_country
 	# }
 	# government = no
 	# ai = {
@@ -221,9 +221,9 @@ nep_krahen_country = {
 	# playable = no
 	# enforces_borders = no
 	# minimalist_contacts_list_profile = yes
-	# custom_starbase = nep_starbase_krahen
+	# custom_starbase = nep_starbase_Krahen
 	# targets = { 
-		# nep_krahen_country
+		# nep_Krahen_country
 	# }
 	# government = no
 	# ai = {

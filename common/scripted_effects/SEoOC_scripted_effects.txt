@@ -270,21 +270,23 @@ create_dragon_babys = {
 #######################################
 #  invasion
 #######################################
-create_krahen_defender = {
-	create_leader = {
-		type = admiral
-		species = root.owner_species
-		name = random
-		skill = 10
-		traits = {
-			trait = leader_trait_krahen_admiral
-			trait = leader_trait_aggressive
+create_Krahen_defender = {
+	event_target:nep_Krahen_country = {
+		create_leader = {
+			type = admiral
+			species = event_target:nep_Krahen_country
+			name = random
+			skill = 10
+			traits = {
+				trait = leader_trait_Krahen_admiral
+				trait = leader_trait_aggressive
+			}
 		}
 	}
 	create_fleet = {
 		name = "Krah'en Defender"
 		effect = {		
-			set_owner = event_target:nep_krahen_country
+			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 60
 				create_ship = {
@@ -303,7 +305,7 @@ create_krahen_defender = {
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
 			
-			set_fleet_flag = nep_krahen_defender
+			set_fleet_flag = nep_Krahen_defender
 			
 			queue_actions = {
 				repeat = {
@@ -320,21 +322,23 @@ create_krahen_defender = {
 	}
 }
 
-create_krahen_invader = {
-	create_leader = {
-		type = admiral
-		species = root.owner_species
-		name = random
-		skill = 10
-		traits = {
-			trait = leader_trait_krahen_admiral
-			trait = leader_trait_aggressive
+create_Krahen_invader = {
+	event_target:nep_Krahen_country = {
+		create_leader = {
+			type = admiral
+			species = event_target:nep_Krahen_country
+			name = random
+			skill = 10
+			traits = {
+				trait = leader_trait_Krahen_admiral
+				trait = leader_trait_aggressive
+			}
 		}
 	}
 	create_fleet = {
 		name = "Krah'en Invader"
 		effect = {		
-			set_owner = event_target:nep_krahen_country
+			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 60
 				create_ship = {
@@ -362,10 +366,10 @@ create_krahen_invader = {
 					}
 					find_closest_planet = {
 						trigger = {
-							id = "nep_krahen.trigger.0"
+							id = "nep_Krahen.trigger.0"
 							has_owner = yes
 							is_colony = yes
-							NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+							NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 						}
 						found_planet = {
 							orbit_planet = THIS
@@ -377,7 +381,7 @@ create_krahen_invader = {
 						failed = {
 							find_random_system = {
 								trigger = {
-									id = "nep_krahen.trigger.1"
+									id = "nep_Krahen.trigger.1"
 									has_access_fleet = yes
 									distance = {
 										source = FROMFROM
@@ -388,22 +392,22 @@ create_krahen_invader = {
 									OR = {
 										any_ship_in_system = {
 											is_ship_class = shipclass_starbase
-											NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 										}
 										any_planet = {
 											has_owner = yes
 											is_colony = yes
-											NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 										}
 									}
 								}
 								found_system = {
 									find_closest_planet = {
 										trigger = {
-											id = "nep_krahen.trigger.11"
+											id = "nep_Krahen.trigger.11"
 											has_owner = yes
 											is_colony = yes
-											NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 										}
 										found_planet = {
 											move_to = this
@@ -417,7 +421,7 @@ create_krahen_invader = {
 								failed = {
 									find_random_system = {
 										trigger = {
-											id = "nep_krahen.trigger.2"
+											id = "nep_Krahen.trigger.2"
 											has_access_fleet = yes
 											distance = {
 												source = FROMFROM
@@ -428,22 +432,22 @@ create_krahen_invader = {
 											OR = {
 												any_ship_in_system = {
 													is_ship_class = shipclass_starbase
-													NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 												}
 												any_planet = {
 													has_owner = yes
 													is_colony = yes
-													NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 												}
 											}
 										}
 										found_system = {
 											find_closest_planet = {
 												trigger = {
-													id = "nep_krahen.trigger.21"
+													id = "nep_Krahen.trigger.21"
 													has_owner = yes
 													is_colony = yes
-													NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 												}
 												found_planet = {
 													move_to = this
@@ -457,7 +461,7 @@ create_krahen_invader = {
 										failed = {
 											find_random_system = {
 												trigger = {
-													id = "nep_krahen.trigger.3"
+													id = "nep_Krahen.trigger.3"
 													has_access_fleet = yes
 													distance = {
 														source = FROMFROM
@@ -468,22 +472,22 @@ create_krahen_invader = {
 													OR = {
 														any_ship_in_system = {
 															is_ship_class = shipclass_starbase
-															NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 														}
 														any_planet = {
 															has_owner = yes
 															is_colony = yes
-															NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 														}
 													}
 												}
 												found_system = {
 													find_closest_planet = {
 														trigger = {
-															id = "nep_krahen.trigger.31"
+															id = "nep_Krahen.trigger.31"
 															has_owner = yes
 															is_colony = yes
-															NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 														}
 														found_planet = {
 															move_to = this
@@ -498,7 +502,7 @@ create_krahen_invader = {
 												failed = {
 													find_random_system = {
 														trigger = {
-															id = "nep_krahen.trigger.4"
+															id = "nep_Krahen.trigger.4"
 															has_access_fleet = yes
 															distance = {
 																source = FROMFROM
@@ -509,22 +513,22 @@ create_krahen_invader = {
 															OR = {
 																any_ship_in_system = {
 																	is_ship_class = shipclass_starbase
-																	NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																}
 																any_planet = {
 																	has_owner = yes
 																	is_colony = yes
-																	NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																}
 															}
 														}
 														found_system = {									
 															find_closest_planet = {
 																trigger = {
-																	id = "nep_krahen.trigger.41"
+																	id = "nep_Krahen.trigger.41"
 																	has_owner = yes
 																	is_colony = yes
-																	NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																}															
 																found_planet = {
 																	move_to = this
@@ -538,7 +542,7 @@ create_krahen_invader = {
 														failed = {
 															find_random_system = {
 																trigger = {
-																	id = "nep_krahen.trigger.5"
+																	id = "nep_Krahen.trigger.5"
 																	has_access_fleet = yes
 																	distance = {
 																		source = FROMFROM
@@ -549,22 +553,22 @@ create_krahen_invader = {
 																	OR = {
 																		any_ship_in_system = {
 																			is_ship_class = shipclass_starbase
-																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																		}
 																		any_planet = {
 																			has_owner = yes
 																			is_colony = yes
-																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																		}
 																	}
 																}
 																found_system = {									
 																	find_closest_planet = {
 																		trigger = {
-																			id = "nep_krahen.trigger.51"
+																			id = "nep_Krahen.trigger.51"
 																			has_owner = yes
 																			is_colony = yes
-																			NOT = { owner = { is_same_value = event_target:nep_krahen_country } }
+																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 																		}																		
 																		found_planet = {
 																			move_to = this
@@ -578,7 +582,7 @@ create_krahen_invader = {
 																failed = {
 																	find_random_system = {
 																		trigger = {
-																			id = "nep_krahen.trigger.6"
+																			id = "nep_Krahen.trigger.6"
 																			has_access_fleet = yes
 																			distance = {
 																				source = FROMFROM
@@ -589,14 +593,14 @@ create_krahen_invader = {
 																			any_ship_in_system = {
 																				NOR = {
 																					is_ship_class = shipclass_starbase
-																					owner = { is_same_value = event_target:nep_krahen_country } 
+																					owner = { is_same_value = event_target:nep_Krahen_country } 
 																				}
 																			}
 																		}
 																		found_system = {
 																			find_closest_planet = {
 																				trigger = {
-																					id = "nep_krahen.trigger.61"
+																					id = "nep_Krahen.trigger.61"
 																					is_star = yes
 																				}
 																				found_planet = {
@@ -607,10 +611,10 @@ create_krahen_invader = {
 																		failed = {
 																			find_closest_system = {
 																				trigger = {
-																					id = "nep_krahen.trigger.7"
+																					id = "nep_Krahen.trigger.7"
 																					has_access_fleet = yes
 																					any_ship_in_system = {
-																						NOT = { owner = { is_same_value = event_target:nep_krahen_country } } 
+																						NOT = { owner = { is_same_value = event_target:nep_Krahen_country } } 
 																					}
 																				}
 																				found_system = {
@@ -619,7 +623,7 @@ create_krahen_invader = {
 																				failed = {
 																					find_random_system = {
 																						trigger = {
-																							id = "nep_krahen.trigger.8"
+																							id = "nep_Krahen.trigger.8"
 																							has_access_fleet = yes
 																							distance = {
 																								source = FROMFROM
@@ -658,7 +662,7 @@ create_krahen_invader = {
 	}
 }
 
-create_krahen_buildings = {
+create_Krahen_buildings = {
 	random_tile = {
 		limit = {
 			has_blocker = no
@@ -705,27 +709,29 @@ create_krahen_buildings = {
 	}
 }
 
-create_krahen_transport = {
-	create_leader = {
-		type = general
-		species = root.owner_species
-		name = random
-		skill = 10
-		traits = {
-			trait = leader_trait_krahen_general
+create_Krahen_transport = {
+	event_target:nep_Krahen_country = {
+		create_leader = {
+			type = general
+			species = event_target:nep_Krahen_country
+			name = random
+			skill = 10
+			traits = {
+				trait = leader_trait_Krahen_general
+			}
 		}
 	}
 	create_fleet = {
 		name = "NAME_Krahen_Armies"
 		effect = {
-			set_owner = event_target:nep_krahen_country
+			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 20
 				create_army_transport = {
 					ship_name = "NAME_nep_Krahen_Transport"
 					army_name = "NAME_nep_Krahen_Invaders"
-					army_type = "nep_krahen_anti_grav"
-					species = event_target:nep_krahen_country
+					army_type = "nep_Krahen_anti_grav"
+					species = event_target:nep_Krahen_country
 				}
 			}
 			assign_leader = last_created_leader
@@ -743,14 +749,14 @@ create_krahen_transport = {
 	}
 }
 
-create_krahen_constructor = {
+create_Krahen_constructor = {
 	create_fleet = {
 		effect = {
 			create_ship = {
 				name = random
-				design = nep_krahen_constructor
+				design = nep_Krahen_constructor
 			}
-			set_owner = event_target:nep_krahen_country
+			set_owner = event_target:nep_Krahen_country
 			set_fleet_stance = evasive
 			set_location = {
 				target = PREV
@@ -761,15 +767,15 @@ create_krahen_constructor = {
 	}
 }
 
-create_krahen_colonizer = {
+create_Krahen_colonizer = {
 	create_fleet = {
 		effect = {
 			create_ship = {
 				name = random
-				design = nep_krahen_colonizer
-				colonizer_species = event_target:nep_krahen_country
+				design = nep_Krahen_colonizer
+				colonizer_species = event_target:nep_Krahen_country
 			}
-			set_owner = event_target:nep_krahen_country
+			set_owner = event_target:nep_Krahen_country
 			set_fleet_stance = evasive
 			set_location = {
 				target = PREV
@@ -785,13 +791,15 @@ create_krahen_colonizer = {
 #######################################
 
 create_finalweapon_fleet = {
-	create_leader = {
-		type = admiral
-		species = prev.owner_species
-		name = random
-		skill = 10
-		traits = {
-			trait = leader_trait_aggressive
+	event_target:nep_Krahen_country = {
+		create_leader = {
+			type = admiral
+			species = prev.owner_species
+			name = random
+			skill = 10
+			traits = {
+				trait = leader_trait_aggressive
+			}
 		}
 	}
 	create_fleet = {

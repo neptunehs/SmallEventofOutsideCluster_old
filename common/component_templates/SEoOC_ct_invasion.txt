@@ -27,7 +27,7 @@ weapon_component_template = {
 
 	hidden = yes
 	use_ship_kill_target = no
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	projectile_gfx = "gamma_laser_m"
 	tags = { weapon_type_energy }
@@ -46,7 +46,7 @@ weapon_component_template = {
 	power = 0
 	cost = 0
 	
-	damage = { min = 135.0 max = 270.0 }
+	damage = { min = 350.0 max = 700.0 }
 	windup = { min = 2.0 max = 20.0 }
 
 	total_fire_time = 40
@@ -63,7 +63,7 @@ weapon_component_template = {
 
 	hidden = yes
 	use_ship_kill_target = no
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	projectile_gfx = "plasma_cannon_l"
 	tags = { weapon_type_energy }
@@ -103,7 +103,7 @@ weapon_component_template = {
 
 	hidden = yes
 	use_ship_kill_target = no
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	projectile_gfx = "large_torpedo_03"
 	tags = { weapon_type_explosive }
@@ -126,7 +126,7 @@ utility_component_template = {
 	}
 
 	component_set = "sensor_components"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 }
 
 utility_component_template = {
@@ -148,7 +148,7 @@ utility_component_template = {
 	
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special }
 	component_set = "ftl_components"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 }
 
 utility_component_template = {
@@ -164,7 +164,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { corvette }
 	component_set = "combat_computers"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -184,7 +184,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { destroyer }
 	component_set = "combat_computers"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -215,7 +215,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { cruiser battleship }
 	component_set = "combat_computers"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -232,7 +232,7 @@ utility_component_template = {
 	hidden = yes
 	
 	component_set = "ship_aura_components"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	hostile_aura = {
 		name = "aura_computer_jammer"
@@ -283,7 +283,7 @@ utility_component_template = {
 
 	component_set = "thruster_components"
 	size_restriction = { corvette colonizer constructor science transport }
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -304,7 +304,7 @@ utility_component_template = {
 	}
 	component_set = "thruster_components"
 	size_restriction = { destroyer }
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -326,7 +326,7 @@ utility_component_template = {
 
 	component_set = "thruster_components"
 	size_restriction = { cruiser }
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -348,7 +348,7 @@ utility_component_template = {
 
 	component_set = "thruster_components"
 	size_restriction = { battleship }
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	ai_weight = {
 		weight = 0
@@ -365,7 +365,7 @@ utility_component_template = {
 	hidden = yes
 	
 	component_set = "ship_aura_components"
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	hostile_aura = {
 		name = "aura_advance_ecm"
@@ -465,7 +465,7 @@ strike_craft_component_template = {
 	hidden = yes
 	ship_behavior = "bombers_behavior"
 
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	icon = "GFX_ship_part_strike_craft_scout_1"
 	icon_frame = 1
@@ -483,7 +483,7 @@ utility_component_template = {
 		ship_shield_add = 4320
 		ship_shield_regen_add_static = 432 #Regeneration per day
 	}
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	hidden = yes
 	component_set = "nep_MAGNETIC_SHIELD"
 }
@@ -499,7 +499,7 @@ utility_component_template = {
 		ship_shield_add = 19440
 		ship_shield_regen_add_static = 1944 #Regeneration per day
 	}
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	hidden = yes
 	component_set = "nep_MAGNETIC_SHIELD"
 }
@@ -534,7 +534,7 @@ weapon_component_template = {
 
 	hidden = yes
 	use_ship_kill_target = no
-	prerequisites = { "tech_nep_krahen_tech" }
+	prerequisites = { "tech_nep_Krahen_tech" }
 	
 	projectile_gfx = "gamma_laser_m"
 	tags = { weapon_type_energy }

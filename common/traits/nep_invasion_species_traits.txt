@@ -1,4 +1,4 @@
-trait_krahen = {
+trait_Krahen = {
 	cost = 0
 	sorting_priority = 20
 	

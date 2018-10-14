@@ -60,7 +60,7 @@ nep_adv_tank_factory = {
 	
 	destroy_if = {
 		exists = owner
-		NOT = { owner = { has_country_flag = nep_krahen_country } }
+		NOT = { owner = { has_country_flag = nep_Krahen_country } }
 	}
 }
 
@@ -80,7 +80,7 @@ nep_heavy_fortress = {
 	
 	destroy_if = {
 		exists = owner
-		NOT = { owner = { has_country_flag = nep_krahen_country } }
+		NOT = { owner = { has_country_flag = nep_Krahen_country } }
 	}
 }
 
@@ -100,7 +100,7 @@ nep_heavy_fortress_2 = {
 	
 	destroy_if = {
 		exists = owner
-		NOT = { owner = { has_country_flag = nep_krahen_country } }
+		NOT = { owner = { has_country_flag = nep_Krahen_country } }
 	}
 }
 
@@ -120,6 +120,6 @@ nep_planetary_gun = {
 	
 	destroy_if = {
 		exists = owner
-		NOT = { owner = { has_country_flag = nep_krahen_country } }
+		NOT = { owner = { has_country_flag = nep_Krahen_country } }
 	}
 }

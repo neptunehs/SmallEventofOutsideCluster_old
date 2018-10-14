@@ -18,7 +18,7 @@ nep_dragon_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
 }
 
-nep_krahen_invasion_chain = {
+nep_Krahen_invasion_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_evil_fleet
 	counter = {
@@ -26,11 +26,11 @@ nep_krahen_invasion_chain = {
 		}
 		liberated_worlds = {
 		}
-		krahen_overrun_us = {
+		Krahen_overrun_us = {
 		}
-		krahen_overrun_others = {
+		Krahen_overrun_others = {
 		}
-		krahen_overruns = {
+		Krahen_overruns = {
 		}
 	}
 }
