@@ -316,6 +316,7 @@ create_Krahen_defender = {
 			}
 		}
 		settings = {
+			garrison = yes
 			can_change_leader = no
 			uses_naval_capacity = no
 		}
@@ -337,7 +338,7 @@ create_Krahen_invader = {
 	}
 	create_fleet = {
 		name = "Krah'en Invader"
-		effect = {		
+		effect = {
 			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 60
@@ -357,304 +358,489 @@ create_Krahen_invader = {
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
 			set_fleet_bombardment_stance = armageddon
+			set_fleet_flag = nep_inva_fleet
+			
+			# queue_actions = {
+				# find_closest_planet = {
+					# trigger = {
+						# id = "nep_Krahen.trigger.1000"
+						# is_star = yes
+					# }
+					# found_planet = {
+						# move_to = this
+						# orbit_planet = THIS
+					# }
+				# }
+				# repeat = {
+					# wait = {
+						# duration = 5
+						# random = 10
+					# }
+					# find_closest_planet = {
+						# trigger = {
+							# id = "nep_Krahen.trigger.0"
+							# has_owner = yes
+							# is_colony = yes
+							# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+						# }
+						# found_planet = {
+							# orbit_planet = THIS
+							# wait = {
+								# duration = 30
+								# random = 10
+							# }
+						# }
+						# failed = {
+							# find_random_system = {
+								# trigger = {
+									# id = "nep_Krahen.trigger.1"
+									# #has_access_fleet = yes
+									# distance = {
+										# source = orbit.solar_system
+										# use_bypasses = yes
+										# min_jumps = 1
+										# max_jumps = 2
+									# }
+									# OR = {
+										# any_ship_in_system = {
+											# is_ship_class = shipclass_starbase
+											# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+										# }
+										# any_planet = {
+											# has_owner = yes
+											# is_colony = yes
+											# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+										# }
+									# }
+								# }
+								# found_system = {
+									# effect = {
+										# log = "1:[This.GetName]"
+									# }
+									# find_closest_planet = {
+										# trigger = {
+											# id = "nep_Krahen.trigger.11"
+											# has_owner = yes
+											# is_colony = yes
+											# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+										# }
+										# found_planet = {
+											# move_to = this
+											# orbit_planet = THIS
+										# }
+										# failed = { 
+											# move_to = prev
+										# }
+									# }
+								# }
+								# failed = {
+									# find_random_system = {
+										# trigger = {
+											# id = "nep_Krahen.trigger.2"
+											# #has_access_fleet = yes
+											# distance = {
+												# source = orbit.solar_system
+												# use_bypasses = yes
+												# min_jumps = 2
+												# max_jumps = 3
+											# }
+											# OR = {
+												# any_ship_in_system = {
+													# is_ship_class = shipclass_starbase
+													# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+												# }
+												# any_planet = {
+													# has_owner = yes
+													# is_colony = yes
+													# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+												# }
+											# }
+										# }
+										# found_system = {
+											# effect = {
+												# log = "2:[This.GetName]"
+											# }
+											# find_closest_planet = {
+												# trigger = {
+													# id = "nep_Krahen.trigger.21"
+													# has_owner = yes
+													# is_colony = yes
+													# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+												# }
+												# found_planet = {
+													# move_to = this
+													# orbit_planet = THIS
+												# }
+												# failed = {
+														# move_to = prev
+												# }
+											# }
+										# }
+										# failed = {
+											# find_random_system = {
+												# trigger = {
+													# id = "nep_Krahen.trigger.3"
+													# #has_access_fleet = yes
+													# distance = {
+														# source = orbit.solar_system
+														# use_bypasses = yes
+														# min_jumps = 3
+														# max_jumps = 4
+													# }
+													# OR = {
+														# any_ship_in_system = {
+															# is_ship_class = shipclass_starbase
+															# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+														# }
+														# any_planet = {
+															# has_owner = yes
+															# is_colony = yes
+															# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+														# }
+													# }
+												# }
+												# found_system = {
+													# effect = {
+														# log = "3:[This.GetName]"
+													# }
+													# find_closest_planet = {
+														# trigger = {
+															# id = "nep_Krahen.trigger.31"
+															# has_owner = yes
+															# is_colony = yes
+															# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+														# }
+														# found_planet = {
+															# move_to = this
+															# orbit_planet = THIS
+														# }
+														# failed = {
+															# move_to = prev
+														# }
+													# }
+
+												# }
+												# failed = {
+													# find_random_system = {
+														# trigger = {
+															# id = "nep_Krahen.trigger.4"
+															# #has_access_fleet = yes
+															# distance = {
+																# source = orbit.solar_system
+																# use_bypasses = yes
+																# min_jumps = 4
+																# max_jumps = 5
+															# }
+															# OR = {
+																# any_ship_in_system = {
+																	# is_ship_class = shipclass_starbase
+																	# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																# }
+																# any_planet = {
+																	# has_owner = yes
+																	# is_colony = yes
+																	# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																# }
+															# }
+														# }
+														# found_system = {
+															# effect = {
+																# log = "4:[This.GetName]"
+															# }									
+															# find_closest_planet = {
+																# trigger = {
+																	# id = "nep_Krahen.trigger.41"
+																	# has_owner = yes
+																	# is_colony = yes
+																	# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																# }															
+																# found_planet = {
+																	# move_to = this
+																	# orbit_planet = THIS
+																# }
+																# failed = {
+																	# move_to = prev
+																# }
+															# }
+														# }
+														# failed = {
+															# find_random_system = {
+																# trigger = {
+																	# id = "nep_Krahen.trigger.5"
+																	# #has_access_fleet = yes
+																	# distance = {
+																		# source = orbit.solar_system
+																		# use_bypasses = yes
+																		# min_jumps = 5
+																		# max_jumps = 6
+																	# }
+																	# OR = {
+																		# any_ship_in_system = {
+																			# is_ship_class = shipclass_starbase
+																			# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																		# }
+																		# any_planet = {
+																			# has_owner = yes
+																			# is_colony = yes
+																			# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																		# }
+																	# }
+																# }
+																# found_system = {
+																	# effect = {
+																		# log = "5:[This.GetName]"
+																	# }								
+																	# find_closest_planet = {
+																		# trigger = {
+																			# id = "nep_Krahen.trigger.51"
+																			# has_owner = yes
+																			# is_colony = yes
+																			# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+																		# }																		
+																		# found_planet = {
+																			# move_to = this
+																			# orbit_planet = THIS
+																		# }
+																		# failed = {
+																			# move_to = prev
+																		# }
+																	# }
+																# }
+																# failed = {
+																	# find_random_system = {
+																		# trigger = {
+																			# id = "nep_Krahen.trigger.6"
+																			# #has_access_fleet = yes
+																			# distance = {
+																				# source = orbit.solar_system
+																				# use_bypasses = yes
+																				# min_jumps = 1
+																				# max_jumps = 5
+																			# }
+																			# any_ship_in_system = {
+																				# NOR = {
+																					# is_ship_class = shipclass_starbase
+																					# owner = { is_same_value = event_target:nep_Krahen_country } 
+																				# }
+																			# }
+																		# }
+																		# found_system = {
+																			# effect = {
+																				# log = "6:[This.GetName]"
+																			# }
+																			# find_closest_planet = {
+																				# trigger = {
+																					# id = "nep_Krahen.trigger.61"
+																					# is_star = yes
+																				# }
+																				# found_planet = {
+																					# move_to = this
+																				# }
+																			# }
+																		# }
+																		# failed = {
+																			# find_closest_system = {
+																				# trigger = {
+																					# id = "nep_Krahen.trigger.7"
+																					# has_access_fleet = yes
+																					# any_ship_in_system = {
+																						# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } } 
+																					# }
+																				# }
+																				# found_system = {
+																					# move_to = this
+																				# }
+																				# failed = {
+																					# find_random_system = {
+																						# trigger = {
+																							# id = "nep_Krahen.trigger.8"
+																							# has_access_fleet = yes
+																							# distance = {
+																								# source = orbit.solar_system
+																								# use_bypasses = yes
+																								# min_jumps = 1
+																								# max_jumps = 5
+																							# }
+																						# }
+																						# found_system = {
+																							# effect = {
+																								# log = this
+																							# }
+																							# move_to = this
+																						# }
+																					# }
+																				# }
+																			# }																			
+																		# }
+																	# }
+																# }
+															# }
+														# }
+													# }
+												# }
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+			# }
 			
 			queue_actions = {
-				repeat = {
-					wait = {
-						duration = 5
-						random = 10
+				find_random_system = {
+					trigger = {
+						id = "nep_Krahen.trigger.0.0"
+						has_star_flag = nep_inva_system
 					}
-					find_closest_planet = {
-						trigger = {
-							id = "nep_Krahen.trigger.0"
-							has_owner = yes
-							is_colony = yes
-							NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-						}
-						found_planet = {
-							orbit_planet = THIS
-							wait = {
-								duration = 30
-								random = 10
-							}
-						}
-						failed = {
-							find_random_system = {
-								trigger = {
-									id = "nep_Krahen.trigger.1"
-									has_access_fleet = yes
-									distance = {
-										source = FROMFROM
-										use_bypasses = yes
-										min_jumps = 0
-										max_jumps = 2
-									}
-									OR = {
-										any_ship_in_system = {
-											is_ship_class = shipclass_starbase
-											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-										}
-										any_planet = {
-											has_owner = yes
-											is_colony = yes
-											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-										}
-									}
-								}
-								found_system = {
-									find_closest_planet = {
-										trigger = {
-											id = "nep_Krahen.trigger.11"
-											has_owner = yes
-											is_colony = yes
-											NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-										}
-										found_planet = {
-											move_to = this
-											orbit_planet = THIS
-										}
-										failed = { 
-											move_to = prev
-										}
-									}
-								}
-								failed = {
-									find_random_system = {
-										trigger = {
-											id = "nep_Krahen.trigger.2"
-											has_access_fleet = yes
-											distance = {
-												source = FROMFROM
-												use_bypasses = yes
-												min_jumps = 2
-												max_jumps = 3
-											}
-											OR = {
-												any_ship_in_system = {
-													is_ship_class = shipclass_starbase
-													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-												}
-												any_planet = {
-													has_owner = yes
-													is_colony = yes
-													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-												}
-											}
-										}
-										found_system = {
-											find_closest_planet = {
-												trigger = {
-													id = "nep_Krahen.trigger.21"
-													has_owner = yes
-													is_colony = yes
-													NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-												}
-												found_planet = {
-													move_to = this
-													orbit_planet = THIS
-												}
-												failed = {
-														move_to = prev
-												}
-											}
-										}
-										failed = {
-											find_random_system = {
-												trigger = {
-													id = "nep_Krahen.trigger.3"
-													has_access_fleet = yes
-													distance = {
-														source = FROMFROM
-														use_bypasses = yes
-														min_jumps = 3
-														max_jumps = 4
-													}
-													OR = {
-														any_ship_in_system = {
-															is_ship_class = shipclass_starbase
-															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-														}
-														any_planet = {
-															has_owner = yes
-															is_colony = yes
-															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-														}
-													}
-												}
-												found_system = {
-													find_closest_planet = {
-														trigger = {
-															id = "nep_Krahen.trigger.31"
-															has_owner = yes
-															is_colony = yes
-															NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-														}
-														found_planet = {
-															move_to = this
-															orbit_planet = THIS
-														}
-														failed = {
-															move_to = prev
-														}
-													}
-
-												}
-												failed = {
-													find_random_system = {
-														trigger = {
-															id = "nep_Krahen.trigger.4"
-															has_access_fleet = yes
-															distance = {
-																source = FROMFROM
-																use_bypasses = yes
-																min_jumps = 4
-																max_jumps = 5
-															}
-															OR = {
-																any_ship_in_system = {
-																	is_ship_class = shipclass_starbase
-																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																}
-																any_planet = {
-																	has_owner = yes
-																	is_colony = yes
-																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																}
-															}
-														}
-														found_system = {									
-															find_closest_planet = {
-																trigger = {
-																	id = "nep_Krahen.trigger.41"
-																	has_owner = yes
-																	is_colony = yes
-																	NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																}															
-																found_planet = {
-																	move_to = this
-																	orbit_planet = THIS
-																}
-																failed = {
-																	move_to = prev
-																}
-															}
-														}
-														failed = {
-															find_random_system = {
-																trigger = {
-																	id = "nep_Krahen.trigger.5"
-																	has_access_fleet = yes
-																	distance = {
-																		source = FROMFROM
-																		use_bypasses = yes
-																		min_jumps = 5
-																		max_jumps = 6
-																	}
-																	OR = {
-																		any_ship_in_system = {
-																			is_ship_class = shipclass_starbase
-																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																		}
-																		any_planet = {
-																			has_owner = yes
-																			is_colony = yes
-																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																		}
-																	}
-																}
-																found_system = {									
-																	find_closest_planet = {
-																		trigger = {
-																			id = "nep_Krahen.trigger.51"
-																			has_owner = yes
-																			is_colony = yes
-																			NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
-																		}																		
-																		found_planet = {
-																			move_to = this
-																			orbit_planet = THIS
-																		}
-																		failed = {
-																			move_to = prev
-																		}
-																	}
-																}
-																failed = {
-																	find_random_system = {
-																		trigger = {
-																			id = "nep_Krahen.trigger.6"
-																			has_access_fleet = yes
-																			distance = {
-																				source = FROMFROM
-																				use_bypasses = yes
-																				min_jumps = 1
-																				max_jumps = 5
-																			}
-																			any_ship_in_system = {
-																				NOR = {
-																					is_ship_class = shipclass_starbase
-																					owner = { is_same_value = event_target:nep_Krahen_country } 
-																				}
-																			}
-																		}
-																		found_system = {
-																			find_closest_planet = {
-																				trigger = {
-																					id = "nep_Krahen.trigger.61"
-																					is_star = yes
-																				}
-																				found_planet = {
-																					move_to = this
-																				}
-																			}
-																		}
-																		failed = {
-																			find_closest_system = {
-																				trigger = {
-																					id = "nep_Krahen.trigger.7"
-																					has_access_fleet = yes
-																					any_ship_in_system = {
-																						NOT = { owner = { is_same_value = event_target:nep_Krahen_country } } 
-																					}
-																				}
-																				found_system = {
-																					move_to = this
-																				}
-																				failed = {
-																					find_random_system = {
-																						trigger = {
-																							id = "nep_Krahen.trigger.8"
-																							has_access_fleet = yes
-																							distance = {
-																								source = FROMFROM
-																								use_bypasses = yes
-																								min_jumps = 1
-																								max_jumps = 5
-																							}
-																						}
-																						found_system = {
-																							move_to = this
-																						}
-																					}
-																				}
-																			}																			
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+					found_system = {
+						move_to = this
 					}
 				}
+				# repeat = {
+					# wait = {
+						# duration = 5
+						# random = 10
+					# }
+					# find_closest_planet = {
+						# trigger = {
+							# id = "nep_Krahen.trigger.0"
+							# has_owner = yes
+							# is_colony = yes
+							# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+						# }
+						# found_planet = {
+							# effect = {
+								# id = "nep_Krahen.trigger.0.1"
+								# log = "P:[This.GetName]"
+							# }
+							# move_to = This
+							# orbit_planet = THIS
+							# wait = {
+								# duration = 30
+								# random = 10
+							# }
+						# }
+						# failed = {
+							# find_closest_system = {
+								# trigger = {
+									# id = "nep_Krahen.trigger.1"
+									# has_access_fleet = yes
+									# OR = {
+										# any_ship_in_system = {
+											# is_ship_class = shipclass_starbase
+											# owner = { NOT = { has_country_flag = nep_Krahen_country } }
+										# }
+										# any_planet = {
+											# has_owner = yes
+											# is_colony = yes
+											# owner = { NOT = { has_country_flag = nep_Krahen_country } }
+										# }
+									# }
+									# count_system_ships = {
+										# limit = { is_ship_size = nep_Krahen_battleship }
+										# count < 60
+									# }
+								# }
+								# found_system = {
+									# effect = {
+										# id = "nep_Krahen.trigger.1.1"
+										# log = "1:[This.GetName]"
+									# }
+									# move_to = this
+									# find_closest_planet = {
+										# trigger = {
+											# id = "nep_Krahen.trigger.1.2"
+											# has_owner = yes
+											# is_colony = yes
+											# NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
+										# }
+										# found_planet = {
+											# move_to = this
+											# orbit_planet = THIS
+										# }
+										# failed = {
+											# find_closest_planet = {
+												# trigger = {
+													# id = "nep_Krahen.trigger.1.3"
+													# is_star = yes
+												# }												
+												# found_planet = {
+													# move_to = this
+													# orbit_planet = THIS
+												# }
+											# }
+										# }
+									# }
+								# }
+								# failed = {
+									# find_closest_system = {
+										# trigger = {
+											# id = "nep_Krahen.trigger.2"
+											# has_access_fleet = yes
+											# any_ship_in_system = {
+												# owner = { NOT = { has_country_flag = nep_Krahen_country } }
+											# }
+										# }
+										# found_system = {
+											# effect = {
+												# id = "nep_Krahen.trigger.2.1"
+												# log = "2:[This.GetName]"
+											# }
+											# move_to = this
+											# find_closest_planet = {
+												# trigger = {
+													# id = "nep_Krahen.trigger.2.2"
+													# is_star = yes
+												# }
+												# found_planet = {
+													# move_to = this
+													# orbit_planet = THIS
+												# }
+												# failed = {
+												
+												# }
+											# }
+										# }
+										# failed = {
+											# find_closest_system = {
+												# trigger = {
+													# id = "nep_Krahen.trigger.3"
+													# has_access_fleet = yes
+													# NOT = { is_inside_border = event_target:nep_Krahen_country }
+												# }
+												# found_system = {
+													# effect = {
+														# id = "nep_Krahen.trigger.3.1"
+														# log = "3:[This.GetName]"
+													# }
+													# move_to = this
+													# find_closest_planet = {
+														# trigger = {
+															# id = "nep_Krahen.trigger.3.2"
+															# is_star = yes
+														# }
+														# found_planet = {
+															# move_to = this
+															# orbit_planet = THIS
+														# }
+														# failed = {
+														
+														# }
+													# }
+
+												# }
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
 			}
-		}			
+		}
 		settings = {
 			can_change_leader = no
 			uses_naval_capacity = no
@@ -709,52 +895,64 @@ create_Krahen_buildings = {
 	}
 }
 
-create_Krahen_transport = {
-	event_target:nep_Krahen_country = {
-		create_leader = {
-			type = general
-			species = event_target:nep_Krahen_country
-			name = random
-			skill = 10
-			traits = {
-				trait = leader_trait_Krahen_general
-			}
-		}
-	}
-	create_fleet = {
-		name = "NAME_Krahen_Armies"
-		effect = {
-			set_owner = event_target:nep_Krahen_country
-			while = {
-				count = 20
-				create_army_transport = {
-					ship_name = "NAME_nep_Krahen_Transport"
-					army_name = "NAME_nep_Krahen_Invaders"
-					army_type = "nep_Krahen_anti_grav"
-					species = event_target:nep_Krahen_country
-				}
-			}
-			assign_leader = last_created_leader
-			set_location = {
-				target = PREV
-				distance = 20
-				angle = random 
-			}
-		}
-		settings = {
-			can_change_leader = no
-			uses_naval_capacity = no
-			spawn_debris = no
-		}
-	}
-}
+# create_Krahen_transport = {
+	# event_target:nep_Krahen_country = {
+		# create_leader = {
+			# type = general
+			# species = event_target:nep_Krahen_country
+			# name = random
+			# skill = 10
+			# traits = {
+				# trait = leader_trait_Krahen_general
+			# }
+		# }
+	# }
+	# create_fleet = {
+		# name = "NAME_Krahen_Armies"
+		# effect = {
+			# set_owner = event_target:nep_Krahen_country
+			# while = {
+				# count = 20
+				# create_army_transport = {
+					# ship_name = "NAME_nep_Krahen_Transport"
+					# army_name = "NAME_nep_Krahen_Invaders"
+					# army_type = "nep_Krahen_anti_grav"
+					# species = event_target:nep_Krahen_country
+				# }
+			# }
+			# set_leader = last_created_leader
+			# set_location = {
+				# target = PREV
+				# distance = 20
+				# angle = random 
+			# }
+			# set_fleet_flag = nep_inva_armies
+			# queue_actions = {
+				# find_random_system = {
+					# trigger = {
+						# id = "nep_Krahen.trigger.0.0"
+						# has_star_flag = nep_inva_system
+					# }
+					# found_system = {
+						# move_to = this
+					# }
+				# }
+			# }
+		# }
+		# settings = {
+			# #can_change_leader = no
+			# uses_naval_capacity = no
+			# spawn_debris = no
+		# }
+	# }
+# }
 
 create_Krahen_constructor = {
 	create_fleet = {
 		effect = {
 			create_ship = {
 				name = random
-				design = nep_Krahen_constructor
+				design = "NAME_nep_Krahen_Constructor"
 			}
 			set_owner = event_target:nep_Krahen_country
 			set_fleet_stance = evasive
@@ -770,12 +968,12 @@ create_Krahen_constructor = {
 create_Krahen_colonizer = {
 	create_fleet = {
 		effect = {
+			set_owner = event_target:nep_Krahen_country
 			create_ship = {
 				name = random
-				design = nep_Krahen_colonizer
-				colonizer_species = event_target:nep_Krahen_country
+				design = "NAME_nep_Krahen_Colonizer"
+				colonizer_species = owner_main_species
 			}
-			set_owner = event_target:nep_Krahen_country
 			set_fleet_stance = evasive
 			set_location = {
 				target = PREV

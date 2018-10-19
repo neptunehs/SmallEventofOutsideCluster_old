@@ -98,14 +98,17 @@ nep_Krahen_country = {
 	#	nep_shinari
 	#	nep_tolumn
 	#}
-	government = no
+	#government = no
 	ai = {
 		enabled = yes
-		colonizer = yes
+		declare_war = no
+		colonizer = no
+		internal_policies = no
+		modification = no
+		tech = no
 		construction = yes
 		modules = {
 			swarm_interior_minister_module
-			swarm_military_minister_module
 		}
 	}
 	faction = {

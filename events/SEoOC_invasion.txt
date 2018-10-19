@@ -262,7 +262,7 @@ fleet_event = {
 		create_species = {
 			name = Krah'en
 			class = random_non_machine
-			portrait = mol6
+			portrait = mol4
 			traits = {
 				trait = trait_Krahen
 			}
@@ -272,17 +272,19 @@ fleet_event = {
 			species = last_created
 			type = nep_Krahen_country
 			auto_delete = no
+			authority = auth_imperial
 			ethos = {
 				ethic = ethic_militarist
 				ethic = ethic_fanatic_xenophobe
 			}
 			civics = {
 				civic = civic_fanatic_purifiers
+				civic = civic_cutthroat_politics
 			}
 			flag = {
 				icon = {
-					category = "zoological"
-					file = "flag_zoological_10.dds"
+					category = "domination"
+					file = "domination_12.dds"
 				}
 				background= {
 					category = "backgrounds"
@@ -307,12 +309,12 @@ fleet_event = {
 				}
 				skill = 10
 			}
-			assign_leader = last_created_leader
+			set_leader = last_created_leader
 			set_policy = {
- 				policy = orbital_bombardment
- 				option = orbital_bombardment_armageddon
- 				cooldown = no
- 			}
+				policy = orbital_bombardment
+				option = orbital_bombardment_armageddon
+				cooldown = no
+			}
 			set_country_flag = nep_Krahen_country
 			save_global_event_target_as = nep_Krahen_country
 		}
@@ -345,7 +347,7 @@ country_event = {
 	}
 	
 	immediate = {
-		country_event = { id = nep_inva.21 days = 5 random = 5 }
+		From = { country_event = { id = nep_inva.21 days = 5 random = 5 } }
 	}
 }
 
@@ -368,10 +370,35 @@ country_event = {
 				design = "NAME_Krah'en_heavy_spacebase"
 			}
 			add_ship_design = last_created_design
+			create_ship_design = { 
+				design = "NAME_nep_Krahen_Colonizer"
+			}
+			add_ship_design = last_created_design
+			create_ship_design = { 
+				design = "NAME_nep_Krahen_Constructor"
+			}
+			add_ship_design = last_created_design
+			create_ship_design = {
+				design = "NAME_nep_Krahen_Transport"
+			}
+			add_ship_design = last_created_design
 		}
 		every_system = {
 			limit = { 
 				has_star_flag = nep_Krahen_cluster
+			}
+			every_fleet_in_system = {
+				limit = {
+					is_ship_class = shipclass_starbase
+				}
+				destroy_fleet = this
+			}
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+					is_under_colonization = yes
+				}
+				destroy_colony = yes
 			}
 			create_starbase = {
 				size = nep_heavy_spacebase
@@ -384,6 +411,11 @@ country_event = {
 						is_colony = no
 						is_colonizable = yes
 					}
+					if = {
+						limit = { planet_size < 12 }
+						change_planet_size = 12
+						reroll_planet = yes
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
@@ -394,6 +426,11 @@ country_event = {
 					limit = {
 						is_colony = no
 						is_colonizable = yes
+					}
+					if = {
+						limit = { planet_size < 12 }
+						change_planet_size = 12
+						reroll_planet = yes
 					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
@@ -408,6 +445,11 @@ country_event = {
 					limit = {
 						is_colony = no
 						is_colonizable = yes
+					}
+					if = {
+						limit = { planet_size < 12 }
+						change_planet_size = 12
+						reroll_planet = yes
 					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
@@ -427,7 +469,7 @@ country_event = {
 			random_system_planet = {
 				limit = { is_colony = yes }
 				create_fleet = {
-					name = "NAME_Portal_to_God'Emperor"
+					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
 						set_owner = event_target:nep_Krahen_country
 						create_ship = {
@@ -439,16 +481,21 @@ country_event = {
 								set_ship_flag = nep_Krahen_portal_1
 							}
 						}
+						set_location = {
+							target = prev
+							distance = 150
+							angle = random
+						}
 						set_event_locked = yes
 						set_fleet_flag = nep_Krahen_portal_1
 					}
 				}
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
-				create_Krahen_transport = yes
-				create_Krahen_transport = yes
-				create_Krahen_transport = yes
-				create_Krahen_transport = yes
+				# create_Krahen_transport = yes
+				# create_Krahen_transport = yes
+				# create_Krahen_transport = yes
+				# create_Krahen_transport = yes
 				create_Krahen_constructor = yes
 				create_Krahen_constructor = yes
 				create_Krahen_constructor = yes
@@ -479,6 +526,11 @@ country_event = {
 								set_ship_flag = nep_Krahen_portal_2
 							}
 						}
+						set_location = {
+							target = prev
+							distance = 150
+							angle = random
+						}
 						set_event_locked = yes
 						set_fleet_flag = nep_Krahen_portal_2
 					}
@@ -486,6 +538,7 @@ country_event = {
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
 			}
+			set_star_flag = nep_Krahen_portal_system
 		}
 		random_system = {
 			limit = { 
@@ -510,6 +563,11 @@ country_event = {
 							effect = {
 								set_ship_flag = nep_Krahen_portal_3
 							}
+						}
+						set_location = {
+							target = prev
+							distance = 150
+							angle = random
 						}
 						set_event_locked = yes
 						set_fleet_flag = nep_Krahen_portal_3
@@ -543,6 +601,11 @@ country_event = {
 								set_ship_flag = nep_Krahen_portal_4
 							}
 						}
+						set_location = {
+							target = prev
+							distance = 150
+							angle = random
+						}
 						set_event_locked = yes
 						set_fleet_flag = nep_Krahen_portal_4
 					}
@@ -550,6 +613,7 @@ country_event = {
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
 			}
+			set_star_flag = nep_Krahen_portal_system
 		}
 		
 		#sealgate
@@ -653,7 +717,123 @@ country_event = {
 				}
 			}
 		}
-		set_spawn_system_batch = end	
+		set_spawn_system_batch = end
+		add_monthly_resource_mult = {
+			resource = influence
+			value = 1000
+			min = 900
+			max = 1000
+		}
+		every_planet_within_border = {
+			limit = {
+				is_colony = yes
+				has_owner = yes
+				owner = { has_country_flag = nep_Krahen_country }
+				has_ground_combat = no
+				OR = {
+					any_tile = { 
+						has_building = "nep_heavy_fortress"
+						has_pop = yes
+					}
+					any_tile = { 
+						has_building = "nep_heavy_fortress_2"
+						has_pop = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_tile = { 
+						has_building = "nep_heavy_fortress"
+						has_pop = yes
+					}
+					count_armies = {
+						limit = { army_type = nep_Krahen_heavy_fortress }
+						count < 8
+					}
+				}
+				while = {
+					limit = {
+						count_armies = {
+							limit = { army_type = nep_Krahen_heavy_fortress }
+							count < 8
+						}
+					}
+					create_army = {
+						name = random
+						owner = event_target:nep_Krahen_country
+						species = event_target:nep_Krahen_country
+						type = nep_Krahen_heavy_fortress
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_tile = { 
+						has_building = "nep_heavy_fortress_2"
+						has_pop = yes
+					}
+					count_armies = {
+						limit = { army_type = nep_Krahen_heavy_fortress_2 }
+						count < 8
+					}
+				}
+				while = {
+					limit = {
+						count_armies = {
+							limit = { army_type = nep_Krahen_heavy_fortress_2 }
+							count < 8
+						}
+					}
+					create_army = {
+						name = random
+						owner = event_target:nep_Krahen_country
+						species = event_target:nep_Krahen_country
+						type = nep_Krahen_heavy_fortress_2
+					}
+				}
+			}
+		}
+		every_planet_within_border = {
+			limit = {
+				is_colony = yes
+				has_owner = yes
+				owner = { has_country_flag = nep_Krahen_country }
+				has_ground_combat = no
+				any_tile = { 
+					has_building = "nep_planetary_gun"
+					has_pop = yes
+				}
+				NOT = { any_fleet_in_orbit = { is_ship_size = nep_planetary_gun_invisible } }
+			}
+			create_fleet = {
+				name = "NAME_nep_planetary_gun_invisible"
+				settings = {
+					spawn_debris = no 
+				}
+				effect = {
+					set_owner = event_target:nep_Krahen_country	
+					create_ship = {
+						name = "NAME_nep_planetary_gun_invisible"
+						design = "NAME_nep_planetary_gun_design"
+					}
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range = 250
+					set_aggro_range_measure_from = self
+
+					queue_actions = {	
+						repeat = {
+							orbit_planet = prev
+						}
+					}
+				}
+			}
+		}
 		#diplomatic
 		every_playable_country = {
 			establish_communications_no_message = event_target:nep_Krahen_country
@@ -1218,15 +1398,16 @@ event = {
 		every_system = {
 			limit = {
 				has_star_flag = nep_Krahen_portal_system
-				NOT = {
-					any_ship_in_system = {
-						fleet = {
-							has_fleet_flag = nep_Krahen_defender
-						}
+			}
+			if = {
+				limit = {
+					count_system_ships = {
+						limit = { is_ship_size = nep_Krahen_battleship }
+						count < 180
 					}
 				}
+				create_Krahen_defender = yes
 			}
-			create_Krahen_defender = yes
 		}
 		
 		event_target:nep_Krahen_country = {
@@ -1268,7 +1449,7 @@ event = {
 						limit = {
 							count_armies = {
 								limit = { army_type = nep_Krahen_heavy_fortress }
-								count >= 8
+								count < 8
 							}
 						}
 						create_army = {
@@ -1294,7 +1475,7 @@ event = {
 						limit = {
 							count_armies = {
 								limit = { army_type = nep_Krahen_heavy_fortress_2 }
-								count >= 8
+								count < 8
 							}
 						}
 						create_army = {
@@ -1405,7 +1586,7 @@ event = {
 						has_pop = yes
 					}
 				}
-				create_Krahen_transport = yes
+				# create_Krahen_transport = yes
 			}
 		}
 	}

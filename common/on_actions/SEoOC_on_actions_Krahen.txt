@@ -1,0 +1,75 @@
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+
+	}
+}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		nep_kai.1000
+		nep_kai.1020
+	}
+}
+
+# This = owner of fleet
+# From = fleet # And ship??
+# Only works if clear auto move on arrival is enabled
+on_fleet_auto_move_arrival = {
+	events = {
+		nep_kai.1010
+		nep_kai.1041
+	}
+}
+
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_win = {
+	events = {
+		nep_kai.1031
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_lose = {
+	events = {
+		nep_kai.1032
+	}
+}
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_won = {
+	events = {
+		nep_kai.1021
+	}
+}
+
+# This = Planet
+# From = Bombarder ( Country )
+on_planet_zero_pops = {
+	events = {
+		nep_kai.1040
+	}
+}
+
+# Planet has reached 0 health from orbital bombardment
+# This = Planet
+# From = Bombarder ( Country )
+on_planet_zero_health = {
+	events = {
+		nep_kai.1030
+	}
+}

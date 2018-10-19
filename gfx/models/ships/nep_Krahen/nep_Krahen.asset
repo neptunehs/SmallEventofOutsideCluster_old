@@ -220,3 +220,15 @@ entity = {
 	name = "nep_planetary_gun_invisible_entity"
 	scale = 1
 }
+
+entity = {
+	name = "nep_Krahen_portal_entity"
+	scale = 1
+	
+	locator = {
+		name = "root"
+	}
+	locator = {
+		name = "part1"
+	}
+}

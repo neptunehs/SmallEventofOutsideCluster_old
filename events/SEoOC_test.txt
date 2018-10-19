@@ -624,3 +624,19 @@ country_event = {
 			}
 	}
 }
+
+# fleet_event = {
+	# id = nep_test.12
+    # hide_window = yes
+	# is_triggered_only = yes
+
+
+	# trigger = { always = no }
+
+	# immediate = {
+		# queue_actions = {
+			# land_armies_on_planet = from
+			# jump_drive = from
+		# }
+	# }
+# }

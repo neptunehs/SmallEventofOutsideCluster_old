@@ -233,7 +233,7 @@ ship_design = {
 	hide_size = yes
 	is_event_design = yes
 	section = {
-		template = "NEP_Krahen_BATTLESHIP_BOW_1"
+		template = "NEP_KRAHEN_BATTLESHIP_BOW_1"
 		slot = "bow"	
 	
 		component = {
@@ -255,7 +255,7 @@ ship_design = {
 	}	
 	
 	section = {
-		template = "NEP_Krahen_BATTLESHIP_MID_1"
+		template = "NEP_KRAHEN_BATTLESHIP_MID_1"
 		slot = "mid"	
 	
 		component = {
@@ -341,7 +341,7 @@ ship_design = {
 	}
 	
 	section = {
-		template = "NEP_Krahen_BATTLESHIP_STERN_1"
+		template = "NEP_KRAHEN_BATTLESHIP_STERN_1"
 		slot = "stern"	
 	
 		component = {
@@ -390,7 +390,7 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "AUTO_REPAIR"
+			template = "nep_CARGO_POD"
 		}
 	}
 		
@@ -755,5 +755,67 @@ ship_design = {
 		}
 	}
 	
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_nep_Krahen_portal"
+	ship_size = nep_Krahen_portal
+	hide_size = yes
+	is_event_design = yes
+
+	section = {
+		template = "ed_dimensional_portal_key_blue"
+		slot = "mid"
+	}
+}
+
+ship_design = {
+	name = "NAME_nep_Krahen_Constructor"
+	ship_size = constructor
+	country_type = nep_Krahen_country
+	
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+	}
+	
+	required_component="nep_STEALTHRADAR"
+	required_component="nep_HYPERDRIVEMK5"
+	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_nep_Krahen_Colonizer"
+	ship_size = colonizer
+	country_type = nep_Krahen_country
+	
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	}
+	
+	required_component="nep_STEALTHRADAR"
+	required_component="nep_HYPERDRIVEMK5"
+	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_nep_Krahen_Transport"
+	ship_size = transport
+	country_type = nep_Krahen_country
+	
+	section = {
+		template = "DEFAULT_TRANSPORT_SECTION"
+		slot = "mid"
+
+
+	}
+	
+	required_component="nep_STEALTHRADAR"
+	required_component="nep_HYPERDRIVEMK5"
+	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
 	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
 }
