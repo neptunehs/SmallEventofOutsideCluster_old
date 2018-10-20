@@ -233,7 +233,7 @@
 
 ship_section_template = {
 	key = "NEP_KRAHEN_BATTLESHIP_BOW_1"
-	ship_size = battleship
+	ship_size = nep_Krahen_battleship
 	fits_on_slot = bow
 	should_draw_components = yes
 	entity = "NEP_ANCIENT_BATTLESHIP_BOW_1_entity"
@@ -273,7 +273,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "NEP_KRAHEN_BATTLESHIP_MID_1"
-	ship_size = battleship
+	ship_size = nep_Krahen_battleship
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "NEP_ANCIENT_BATTLESHIP_MID_1_entity"
@@ -428,7 +428,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "NEP_KRAHEN_BATTLESHIP_STERN_1"
-	ship_size = battleship
+	ship_size = nep_Krahen_battleship
 	fits_on_slot = stern
 	should_draw_components = yes
 	entity = "NEP_ANCIENT_BATTLESHIP_STERN_1_entity"

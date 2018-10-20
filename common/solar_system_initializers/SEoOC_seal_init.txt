@@ -164,7 +164,7 @@ nep_step_1 = {
 	class = "sc_void_dummy"
 	
 	flags = {
-		Step_to_the_Void_1
+		nep_Step_to_the_Void_1
 	}
 	
 	planet = {
@@ -189,7 +189,7 @@ nep_step_2 = {
 	class = "sc_void_dummy"
 	
 	flags = {
-		Step_to_the_Void_2
+		nep_Step_to_the_Void_2
 	}
 	
 	planet = {
@@ -214,7 +214,7 @@ nep_step_3 = {
 	class = "sc_void_dummy"
 	
 	flags = {
-		Step_to_the_Void_3
+		nep_Step_to_the_Void_3
 	}
 	
 	planet = {
@@ -239,7 +239,7 @@ nep_step_4 = {
 	class = "sc_void_dummy"
 	
 	flags = {
-		Step_to_the_Void_4
+		nep_Step_to_the_Void_4
 	}
 	
 	planet = {
@@ -264,7 +264,7 @@ nep_step_5 = {
 	class = "sc_void_dummy"
 	
 	flags = {
-		Step_to_the_Void_5
+		nep_Step_to_the_Void_5
 	}
 	
 	planet = {
@@ -273,7 +273,132 @@ nep_step_5 = {
 		orbit_angle = 0
 		size = 1
 		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
 
+nep_step_6 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		nep_Step_to_the_Void_6
+	}
+	
+	planet = {
+		class = "pc_star_void_dummy_01"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_7 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		nep_Step_to_the_Void_7
+	}
+	
+	planet = {
+		class = "pc_star_void_dummy_01"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_8 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		nep_Step_to_the_Void_8
+	}
+	
+	planet = {
+		class = "pc_star_void_dummy_01"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_9 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		nep_Step_to_the_Void_9
+	}
+	
+	planet = {
+		class = "pc_star_void_dummy_01"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+		}
+	}
+}
+
+nep_step_10 = {
+	name = "Step to the Void"
+
+	class = "sc_void_dummy"
+	
+	flags = {
+		nep_Step_to_the_Void_10
+	}
+	
+	planet = {
+		class = "pc_star_void_dummy_01"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 1
+		has_ring = no
+		
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {

@@ -103,8 +103,14 @@ on_space_battle_won = {
 	events = {
 		nep_finalweapon.714
 		nep_inva.210
-		nep_inva.47
+		
+	}
+}
+
+on_fleet_destroyed_perp = {
+	events = {
 		nep_seal.500
+		nep_inva.47
 	}
 }
 

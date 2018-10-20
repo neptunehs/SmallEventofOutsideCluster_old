@@ -17,9 +17,11 @@ fleet_event = {
 		closest_system = {
 			limit = {
 				OR = {
-					any_ship_in_system = {
-						is_ship_class = shipclass_starbase
-						owner = { NOT = { has_country_flag = nep_Krahen_country } }
+					AND = {
+						exists = starbase
+						starbase = {
+							owner = { NOT = { has_country_flag = nep_Krahen_country } }
+						}
 					}
 					any_planet = {
 						has_owner = yes
@@ -93,9 +95,11 @@ fleet_event = {
 		closest_system = {
 			limit = {
 				OR = {
-					any_ship_in_system = {
-						is_ship_class = shipclass_starbase
-						owner = { NOT = { has_country_flag = nep_Krahen_country } }
+					AND = {
+						exists = starbase
+						starbase = {
+							owner = { NOT = { has_country_flag = nep_Krahen_country } }
+						}
 					}
 					any_planet = {
 						has_owner = yes

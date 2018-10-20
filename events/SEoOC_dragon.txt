@@ -1168,7 +1168,7 @@ country_event = {
 		set_global_flag = nep_dragon_end
 		set_country_flag = nep_dragon_summoner
 		remove_global_flag = nep_dragon_begin
-		remove_global_flag = nep_dragon_founder
+		remove_country_flag = nep_dragon_founder
 		every_country = {
 			if = {
 				limit = {
@@ -1176,6 +1176,12 @@ country_event = {
 				}
 			end_event_chain = "nep_dragon_chain"
 			}
+		}
+		event_target:nep_dragon_country = {
+			every_owned_fleet = {
+				delete_fleet = this
+			}
+			destroy_country = yes
 		}
 		country_event = { id = nep_dragon.8 }
 		country_event = { id = nep_inva.1 days = 180 random = 180 }

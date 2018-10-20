@@ -1659,7 +1659,7 @@ country_event = {
 						is_ship_size = nep_Krahen_battleship
 					}
 					any_planet = {
-						NOT = { is_same_value = root.fromfrom}
+						NOT = { is_same_value = root.fromfrom }
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
 						is_colony = yes
@@ -1963,7 +1963,7 @@ country_event = {
 	fire_only_once = yes
 	
 	immediate = {
-		every_owned_ship = {
+		every_owned_fleet = {
 			destroy_fleet = this
 		}
 		every_owned_planet = {

@@ -147,6 +147,8 @@
  NEP_SEALPORTAL_GALACTIC_CANNOT_USE:0 "我们的舰队无法承受黑洞的压力。"
  nep_dragon_summon:0 "龙的召唤"
  nep_dragon_summon_DESC:0 "奉龙殿开始了工作，我们现在可以召唤一只新的龙了————以七个星球暂时的贫瘠为代价。"
+ nep_dragon_summon:0 "龙的强化"
+ nep_dragon_summon_DESC:0 "如果7个星球的星之力已经回复，我们可以试试看强化龙。"
  
  nep_Legnahcras_assault_army:0 "使天众"
  nep_Legnahcras_defensive_army:0 "使天众扫荡者"

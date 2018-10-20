@@ -9,6 +9,15 @@ nep_highway_fee = {
 ##########################################################################
 # Seal
 ##########################################################################
+nep_malfunctioning_guards_buff = {
+	ship_weapon_damage = 1
+	ship_fire_rate_mult = 1
+	ship_hull_mult = 2
+	ship_armor_mult = 2
+	ship_shield_mult = 2
+}
+
+
 nep_seal_evil_buff = {
 	ship_weapon_damage = 0.25
 	ship_fire_rate_mult = 0.5

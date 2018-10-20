@@ -57,6 +57,9 @@
  grand_seal_system_poi_name:0 "大封印"
  grand_seal_system_poi_desc:0 "这儿就是宇宙的中心！"
  
+ nep_step_poi_name:0 "通往封印的道路"
+ nep_step_poi_desc:0 "通过跃迁进入宇宙的中心！"
+ 
  sc_void_dummy:0 "虚无宙域"
  sc_void_dummy_desc:0 "这儿没有东西。"
  

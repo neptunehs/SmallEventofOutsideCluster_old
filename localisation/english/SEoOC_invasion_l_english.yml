@@ -1,7 +1,7 @@
 ﻿l_english:
 
- nep_krahen_battleship:0 "Battleship"
- nep_krahen_battleship_plural:0 "Battleships"
+ nep_Krahen_battleship:0 "Battleship"
+ nep_Krahen_battleship_plural:0 "Battleships"
  
  nep_heavy_spacebase:0 "Heavy Spacebase"
  nep_heavy_spacebase_plural:0 "Heavy Spacebases"
@@ -52,17 +52,17 @@
  nep_inva.6.desc:0 "nep_inva.6.desc"
  nep_inva.6.a:0 "nep_inva.6.a"
  
- nep_krahen_invasion_chain_title:0 "Krah'en Empire Invasion"
- nep_krahen_invasion_chain_desc:0 "nep_krahen_invasion_chain_desc" 
+ nep_Krahen_invasion_chain_title:0 "Krah'en Empire Invasion"
+ nep_Krahen_invasion_chain_desc:0 "nep_Krahen_invasion_chain_desc" 
  
  annexed_worlds:0 "Annexed Worlds"
  liberated_worlds:0 "Liberated_Worlds"
- krahen_overrun_us:0 "Krah'en Empire Fleets Overrun by Our Forces"
- krahen_overrun_others:0 "Krah'en Empire Fleets Overrun by Other Country Forces"
- krahen_overruns:0 "Fleets Overrun by Krah'en Empire Forces"
+ Krahen_overrun_us:0 "Krah'en Empire Fleets Overrun by Our Forces"
+ Krahen_overrun_others:0 "Krah'en Empire Fleets Overrun by Other Country Forces"
+ Krahen_overruns:0 "Fleets Overrun by Krah'en Empire Forces"
  
- nep_krahen_explore:0 "nep_krahen_explore"
- nep_krahen_explore_desc:0 "ep_krahen_explore_desc"
+ nep_Krahen_explore:0 "nep_Krahen_explore"
+ nep_Krahen_explore_desc:0 "ep_Krahen_explore_desc"
  
  nep_adv_tank_factory:0 "Adv.tank Factory"
  nep_adv_tank_factory_desc:0 "An improved Tank factroy that increases the manufacturing capacity whilst requiring less workers."

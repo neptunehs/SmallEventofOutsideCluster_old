@@ -121,28 +121,28 @@ malfunctioning_guards_spawn_static = {
 		effect = {		
 			set_owner = event_target:malfunctioning_guards_country
 			while = {
-				count = 18
+				count = 9
 				create_ship = {
 					name = "Malfunctioning Guard"
 					design = "Xeeeeh"
 				}
 			}
 			while = {
-				count = 32
+				count = 18
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Tes"
 				}
 			}
 			while = {
-				count = 60
+				count = 24
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Sekae"
 				}
 			}
 			while = {
-				count = 108
+				count = 56
 				create_ship = {
 					name = "Malfunctioning Guards"
 					design = "Deek"
@@ -158,6 +158,11 @@ malfunctioning_guards_spawn_static = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
+			
+			add_modifier = {
+				modifier = nep_malfunctioning_guards_buff
+				days = -1
+			}
 			
 			queue_actions = {	
 				find_closest_planet = {
