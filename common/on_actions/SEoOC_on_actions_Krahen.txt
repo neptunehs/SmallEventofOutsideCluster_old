@@ -47,11 +47,11 @@ on_planet_attackers_lose = {
 	}
 }
 
-# This = owner of fleet 1 (winner)
-# From = owner of fleet 2 (loser)
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
 # FromFrom = fleet 1
 # FromFromFrom = fleet 2
-on_space_battle_won = {
+on_fleet_destroyed_perp = {
 	events = {
 		nep_kai.1021
 	}

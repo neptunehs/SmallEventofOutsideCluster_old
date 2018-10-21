@@ -640,3 +640,26 @@ country_event = {
 		# }
 	# }
 # }
+
+planet_event = {
+	id = nep_test.13
+    hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { always = no }
+	
+	immediate = {
+		random_tile = {
+			limit = {
+				has_building = no
+				num_adjacent_tiles = 2
+			}
+			if = {
+				limit = { has_blocker = yes }
+				remove_blocker = yes				
+			}
+			set_building = "nep_ruin_temple"
+			save_global_event_target_as = nep_Anael_temple
+		}
+	}
+}

@@ -86,7 +86,7 @@ nep_seal_init = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 0
-		size = 100
+		size = 120
 		has_ring = no
 		
 		flags = { nep_grand_seal } 
@@ -104,7 +104,7 @@ nep_seal_init = {
 		name = "Sub Seal 1"
 		orbit_distance = 120
 		orbit_angle = -135
-		size = 20
+		size = 40
 		has_ring = no
 		
 		flags = { nep_seal_1 } 
@@ -124,7 +124,7 @@ nep_seal_init = {
 		name = "Sub Seal 2"
 		orbit_distance = 120
 		orbit_angle = 90
-		size = 20
+		size = 40
 		has_ring = no
 		
 		flags = { nep_seal_2 } 
@@ -137,25 +137,26 @@ nep_seal_init = {
 		}
 	}
 	
-	change_orbit = -120
+	# Will open again after I thought some events for this
+	# change_orbit = -120
 	
-	planet = {
-		class = "pc_black_hole"
-		name = "Sub Seal 3"
-		orbit_distance = 120
-		orbit_angle = -45
-		size = 20
-		has_ring = no
+	# planet = {
+		# class = "pc_black_hole"
+		# name = "Sub Seal 3"
+		# orbit_distance = 120
+		# orbit_angle = -45
+		# size = 20
+		# has_ring = no
 		
-		flags = { nep_seal_3 } 
+		# flags = { nep_seal_3 } 
 		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-                clear_deposits = yes
-            }
-		}
-	}
+		# init_effect = {
+			# prevent_anomaly = yes
+			# orbital_deposit_tile = {
+                # clear_deposits = yes
+            # }
+		# }
+	# }
 }
 
 nep_step_1 = {

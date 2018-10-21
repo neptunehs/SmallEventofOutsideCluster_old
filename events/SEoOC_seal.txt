@@ -378,80 +378,81 @@ country_event = {
 			category = nep_step_cat
 			location = event_target:nep_Step_to_the_Void_1
 		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.2
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_2
+		hidden_effect = {
+			create_point_of_interest = {
+				id = grand_seal_system_poi.2
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_2
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.3
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_3
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.4
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_4
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.5
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_5
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.6
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_6
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.7
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_7
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.8
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_8
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.9
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_9
+			}
+			create_point_of_interest = {
+				id = grand_seal_system_poi.10
+				name = "nep_step_poi_name"
+				desc = "nep_step_poi_desc"
+				event_chain = nep_seal_chain
+				category = nep_step_cat
+				location = event_target:nep_Step_to_the_Void_10
+			}
+			set_country_flag = nep_grand_seal_founder
 		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.3
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_3
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.4
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_4
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.5
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_5
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.6
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_6
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.7
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_7
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.8
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_8
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.9
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_9
-		}
-		create_point_of_interest = {
-			id = grand_seal_system_poi.10
-			name = "nep_step_poi_name"
-			desc = "nep_step_poi_desc"
-			event_chain = nep_seal_chain
-			category = nep_step_cat
-			location = event_target:nep_Step_to_the_Void_10
-		}
-		
-		hidden_effect = { set_country_flag = nep_grand_seal_founder }
 	}
 	
 	option = {
@@ -488,14 +489,19 @@ ship_event = {
 	option = {
 		name = nep_seal.7.a
 		hidden_effect = { 
-			OWNER = { 
+			OWNER = {
 				remove_point_of_interest = grand_seal_system_poi.1
 				remove_point_of_interest = grand_seal_system_poi.2
 				remove_point_of_interest = grand_seal_system_poi.3
 				remove_point_of_interest = grand_seal_system_poi.4
 				remove_point_of_interest = grand_seal_system_poi.5
 				remove_point_of_interest = grand_seal_system_poi.6
-			} 
+				remove_point_of_interest = grand_seal_system_poi.7
+				remove_point_of_interest = grand_seal_system_poi.8
+				remove_point_of_interest = grand_seal_system_poi.9
+				remove_point_of_interest = grand_seal_system_poi.10
+				remove_point_of_interest = grand_seal_system_poi.0
+			}
 		}
 		enable_special_project = {
 			name = "nep_grand_seal_research"

@@ -16,8 +16,8 @@ country_event = {
 		set_spawn_system_batch = begin
 		no_scope = {
 			spawn_system = {
-				min_distance >= 550
-				max_distance <= 560
+				min_distance >= 540
+				max_distance <= 550
 				min_orientation_angle = 133
 				max_orientation_angle = 135
 				hyperlane = no
@@ -496,10 +496,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Auriel_temple
@@ -516,10 +519,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Gabriel_temple
@@ -536,10 +542,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Sabriel_temple
@@ -556,10 +565,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Samuel_temple
@@ -576,10 +588,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Michael_temple
@@ -596,10 +611,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Jauiel_temple
@@ -616,10 +634,13 @@ ship_event = {
 					days = -1
 				}
 				random_tile = {
-					limit = { 
-						has_blocker = no 
-						has_building = no 
-						num_adjacent_tiles = 2 
+					limit = {
+						has_building = no
+						num_adjacent_tiles = 2
+					}
+					if = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes				
 					}
 					set_building = "nep_ruin_temple"
 					save_global_event_target_as = nep_Anael_temple

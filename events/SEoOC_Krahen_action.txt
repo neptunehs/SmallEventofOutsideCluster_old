@@ -66,11 +66,11 @@ fleet_event = {
 					limit = {
 						is_star = yes
 					}
-				}
-				root = {
-					auto_move_to_planet = {
-						target = prev
-						clear_auto_move_on_arrival = yes
+					root = {
+						auto_move_to_planet = {
+							target = prev
+							clear_auto_move_on_arrival = yes
+						}
 					}
 				}
 			}
@@ -200,7 +200,7 @@ country_event = {
 							orbit_planet = THIS
 							effect = {
 								id = "nep_Krahen.trigger.1010.1"
-								prev = { fleet_event = { id = nep_kai.1001 } }
+								prev = { fleet_event = { id = nep_kai.1001 days = 10 } }
 							}
 						}
 					}
@@ -283,7 +283,7 @@ fleet_event = {
 						orbit_planet = THIS
 						effect = {
 							id = "nep_Krahen.trigger.1011.1"
-							prev = { fleet_event = { id = nep_kai.1001 } }
+							prev = { fleet_event = { id = nep_kai.1001 days = 10 } }
 						}
 					}
 				}
@@ -335,21 +335,22 @@ fleet_event = {
 		has_fleet_flag = nep_inva_fleet
 		from = {
 			any_ship_in_system = {
+				is_disabled = no
 				owner = { is_hostile = root.owner }
 			}
 		}
 	}
 	
 	immediate = {
-		remove_auto_move_target = yes
-		clear_fleet_actions = yes
+		#remove_auto_move_target = yes
+		#clear_fleet_actions = yes
 		from = {
 			random_fleet_in_system = {
 				limit = {
+					is_disabled = no
 					owner = { is_hostile = root.owner }
 				}
-				root = { 
-					set_fleet_flag = nep_inva_fleet_attacking_fleet
+				root = {
 					auto_follow_fleet = { target = prev attack_fleet = yes }
 				}
 			}
@@ -369,13 +370,12 @@ country_event = {
 		fromfrom = {
 			is_in_combat = no
 			has_fleet_flag = nep_inva_fleet
-			has_fleet_flag = nep_inva_fleet_attacking_fleet
 		}
 	}
 	
 	immediate = {
 		fromfrom = {
-			remove_fleet_flag = nep_inva_fleet_attacking_fleet
+			clear_fleet_actions = yes
 			fleet_event = { id = nep_kai.1001 }
 		}
 	}
@@ -630,6 +630,7 @@ fleet_event = {
 
 	trigger = {
 		is_fleet_idle = yes
+		NOT = { exists = orbit }
 		has_fleet_flag = nep_inva_fleet
 	}
 	
@@ -659,18 +660,6 @@ fleet_event = {
 			}
 		}
 		else = {
-			closest_system = {
-				min_steps = 1
-				max_steps = 3
-				random_system_planet = {
-					root = {
-						auto_move_to_planet = {
-							target = prev
-							clear_auto_move_on_arrival = yes
-						}
-					}
-				}
-			}
 			fleet_event = { id = nep_kai.1099 days = 200 }
 		}
 	}

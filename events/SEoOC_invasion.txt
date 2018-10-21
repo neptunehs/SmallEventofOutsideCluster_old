@@ -880,24 +880,76 @@ country_event = {
 				event_chain = "nep_Krahen_invasion_chain"
 				target = this
 			}
-			every_system = {
-				limit = {
-					has_star_flag = nep_inva_system
-				}
-				root = {
-					create_point_of_interest = {
-						id = nep_Krahen_doors_poi.1
-						name = nep_Krahen_doors_poi_title
-						desc = nep_Krahen_doors_poi_desc
-						event_chain = nep_Krahen_invasion_chain
-						location = prev
+			hidden_effect = {
+				random_system = {
+					limit = {
+						has_star_flag = nep_inva_system
 					}
+					save_event_target_as = nep_Krahen_doors_1
+				}
+				random_system = {
+					limit = {
+						has_star_flag = nep_inva_system
+						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+					}
+					save_event_target_as = nep_Krahen_doors_2
+				}
+				random_system = {
+					limit = {
+						has_star_flag = nep_inva_system
+						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+						NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
+					}
+					save_event_target_as = nep_Krahen_doors_3
+				}				
+				random_system = {
+					limit = {
+						has_star_flag = nep_inva_system
+						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+						NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
+						NOT = { is_same_value = event_target:nep_Krahen_doors_3 }
+					}
+					save_event_target_as = nep_Krahen_doors_4
 				}
 			}
-			add_event_chain_counter = {
-				event_chain = "nep_Krahen_invasion_chain"
-				counter = "annexed_worlds"
-				amount = 12
+			create_point_of_interest = {
+				id = nep_Krahen_doors_poi.1
+				name = nep_Krahen_doors_poi_title
+				desc = nep_Krahen_doors_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_doors_cat
+				location = event_target:nep_Krahen_doors_1
+			}
+			hidden_effect = {
+				create_point_of_interest = {
+					id = nep_Krahen_doors_poi.2
+					name = nep_Krahen_doors_poi_title
+					desc = nep_Krahen_doors_poi_desc
+					event_chain = nep_Krahen_invasion_chain
+					category = nep_Krahen_doors_cat
+					location = event_target:nep_Krahen_doors_2
+				}
+				create_point_of_interest = {
+					id = nep_Krahen_doors_poi.3
+					name = nep_Krahen_doors_poi_title
+					desc = nep_Krahen_doors_poi_desc
+					event_chain = nep_Krahen_invasion_chain
+					category = nep_Krahen_doors_cat
+					location = event_target:nep_Krahen_doors_3
+				}
+				create_point_of_interest = {
+					id = nep_Krahen_doors_poi.4
+					name = nep_Krahen_doors_poi_title
+					desc = nep_Krahen_doors_poi_desc
+					event_chain = nep_Krahen_invasion_chain
+					category = nep_Krahen_doors_cat
+					location = event_target:nep_Krahen_doors_4
+				}
+				add_event_chain_counter = {
+					event_chain = "nep_Krahen_invasion_chain"
+					counter = "annexed_worlds"
+					amount = 27
+				}
 			}
 		}
 	}
