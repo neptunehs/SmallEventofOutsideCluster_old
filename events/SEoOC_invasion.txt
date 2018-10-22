@@ -497,8 +497,8 @@ country_event = {
 				# create_Krahen_transport = yes
 				# create_Krahen_transport = yes
 				create_Krahen_constructor = yes
-				create_Krahen_constructor = yes
-				create_Krahen_constructor = yes
+				# create_Krahen_constructor = yes
+				# create_Krahen_constructor = yes
 				create_Krahen_colonizer = yes
 				create_Krahen_colonizer = yes
 			}
@@ -537,6 +537,7 @@ country_event = {
 				}
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
+				create_Krahen_constructor = yes
 			}
 			set_star_flag = nep_Krahen_portal_system
 		}
@@ -575,6 +576,7 @@ country_event = {
 				}
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
+				create_Krahen_constructor = yes
 			}
 			set_star_flag = nep_Krahen_portal_system
 		}
@@ -612,6 +614,7 @@ country_event = {
 				}
 				create_Krahen_defender = yes
 				create_Krahen_defender = yes
+				create_Krahen_constructor = yes
 			}
 			set_star_flag = nep_Krahen_portal_system
 		}
@@ -696,7 +699,7 @@ country_event = {
 						type = nep_sealgate_restored
 						location = event_target:nep_mega_temp_poi
 						orbit_angle = 24
-						orbit_distance =  169
+						orbit_distance = 169
 					}
 				}
 				clear_global_event_target = nep_mega_temp_poi
@@ -718,93 +721,40 @@ country_event = {
 			}
 		}
 		set_spawn_system_batch = end
-		add_monthly_resource_mult = {
-			resource = influence
-			value = 1000
-			min = 900
-			max = 1000
-		}
 		every_planet_within_border = {
 			limit = {
 				is_colony = yes
 				has_owner = yes
 				owner = { has_country_flag = nep_Krahen_country }
 				has_ground_combat = no
-				OR = {
-					any_tile = { 
-						has_building = "nep_heavy_fortress"
-						has_pop = yes
-					}
-					any_tile = { 
-						has_building = "nep_heavy_fortress_2"
-						has_pop = yes
-					}
-				}
 			}
-			if = {
+			while = {
 				limit = {
-					any_tile = { 
-						has_building = "nep_heavy_fortress"
-						has_pop = yes
-					}
 					count_armies = {
 						limit = { army_type = nep_Krahen_heavy_fortress }
 						count < 8
 					}
 				}
-				while = {
-					limit = {
-						count_armies = {
-							limit = { army_type = nep_Krahen_heavy_fortress }
-							count < 8
-						}
-					}
-					create_army = {
-						name = random
-						owner = event_target:nep_Krahen_country
-						species = event_target:nep_Krahen_country
-						type = nep_Krahen_heavy_fortress
-					}
+				create_army = {
+					name = random
+					owner = event_target:nep_Krahen_country
+					species = event_target:nep_Krahen_country
+					type = nep_Krahen_heavy_fortress
 				}
 			}
-			if = {
+			while = {
 				limit = {
-					any_tile = { 
-						has_building = "nep_heavy_fortress_2"
-						has_pop = yes
-					}
 					count_armies = {
 						limit = { army_type = nep_Krahen_heavy_fortress_2 }
 						count < 8
 					}
 				}
-				while = {
-					limit = {
-						count_armies = {
-							limit = { army_type = nep_Krahen_heavy_fortress_2 }
-							count < 8
-						}
-					}
-					create_army = {
-						name = random
-						owner = event_target:nep_Krahen_country
-						species = event_target:nep_Krahen_country
-						type = nep_Krahen_heavy_fortress_2
-					}
+				create_army = {
+					name = random
+					owner = event_target:nep_Krahen_country
+					species = event_target:nep_Krahen_country
+					type = nep_Krahen_heavy_fortress_2
 				}
-			}
-		}
-		every_planet_within_border = {
-			limit = {
-				is_colony = yes
-				has_owner = yes
-				owner = { has_country_flag = nep_Krahen_country }
-				has_ground_combat = no
-				any_tile = { 
-					has_building = "nep_planetary_gun"
-					has_pop = yes
-				}
-				NOT = { any_fleet_in_orbit = { is_ship_size = nep_planetary_gun_invisible } }
 			}
 			create_fleet = {
 				name = "NAME_nep_planetary_gun_invisible"
@@ -1460,6 +1410,7 @@ event = {
 				}
 				create_Krahen_defender = yes
 			}
+			create_Krahen_constructor = yes
 		}
 		
 		event_target:nep_Krahen_country = {
@@ -1596,7 +1547,6 @@ event = {
 						}
 					}
 				}
-				create_Krahen_constructor = yes
 			}
 		}
 		while = {

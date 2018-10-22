@@ -965,6 +965,18 @@ create_Krahen_constructor = {
 				target = PREV
 				distance = 20
 				angle = random 
+			}			
+			
+			queue_actions = {
+				find_random_system = {
+					trigger = {
+						id = "nep_Krahen.trigger.0.0.0"
+						has_star_flag = nep_inva_system
+					}
+					found_system = {
+						move_to = this
+					}
+				}
 			}
 		}
 	}

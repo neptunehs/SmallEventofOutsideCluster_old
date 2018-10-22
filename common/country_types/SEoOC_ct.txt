@@ -82,7 +82,7 @@ nep_dragon_country = {
 }
 
 nep_Krahen_country = {
-	attack_unarmed_orbital_stations = yes
+	attack_unarmed_orbital_stations = no
 	#scaled_difficulty_bonuses = 3.0	# scales to setting
 	#end_game_crisis = yes
 	destroys_starbases = yes
