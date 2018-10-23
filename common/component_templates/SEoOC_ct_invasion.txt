@@ -15,7 +15,7 @@ weapon_component_template = {
 
 	total_fire_time = 35
 
-	range = 120.0
+	range = 140.0
 	accuracy = 0.9
 	tracking = 0.35
 	
@@ -87,7 +87,7 @@ weapon_component_template = {
 
 	total_fire_time = 210
 
-	range = 160.0
+	range = 180.0
 	accuracy = 1
 	tracking = 0.1
 	
@@ -369,7 +369,7 @@ utility_component_template = {
 	
 	hostile_aura = {
 		name = "aura_advance_ecm"
-		radius = 250
+		radius = 300
 		apply_on = ships
 		
 		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
@@ -377,7 +377,7 @@ utility_component_template = {
 			priority = 1
 		}
 		modifier = {
-			weapon_type_explosive_weapon_damage_mult = -0.8
+			weapon_type_explosive_weapon_damage_mult = -1.2
 		}
 		
 		graphics = {
