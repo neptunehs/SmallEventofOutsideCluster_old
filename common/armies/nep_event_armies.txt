@@ -49,8 +49,8 @@ nep_Krahen_anti_grav = {
 
 nep_Krahen_heavy_fortress = {
 	defensive = yes
-	damage = 16.0
-	health = 28.0
+	damage = 8.0
+	health = 17.0
 	has_morale = no
 	morale_damage = 4.0
 	collateral_damage = 0.1
@@ -66,8 +66,8 @@ nep_Krahen_heavy_fortress = {
 
 nep_Krahen_heavy_fortress_2 = {
 	defensive = yes
-	damage = 16.0
-	health = 28.0
+	damage = 8.0
+	health = 17.0
 	has_morale = no
 	morale_damage = 4.0
 	collateral_damage = 0.1

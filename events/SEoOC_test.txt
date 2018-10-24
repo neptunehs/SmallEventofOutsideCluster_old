@@ -663,3 +663,63 @@ planet_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = nep_test.14
+    hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { always = no }
+	
+	immediate = {
+		create_species = {
+			name = Krah'en
+			class = random_non_machine
+			portrait = mol4
+			traits = {
+				trait = trait_Krahen
+			}
+		}
+		create_country = {
+			name = "Krah'en Empire"
+			species = last_created
+			type = nep_Krahen_country
+			auto_delete = no
+			# authority = auth_imperial
+			# ethos = {
+				# ethic = ethic_militarist
+				# ethic = ethic_fanatic_xenophobe
+			# }
+			# civics = {
+				# civic = civic_fanatic_purifiers
+				# civic = civic_cutthroat_politics
+			# }
+			flag = {
+				icon = {
+					category = "domination"
+					file = "domination_12.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors={
+					"red"
+					"black"
+					"null"
+					"null"
+				}
+			}
+		}
+		create_colony = {
+			owner = last_created_country
+			species = last_created
+			ethos = owner
+		}
+		last_created_country = {
+			set_country_flag = nep_Krahen_country
+			save_global_event_target_as = nep_Krahen_country
+		}
+		create_Krahen_invader = yes
+	}
+}

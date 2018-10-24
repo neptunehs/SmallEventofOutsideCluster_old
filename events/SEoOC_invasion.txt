@@ -272,15 +272,15 @@ fleet_event = {
 			species = last_created
 			type = nep_Krahen_country
 			auto_delete = no
-			authority = auth_imperial
-			ethos = {
-				ethic = ethic_militarist
-				ethic = ethic_fanatic_xenophobe
-			}
-			civics = {
-				civic = civic_fanatic_purifiers
-				civic = civic_cutthroat_politics
-			}
+			# authority = auth_imperial
+			# ethos = {
+				# ethic = ethic_militarist
+				# ethic = ethic_fanatic_xenophobe
+			# }
+			# civics = {
+				# civic = civic_fanatic_purifiers
+				# civic = civic_cutthroat_politics
+			# }
 			flag = {
 				icon = {
 					category = "domination"
@@ -310,11 +310,11 @@ fleet_event = {
 				skill = 10
 			}
 			set_leader = last_created_leader
-			set_policy = {
-				policy = orbital_bombardment
-				option = orbital_bombardment_armageddon
-				cooldown = no
-			}
+			# set_policy = {
+				# policy = orbital_bombardment
+				# option = orbital_bombardment_armageddon
+				# cooldown = no
+			# }
 			set_country_flag = nep_Krahen_country
 			save_global_event_target_as = nep_Krahen_country
 		}
@@ -376,10 +376,6 @@ country_event = {
 			add_ship_design = last_created_design
 			create_ship_design = { 
 				design = "NAME_nep_Krahen_Constructor"
-			}
-			add_ship_design = last_created_design
-			create_ship_design = {
-				design = "NAME_nep_Krahen_Transport"
 			}
 			add_ship_design = last_created_design
 		}
@@ -662,23 +658,38 @@ country_event = {
 		set_spawn_system_batch = begin
 		while = {
 			count = 4
-			random_system = {
+			random_rim_system = {
 				limit = {
 					exists = space_owner
-					space_owner = {
-						NOR = {
-							is_country_type = fallen_empire
-							is_country_type = awakened_fallen_empire
-						}
+					NOR = { 
+						is_fe_cluster = YES 
+						has_star_flag = lcluster
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system				
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
 					}
 					NOT = {
-						any_neighbor_system = {
-							exists = space_owner
-							space_owner = {
-								OR = {
-									is_country_type = fallen_empire
-									is_country_type = awakened_fallen_empire
-								}
+						any_system = {
+							has_star_flag = nep_inva_system
+							distance = {
+								source = prev
+								use_bypasses = no
+								min_jumps = 1
+								max_jumps = 10
 							}
 						}
 					}
@@ -687,6 +698,7 @@ country_event = {
 					min_distance >= 20
 					max_distance <= 30
 					initializer = "nep_inva_system_init"
+					hyperlane = no
 				}
 			}
 		}
@@ -715,8 +727,30 @@ country_event = {
 			while = {
 				count = 3
 				random_neighbor_system = {
+					ignore_hyperlanes = yes
 					limit = {
-						NOT = { has_hyperlane_to = prev }
+						NOR = {
+							has_hyperlane_to = prev 
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system				
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+						}
 					}
 					add_hyperlane = { from = this to = prev }
 				}

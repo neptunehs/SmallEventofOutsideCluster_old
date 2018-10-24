@@ -90,26 +90,13 @@ nep_Krahen_country = {
 	has_complete_sensor = yes
 	can_planets_be_attacked = yes
 	has_capital = no
-	enforces_borders = yes
-	home_system = extradimensional_origin_system
+	home_system = nep_Central_system
 	custom_starbase = nep_heavy_spacebase
-	#targets = { 
-	#	nep_solarian
-	#	nep_shinari
-	#	nep_tolumn
-	#}
-	#government = no
+	orbital_bombardment = yes
+	government = no
+	enforces_borders = no
 	ai = {
-		enabled = yes
-		declare_war = no
-		colonizer = no
-		internal_policies = no
-		modification = no
-		tech = no
-		construction = yes
-		modules = {
-			swarm_interior_minister_module
-		}
+		enabled = no
 	}
 	faction = {
 		needs_colony = no

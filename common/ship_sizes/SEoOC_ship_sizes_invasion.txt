@@ -155,7 +155,7 @@ nep_Krahen_battleship = {
 	
 	combat_disengage_chance = 1.00
 	
-	has_mineral_upkeep = yes
+	has_mineral_upkeep = no
 	class = shipclass_military
 	construction_type = starbase_shipyard	
 	is_designable = no

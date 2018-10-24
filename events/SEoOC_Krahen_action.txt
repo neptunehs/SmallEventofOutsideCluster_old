@@ -184,6 +184,12 @@ country_event = {
 		has_global_flag = nep_Krahen_crisis
 		From = {
 			has_fleet_flag = nep_inva_fleet
+			NOT = {
+				AND = {
+					exists = orbit
+					orbit = { owner = { is_hostile = root } }
+				}
+			}
 		}
 	}
 	
@@ -847,7 +853,6 @@ ship_event = {
 			}
 			remove_star_flag = nep_Krahen_starbase_building
 		}
-		ship_event = { id = nep_kai.2001 days = 10 random = 5 }
 		if = {
 			limit = {
 				solar_system = {
@@ -857,6 +862,7 @@ ship_event = {
 					}
 				}
 			}
+			ship_event = { id = nep_kai.2001 days = 10 random = 5 }
 			random = {
 				chance = 50
 				solar_system = {
@@ -908,7 +914,7 @@ country_event = {
 						is_colony = no
 						can_colonize = { who = event_target:nep_Krahen_country status = yes }
 					}
-					found_planet = { 
+					found_planet = {
 						move_to = this
 						effect = {
 							id = nep_Krahen_colonizer.2
@@ -921,6 +927,43 @@ country_event = {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+#########################################
+#To prevent idle
+#########################################
+#on_yearly_pulse 
+event = {
+	id = nep_kai.4001
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+	}
+	
+	immediate = {
+		event_target:nep_Krahen_country = {
+			every_owned_ship = {
+				limit = {
+					is_ship_size = constructor
+					is_fleet_idle = yes
+					exists = solar_system
+					NOT = { solar_system = { has_star_flag = nep_Krahen_starbase_building } }
+				}
+				ship_event = { id = nep_kai.2001 days = 3 random = 30 }
+			}
+			every_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_inva_fleet
+					is_fleet_idle = yes
+					NOT = { exists = orbit }
+				}
+				fleet_event = { id = nep_kai.1011 days = 3 random = 30 }
 			}
 		}
 	}
