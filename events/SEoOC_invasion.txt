@@ -667,7 +667,7 @@ country_event = {
 						has_star_flag = nep_Krahen_cluster
 						has_star_flag = nep_dragon_system
 						has_star_flag = nep_heptagram_cluster
-						has_star_flag = nep_seal_system
+						has_star_flag = nep_seal_system				
 						has_star_flag = highway_station_system
 						has_star_flag = highway_note_system
 						has_star_flag = nep_Step_to_the_Void_1
@@ -736,7 +736,7 @@ country_event = {
 							has_star_flag = nep_Krahen_cluster
 							has_star_flag = nep_dragon_system
 							has_star_flag = nep_heptagram_cluster
-							has_star_flag = nep_seal_system
+							has_star_flag = nep_seal_system				
 							has_star_flag = highway_station_system
 							has_star_flag = highway_note_system
 							has_star_flag = nep_Step_to_the_Void_1
@@ -1501,7 +1501,7 @@ event = {
 							}
 						}
 						create_army = {
-							name = “NAME_nep_Krahen_heavy_fortress"
+							name = "NAME_nep_Krahen_heavy_fortress"
 							owner = event_target:nep_Krahen_country
 							species = event_target:nep_Krahen_country
 							type = nep_Krahen_heavy_fortress
@@ -1510,7 +1510,7 @@ event = {
 				}
 				if = {
 					limit = {
-						any_tile = {
+						any_tile = { 
 							has_building = "nep_heavy_fortress_2"
 							has_pop = yes
 						}

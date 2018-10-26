@@ -205,14 +205,14 @@ fleet_event = {
 							any_neighbor_system = {
 								ignore_hyperlanes = no
 								exists = starbase
-								starbase = { owner = { is_hostile = { root.owner } } }
+								starbase = { owner = { is_hostile = root.owner } }
 							}
 						}
 						random_neighbor_system = {
 							ignore_hyperlanes = no
 							limit = { 
 								exists = starbase
-								starbase = { owner = { is_hostile = { root.owner } } }
+								starbase = { owner = { is_hostile = root.owner } }
 							}
 							if = {
 								limit = {
