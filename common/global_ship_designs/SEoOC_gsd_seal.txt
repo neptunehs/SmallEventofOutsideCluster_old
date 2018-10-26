@@ -1,5 +1,5 @@
 ship_design = {
-	name = "Seal evil"
+	name = "NAME_nep_Seal_evil"
 	ship_size = nep_seal_evil
 
 	section = {

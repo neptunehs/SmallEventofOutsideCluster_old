@@ -143,7 +143,7 @@ country_event = {
 			save_event_target_as = nep_seal_2
 			solar_system = {
 				spawn_megastructure = {
-					name = "Seal Gate"
+					name = "NAME_nep_Seal_Gate"
 					type = nep_sealgate_ruined
 					location = event_target:nep_seal_2
 					orbit_angle = 1
@@ -219,7 +219,7 @@ country_event = {
 				save_event_target_as = nep_gate_temp_poi
 				solar_system = {
 					spawn_megastructure = {
-						name = "Seal Gate"
+						name = "NAME_nep_Seal_Gate"
 						type = nep_sealgate_restored
 						location = event_target:nep_gate_temp_poi
 						orbit_angle = 186
@@ -260,7 +260,7 @@ fleet_event = {
 	
 	immediate = {
 		create_species = {
-			name = Krah'en
+			name = "NAME_nep_Krahen"
 			class = random_non_machine
 			portrait = mol4
 			traits = {
@@ -268,7 +268,7 @@ fleet_event = {
 			}
 		}
 		create_country = {
-			name = "Krah'en Empire"
+			name = "NAME_nep_Krahen_Empire"
 			species = last_created
 			type = nep_Krahen_country
 			auto_delete = no
@@ -302,7 +302,7 @@ fleet_event = {
 			create_leader = {
 				type = ruler
 				species = owner_main_species
-				name = "Imperator"
+				name = "NAME_nep_Imperator"
 				traits = {
 					trait = random_trait
 					trait = random_trait
@@ -367,7 +367,7 @@ country_event = {
 		#create Krahen colony&invader force
 		event_target:nep_Krahen_country = {
 			create_ship_design = { 
-				design = "NAME_Krah'en_heavy_spacebase"
+				design = "NAME_Krahen_heavy_spacebase"
 			}
 			add_ship_design = last_created_design
 			create_ship_design = { 
@@ -470,7 +470,7 @@ country_event = {
 					effect = {
 						set_owner = event_target:nep_Krahen_country
 						create_ship = {
-							name = "NAME_Portal_to_God'Emperor"
+							name = "NAME_nep_Portal_to_Emperor-God"
 							design = "NAME_nep_Krahen_portal"
 							prefix = no
 							upgradable = no
@@ -512,11 +512,11 @@ country_event = {
 			random_system_planet = {
 				limit = { is_colony = yes }
 				create_fleet = {
-					name = "NAME_Portal_to_God'Emperor"
+					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
 						set_owner = event_target:nep_Krahen_country
 						create_ship = {
-							name = "NAME_Portal_to_God'Emperor"
+							name = "NAME_nep_Portal_to_Emperor-God"
 							design = "NAME_nep_Krahen_portal"
 							prefix = no
 							upgradable = no
@@ -551,11 +551,11 @@ country_event = {
 			random_system_planet = {
 				limit = { is_colony = yes }
 				create_fleet = {
-					name = "NAME_Portal_to_God'Emperor"
+					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
 						set_owner = event_target:nep_Krahen_country
 						create_ship = {
-							name = "NAME_Portal_to_God'Emperor"
+							name = "NAME_nep_Portal_to_Emperor-God"
 							design = "NAME_nep_Krahen_portal"
 							prefix = no
 							upgradable = no
@@ -590,11 +590,11 @@ country_event = {
 			random_system_planet = {
 				limit = { is_colony = yes }
 				create_fleet = {
-					name = "NAME_Portal_to_God'Emperor"
+					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
 						set_owner = event_target:nep_Krahen_country
 						create_ship = {
-							name = "NAME_Portal_to_God'Emperor"
+							name = "NAME_nep_Portal_to_Emperor-God"
 							design = "NAME_nep_Krahen_portal"
 							prefix = no
 							upgradable = no
@@ -639,7 +639,7 @@ country_event = {
 					save_event_target_as = nep_mega_temp_poi
 					solar_system = {
 						spawn_megastructure = {
-							name = "Seal Gate"
+							name = "NAME_nep_Seal_Gate"
 							type = nep_sealgate_restored
 							location = event_target:nep_mega_temp_poi
 							orbit_angle = 128
@@ -667,7 +667,7 @@ country_event = {
 						has_star_flag = nep_Krahen_cluster
 						has_star_flag = nep_dragon_system
 						has_star_flag = nep_heptagram_cluster
-						has_star_flag = nep_seal_system				
+						has_star_flag = nep_seal_system
 						has_star_flag = highway_station_system
 						has_star_flag = highway_note_system
 						has_star_flag = nep_Step_to_the_Void_1
@@ -709,7 +709,7 @@ country_event = {
 				save_global_event_target_as = nep_mega_temp_poi
 				solar_system = {
 					spawn_megastructure = {
-						name = "Seal Gate"
+						name = "NAME_nep_Seal_Gate"
 						type = nep_sealgate_restored
 						location = event_target:nep_mega_temp_poi
 						orbit_angle = 24
@@ -736,7 +736,7 @@ country_event = {
 							has_star_flag = nep_Krahen_cluster
 							has_star_flag = nep_dragon_system
 							has_star_flag = nep_heptagram_cluster
-							has_star_flag = nep_seal_system				
+							has_star_flag = nep_seal_system
 							has_star_flag = highway_station_system
 							has_star_flag = highway_note_system
 							has_star_flag = nep_Step_to_the_Void_1
@@ -775,7 +775,7 @@ country_event = {
 					}
 				}
 				create_army = {
-					name = random
+					name = "NAME_nep_Krahen_heavy_fortress"
 					owner = event_target:nep_Krahen_country
 					species = event_target:nep_Krahen_country
 					type = nep_Krahen_heavy_fortress
@@ -789,7 +789,7 @@ country_event = {
 					}
 				}
 				create_army = {
-					name = random
+					name = "NAME_nep_Krahen_heavy_fortress"
 					owner = event_target:nep_Krahen_country
 					species = event_target:nep_Krahen_country
 					type = nep_Krahen_heavy_fortress_2
@@ -1501,7 +1501,7 @@ event = {
 							}
 						}
 						create_army = {
-							name = random
+							name = “NAME_nep_Krahen_heavy_fortress"
 							owner = event_target:nep_Krahen_country
 							species = event_target:nep_Krahen_country
 							type = nep_Krahen_heavy_fortress
@@ -1510,7 +1510,7 @@ event = {
 				}
 				if = {
 					limit = {
-						any_tile = { 
+						any_tile = {
 							has_building = "nep_heavy_fortress_2"
 							has_pop = yes
 						}
@@ -1527,7 +1527,7 @@ event = {
 							}
 						}
 						create_army = {
-							name = random
+							name = "NAME_nep_Krahen_heavy_fortress"
 							owner = event_target:nep_Krahen_country
 							species = event_target:nep_Krahen_country
 							type = nep_Krahen_heavy_fortress_2

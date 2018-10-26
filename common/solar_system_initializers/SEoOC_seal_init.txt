@@ -1,5 +1,5 @@
 nep_seal_init = {
-	name = "Grand Seal of Void"
+	name = "NAME_Grand_Seal_of_Void"
 
 	class = "sc_grand_seal"
 
@@ -101,7 +101,7 @@ nep_seal_init = {
 		
 	planet = {
 		class = "pc_black_hole"
-		name = "Sub Seal 1"
+		name = "NAME_Sub_Seal_1"
 		orbit_distance = 120
 		orbit_angle = -135
 		size = 40
@@ -121,7 +121,7 @@ nep_seal_init = {
 	
 	planet = {
 		class = "pc_black_hole"
-		name = "Sub Seal 2"
+		name = "NAME_Sub_Seal_2"
 		orbit_distance = 120
 		orbit_angle = 90
 		size = 40
@@ -142,7 +142,7 @@ nep_seal_init = {
 	
 	# planet = {
 		# class = "pc_black_hole"
-		# name = "Sub Seal 3"
+		# name = "NAME_Sub_Seal_3"
 		# orbit_distance = 120
 		# orbit_angle = -45
 		# size = 20
@@ -160,7 +160,7 @@ nep_seal_init = {
 }
 
 nep_step_1 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -185,7 +185,7 @@ nep_step_1 = {
 }
 
 nep_step_2 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -210,7 +210,7 @@ nep_step_2 = {
 }
 
 nep_step_3 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -235,7 +235,7 @@ nep_step_3 = {
 }
 
 nep_step_4 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -260,7 +260,7 @@ nep_step_4 = {
 }
 
 nep_step_5 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -285,7 +285,7 @@ nep_step_5 = {
 }
 
 nep_step_6 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -310,7 +310,7 @@ nep_step_6 = {
 }
 
 nep_step_7 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -335,7 +335,7 @@ nep_step_7 = {
 }
 
 nep_step_8 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -360,7 +360,7 @@ nep_step_8 = {
 }
 
 nep_step_9 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	
@@ -385,7 +385,7 @@ nep_step_9 = {
 }
 
 nep_step_10 = {
-	name = "Step to the Void"
+	name = "NAME_Step_to_the_Void"
 
 	class = "sc_void_dummy"
 	

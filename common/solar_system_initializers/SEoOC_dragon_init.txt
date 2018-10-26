@@ -1,5 +1,5 @@
 nep_Aemethms_init = {
-	name = "Aemethms"
+	name = "NAME_Aemethms"
 
 	class = "sc_Aemethms"
 	
@@ -68,7 +68,7 @@ nep_Aemethms_init = {
 
 nep_Auriel_init = {
 	
-	name = "Auriel"
+	name = "NAME_Auriel"
 
 	class = "rl_standard_stars"
 
@@ -103,7 +103,7 @@ nep_Auriel_init = {
     }
 	
 	planet = {
-		name = "Auriel"
+		name = "NAME_Auriel"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -156,7 +156,7 @@ nep_Auriel_init = {
 
 nep_Gabriel_init = {
 	
-	name = "Gabriel"
+	name = "NAME_Gabriel"
 
 	class = "rl_standard_stars"
 
@@ -191,7 +191,7 @@ nep_Gabriel_init = {
     }
 	
 	planet = {
-		name = "Gabriel"
+		name = "NAME_Gabriel"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -242,7 +242,7 @@ nep_Gabriel_init = {
 
 nep_Sabriel_init = {
 	
-	name = "Sabriel"
+	name = "NAME_Sabriel"
 
 	class = "rl_standard_stars"
 
@@ -277,7 +277,7 @@ nep_Sabriel_init = {
     }
 	
 	planet = {
-		name = "Sabriel"
+		name = "NAME_Sabriel"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -328,7 +328,7 @@ nep_Sabriel_init = {
 
 nep_Samuel_init = {
 	
-	name = "Samuel"
+	name = "NAME_Samuel"
 
 	class = "rl_standard_stars"
 
@@ -363,7 +363,7 @@ nep_Samuel_init = {
     }
 	
 	planet = {
-		name = "Samuel"
+		name = "NAME_Samuel"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -415,7 +415,7 @@ nep_Samuel_init = {
 
 nep_Michael_init = {
 	
-	name = "Michael"
+	name = "NAME_Michael"
 
 	class = "rl_standard_stars"
 
@@ -450,7 +450,7 @@ nep_Michael_init = {
     }
 	
 	planet = {
-		name = "Michael"
+		name = "NAME_Michael"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -503,7 +503,7 @@ nep_Michael_init = {
 
 nep_Jauiel_init = {
 	
-	name = "Jauiel"
+	name = "NAME_Jauiel"
 
 	class = "rl_standard_stars"
 
@@ -538,7 +538,7 @@ nep_Jauiel_init = {
     }
 	
 	planet = {
-		name = "Jauiel"
+		name = "NAME_Jauiel"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no
@@ -589,7 +589,7 @@ nep_Jauiel_init = {
 
 nep_Anael_init = {
 	
-	name = "Anael"
+	name = "NAME_Anael"
 
 	class = "rl_standard_stars"
 
@@ -624,7 +624,7 @@ nep_Anael_init = {
     }
 	
 	planet = {
-		name = "Anael"
+		name = "NAME_Anael"
 		orbit_distance = 12
 		class = "pc_shielded"
 		has_ring = no

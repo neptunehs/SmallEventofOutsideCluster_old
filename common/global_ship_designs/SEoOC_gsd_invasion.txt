@@ -228,7 +228,7 @@
 # }
 	
 ship_design = {
-	name = "NAME_Krah'en_Battleship"
+	name = "NAME_Krahen_Battleship"
 	ship_size = nep_Krahen_battleship
 	hide_size = yes
 	is_event_design = yes
@@ -405,7 +405,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "NAME_Krah'en_heavy_spacebase"
+	name = "NAME_Krahen_heavy_spacebase"
 	ship_size = nep_heavy_spacebase
 	hide_size = yes
 	is_event_design = yes

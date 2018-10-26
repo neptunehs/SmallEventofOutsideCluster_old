@@ -23,28 +23,28 @@ country_event = {
 				count = 15
 				create_ship = {
 					name = "Malfunctioning Guard"
-					design = "Xeeeeh"
+					design = "NAME_Xeoh"
 				}
 			}
 			while = {
 				count = 30
 				create_ship = {
 					name = "Malfunctioning Guards"
-					design = "Tes"
+					design = "NAME_Tes"
 				}
 			}
 			while = {
 				count = 60
 				create_ship = {
 					name = "Malfunctioning Guards"
-					design = "Sekae"
+					design = "NAME_Sekae"
 				}
 			}
 			while = {
 				count = 140
 				create_ship = {
 					name = "Malfunctioning Guards"
-					design = "Deek"
+					design = "NAME_Deek"
 				}
 			}
 			
@@ -85,7 +85,7 @@ country_event = {
 			set_owner = event_target:seal_evil_country
 			create_ship = {
 				name = "Seal Evil"
-				design = "Seal evil"
+				design = "NAME_nep_Seal_evil"
 				effect = {
 					#set_disabled = yes
 				}
@@ -469,7 +469,7 @@ country_event = {
 					count = 60
 					create_ship = {
 						name = "Krah'en Invader"
-						design = "NAME_Krah'en_Battleship"
+						design = "NAME_Krahen_Battleship"
 					}
 				}
 				set_location = {

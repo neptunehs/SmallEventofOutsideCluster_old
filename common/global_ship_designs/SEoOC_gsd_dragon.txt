@@ -1,5 +1,5 @@
 ship_design = {
-	name = "Heptagram Dragon"
+	name = "NAME_Heptagram_Dragon_design"
 	ship_size = nep_dragon
 	
 	section = {
@@ -357,7 +357,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Summoned Babys"
+	name = "NAME_Summoned_Babys_design"
 	ship_size = nep_dragon_baby
 	
 	section = {
@@ -403,7 +403,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Heptagram Dragon Rebirth"
+	name = "NAME_Heptagram_Dragon_Rebirth_design"
 	ship_size = nep_dragon_reward
 	section = {
 		template = "NEP_DRAGON_REWARD_key"
@@ -605,7 +605,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Heptagram Dragon Kai"
+	name = "NAME_Heptagram_Dragon_Kai_design"
 	ship_size = nep_dragon_reward_kai
 	
 	section = {

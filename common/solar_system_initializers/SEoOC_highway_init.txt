@@ -1,6 +1,6 @@
 nep_highway_station_N = {
 	
-	name = "Station N"
+	name = "NAME_Station_N"
 
 	class = "rl_standard_stars"
 
@@ -37,7 +37,7 @@ nep_highway_station_N = {
 
 nep_highway_station_NNE = {
 	
-	name = "Station NNE"
+	name = "NAME_Station_NNE"
 
 	class = "rl_standard_stars"
 
@@ -74,7 +74,7 @@ nep_highway_station_NNE = {
 
 nep_highway_station_NE = {
 	
-	name = "Station NE"
+	name = "NAME_Station_NE"
 
 	class = "rl_standard_stars"
 
@@ -111,7 +111,7 @@ nep_highway_station_NE = {
 
 nep_highway_station_ENE = {
 	
-	name = "Station ENE"
+	name = "NAME_Station_ENE"
 
 	class = "rl_standard_stars"
 
@@ -148,7 +148,7 @@ nep_highway_station_ENE = {
 
 nep_highway_station_E = {
 	
-	name = "Station E"
+	name = "NAME_Station_E"
 
 	class = "rl_standard_stars"
 
@@ -185,7 +185,7 @@ nep_highway_station_E = {
 
 nep_highway_station_ESE = {
 	
-	name = "Station ESE"
+	name = "NAME_Station_ESE"
 
 	class = "rl_standard_stars"
 
@@ -222,7 +222,7 @@ nep_highway_station_ESE = {
 
 nep_highway_station_SE = {
 	
-	name = "Station SE"
+	name = "NAME_Station_SE"
 
 	class = "rl_standard_stars"
 
@@ -259,7 +259,7 @@ nep_highway_station_SE = {
 
 nep_highway_station_SSE = {
 	
-	name = "Station SSE"
+	name = "NAME_Station_SSE"
 
 	class = "rl_standard_stars"
 
@@ -296,7 +296,7 @@ nep_highway_station_SSE = {
 
 nep_highway_station_S = {
 	
-	name = "Station S"
+	name = "NAME_Station_S"
 
 	class = "rl_standard_stars"
 
@@ -333,7 +333,7 @@ nep_highway_station_S = {
 
 nep_highway_station_SSW = {
 	
-	name = "Station SSW"
+	name = "NAME_Station_SSW"
 
 	class = "rl_standard_stars"
 
@@ -370,7 +370,7 @@ nep_highway_station_SSW = {
 
 nep_highway_station_SW = {
 	
-	name = "Station SW"
+	name = "NAME_Station_SW"
 
 	class = "rl_standard_stars"
 
@@ -407,7 +407,7 @@ nep_highway_station_SW = {
 
 nep_highway_station_WSW = {
 	
-	name = "Station WSW"
+	name = "NAME_Station_WSW"
 
 	class = "rl_standard_stars"
 
@@ -444,7 +444,7 @@ nep_highway_station_WSW = {
 
 nep_highway_station_W = {
 	
-	name = "Station W"
+	name = "NAME_Station_W"
 
 	class = "rl_standard_stars"
 
@@ -481,7 +481,7 @@ nep_highway_station_W = {
 
 nep_highway_station_WNW = {
 	
-	name = "Station WNW"
+	name = "NAME_Station_WNW"
 
 	class = "rl_standard_stars"
 
@@ -518,7 +518,7 @@ nep_highway_station_WNW = {
 
 nep_highway_station_NW = {
 	
-	name = "Station NW"
+	name = "NAME_Station_NW"
 
 	class = "rl_standard_stars"
 
@@ -555,7 +555,7 @@ nep_highway_station_NW = {
 
 nep_highway_station_NNW = {
 	
-	name = "Station NNW"
+	name = "NAME_Station_NNW"
 
 	class = "rl_standard_stars"
 
@@ -592,7 +592,7 @@ nep_highway_station_NNW = {
 
 nep_highway_note_N = {
 	
-	name = "Highway Note N"
+	name = "NAME_Highway_Note_N"
 
 	class = "sc_hw_n"
 
@@ -603,7 +603,7 @@ nep_highway_note_N = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse N"
+		name = "NAME_Lighthouse_N"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -620,7 +620,7 @@ nep_highway_note_N = {
 
 nep_highway_note_NNE = {
 	
-	name = "Highway Note NNE"
+	name = "NAME_Highway_Note_NNE"
 
 	class = "sc_hw_n"
 
@@ -631,7 +631,7 @@ nep_highway_note_NNE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse NNE"
+		name = "NAME_Lighthouse_NNE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -648,7 +648,7 @@ nep_highway_note_NNE = {
 
 nep_highway_note_NE = {
 	
-	name = "Highway Note NE"
+	name = "NAME_Highway_Note_NE"
 
 	class = "sc_hw_n"
 
@@ -659,7 +659,7 @@ nep_highway_note_NE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse NE"
+		name = "NAME_Lighthouse_NE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -676,7 +676,7 @@ nep_highway_note_NE = {
 
 nep_highway_note_ENE = {
 	
-	name = "Highway Note ENE"
+	name = "NAME_Highway_Note_ENE"
 
 	class = "sc_hw_n"
 
@@ -687,7 +687,7 @@ nep_highway_note_ENE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse ENE"
+		name = "NAME_Lighthouse_ENE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -704,7 +704,7 @@ nep_highway_note_ENE = {
 
 nep_highway_note_E = {
 	
-	name = "Highway Note E"
+	name = "NAME_Highway_Note_E"
 
 	class = "sc_hw_n"
 
@@ -715,7 +715,7 @@ nep_highway_note_E = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse E"
+		name = "NAME_Lighthouse_E"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -732,7 +732,7 @@ nep_highway_note_E = {
 
 nep_highway_note_ESE = {
 	
-	name = "Highway Note ESE"
+	name = "NAME_Highway_Note_ESE"
 
 	class = "sc_hw_n"
 
@@ -743,7 +743,7 @@ nep_highway_note_ESE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse ESE"
+		name = "NAME_Lighthouse_ESE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -760,7 +760,7 @@ nep_highway_note_ESE = {
 
 nep_highway_note_SE = {
 	
-	name = "Highway Note SE"
+	name = "NAME_Highway_Note_SE"
 
 	class = "sc_hw_n"
 
@@ -771,7 +771,7 @@ nep_highway_note_SE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse SE"
+		name = "NAME_Lighthouse_SE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -788,7 +788,7 @@ nep_highway_note_SE = {
 
 nep_highway_note_SSE = {
 	
-	name = "Highway Note SSE"
+	name = "NAME_Highway_Note_SSE"
 
 	class = "sc_hw_n"
 
@@ -799,7 +799,7 @@ nep_highway_note_SSE = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse SSE"
+		name = "NAME_Lighthouse_SSE"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -816,7 +816,7 @@ nep_highway_note_SSE = {
 
 nep_highway_note_S = {
 	
-	name = "Highway Note S"
+	name = "NAME_Highway_Note_S"
 
 	class = "sc_hw_n"
 
@@ -827,7 +827,7 @@ nep_highway_note_S = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse S"
+		name = "NAME_Lighthouse_S"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -844,7 +844,7 @@ nep_highway_note_S = {
 
 nep_highway_note_SSW = {
 	
-	name = "Highway Note SSW"
+	name = "NAME_Highway_Note_SSW"
 
 	class = "sc_hw_n"
 
@@ -855,7 +855,7 @@ nep_highway_note_SSW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse SSW"
+		name = "NAME_Lighthouse_SSW"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -872,7 +872,7 @@ nep_highway_note_SSW = {
 
 nep_highway_note_SW = {
 	
-	name = "Highway Note SW"
+	name = "NAME_Highway_Note_SW"
 
 	class = "sc_hw_n"
 
@@ -883,7 +883,7 @@ nep_highway_note_SW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse SW"
+		name = "NAME_Lighthouse_SW"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -900,7 +900,7 @@ nep_highway_note_SW = {
 
 nep_highway_note_WSW = {
 	
-	name = "Highway Note WSW"
+	name = "NAME_Highway_Note_WSW"
 
 	class = "sc_hw_n"
 
@@ -911,7 +911,7 @@ nep_highway_note_WSW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse WSW"
+		name = "NAME_Lighthouse_WSW"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -928,7 +928,7 @@ nep_highway_note_WSW = {
 
 nep_highway_note_W = {
 	
-	name = "Highway Note W"
+	name = "NAME_Highway_Note_W"
 
 	class = "sc_hw_n"
 
@@ -939,7 +939,7 @@ nep_highway_note_W = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse W"
+		name = "NAME_Lighthouse_W"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -956,7 +956,7 @@ nep_highway_note_W = {
 
 nep_highway_note_WNW = {
 	
-	name = "Highway Note WNW"
+	name = "NAME_Highway_Note_WNW"
 
 	class = "sc_hw_n"
 
@@ -967,7 +967,7 @@ nep_highway_note_WNW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse WNW"
+		name = "NAME_Lighthouse_WNW"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -984,7 +984,7 @@ nep_highway_note_WNW = {
 
 nep_highway_note_NW = {
 	
-	name = "Highway Note NW"
+	name = "NAME_Highway_Note_NW"
 
 	class = "sc_hw_n"
 
@@ -995,7 +995,7 @@ nep_highway_note_NW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse NW"
+		name = "NAME_Lighthouse_NW"
         class = star
         orbit_distance = 0
         orbit_angle = 0
@@ -1012,7 +1012,7 @@ nep_highway_note_NW = {
 
 nep_highway_note_NNW = {
 	
-	name = "Highway Note NNW"
+	name = "NAME_Highway_Note_NNW"
 
 	class = "sc_hw_n"
 
@@ -1023,7 +1023,7 @@ nep_highway_note_NNW = {
 
 	planet = {
       	count = 1
-		name = "Lighthouse NNW"
+		name = "NAME_Lighthouse_NNW"
         class = star
         orbit_distance = 0
         orbit_angle = 0

@@ -28,7 +28,7 @@ fleet_event = {
 						}
 					}
 					any_planet = {
-						has_owner = yes
+						exists = owner
 						OR = {
 							is_colony = yes
 							is_under_colonization = yes
@@ -40,7 +40,7 @@ fleet_event = {
 			if = {
 				limit = {
 					any_planet = {
-						has_owner = yes
+						exists = owner
 						OR = {
 							is_colony = yes
 							is_under_colonization = yes
@@ -50,7 +50,7 @@ fleet_event = {
 				}
 				random_system_planet = {
 					limit = {
-						has_owner = yes
+						exists = owner
 						OR = {
 							is_colony = yes
 							is_under_colonization = yes
@@ -102,66 +102,247 @@ fleet_event = {
 	
 	immediate = {
 		log = "[Root.GetName]:1001"
-		closest_system = {
-			limit = {
-				OR = {
-					AND = {
-						exists = starbase
-						starbase = {
-							owner = { NOT = { has_country_flag = nep_Krahen_country } }
+		random_list = {
+			50 = {
+				closest_system = {
+					limit = {
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = {
+									owner = { NOT = { has_country_flag = nep_Krahen_country } }
+								}
+							}
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
 						}
 					}
-					any_planet = {
-						has_owner = yes
-						OR = {
-							is_colony = yes
-							is_under_colonization = yes
+					if = {
+						limit = {
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
 						}
-						NOT = { owner = { has_country_flag = nep_Krahen_country } }
+						random_system_planet = {
+							limit = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							log = "[Root.GetName]:1001:[This.GetName]:Y"
+							root = {
+								auto_move_to_planet = {
+									target = prev
+									clear_auto_move_on_arrival = yes
+								}
+							}
+						}
+					}
+					else = {
+						random_system_planet = {
+							limit = {
+								is_star = yes
+							}
+							save_event_target_as = nep_1001_temp
+						}
+						root = {
+							log = "[Root.GetName]:1001:[This.GetName]:N"
+							auto_move_to_planet = {
+								target = event_target:nep_1001_temp
+								clear_auto_move_on_arrival = yes
+							}
+						}
 					}
 				}
 			}
-			if = {
-				limit = {
-					any_planet = {
-						has_owner = yes
-						OR = {
-							is_colony = yes
-							is_under_colonization = yes
+			30 = {
+				solar_system = {
+					if = {
+						limit = {
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
 						}
-						NOT = { owner = { has_country_flag = nep_Krahen_country } }
+						random_system_planet = {
+							limit = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							log = "[Root.GetName]:1001:[This.GetName]:Y"
+							root = {
+								auto_move_to_planet = {
+									target = prev
+									clear_auto_move_on_arrival = yes
+								}
+							}
+						}
 					}
-				}
-				random_system_planet = {
-					limit = {
-						has_owner = yes
-						OR = {
-							is_colony = yes
-							is_under_colonization = yes
+					else_if = {
+						limit = {
+							any_neighbor_system = {
+								ignore_hyperlanes = no
+								exists = starbase
+								starbase = { owner = { is_hostile = { root.owner } } }
+							}
 						}
-						NOT = { owner = { has_country_flag = nep_Krahen_country } }
+						random_neighbor_system = {
+							ignore_hyperlanes = no
+							limit = { 
+								exists = starbase
+								starbase = { owner = { is_hostile = { root.owner } } }
+							}
+							if = {
+								limit = {
+									any_planet = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+								}
+								random_system_planet = {
+									limit = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+									log = "[Root.GetName]:1001:[This.GetName]:Y"
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+							else = {
+								random_system_planet = {
+									limit = {
+										is_star = yes
+									}
+									log = "[Root.GetName]:1001:[This.GetName]:Y"
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+						}
 					}
-					log = "[Root.GetName]:1001:[This.GetName]:Y"
-					root = {
-						auto_move_to_planet = {
-							target = prev
-							clear_auto_move_on_arrival = yes
-						}
+					else = { 
+						root = { fleet_event = { id = nep_kai.1001 } }
 					}
 				}
 			}
-			else = {
-				random_system_planet = {
-					limit = {
-						is_star = yes
+			20 = {
+				solar_system = {
+					if = {
+						limit = {
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+						random_system_planet = {
+							limit = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							log = "[Root.GetName]:1001:[This.GetName]:Y"
+							root = {
+								auto_move_to_planet = {
+									target = prev
+									clear_auto_move_on_arrival = yes
+								}
+							}
+						}
 					}
-					save_event_target_as = nep_1001_temp
-				}
-				root = {
-					log = "[Root.GetName]:1001:[This.GetName]:N"
-					auto_move_to_planet = {
-						target = event_target:nep_1001_temp
-						clear_auto_move_on_arrival = yes
+					else = {
+						closest_system = {
+							max_steps = 5
+							limit = {
+								any_ship_in_system = {
+									exists = owner
+									owner = { has_country_flag = nep_Krahen_country }
+									fleet = {
+										any_combatant_fleet = {
+											exists = owner
+											is_ship_class = shipclass_military
+										}
+									}
+								}
+							}
+							random_fleet_in_system = {
+								limit = {
+									exists = owner
+									NOT = { owner = { has_country_flag = nep_Krahen_country } }
+								}
+								save_event_target_as = nep_1001_temp_2
+							}
+						}
+						root = {
+							if = {
+								limit = {
+									exists = event_target:nep_1001_temp_2
+								}
+								if = {
+									limit = {
+										NOT = { has_fleet_flag = nep_inva_fleet_jumped }
+									}
+									set_location = {
+										target = event_target:nep_1001_temp_2
+										distance = 250
+										angle = random
+									}
+									set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+									auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+								}
+								else = {
+									auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+								}
+							}
+							else = {
+								fleet_event = { id = nep_kai.1001 }
+							}
+						}
 					}
 				}
 			}
@@ -203,7 +384,7 @@ country_event = {
 					solar_system = {
 						any_planet = {
 							is_colony = yes
-							has_owner = yes
+							exists = owner
 							owner = { has_country_flag = nep_Krahen_country }
 						}
 					}
@@ -215,7 +396,7 @@ country_event = {
 					find_closest_planet = {
 						trigger = {
 							id = "nep_Krahen.trigger.1010"
-							has_owner = yes
+							exists = owner
 							is_colony = yes
 							owner = { is_same_value = event_target:nep_Krahen_country }
 						}
@@ -241,7 +422,7 @@ country_event = {
 				From = {
 					solar_system = {
 						any_planet = {
-							has_owner = yes
+							exists = owner
 							OR = {
 								is_colony = yes
 								is_under_colonization = yes
@@ -256,7 +437,7 @@ country_event = {
 					find_closest_planet = {
 						trigger = {
 							id = "nep_Krahen.trigger.1010.2"
-							has_owner = yes
+							exists = owner
 							is_colony = yes
 							NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 						}
@@ -305,7 +486,7 @@ fleet_event = {
 				solar_system = {
 					any_planet = {
 						is_colony = yes
-						has_owner = yes
+						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
 					}
 				}
@@ -314,7 +495,7 @@ fleet_event = {
 				find_closest_planet = {
 					trigger = {
 						id = "nep_Krahen.trigger.1011"
-						has_owner = yes
+						exists = owner
 						is_colony = yes
 						owner = { is_same_value = event_target:nep_Krahen_country }
 					}
@@ -333,7 +514,7 @@ fleet_event = {
 			limit = {
 				solar_system = {
 					any_planet = {
-						has_owner = yes
+						exists = owner
 						OR = {
 							is_colony = yes
 							is_under_colonization = yes
@@ -346,7 +527,7 @@ fleet_event = {
 				find_closest_planet = {
 					trigger = {
 						id = "nep_Krahen.trigger.1011.2"
-						has_owner = yes
+						exists = owner
 						is_colony = yes
 						NOT = { owner = { is_same_value = event_target:nep_Krahen_country } }
 					}
@@ -477,7 +658,7 @@ planet_event = {
 				root = {
 						log = "[Root.GetName]:1030:1 army"
 						create_army = {
-						name = "Krah'en Invader"
+						name = "NAME_Krahen_Invader"
 						owner = event_target:nep_Krahen_country
 						type = nep_Krahen_anti_grav
 					}
@@ -509,7 +690,7 @@ country_event = {
 				if = {
 					limit = {
 						any_planet = {
-							has_owner = yes
+							exists = owner
 							OR = {
 								is_colony = yes
 								is_under_colonization = yes
@@ -561,14 +742,14 @@ country_event = {
 						limit = {
 							any_planet = {
 								is_colony = yes
-								has_owner = yes
+								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
 							}
 						}
 						random_system_planet = {
 							limit = {
 								is_colony = yes
-								has_owner = yes
+								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
 							}
 							log = "[Root.GetName]:1032:[This.GetName]"
@@ -646,7 +827,7 @@ fleet_event = {
 				limit = {
 					any_planet = {
 						is_colony = yes
-						has_owner = yes
+						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
 					}
 				}
@@ -689,7 +870,7 @@ fleet_event = {
 			closest_system = {
 				limit = {
 					any_planet = {
-						has_owner = yes
+						exists = owner
 						OR = {
 							is_colony = yes
 							is_under_colonization = yes

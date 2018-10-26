@@ -749,7 +749,7 @@ country_event = {
 
 	immediate = {
 		create_country = {
-			name = "Legnahcras"
+			name = "NAME_Legnahcras"
 			type = nep_Legnahcras_country
 			auto_delete = no
 			effect = {
@@ -763,7 +763,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -773,7 +773,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -783,7 +783,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -793,7 +793,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -803,7 +803,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -813,7 +813,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -823,7 +823,7 @@ country_event = {
 			while = {
 				count = 13
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = event_target:Legnahcras_country
 					type = nep_Legnahcras_defensive_army
 				}
@@ -899,11 +899,11 @@ country_event = {
 		random_planet = {
 			limit = {
 				has_planet_flag = nep_dragon_star
-				}
-			save_global_event_target_as = nep_dragon_star
 			}
+			save_global_event_target_as = nep_dragon_star
+		}
 		create_country = {
-			name = "Heptagram Dragon"
+			name = "NAME_Heptagram_Dragon_country"
 			type = nep_dragon_country
 			auto_delete = no
 			effect = {
@@ -914,20 +914,20 @@ country_event = {
 			save_global_event_target_as = nep_dragon_country
 		}
 		create_fleet = {
-			name = "Pentacles"
+			name = "NAME_Pentacle"
 			settings = {
 				spawn_debris = no 
 			}
 			effect = {
 				set_owner = event_target:nep_dragon_country
 				create_ship = {
-					name = "Heptagram Dragon"
+					name = "NAME_Heptagram_Dragon"
 					design = "Heptagram Dragon"
 				}
 				while = {
 					count = 100
 					create_ship = {
-						name = "Summoned Babys"
+						name = "NAME_Summoned_Babys"
 						design = "Summoned Babys"
 					}
 				}
@@ -949,7 +949,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -959,7 +959,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -969,7 +969,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -979,7 +979,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -989,7 +989,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -999,7 +999,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -1009,7 +1009,7 @@ country_event = {
 			while = {
 				count = 2
 				create_army = {
-					name = "Legnahcras existences"
+					name = "NAME_Legnahcras_existences"
 					owner = root
 					type = nep_Legnahcras_assault_army
 				}
@@ -1348,14 +1348,14 @@ country_event = {
 
 	immediate = {
 		create_fleet = {
-			name = "Pentacle"
+			name = "NAME_Pentacle"
 			settings = {
 				spawn_debris = no
 			}
 			effect = {
 				set_owner = root
 				create_ship = {
-					name = "Heptagram Dragon"
+					name = "NAME_Heptagram_Dragon"
 					design = "Heptagram Dragon Rebirth"
 				}
 				set_location = {
@@ -1679,14 +1679,14 @@ country_event = {
 			}
 		}
 		create_fleet = {
-			name = "Pentacle"
+			name = "NAME_Pentacle"
 			settings = {
 				spawn_debris = no
 			}
 			effect = {
 				set_owner = root
 				create_ship = {
-					name = "Heptagram Dragon"
+					name = "NAME_Heptagram_Dragon"
 					design = "Heptagram Dragon Kai"
 				}
 				set_location = {

@@ -1,6 +1,6 @@
 nep_Central_init = {
 
-	name = "Central"
+	name = "NAME_Central"
 
 	class = "rl_standard_stars"
 
@@ -39,7 +39,7 @@ nep_Central_init = {
 
 nep_Centaury_init = {
 
-	name = "Centaury"
+	name = "NAME_Centaury"
 
 	class = "rl_standard_stars"
 
@@ -77,7 +77,7 @@ nep_Centaury_init = {
 
 nep_Magellan_init = {
 
-	name = "Magellan"
+	name = "NAME_Magellan"
 
 	class = "rl_standard_stars"
 
@@ -115,7 +115,7 @@ nep_Magellan_init = {
 
 nep_Orion_init = {
 
-	name = "Orion"
+	name = "NAME_Orion"
 
 	class = "rl_standard_stars"
 
@@ -153,7 +153,7 @@ nep_Orion_init = {
 
 nep_Tra_init = {
 
-	name = "Tra"
+	name = "NAME_Tra"
 
 	class = "rl_standard_stars"
 
@@ -191,7 +191,7 @@ nep_Tra_init = {
 
 nep_Aurora_init = {
 
-	name = "Aurora"
+	name = "NAME_Aurora"
 
 	class = "rl_standard_stars"
 
@@ -229,7 +229,7 @@ nep_Aurora_init = {
 
 nep_Andromeda_init = {
 
-	name = "Andromeda"
+	name = "NAME_Andromeda"
 
 	class = "rl_standard_stars"
 
@@ -268,7 +268,7 @@ nep_Andromeda_init = {
 
 nep_Persei_init = {
 
-	name = "Persei"
+	name = "NAME_Persei"
 
 	class = "rl_standard_stars"
 
@@ -344,7 +344,7 @@ nep_Trantor_init = {
 
 nep_Exterior_init = {
 
-	name = "Exterior"
+	name = "NAME_Exterior"
 
 	class = "rl_standard_stars"
 

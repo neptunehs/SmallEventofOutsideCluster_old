@@ -4,7 +4,7 @@
 
 create_malfunctioning_guards_country = {
 	create_country = {
-		name = "Malfunctioning Guards"
+		name = "NAME_Malfunctioning_Guards_country"
 		type = nep_malfunctioning_guards
 		auto_delete = no
 		flag = {
@@ -33,7 +33,7 @@ create_malfunctioning_guards_country = {
 
 malfunctioning_guards_spawn = {
 	create_fleet = {
-		name = "Malfunctioning Guards"
+		name = "NAME_Malfunctioning_Guards"
 		settings = {
 			spawn_debris = no 
 		}
@@ -42,29 +42,29 @@ malfunctioning_guards_spawn = {
 			while = {
 				count = 15
 				create_ship = {
-					name = "Malfunctioning Guard"
-					design = "Xeeeeh"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Xeoh"
 				}
 			}
 			while = {
 				count = 30
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Tes"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Tes"
 				}
 			}
 			while = {
 				count = 60
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Sekae"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Sekae"
 				}
 			}
 			while = {
 				count = 140
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Deek"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Deek"
 				}
 			}
 			
@@ -114,7 +114,7 @@ malfunctioning_guards_spawn = {
 #######################################
 malfunctioning_guards_spawn_static = {
 	create_fleet = {
-		name = "Malfunctioning Guards"
+		name = "NAME_Malfunctioning_Guards"
 		settings = {
 			spawn_debris = no 
 		}
@@ -123,29 +123,29 @@ malfunctioning_guards_spawn_static = {
 			while = {
 				count = 9
 				create_ship = {
-					name = "Malfunctioning Guard"
-					design = "Xeeeeh"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Xeoh"
 				}
 			}
 			while = {
 				count = 18
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Tes"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Tes"
 				}
 			}
 			while = {
 				count = 24
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Sekae"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Sekae"
 				}
 			}
 			while = {
 				count = 56
 				create_ship = {
-					name = "Malfunctioning Guards"
-					design = "Deek"
+					name = "NAME_Malfunctioning_Guards"
+					design = "NAME_Deek"
 				}
 			}
 			
@@ -181,7 +181,7 @@ malfunctioning_guards_spawn_static = {
 
 create_seal_evil_country = {
 	create_country = {
-		name = "Seal Evil"
+		name = "NAME_nep_Seal_Evil_country"
 		type = nep_seal_evil_country
 		auto_delete = no
 		flag = {
@@ -210,15 +210,15 @@ create_seal_evil_country = {
 
 seal_boss_spawn = {
 	create_fleet = {
-		name = "Seal Evil"
+		name = "NAME_nep_Seal_Evil"
 		settings = {
 			spawn_debris = no 
 		}
 		effect = {			
 			set_owner = event_target:seal_evil_country
 			create_ship = {
-				name = "Seal Evil"
-				design = "Seal evil"
+				name = "NAME_nep_Seal_Evil"
+				design = "NAME_nep_Seal_evil"
 			}	
 			set_location = {
 				target = event_target:nep_grand_seal_planet
@@ -243,7 +243,7 @@ seal_boss_spawn = {
 #######################################
 create_dragon_babys = {
 	create_fleet = {
-		name = "Summoned Babys"
+		name = "NAME_Summoned_Babys"
 		settings = {
 			spawn_debris = no 
 		}
@@ -252,8 +252,8 @@ create_dragon_babys = {
 			while = {
 				count = 20
 				create_ship = {
-					name = "Summoned Babys"
-					design = "Summoned Babys"
+					name = "NAME_Summoned_Babys"
+					design = "NAME_Summoned_Babys_design"
 				}
 			}
 			set_location = {
@@ -289,14 +289,14 @@ create_Krahen_defender = {
 		}
 	}
 	create_fleet = {
-		name = "Krah'en Defender"
+		name = "NAME_Krahen_Defender"
 		effect = {		
 			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 60
 				create_ship = {
-					name = "Krah'en Defender"
-					design = "NAME_Krah'en_Battleship"
+					name = "NAME_Krahen_Defender"
+					design = "NAME_Krahen_Battleship"
 				}
 			}
 			assign_leader = last_created_leader
@@ -342,14 +342,14 @@ create_Krahen_invader = {
 		}
 	}
 	create_fleet = {
-		name = "Krah'en Invader"
+		name = "NAME_Krahen_Invader"
 		effect = {
 			set_owner = event_target:nep_Krahen_country
 			while = {
 				count = 60
 				create_ship = {
-					name = "Krah'en Invader"
-					design = "NAME_Krah'en_Battleship"
+					name = "NAME_Krahen_Invader"
+					design = "NAME_Krahen_Battleship"
 				}
 			}
 			assign_leader = last_created_leader
@@ -560,7 +560,7 @@ create_finalweapon_fleet = {
 			while = {
 				count = 3
 				create_ship = {
-					name = "NAME_nep_Corrupted_Finalweapon"
+					name = "NAME_nep_Corrupted_Finalweapons"
 					design = "NAME_nep_finalweapon_design"
 				}
 			}

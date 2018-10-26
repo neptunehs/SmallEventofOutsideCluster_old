@@ -1,12 +1,12 @@
 ship_design = {
-	name = "Deek"
+	name = "NAME_Deek"
 	ship_size = nep_ancient_corvette
 	hide_size = yes
 	is_event_design = yes
 	
 	section = {
 		template = "NEP_ANCIENT_CORVETTE_MID_1"
-		slot = "mid"	
+		slot = "mid"
 	
 		component = {
 			slot = "MEDIUM_GUN_01"
@@ -43,7 +43,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Sekae"
+	name = "NAME_Sekae"
 	ship_size = nep_ancient_destroyer
 	hide_size = yes
 	is_event_design = yes
@@ -121,7 +121,7 @@ ship_design = {
 }
 	
 ship_design = {
-	name = "Tes"
+	name = "NAME_Tes"
 	ship_size = nep_ancient_cruiser
 	hide_size = yes
 	is_event_design = yes
@@ -228,7 +228,7 @@ ship_design = {
 }
 	
 ship_design = {
-	name = "Xeeeeh"
+	name = "NAME_Xeoh"
 	ship_size = nep_ancient_battleship
 	hide_size = yes
 	is_event_design = yes
