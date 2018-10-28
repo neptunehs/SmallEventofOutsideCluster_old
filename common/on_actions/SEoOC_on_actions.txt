@@ -109,7 +109,6 @@ on_space_battle_won = {
 
 on_fleet_destroyed_perp = {
 	events = {
-		nep_seal.500
 		nep_inva.47
 	}
 }
@@ -142,5 +141,11 @@ on_building_upgraded = {
 on_megastructure_upgraded = {
 	events = {
 		nep_inva.1002
+	}
+}
+
+on_first_contact = {
+	events = {
+		nep_inva.72
 	}
 }

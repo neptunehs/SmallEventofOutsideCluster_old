@@ -32,6 +32,7 @@ nep_Legnahcras_assault_army = {
 }
 
 nep_Krahen_anti_grav = {
+	defensive = yes #To prevent a bug
 	damage = 1.5
 	health = 1.5
 	has_morale = no

@@ -368,7 +368,10 @@ country_event = {
 			NOT = {
 				AND = {
 					exists = orbit
-					orbit = { owner = { is_hostile = root } }
+					orbit = { 
+						exists = owner
+						owner = { is_hostile = root } 
+					}
 				}
 			}
 		}
@@ -652,6 +655,7 @@ planet_event = {
 				limit = {
 					fleet = {
 						NOT = { has_fleet_flag = nep_Krahen_fleet_no_tanks }
+						exists = orbit
 						orbit = { is_same_value = root } 
 					}
 				}
@@ -687,6 +691,14 @@ country_event = {
 			remove_planet_flag = nep_Krahen_invading_planet
 			remove_all_armies = yes
 			solar_system = {
+				# every_fleet_in_system = {
+					# limit = {
+						# any_owned_ship = {
+							# is_ship_class = shipclass_transport
+						# }
+					# }
+					# delete_fleet = this
+				# }
 				if = {
 					limit = {
 						any_planet = {

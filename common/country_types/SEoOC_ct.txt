@@ -83,9 +83,10 @@ nep_dragon_country = {
 
 nep_Krahen_country = {
 	attack_unarmed_orbital_stations = no
-	#scaled_difficulty_bonuses = 3.0	# scales to setting
+	#scaled_difficulty_bonuses = 0.5	# scales to setting
 	#end_game_crisis = yes
 	destroys_starbases = yes
+	can_own_empty_planets = yes
 	needs_survey = no
 	has_complete_sensor = yes
 	can_planets_be_attacked = yes
@@ -93,7 +94,7 @@ nep_Krahen_country = {
 	home_system = nep_Central_system
 	custom_starbase = nep_heavy_spacebase
 	orbital_bombardment = yes
-	government = no
+	#government = no
 	enforces_borders = no
 	ai = {
 		enabled = no
@@ -102,7 +103,6 @@ nep_Krahen_country = {
 		needs_colony = no
 		hostile = yes
 		needs_border_access = no
-		generate_borders = yes
 	}
 	
 	custom_diplomacy = yes
