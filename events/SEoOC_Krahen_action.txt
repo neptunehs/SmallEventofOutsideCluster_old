@@ -689,16 +689,11 @@ country_event = {
 		log = "[Root.GetName]:1031"
 		fromfrom = { 
 			remove_planet_flag = nep_Krahen_invading_planet
-			remove_all_armies = yes
+			every_planet_army = {
+				limit = { army_type = nep_Krahen_anti_grav }
+				remove_army = yes
+			}
 			solar_system = {
-				# every_fleet_in_system = {
-					# limit = {
-						# any_owned_ship = {
-							# is_ship_class = shipclass_transport
-						# }
-					# }
-					# delete_fleet = this
-				# }
 				if = {
 					limit = {
 						any_planet = {
@@ -996,7 +991,7 @@ ship_event = {
 				random_system = {
 					limit = { has_star_flag = nep_inva_system }
 					random_system_planet = {
-						root = { set_location = prev }
+						root = { fleet = { set_location = prev } }
 					}
 				}
 			}

@@ -365,6 +365,15 @@ country_event = {
 		set_global_flag = nep_Krahen_crisis
 		set_global_flag = nep_Krahen_stage_1
 		
+		every_system = {
+			limit = { has_star_flag = nep_Krahen_cluster }
+			every_fleet_in_system = {
+				limit = {
+					exists = owner
+				}
+				set_event_locked = yes
+			}
+		}		
 		#create Krahen colony&invader force
 		event_target:nep_Krahen_country = {
 			create_ship_design = { 
@@ -690,9 +699,8 @@ country_event = {
 							has_star_flag = nep_inva_system
 							distance = {
 								source = prev
-								use_bypasses = no
-								min_jumps = 1
-								max_jumps = 10
+								max_distance <= 250
+								min_distance >= 1
 							}
 						}
 					}
@@ -765,11 +773,9 @@ country_event = {
 	}
 	
 	after = {
-		every_planet_within_border = {
+		every_owned_planet = {
 			limit = {
 				is_colony = yes
-				has_owner = yes
-				owner = { has_country_flag = nep_Krahen_country }
 				has_ground_combat = no
 			}
 			while = {
@@ -839,6 +845,102 @@ country_event = {
 			establish_communications_no_message = event_target:nep_Krahen_country
 			country_event = { id = nep_inva.31 }
 		}
+		every_country = {
+			limit = {
+				is_ai = no
+				is_subject = no
+			}
+			event_target:nep_Krahen_country	= {
+				declare_war = {
+					target = prev
+					name = "NAME_nep_Krahen_invasion_war"
+					attacker_war_goal = wg_nep_Krahen_invasion_war
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				is_subject = yes				
+				NOT = { is_at_war_with = event_target:nep_Krahen_country }
+			}
+			event_target:nep_Krahen_country	= {
+				declare_war = {
+					target = prev
+					name = "NAME_nep_Krahen_invasion_war"
+					attacker_war_goal = wg_nep_Krahen_invasion_war
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_overlord = yes
+				NOT = { is_at_war_with = event_target:nep_Krahen_country }
+			}
+			event_target:nep_Krahen_country	= {
+				declare_war = {
+					target = prev
+					name = "NAME_nep_Krahen_invasion_war"
+					attacker_war_goal = wg_nep_Krahen_invasion_war
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				is_subject = yes
+				NOT = { is_at_war_with = event_target:nep_Krahen_country }
+			}
+			event_target:nep_Krahen_country	= {
+				declare_war = {
+					target = prev
+					name = "NAME_nep_Krahen_invasion_war"
+					attacker_war_goal = wg_nep_Krahen_invasion_war
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+				}
+				NOT = { is_at_war_with = event_target:nep_Krahen_country }
+			}
+			event_target:nep_Krahen_country	= {
+				declare_war = {
+					target = prev
+					name = "NAME_nep_Krahen_invasion_war"
+					attacker_war_goal = wg_nep_Krahen_invasion_war
+				}
+			}
+		}
+	}
+}
+
+#Retreat from Krahen cluster
+country_event = {
+	id = nep_inva.22
+	title = "nep_inva.22.name"
+	desc = "nep_inva.22.desc"	
+	picture = GFX_evt_unknown_ships
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_fleet = {
+			limit = {
+				exists = solar_system
+				solar_system = { has_star_flag = nep_Krahen_cluster }
+			}
+			set_location = event_target:nep_grand_seal_planet
+			order_forced_return = yes
+			set_event_locked = no
+			clear_fleet_actions = this
+		}
+	}
+	
+	option = {
+		name = nep_inva.22.a
 	}
 }
 
@@ -861,6 +963,39 @@ country_event = {
 		room = event_target:nep_Krahen_country
 	}
 	
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = nep_inva_system
+			}
+			save_event_target_as = nep_Krahen_doors_1
+		}
+		random_system = {
+			limit = {
+				has_star_flag = nep_inva_system
+				NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+			}
+			save_event_target_as = nep_Krahen_doors_2
+		}
+		random_system = {
+			limit = {
+				has_star_flag = nep_inva_system
+				NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+				NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
+			}
+			save_event_target_as = nep_Krahen_doors_3
+		}				
+		random_system = {
+			limit = {
+				has_star_flag = nep_inva_system
+				NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
+				NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
+				NOT = { is_same_value = event_target:nep_Krahen_doors_3 }
+			}
+			save_event_target_as = nep_Krahen_doors_4
+		}
+	}
+	
 	option = {
 		name = nep_inva.31.a
 		response_text = nep_inva.31.a.response
@@ -875,88 +1010,56 @@ country_event = {
 	
 	option = {
 		name = nep_inva.31.c
-		event_target:nep_Krahen_country	= {
-			declare_war = {
-				target = prev
-				name = "NAME_nep_Krahen_invasion_war"
-				attacker_war_goal = wg_nep_Krahen_invasion_war
-			}
+		begin_event_chain = {
+			event_chain = "nep_Krahen_invasion_chain"
+			target = this
+		}
+		create_point_of_interest = {
+			id = nep_Krahen_doors_poi.1
+			name = nep_Krahen_doors_poi_title
+			desc = nep_Krahen_doors_poi_desc
+			event_chain = nep_Krahen_invasion_chain
+			category = nep_Krahen_doors_cat
+			location = event_target:nep_Krahen_doors_1
 		}
 		hidden_effect = {
-			begin_event_chain = {
-				event_chain = "nep_Krahen_invasion_chain"
-				target = this
-			}
-			hidden_effect = {
-				random_system = {
-					limit = {
-						has_star_flag = nep_inva_system
-					}
-					save_event_target_as = nep_Krahen_doors_1
-				}
-				random_system = {
-					limit = {
-						has_star_flag = nep_inva_system
-						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
-					}
-					save_event_target_as = nep_Krahen_doors_2
-				}
-				random_system = {
-					limit = {
-						has_star_flag = nep_inva_system
-						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
-						NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
-					}
-					save_event_target_as = nep_Krahen_doors_3
-				}				
-				random_system = {
-					limit = {
-						has_star_flag = nep_inva_system
-						NOT = { is_same_value = event_target:nep_Krahen_doors_1 }
-						NOT = { is_same_value = event_target:nep_Krahen_doors_2 }
-						NOT = { is_same_value = event_target:nep_Krahen_doors_3 }
-					}
-					save_event_target_as = nep_Krahen_doors_4
-				}
-			}
 			create_point_of_interest = {
-				id = nep_Krahen_doors_poi.1
+				id = nep_Krahen_doors_poi.2
 				name = nep_Krahen_doors_poi_title
 				desc = nep_Krahen_doors_poi_desc
 				event_chain = nep_Krahen_invasion_chain
 				category = nep_Krahen_doors_cat
-				location = event_target:nep_Krahen_doors_1
+				location = event_target:nep_Krahen_doors_2
 			}
-			hidden_effect = {
-				create_point_of_interest = {
-					id = nep_Krahen_doors_poi.2
-					name = nep_Krahen_doors_poi_title
-					desc = nep_Krahen_doors_poi_desc
-					event_chain = nep_Krahen_invasion_chain
-					category = nep_Krahen_doors_cat
-					location = event_target:nep_Krahen_doors_2
+			create_point_of_interest = {
+				id = nep_Krahen_doors_poi.3
+				name = nep_Krahen_doors_poi_title
+				desc = nep_Krahen_doors_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_doors_cat
+				location = event_target:nep_Krahen_doors_3
+			}
+			create_point_of_interest = {
+				id = nep_Krahen_doors_poi.4
+				name = nep_Krahen_doors_poi_title
+				desc = nep_Krahen_doors_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_doors_cat
+				location = event_target:nep_Krahen_doors_4
+			}
+			add_event_chain_counter = {
+				event_chain = "nep_Krahen_invasion_chain"
+				counter = "annexed_worlds"
+				amount = 27
+			}
+			if = {
+				limit = {
+					any_owned_ship = {
+						exists = solar_system
+						solar_system = { has_star_flag = nep_Krahen_cluster }
+					}
 				}
-				create_point_of_interest = {
-					id = nep_Krahen_doors_poi.3
-					name = nep_Krahen_doors_poi_title
-					desc = nep_Krahen_doors_poi_desc
-					event_chain = nep_Krahen_invasion_chain
-					category = nep_Krahen_doors_cat
-					location = event_target:nep_Krahen_doors_3
-				}
-				create_point_of_interest = {
-					id = nep_Krahen_doors_poi.4
-					name = nep_Krahen_doors_poi_title
-					desc = nep_Krahen_doors_poi_desc
-					event_chain = nep_Krahen_invasion_chain
-					category = nep_Krahen_doors_cat
-					location = event_target:nep_Krahen_doors_4
-				}
-				add_event_chain_counter = {
-					event_chain = "nep_Krahen_invasion_chain"
-					counter = "annexed_worlds"
-					amount = 27
-				}
+				country_event = { id = nep_inva.22 }
 			}
 		}
 	}
@@ -1053,7 +1156,7 @@ country_event = {
 	immediate = {
 		FromFrom = {
 			set_owner = event_target:nep_Krahen_country
-			every_pop = {
+			every_owned_pop = {
 				limit = { NOT = { is_same_species = event_target:nep_Krahen_country } }
 				kill_pop = yes
 			}
@@ -1115,8 +1218,8 @@ country_event = {
 	
 	immediate = {
 		fromfrom = {
-			every_pop = {
-				limit = { NOT = { is_same_species = this } }
+			every_owned_pop = {
+				limit = { is_same_species = event_target:nep_Krahen_country } 
 				kill_pop = yes
 			}
 			every_tile = {
@@ -1490,11 +1593,9 @@ event = {
 				min = 900
 				max = 1000
 			}
-			every_planet_within_border = {
+			every_owned_planet = {
 				limit = {
 					is_colony = yes
-					has_owner = yes
-					owner = { has_country_flag = nep_Krahen_country }
 					has_ground_combat = no
 					OR = {
 						any_tile = { 
@@ -1560,11 +1661,9 @@ event = {
 					}
 				}
 			}
-			every_planet_within_border = {
+			every_owned_planet = {
 				limit = {
 					is_colony = yes
-					has_owner = yes
-					owner = { has_country_flag = nep_Krahen_country }
 					has_ground_combat = no
 					any_tile = { 
 						has_building = "nep_planetary_gun"
@@ -1606,7 +1705,7 @@ event = {
 			random_planet = {
 				limit = {
 					is_colony = yes
-					has_owner = yes
+					exists = owner
 					owner = { has_country_flag = nep_Krahen_country }
 					has_ground_combat = no
 					solar_system = {
@@ -1624,7 +1723,7 @@ event = {
 			random_planet = {
 				limit = {
 					is_colony = yes
-					has_owner = yes
+					exists = owner
 					owner = { has_country_flag = nep_Krahen_country }
 					has_ground_combat = no
 					solar_system = {
@@ -1643,7 +1742,7 @@ event = {
 			random_planet = {
 				limit = {
 					is_colony = yes
-					has_owner = yes
+					exists = owner
 					owner = { has_country_flag = nep_Krahen_country }
 					has_ground_combat = no
 					solar_system = {

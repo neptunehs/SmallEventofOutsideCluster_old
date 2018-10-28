@@ -95,7 +95,8 @@ nep_Krahen_country = {
 	custom_starbase = nep_heavy_spacebase
 	orbital_bombardment = yes
 	#government = no
-	enforces_borders = no
+	piracy_risk = no
+	enforces_borders = yes
 	ai = {
 		enabled = no
 	}
@@ -103,6 +104,7 @@ nep_Krahen_country = {
 		needs_colony = no
 		hostile = yes
 		needs_border_access = no
+		generate_borders = yes
 	}
 	
 	custom_diplomacy = yes
