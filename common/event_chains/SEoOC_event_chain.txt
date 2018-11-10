@@ -32,6 +32,8 @@ nep_Krahen_invasion_chain = {
 		}
 		Krahen_overruns = {
 		}
+		Krahen_portals_num = {
+		}
 	}
 }
 

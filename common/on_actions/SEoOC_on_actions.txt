@@ -21,11 +21,16 @@ on_system_survey_ship = {
 	}
 }
 
+on_monthly_pulse = {
+	events = {
+		nep_inva.473
+		nep_inva.475
+	}
+}
+
 on_yearly_pulse = {
 	events = {
 		nep_inva.46
-		nep_inva.473
-		nep_inva.475
 		nep_inva.511
 	}
 }

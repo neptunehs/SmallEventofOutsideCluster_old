@@ -58,8 +58,8 @@
  NAME_nep_planetary_gun_design:0 "Planetary Gun"
  NAME_nep_Krahen_portal:0 "Portal"
  NAME_Krahen_heavy_spacebase:0 "Krah'en Heavy Spacebase"
- NAME_nep_Krahen_Constructor:1 "$constructor$"
- NAME_nep_Krahen_Colonizer:0 "$colonizer$"
+ NAME_nep_Krahen_Constructor:1 "Constructor"
+ NAME_nep_Krahen_Colonizer:0 "Colonizer"
 
  NAME_nep_finalweapon_design:0 "Finalweapon"
  NAME_nep_star_bomb_design:0 "Star Bomb"

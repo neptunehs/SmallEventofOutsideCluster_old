@@ -265,6 +265,11 @@ create_dragon_babys = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self	
+			
+		}
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
 		}
 	}
 	last_created_fleet = {
@@ -293,7 +298,7 @@ create_Krahen_defender = {
 		effect = {		
 			set_owner = event_target:nep_Krahen_country
 			while = {
-				count = 60
+				count = 40
 				create_ship = {
 					name = "NAME_Krahen_Defender"
 					design = "NAME_Krahen_Battleship_defender"
@@ -346,7 +351,7 @@ create_Krahen_invader = {
 		effect = {
 			set_owner = event_target:nep_Krahen_country
 			while = {
-				count = 60
+				count = 30
 				create_ship = {
 					name = "NAME_Krahen_Invader"
 					design = "NAME_Krahen_Battleship"
@@ -402,7 +407,7 @@ create_Krahen_follower = {
 		effect = {		
 			set_owner = event_target:nep_Krahen_country
 			while = {
-				count = 60
+				count = 30
 				create_ship = {
 					name = "NAME_Krahen_Defender"
 					design = "NAME_Krahen_Battleship_follower"
@@ -421,18 +426,7 @@ create_Krahen_follower = {
 			
 			set_fleet_flag = nep_Krahen_follower
 			
-			owner = {
-				random_owned_fleet = {
-					limit = {
-						is_ship_size = constructor
-						exists = solar_system
-						has_fleet_flag = nep_Krahen_following_target_constructor
-					}
-					save_event_target_as = nep_follower_temp_target
-					set_fleet_flag = nep_Krahen_following_target_constructor
-				}
-			}
-			auto_follow_fleet = { target = event_target:nep_follower_temp_target attack_fleet = no }
+			fleet_event = { id = nep_kai.1210 days = 3 random = 5 }
 		}
 		settings = {
 			can_change_leader = no
@@ -442,48 +436,60 @@ create_Krahen_follower = {
 }
 
 create_Krahen_buildings = {
-	random_tile = {
-		limit = {
-			has_blocker = no
-			has_building = no
-			has_grown_pop = no
-		}
-		set_building = "nep_adv_tank_factory"
-		create_pop = {
-			species = owner
-		}
-	}
-	random_tile = {
-		limit = {
-			has_blocker = no
-			has_building = no
-			has_grown_pop = no
-		}
-		set_building = "nep_heavy_fortress"
-		create_pop = {
-			species = owner
+	if = {
+		limit = { NOT = { has_building = nep_adv_tank_factory } } 
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_building = nep_adv_tank_factory
+			create_pop = {
+				species = owner
+			}
 		}
 	}
-	random_tile = {
-		limit = {
-			has_blocker = no
-			has_building = no
-			has_grown_pop = no
-		}
-		set_building = "nep_heavy_fortress_2"
-		create_pop = {
-			species = owner
+	if = {
+		limit = { NOT = { has_building = nep_heavy_fortress } } 
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_building = nep_heavy_fortress
+			create_pop = {
+				species = owner
+			}
 		}
 	}
-	random_tile = {
-		limit = {
-			has_blocker = no
-			has_building = no
-			has_grown_pop = no
+	if = {
+		limit = { NOT = { has_building = nep_heavy_fortress_2 } } 
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_building = nep_heavy_fortress_2
+			create_pop = {
+				species = owner
+			}
 		}
-		set_building = "nep_planetary_gun"
-		create_pop = {
-			species = owner
+	}
+	if = {
+		limit = { NOT = { has_building = nep_planetary_gun } } 
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_building = "nep_planetary_gun"
+			create_pop = {
+				species = owner
+			}
 		}
 	}
 }

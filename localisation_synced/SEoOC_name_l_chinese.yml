@@ -58,8 +58,8 @@
  NAME_nep_planetary_gun_design:0 "地对宙炮"
  NAME_nep_Krahen_portal:0 "传送门"
  NAME_Krahen_heavy_spacebase:0 "卡恩重型空间站"
- NAME_nep_Krahen_Constructor:1 "$constructor$"
- NAME_nep_Krahen_Colonizer:0 "$colonizer$"
+ NAME_nep_Krahen_Constructor:1 "工程船"
+ NAME_nep_Krahen_Colonizer:0 "殖民船"
 
  NAME_nep_finalweapon_design:0 "最终兵器"
  NAME_nep_star_bomb_design:0 "星爆弹"

@@ -1136,7 +1136,7 @@ ship_design = {
 	
 	required_component="nep_STEALTHRADAR"
 	required_component="nep_HYPERDRIVEMK5"
-	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="nep_HYPERDRIVEMK5_CIVILIAN_THRUSTER"
 	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
 }
 
@@ -1152,7 +1152,7 @@ ship_design = {
 	
 	required_component="nep_STEALTHRADAR"
 	required_component="nep_HYPERDRIVEMK5"
-	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="nep_HYPERDRIVEMK5_CIVILIAN_THRUSTER"
 	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
 }
 

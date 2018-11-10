@@ -239,6 +239,7 @@ fleet_event = {
 	title = "nep_inva.2.name"
 	desc = "nep_inva.2.desc"	
 	picture = GFX_evt_fleet_evil
+	location = FROM
 
 	fire_only_once = yes
 	
@@ -310,6 +311,25 @@ fleet_event = {
 			}
 			set_country_flag = nep_Krahen_country
 			save_global_event_target_as = nep_Krahen_country
+			add_modifier = {
+				modifier = nep_Krahen_buff
+				days = -1
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							has_tradition = tr_plentiful_assault_5
+							has_tradition = tr_est_militarism_finish
+							always = no
+						}						
+					}
+				}
+				add_modifier = {
+					modifier = nep_Krahen_buff_plentiful
+					days = -1
+				}
+			}
 		}
 		set_global_flag = nep_Krahen_begin
 		remove_global_flag = nep_sealgate_appeared
@@ -414,11 +434,43 @@ country_event = {
 						change_planet_size = 12
 						reroll_planet = yes
 					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
 						ethos = owner
 					}
+					create_Krahen_buildings = yes
+					create_Krahen_invader = yes
 				}
 				random_system_planet = {
 					limit = {
@@ -430,13 +482,42 @@ country_event = {
 						change_planet_size = 12
 						reroll_planet = yes
 					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
 						ethos = owner
 					}
 					create_Krahen_buildings = yes
-					create_Krahen_invader = yes
 					create_Krahen_invader = yes
 				}
 				random_system_planet = {
@@ -449,13 +530,42 @@ country_event = {
 						change_planet_size = 12
 						reroll_planet = yes
 					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
 						ethos = owner
 					}
 					create_Krahen_buildings = yes
-					create_Krahen_invader = yes
 					create_Krahen_invader = yes
 				}
 			}
@@ -466,7 +576,6 @@ country_event = {
 			limit = { has_star_flag = nep_Central_system }
 			set_star_flag = nep_Krahen_portal_system
 			random_system_planet = {
-				limit = { is_colony = yes }
 				create_fleet = {
 					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
@@ -507,7 +616,6 @@ country_event = {
 			}
 			set_star_flag = nep_Krahen_portal_system
 			random_system_planet = {
-				limit = { is_colony = yes }
 				create_fleet = {
 					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
@@ -547,7 +655,6 @@ country_event = {
 			}
 			set_star_flag = nep_Krahen_portal_system
 			random_system_planet = {
-				limit = { is_colony = yes }
 				create_fleet = {
 					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
@@ -587,7 +694,6 @@ country_event = {
 			}
 			set_star_flag = nep_Krahen_portal_system
 			random_system_planet = {
-				limit = { is_colony = yes }
 				create_fleet = {
 					name = "NAME_nep_Portal_to_Emperor-God"
 					effect = {
@@ -699,6 +805,7 @@ country_event = {
 					has_star_flag = lcluster
 					has_star_flag = sealed_system
 					has_star_flag = nep_Krahen_cluster
+					has_star_flag = nep_inva_system
 					has_star_flag = nep_dragon_system
 					has_star_flag = nep_heptagram_cluster
 					has_star_flag = nep_seal_system
@@ -741,6 +848,7 @@ country_event = {
 					has_star_flag = lcluster
 					has_star_flag = sealed_system
 					has_star_flag = nep_Krahen_cluster
+					has_star_flag = nep_inva_system
 					has_star_flag = nep_dragon_system
 					has_star_flag = nep_heptagram_cluster
 					has_star_flag = nep_seal_system
@@ -788,6 +896,7 @@ country_event = {
 					has_star_flag = lcluster
 					has_star_flag = sealed_system
 					has_star_flag = nep_Krahen_cluster
+					has_star_flag = nep_inva_system
 					has_star_flag = nep_dragon_system
 					has_star_flag = nep_heptagram_cluster
 					has_star_flag = nep_seal_system
@@ -864,6 +973,7 @@ country_event = {
 							has_star_flag = lcluster
 							has_star_flag = sealed_system
 							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
 							has_star_flag = nep_dragon_system
 							has_star_flag = nep_heptagram_cluster
 							has_star_flag = nep_seal_system
@@ -945,9 +1055,7 @@ country_event = {
 					set_aggro_range_measure_from = self
 
 					queue_actions = {	
-						repeat = {
-							orbit_planet = prev
-						}
+						orbit_planet = prev
 					}
 				}
 			}
@@ -1113,6 +1221,32 @@ country_event = {
 			}
 			save_event_target_as = nep_Krahen_doors_4
 		}
+		event_target:nep_Krahen_country = {
+			random_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_Krahen_portal_1
+				}
+				save_event_target_as = nep_Krahen_portal_1
+			}
+			random_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_Krahen_portal_2
+				}
+				save_event_target_as = nep_Krahen_portal_2
+			}		
+			random_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_Krahen_portal_3
+				}
+				save_event_target_as = nep_Krahen_portal_3
+			}		
+			random_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_Krahen_portal_4
+				}
+				save_event_target_as = nep_Krahen_portal_4
+			}
+		}
 	}
 	
 	option = {
@@ -1134,6 +1268,14 @@ country_event = {
 			target = this
 		}
 		create_point_of_interest = {
+			id = nep_Krahen_portals_poi.1
+			name = nep_Krahen_portals_poi_title
+			desc = nep_Krahen_portals_poi_desc
+			event_chain = nep_Krahen_invasion_chain
+			category = nep_Krahen_portals_cat
+			location = event_target:nep_Krahen_portal_1
+		}
+		create_point_of_interest = {
 			id = nep_Krahen_doors_poi.1
 			name = nep_Krahen_doors_poi_title
 			desc = nep_Krahen_doors_poi_desc
@@ -1142,6 +1284,30 @@ country_event = {
 			location = event_target:nep_Krahen_doors_1
 		}
 		hidden_effect = {
+			create_point_of_interest = {
+				id = nep_Krahen_portals_poi.2
+				name = nep_Krahen_portals_poi_title
+				desc = nep_Krahen_portals_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_portals_cat
+				location = event_target:nep_Krahen_portal_2
+			}
+			create_point_of_interest = {
+				id = nep_Krahen_portals_poi.3
+				name = nep_Krahen_portals_poi_title
+				desc = nep_Krahen_portals_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_portals_cat
+				location = event_target:nep_Krahen_portal_3
+			}
+			create_point_of_interest = {
+				id = nep_Krahen_portals_poi.4
+				name = nep_Krahen_portals_poi_title
+				desc = nep_Krahen_portals_poi_desc
+				event_chain = nep_Krahen_invasion_chain
+				category = nep_Krahen_portals_cat
+				location = event_target:nep_Krahen_portal_4
+			}
 			create_point_of_interest = {
 				id = nep_Krahen_doors_poi.2
 				name = nep_Krahen_doors_poi_title
@@ -1169,7 +1335,12 @@ country_event = {
 			add_event_chain_counter = {
 				event_chain = "nep_Krahen_invasion_chain"
 				counter = "annexed_worlds"
-				amount = 27
+				amount = 27				
+			}
+			add_event_chain_counter = {
+				event_chain = "nep_Krahen_invasion_chain"
+				counter = "Krahen_portals_num"
+				amount = 4
 			}
 			if = {
 				limit = {
@@ -1280,11 +1451,11 @@ country_event = {
 				kill_pop = yes
 			}
 			while = {
-				count = 4
+				count = 5
 				if = {
 					limit = {
 						count_tile = {
-							count < 4
+							count < 5
 							limit = {
 								has_building = no
 								has_blocker = no
@@ -1540,7 +1711,7 @@ event = {
 				if = {
 					limit = {
 						count_ships = {
-							count < 1380
+							count < 690
 							limit = {
 								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
@@ -1578,7 +1749,7 @@ event = {
 				if = {
 					limit = {
 						count_ships = {
-							count < 1680
+							count < 840
 							limit = {
 								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
@@ -1616,7 +1787,7 @@ event = {
 				if = {
 					limit = {
 						count_ships = {
-							count < 1980
+							count < 990
 							limit = {
 								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
@@ -1654,7 +1825,7 @@ event = {
 				if = {
 					limit = {
 						count_ships = {
-							count < 2300
+							count < 1300
 							limit = {
 								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
@@ -1697,7 +1868,7 @@ event = {
 				limit = {
 					count_system_ships = {
 						limit = { is_ship_size = nep_Krahen_battleship }
-						count < 180
+						count < 90
 					}
 				}
 				random_fleet_in_system = {
@@ -1722,9 +1893,20 @@ event = {
 					}
 				}
 				create_Krahen_constructor = yes
-				create_Krahen_follower = yes
+				if = {
+					limit = {
+						owner = {
+							count_owned_ships = {
+								limit = { fleet = { has_fleet_order = follow_order } }
+								count < 240
+							}
+						}
+					}
+					create_Krahen_follower = yes
+				}
 			}
 		}
+		
 		every_system = {
 			limit = {
 				has_star_flag = nep_inva_system
@@ -1740,12 +1922,6 @@ event = {
 		}
 		
 		event_target:nep_Krahen_country = {
-			add_monthly_resource_mult = {
-				resource = influence
-				value = 1000
-				min = 900
-				max = 1000
-			}
 			every_owned_planet = {
 				limit = {
 					is_colony = yes
@@ -1845,9 +2021,7 @@ event = {
 						set_aggro_range_measure_from = self
 
 						queue_actions = {	
-							repeat = {
-								orbit_planet = prev
-							}
+							orbit_planet = prev
 						}
 					}
 				}
@@ -1932,9 +2106,6 @@ country_event = {
 				has_star_flag = nep_Krahen_portal_system
 				NOR = { 
 					has_star_flag = nep_Krahen_portal_system_unlocked
-					any_ship_in_system = {
-						is_ship_size = nep_Krahen_battleship
-					}
 					any_planet = {
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
@@ -1944,23 +2115,46 @@ country_event = {
 			}
 		}
 	}
-
+	
 	immediate = {
-		fromfrom = {
-			solar_system = {
-				random_fleet_in_system = {
-					limit = {
-						OR = {
-							has_fleet_flag = nep_Krahen_portal_1
-							has_fleet_flag = nep_Krahen_portal_2
-							has_fleet_flag = nep_Krahen_portal_3
-							has_fleet_flag = nep_Krahen_portal_4
-						}
-					}
-					set_event_locked = no
+	
+	}
+	
+	after = {
+		fromfrom = { fleet_event = nep_inva.470 }
+	}
+}
+
+country_event = {
+	id = nep_inva.470
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		solar_system = {
+			NOT = {
+				any_ship_in_system = {
+					is_ship_size = nep_Krahen_battleship
 				}
-				set_star_flag = nep_Krahen_portal_system_unlocked
 			}
+		}
+	}
+	
+	immediate = {
+		solar_system = {
+			random_fleet_in_system = {
+				limit = {
+					OR = {
+						has_fleet_flag = nep_Krahen_portal_1
+						has_fleet_flag = nep_Krahen_portal_2
+						has_fleet_flag = nep_Krahen_portal_3
+						has_fleet_flag = nep_Krahen_portal_4
+					}
+				}
+				set_event_locked = no
+			}
+			set_star_flag = nep_Krahen_portal_system_unlocked
 		}
 	}
 }
@@ -2058,7 +2252,7 @@ planet_event = {
 	}
 }
 
-#unlock portal,on_yearly_pulse
+#unlock portal,on_monthly_pulse
 event = {
 	id = nep_inva.473
 	hide_window = yes
@@ -2067,20 +2261,6 @@ event = {
 	
 	trigger = {
 		has_global_flag = nep_Krahen_crisis
-		any_system = {
-			has_star_flag = nep_Krahen_portal_system
-			NOR = {
-				has_star_flag = nep_Krahen_portal_system_unlocked
-				any_ship_in_system = {
-					is_ship_size = nep_Krahen_battleship
-				}
-				any_planet = {
-					exists = owner
-					owner = { has_country_flag = nep_Krahen_country }
-					is_colony = yes
-				}
-			}
-		}
 	}
 	
 	immediate = {
@@ -2123,6 +2303,7 @@ ship_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		is_ship_class = shipclass_military
 		FromFrom = { has_country_flag = nep_Krahen_country }
 		From = { 
 			has_star_flag = nep_Krahen_portal_system
@@ -2148,7 +2329,7 @@ ship_event = {
 	}
 }
 
-#lock portal,on_yearly_pulse
+#lock portal,on_monthly_pulse
 event = {
 	id = nep_inva.475
 	hide_window = yes
@@ -2157,25 +2338,10 @@ event = {
 	
 	trigger = {
 		has_global_flag = nep_Krahen_crisis
-		any_system = {
-			has_star_flag = nep_Krahen_portal_system
-			has_star_flag = nep_Krahen_portal_system_unlocked
-			OR = {
-				any_ship_in_system = {
-					is_ship_size = nep_Krahen_battleship
-					is_in_combat = no
-				}
-				any_planet = {
-						exists = owner
-						owner = { has_country_flag = nep_Krahen_country }
-						is_colony = yes
-				}
-			}
-		}
 	}
 	
 	immediate = {
-		random_system = {
+		every_system = {
 			limit = {
 				has_star_flag = nep_Krahen_portal_system
 				has_star_flag = nep_Krahen_portal_system_unlocked
@@ -2184,9 +2350,9 @@ event = {
 					is_in_combat = no
 				}
 				any_planet = {
-						exists = owner
-						owner = { has_country_flag = nep_Krahen_country }
-						is_colony = yes
+					exists = owner
+					owner = { has_country_flag = nep_Krahen_country }
+					is_colony = yes
 				}
 			}
 			random_fleet_in_system = {
@@ -2228,11 +2394,43 @@ country_event = {
 	immediate = {
 		FromFrom = {
 			switch = {
-				trigger = has_fleet_flag
-				nep_Krahen_portal_1 = { set_global_flag = nep_Krahen_portal_1_destroyed }
-				nep_Krahen_portal_2 = { set_global_flag = nep_Krahen_portal_2_destroyed }
-				nep_Krahen_portal_3 = { set_global_flag = nep_Krahen_portal_3_destroyed }
-				nep_Krahen_portal_4 = { set_global_flag = nep_Krahen_portal_4_destroyed }
+				trigger = has_ship_flag
+				nep_Krahen_portal_1 = {
+					set_global_flag = nep_Krahen_portal_1_destroyed
+					every_country = {
+						limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+						remove_point_of_interest = nep_Krahen_portals_poi.1
+					}
+				}
+				nep_Krahen_portal_2 = {
+					set_global_flag = nep_Krahen_portal_2_destroyed
+					every_country = {
+						limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+						remove_point_of_interest = nep_Krahen_portals_poi.2
+					}
+				}
+				nep_Krahen_portal_3 = {
+					set_global_flag = nep_Krahen_portal_3_destroyed
+					every_country = {
+						limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+						remove_point_of_interest = nep_Krahen_portals_poi.3
+					}
+				}
+				nep_Krahen_portal_4 = {
+					set_global_flag = nep_Krahen_portal_4_destroyed					
+					every_country = {
+						limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+						remove_point_of_interest = nep_Krahen_portals_poi.4
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+			add_event_chain_counter = {
+				event_chain = "nep_Krahen_invasion_chain"
+				counter = "Krahen_portals_num"
+				amount = -1
 			}
 		}
 		if = {
@@ -2365,6 +2563,8 @@ country_event = {
 	title = nep_inva.54.name
 	desc = nep_inva.54.desc
 	picture = GFX_evt_physics_research
+	
+	fire_only_once = yes
 	
 	trigger = {
 		has_global_flag = nep_Krahen_end

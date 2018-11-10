@@ -55,7 +55,7 @@
  nep_inva.53.desc:0 "卡恩帝国的传送门被完全摧毁了！他们的攻击已经被彻底挫败！虽然我们没有将神皇消灭，但是失去了前哨基地后应该哪怕他再怎么狂怒，只要我们做好准备，他们也没办法再入侵我们的银河系了！/n在我们摧毁所有的传送门后，所有的卡恩残余势力都将自己的舰队炸毁，所有被占领的星球的工作员都自杀了，再我们攻入执政官的房间的时候，发现执政官也已经自杀。这个帝国的控制力一如既往的可怕，但是至少这已经不是我们该怕的事情了！"
  nep_inva.53.a:0 "全银河系的伟大胜利！"
  
- nep_inva.54.name:0 "按捺不住好奇心的科学家们"
+ nep_inva.54.name:0 "新的研究计划"
  nep_inva.54.desc:0 "长时间的战后整理结束了。作为对抗卡恩帝国的主要国家，我们成功的确保了足够多的卡恩帝国的缴获物。也许科学家们能够从中找到一些有用的东西。"
  nep_inva.54.a:0 "好"
  
@@ -79,18 +79,19 @@
  Krahen_overrun_us:0 "我们驱逐的卡恩帝国舰队"
  Krahen_overrun_others:0 "其他国家驱逐的卡恩帝国舰队"
  Krahen_overruns:0 "卡恩帝国驱逐的舰队"
+ Krahen_portals_num:0 "剩余传送门"
  
- nep_Krahen_explore:0 "探索卡恩帝国的残余"
- nep_Krahen_explore_desc:0 "卡恩帝国的威胁已经过去了。现在是我们从这件事情中学更多事情的时候了。"
+ nep_Krahen_explore:0 "探索卡恩帝国的遗留物"
+ nep_Krahen_explore_DESC:0 "卡恩帝国的威胁已经结束了。现在是我们从这件事情中学更多事情的时候了。了。现在是我们从这件事情中学更多事情的时候了。"
  
  nep_adv_tank_factory:0 "高级坦克厂"
- nep_adv_tank_factory_desc:0 "nep_adv_tank_factory_desc"
+ nep_adv_tank_factory_desc:0 " "
  
  nep_heavy_fortress:0 "重型要塞"
- nep_heavy_fortress_desc:0 "nep_adv_tank_factory_desc"
+ nep_heavy_fortress_desc:0 " "
  
  nep_heavy_fortress_2:0 "重型要塞"
- nep_heavy_fortress_2_desc:0 "nep_adv_tank_factory_desc"
+ nep_heavy_fortress_2_desc:0 " "
  
  nep_planetary_gun:0 "地对宙炮"
  nep_planetary_gun_desc:0 "nep_planetary_gun_desc"
@@ -108,6 +109,8 @@
  
  nep_Krahen_doors_poi_title:0 "入侵用星门地点"
  nep_Krahen_doors_poi_desc:0 "卡恩帝国试图用这几个星门来入侵。"
+ nep_Krahen_portals_poi_title:0 "传送门"
+ nep_Krahen_portals_poi_desc:0 "我们必须毁掉这些传送门，这样就能切断他们跟本国的联系。只要我们完全毁掉所有传送门，胜利就不远了。另外注意：只要星系内还有敌对的舰队或星球，我们就无法绕过他们对传送门进行攻击，清空一切后再攻击是唯一选择。"
  
  nep_TURBO_LASER:0 "涡轮激光炮"
  nep_TURBO_LASER_DESC:0 ""
@@ -125,13 +128,20 @@
  nep_COMPUTER_JAMMER_DESC:0 ""
  nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER:0 "高级航行器MK5"
  nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER_DESC:0 ""
- nep_ADVANCE_ECM:0 "升级版电子对抗器"
+ nep_HYPERDRIVEMK5_CIVILIAN_THRUSTER:0 "高级航行器MK5"
+ nep_HYPERDRIVEMK5_CIVILIAN_THRUSTER_DESC:0 ""
+ nep_ADVANCE_ECM:0 "升级版电子对抗设备"
  nep_ADVANCE_ECM_DESC:0 ""
  nep_DESTRUCTOR_RAY:0 "破坏光线"
  nep_DESTRUCTOR_RAY_DESC:0 ""
  nep_INTERCEPTOR:0 "拦截机"
  nep_INTERCEPTOR_DESC:0 ""
  nep_MAGNETIC_SHIELD:0 "磁盾"
- nep_MAGNETIC_SHIELD:0 ""
+ nep_MAGNETIC_SHIELD_DESC:0 ""
+ nep_MAGNETIC_SHIELD_BASE:0 "磁盾"
+ nep_MAGNETIC_SHIELD_BASE_DESC:0 ""
+ 
+ tech_nep_destructor_ray:0 "破坏光线"
+ tech_nep_destructor_ray_desc:0 ""
  
  wg_nep_Krahen_invasion_war:0 "卡恩帝国入侵战争"

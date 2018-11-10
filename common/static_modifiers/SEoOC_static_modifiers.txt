@@ -284,6 +284,25 @@ nep_Anael_debuff = {
 }
 
 ##########################################################################
+# Krahen
+##########################################################################
+nep_Krahen_buff = {
+	ship_weapon_damage = 0.5
+	ship_hull_mult = 1
+	ship_armor_mult = 0.5
+	ship_shield_mult = 0.5
+}
+
+nep_Krahen_buff_plentiful = {
+	ship_weapon_range_mult = 0.5
+}
+
+nep_inva_fleet_jumped_debuff = {
+	ship_weapon_damage = -0.5
+	ship_speed_mult = -0.5
+}
+
+##########################################################################
 # Finalweapon
 ##########################################################################
 

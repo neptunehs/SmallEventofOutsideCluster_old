@@ -333,6 +333,10 @@ fleet_event = {
 										angle = random
 									}
 									set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+									add_modifier = {
+										modifier = nep_inva_fleet_jumped_debuff
+										days = 200
+									}
 									auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
 								}
 								else = {
@@ -408,7 +412,7 @@ country_event = {
 								id = "nep_Krahen.trigger.1010.0"
 								log = "[Root.GetName]:1010:[This.GetName]"
 							}
-							move_to = this
+							#move_to = this
 							orbit_planet = THIS
 							effect = {
 								id = "nep_Krahen.trigger.1010.1"
@@ -449,7 +453,7 @@ country_event = {
 								id = "nep_Krahen.trigger.1010.3"
 								log = "[Root.GetName]:1010:[This.GetName]"
 							}
-							move_to = this
+							#move_to = this
 							orbit_planet = THIS
 						}
 					}
@@ -507,7 +511,7 @@ fleet_event = {
 							id = "nep_Krahen.trigger.1011.0"
 							log = "[Root.GetName]:1011:[This.GetName]"
 						}
-						move_to = this
+						#move_to = this
 						orbit_planet = THIS
 					}
 				}
@@ -539,7 +543,7 @@ fleet_event = {
 							id = "nep_Krahen.trigger.1011.3"
 							log = "[Root.GetName]:1011:[This.GetName]"
 						}
-						move_to = this
+						#move_to = this
 						orbit_planet = THIS
 					}
 				}
@@ -831,7 +835,7 @@ fleet_event = {
 			}
 			count_system_ships = {
 				limit = { is_ship_size = nep_Krahen_battleship }
-				count > 200
+				count > 100
 			}
 		}
 	}
@@ -1005,6 +1009,10 @@ fleet_event = {
 									angle = random
 								}
 								set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+								add_modifier = {
+									modifier = nep_inva_fleet_jumped_debuff
+									days = 200
+								}
 								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
 							}
 							else = {
@@ -1046,7 +1054,7 @@ fleet_event = {
 			}
 			count_system_ships = {
 				limit = { is_ship_size = nep_Krahen_battleship }
-				count > 200
+				count > 100
 			}
 		}
 	}
@@ -1220,6 +1228,10 @@ fleet_event = {
 									angle = random
 								}
 								set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+								add_modifier = {
+									modifier = nep_inva_fleet_jumped_debuff
+									days = 200
+								}
 								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
 							}
 							else = {
@@ -1271,7 +1283,11 @@ fleet_event = {
 					log = "[Root.GetName]:1098:[This.GetName]:Y"
 					root = {
 						set_location = prev
-						set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }						
+						set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }		
+						add_modifier = {
+							modifier = nep_inva_fleet_jumped_debuff
+							days = 200
+						}				
 						fleet_event = { id = nep_kai.1011 }
 					}
 				}
@@ -1319,6 +1335,10 @@ fleet_event = {
 					root = {
 						set_location = this
 						set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+						add_modifier = {
+							modifier = nep_inva_fleet_jumped_debuff
+							days = 200
+						}
 						fleet_event = { id = nep_kai.1011 }
 					}
 				}
@@ -1410,6 +1430,34 @@ fleet_event = {
 	# }
 # }
 
+#Scripted effect
+fleet_event = {
+	id = nep_kai.1210
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_fleet_flag = nep_Krahen_follower
+	}
+					
+	immediate = {
+		owner = {
+			random_owned_fleet = {
+				limit = {
+					is_ship_size = constructor
+					exists = solar_system
+					NOT = { has_fleet_flag = nep_Krahen_following_target_constructor }
+				}
+				save_event_target_as = nep_follower_temp_target
+				set_fleet_flag = nep_Krahen_following_target_constructor
+			}
+			root = { auto_follow_fleet = { target = event_target:nep_follower_temp_target attack_fleet = no } }
+		}
+	}
+}
+			
 #on_ship_destroyed_victim,this = constructor
 country_event = {
 	id = nep_kai.1220
@@ -1708,7 +1756,7 @@ fleet_event = {
 					is_star = yes
 				}
 				found_planet = {
-					move_to = this
+					#move_to = this
 					orbit_planet = this
 				}
 			}
@@ -1741,7 +1789,7 @@ fleet_event = {
 					is_star = yes
 				}
 				found_planet = {
-					move_to = this
+					#move_to = this
 					orbit_planet = this
 				}
 			}
@@ -2093,10 +2141,12 @@ event = {
 					has_fleet_flag = nep_inva_fleet
 					is_fleet_idle = yes
 					NOT = {
-						exists = orbit 
-						orbit = {
-							exists = owner
-							owner = { is_hostile = prev }
+						AND = {
+							exists = orbit
+							orbit = {
+								exists = owner
+								owner = { is_hostile = event_target:nep_Krahen_country }
+							}
 						}
 					}
 				}
