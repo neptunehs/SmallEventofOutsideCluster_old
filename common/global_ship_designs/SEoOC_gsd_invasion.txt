@@ -405,6 +405,360 @@ ship_design = {
 }
 
 ship_design = {
+	name = "NAME_Krahen_Battleship_defender"
+	ship_size = nep_Krahen_battleship
+	hide_size = yes
+	is_event_design = yes
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_BOW_1"
+		slot = "bow"	
+	
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "nep_DESTRUCTOR_RAY"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "nep_DESTRUCTOR_RAY"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "nep_INTERCEPTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "nep_MAGNETIC_SHIELD"
+		}
+	}	
+	
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_MID_1"
+		slot = "mid"	
+	
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_09"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_10"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_11"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_12"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_13"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_14"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_15"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_16"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_17"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_18"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_19"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_20"
+			template = "nep_TURBO_LASER"
+		}
+	}
+	
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_STERN_2"
+		slot = "stern"	
+	
+		component = {
+			slot = "TORPEDO_01"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_03"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_04"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_05"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_06"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_07"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_08"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_09"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_10"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "nep_MAGNETIC_SHIELD"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+		
+	required_component="nep_STEALTHRADAR"
+	required_component="nep_HYPERDRIVEMK5_NODRIVE_VER"
+	required_component="nep_BATTLE_COMPUTER_LINE"
+	required_component="nep_COMPUTER_JAMMER"
+	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="nep_ADVANCE_ECM"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_Krahen_Battleship_follower"
+	ship_size = nep_Krahen_battleship
+	hide_size = yes
+	is_event_design = yes
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_BOW_1"
+		slot = "bow"	
+	
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "nep_DESTRUCTOR_RAY"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "nep_DESTRUCTOR_RAY"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "nep_INTERCEPTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "nep_MAGNETIC_SHIELD"
+		}
+	}	
+	
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_MID_1"
+		slot = "mid"	
+	
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_09"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_10"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_11"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_12"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_13"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_14"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_15"
+			template = "nep_TURBO_LASER"
+		}	
+		component = {
+			slot = "MEDIUM_GUN_16"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_17"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_18"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_19"
+			template = "nep_TURBO_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_20"
+			template = "nep_TURBO_LASER"
+		}
+	}
+	
+	section = {
+		template = "NEP_KRAHEN_BATTLESHIP_STERN_2"
+		slot = "stern"	
+	
+		component = {
+			slot = "TORPEDO_01"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_03"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_04"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_05"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_06"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_07"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "TORPEDO_08"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_09"
+			template = "nep_HEAVYTORPEDO"
+		}	
+		component = {
+			slot = "TORPEDO_10"
+			template = "nep_HEAVYTORPEDO"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "nep_MAGNETIC_SHIELD"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+		
+	required_component="nep_STEALTHRADAR"
+	required_component="nep_HYPERDRIVEMK5"
+	required_component="nep_BATTLE_COMPUTER_LINE"
+	required_component="nep_COMPUTER_JAMMER"
+	required_component="nep_HYPERDRIVEMK5_BATTLESHIP_THRUSTER"
+	required_component="nep_ADVANCE_ECM"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+}
+
+ship_design = {
 	name = "NAME_Krahen_heavy_spacebase"
 	ship_size = nep_heavy_spacebase
 	hide_size = yes

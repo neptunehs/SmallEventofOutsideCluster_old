@@ -35,27 +35,12 @@ tech_nep_destructor_ray = {
 	cost = 120000
 	tier = 5
 	category = { particles }
-	ai_update_type = military	
+	ai_update_type = all
 	weight = 0
-
-	potential = { always = no }
+	is_rare = yes
 	
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			has_ethic = ethic_militarist
-		}
-		modifier = {
-			factor = 1.5
-			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}	
+		factor = 0
 	}
 	
 	ai_weight = {
@@ -83,7 +68,8 @@ tech_nep_sealevil_tech = {
 	cost = 120000
 	tier = 5
 	category = { particles }
-	ai_update_type = military	
+	is_reverse_engineerable = no
+	ai_update_type = military
 	weight = 0
 
 	potential = { always = no }
@@ -98,6 +84,7 @@ tech_nep_dragon_tech = {
 	cost = 120000
 	tier = 5
 	category = { particles }
+	is_reverse_engineerable = no
 	ai_update_type = military	
 	weight = 0
 
@@ -113,6 +100,7 @@ tech_nep_Krahen_tech = {
 	cost = 120000
 	tier = 5
 	category = { particles }
+	is_reverse_engineerable = no
 	ai_update_type = military	
 	weight = 0
 
@@ -128,6 +116,7 @@ tech_nep_finalweapon_tech = {
 	cost = 120000
 	tier = 5
 	category = { particles }
+	is_reverse_engineerable = no
 	ai_update_type = military	
 	weight = 0
 

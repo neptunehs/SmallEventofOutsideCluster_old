@@ -264,7 +264,7 @@ fleet_event = {
 					}
 				}
 			}
-			20 = {
+			30 = {
 				solar_system = {
 					if = {
 						limit = {
@@ -782,7 +782,6 @@ country_event = {
 	}
 }
 
-
 #on_planet_zero_pops,fire 1011
 planet_event = {
 	id = nep_kai.1040
@@ -808,6 +807,436 @@ planet_event = {
 				fleet_event = { id = nep_kai.1011 days = 50 }
 			}
 		}
+	}
+}
+
+#To prevent too many fleets in a line to defeat,on_entering_system_fleet
+fleet_event = {
+	id = nep_kai.1050
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_fleet_flag = nep_inva_fleet
+		From = {
+			NOT = {
+				any_ship_in_system = {
+					is_disabled = no
+					is_ship_class = shipclass_military
+					exists = owner
+					owner = { is_hostile = root.owner }
+				}
+			}
+			count_system_ships = {
+				limit = { is_ship_size = nep_Krahen_battleship }
+				count > 200
+			}
+		}
+	}
+	
+	immediate = {
+		log = "[Root.GetName]:1050:[This.GetName]"
+		random_list = {
+			50 = {
+				closest_system = {
+					limit = {
+						NOT = { is_same_value = root.from }
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = {
+									owner = { NOT = { has_country_flag = nep_Krahen_country } }
+								}
+							}
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+						random_system_planet = {
+							limit = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							root = {
+								auto_move_to_planet = {
+									target = prev
+									clear_auto_move_on_arrival = yes
+								}
+							}
+						}
+					}
+					else = {
+						random_system_planet = {
+							limit = {
+								is_star = yes
+							}
+							save_event_target_as = nep_1001_temp
+						}
+						root = {
+							auto_move_to_planet = {
+								target = event_target:nep_1001_temp
+								clear_auto_move_on_arrival = yes
+							}
+						}
+					}
+				}
+			}
+			50 = {
+				from = {
+					if = {
+						limit = {
+							any_neighbor_system = {
+								ignore_hyperlanes = no
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+							}
+						}
+						random_neighbor_system = {
+							ignore_hyperlanes = no
+							limit = { 
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+							}
+							if = {
+								limit = {
+									any_planet = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+								}
+								random_system_planet = {
+									limit = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+							else = {
+								random_system_planet = {
+									limit = {
+										is_star = yes
+									}
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+						}
+					}
+					else = { root = { fleet_event = { id = nep_kai.1051 } } }
+				}
+			}
+			50 = {
+				from = {
+					closest_system = {
+						max_steps = 5
+						limit = {
+							any_ship_in_system = {
+								exists = owner
+								owner = { has_country_flag = nep_Krahen_country }
+								fleet = {
+									any_combatant_fleet = {
+										exists = owner
+										is_ship_class = shipclass_military
+									}
+								}
+							}
+						}
+						random_fleet_in_system = {
+							limit = {
+								exists = owner
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							save_event_target_as = nep_1001_temp_2
+						}
+					}
+					root = {
+						if = {
+							limit = {
+								exists = event_target:nep_1001_temp_2
+							}
+							if = {
+								limit = {
+									NOT = { has_fleet_flag = nep_inva_fleet_jumped }
+								}
+								set_location = {
+									target = event_target:nep_1001_temp_2
+									distance = 250
+									angle = random
+								}
+								set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+							}
+							else = {
+								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+							}
+						}
+						else = {
+							fleet_event = { id = nep_kai.1051 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	after = {
+		fleet_event = { id = nep_kai.1099 days = 3 }
+	}
+}
+
+fleet_event = {
+	id = nep_kai.1051
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_fleet_flag = nep_inva_fleet
+		exists = solar_system
+		solar_system = {
+			NOT = {
+				any_ship_in_system = {
+					is_disabled = no
+					is_ship_class = shipclass_military
+					exists = owner
+					owner = { is_hostile = root.owner }
+				}
+			}
+			count_system_ships = {
+				limit = { is_ship_size = nep_Krahen_battleship }
+				count > 200
+			}
+		}
+	}
+	
+	immediate = {
+		log = "[Root.GetName]:1051:[This.GetName]"
+		random_list = {
+			50 = {
+				closest_system = {
+					limit = {
+						NOT = { is_same_value = root.solar_system }
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = {
+									owner = { NOT = { has_country_flag = nep_Krahen_country } }
+								}
+							}
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_planet = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+						random_system_planet = {
+							limit = {
+								exists = owner
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							root = {
+								auto_move_to_planet = {
+									target = prev
+									clear_auto_move_on_arrival = yes
+								}
+							}
+						}
+					}
+					else = {
+						random_system_planet = {
+							limit = {
+								is_star = yes
+							}
+							save_event_target_as = nep_1001_temp
+						}
+						root = {
+							auto_move_to_planet = {
+								target = event_target:nep_1001_temp
+								clear_auto_move_on_arrival = yes
+							}
+						}
+					}
+				}
+			}
+			50 = {
+				solar_system = {
+					if = {
+						limit = {
+							any_neighbor_system = {
+								ignore_hyperlanes = no
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+							}
+						}
+						random_neighbor_system = {
+							ignore_hyperlanes = no
+							limit = { 
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+							}
+							if = {
+								limit = {
+									any_planet = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+								}
+								random_system_planet = {
+									limit = {
+										exists = owner
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										NOT = { owner = { has_country_flag = nep_Krahen_country } }
+									}
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+							else = {
+								random_system_planet = {
+									limit = {
+										is_star = yes
+									}
+									root = {
+										auto_move_to_planet = {
+											target = prev
+											clear_auto_move_on_arrival = yes
+										}
+									}
+								}
+							}
+						}
+					}
+					else = { root = { fleet_event = { id = nep_kai.1051 } } }
+				}
+			}
+			50 = {
+				solar_system = {
+					closest_system = {
+						max_steps = 5
+						limit = {
+							any_ship_in_system = {
+								exists = owner
+								owner = { has_country_flag = nep_Krahen_country }
+								fleet = {
+									any_combatant_fleet = {
+										exists = owner
+										is_ship_class = shipclass_military
+									}
+								}
+							}
+						}
+						random_fleet_in_system = {
+							limit = {
+								exists = owner
+								NOT = { owner = { has_country_flag = nep_Krahen_country } }
+							}
+							save_event_target_as = nep_1001_temp_2
+						}
+					}
+					root = {
+						if = {
+							limit = {
+								exists = event_target:nep_1001_temp_2
+							}
+							if = {
+								limit = {
+									NOT = { has_fleet_flag = nep_inva_fleet_jumped }
+								}
+								set_location = {
+									target = event_target:nep_1001_temp_2
+									distance = 250
+									angle = random
+								}
+								set_timed_fleet_flag = { flag = nep_inva_fleet_jumped days = 200 }
+								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+							}
+							else = {
+								auto_follow_fleet = { target = event_target:nep_1001_temp_2 attack_fleet = yes }
+							}
+						}
+						else = {
+							fleet_event = { id = nep_kai.1051 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	after = {
+		fleet_event = { id = nep_kai.1099 days = 3 }
 	}
 }
 
@@ -901,13 +1330,365 @@ fleet_event = {
 		}
 	}
 }
-		
-		
+
+
+########################################
+#Defender fleet
+########################################
+#on_entering_system_fleet,make defender follow fleet to attack
+fleet_event = {
+	id = nep_kai.1110
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		exists = owner 
+		owner = { is_hostile = event_target:nep_Krahen_country }
+		From = {
+			OR = {
+				has_star_flag = nep_inva_system
+				has_star_flag = nep_Krahen_cluster
+			}
+			any_ship_in_system = {
+				fleet = { has_fleet_flag = nep_Krahen_defender }
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			every_fleet_in_system = {
+				limit = { has_fleet_flag = nep_Krahen_defender }
+				auto_follow_fleet = { target = root attack_fleet = yes }
+			}
+		}
+	}
+}
+
+########################################
+#Follower fleet
+########################################
+# #on_entering_system_fleet
+# fleet_event = {
+	# id = nep_kai.1210
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# trigger = {
+		# has_global_flag = nep_Krahen_crisis
+		# has_fleet_flag = nep_Krahen_follower
+	# }
+	
+	# immediate = {
+		# owner = {
+			# random_owned_fleet = {
+				# limit = {
+					# is_ship_size = constructor
+					# exists = solar_system
+					# solar_system = {
+						# NOT = {
+							# any_ship_in_system = {
+								# fleet = { has_fleet_flag = nep_Krahen_follower }
+							# }
+							# any_neighbor_system = {
+								# ignore_hyperlanes = no
+								# any_ship_in_system = {
+									# fleet = { has_fleet_flag = nep_Krahen_follower }
+								# }
+							# }
+						# }
+					# }
+					# NOT = { has_fleet_flag = nep_Krahen_following_target_constructor }
+				# }
+				# set_fleet_flag = nep_Krahen_following_target_constructor
+				# root = { auto_follow_fleet = { target = prev attack_fleet = no } }
+			# }
+		# }
+	# }
+# }
+
+#on_ship_destroyed_victim,this = constructor
+country_event = {
+	id = nep_kai.1220
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_country_flag = nep_Krahen_country
+		fromfrom = { is_ship_size = constructor }
+	}
+	
+	immediate = {
+		country_event = { id = nep_kai.1221 days = 3 }
+	}
+}
+
+country_event = {
+	id = nep_kai.1221
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_fleet = {
+			limit = { 
+				has_fleet_flag = nep_Krahen_follower
+				NOT = { has_fleet_order = follow_order }
+			}
+			closest_system = {
+				limit = {
+					any_ship_in_system = {
+						is_ship_size = constructor
+						fleet = { NOT = { has_fleet_flag = nep_Krahen_following_target_constructor } }
+					}
+				}
+				random_fleet_in_system = {
+					limit = {
+						is_ship_size = constructor
+						NOT = { has_fleet_flag = nep_Krahen_following_target_constructor }
+					}						
+					set_fleet_flag = nep_Krahen_following_target_constructor
+					save_event_target_as = nep_Krahen_following_target_constructor
+				}
+			}
+			if = {
+				limit = { exists = event_target:nep_Krahen_following_target_constructor }
+				auto_follow_fleet = { target = event_target:nep_Krahen_following_target_constructor attack_fleet = no }
+			}
+			else = {
+				root = {
+					random_owned_ship = {
+						limit = {
+							is_ship_size = constructor
+							fleet = { NOT = { has_fleet_flag = nep_Krahen_following_target_constructor } }
+						}
+						fleet = { 
+							set_fleet_flag = nep_Krahen_following_target_constructor
+							save_event_target_as = nep_Krahen_following_target_constructor_2
+						}
+					}
+				}
+				auto_follow_fleet = { target = event_target:nep_Krahen_following_target_constructor_2 attack_fleet = no }
+			}
+		}
+	}
+}
+
+#on_fleet_detected
+country_event = {
+	id = nep_kai.1230
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_country_flag = nep_Krahen_country
+	}
+	
+	immediate = {
+		closest_system = {
+			max_steps = 10
+			limit = { 
+				any_ship_in_system = {
+					fleet = { has_fleet_flag = nep_Krahen_following_target_constructor }
+				}
+				any_ship_in_system = {
+					fleet = { 
+						NOT = { has_fleet_flag = nep_Krahen_following_constructor_without_target }
+						has_fleet_flag = nep_Krahen_follower 
+					}
+				}
+			}
+			every_fleet_in_system = {
+				limit = { has_fleet_flag = nep_Krahen_following_target_constructor }
+				remove_fleet_flag = nep_Krahen_following_target_constructor
+			}
+			random_fleet_in_system = {
+				limit = { has_fleet_flag = nep_Krahen_follower  }
+				save_event_target_as = nep_1230_temp
+				auto_follow_fleet = { target = root.from attack_fleet = yes }
+				root = { from = { set_fleet_flag = nep_Krahen_follower_target_fleet } }
+			}
+			every_fleet_in_system = {
+				limit = {
+					has_fleet_flag = nep_Krahen_follower
+					NOT = { is_same_value = event_target:nep_1230_temp }
+				}
+				set_fleet_flag = nep_Krahen_following_constructor_without_target
+			}
+		}
+	}
+}
+
+#on_entering_system_fleet
+fleet_event = {
+	id = nep_kai.1231
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		has_fleet_flag = nep_Krahen_following_constructor_without_target
+	}
+	
+	immediate = {
+		fleet_event = { id = nep_kai.1232 days = 3 }
+	}
+}
+
+fleet_event = {
+	id = nep_kai.1232
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_fleet_flag = nep_Krahen_following_constructor_without_target
+		solar_system = {
+			random_fleet_in_system = {
+				limit = {
+					any_owned_ship = { 
+						is_ship_size = constructor 
+						NOT = { fleet = { has_fleet_flag = nep_Krahen_following_target_constructor } }
+					}
+				}
+				set_fleet_flag = nep_Krahen_following_target_constructor
+				root = { auto_follow_fleet = { target = prev attack_fleet = no } }
+			}
+		}
+	}
+}
+
+#on_fleet_destroyed_perp
+country_event = {
+	id = nep_kai.1240
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		fromfrom = { has_fleet_flag = nep_Krahen_follower }
+		fromfromfrom = { has_fleet_flag = nep_Krahen_follower_target_fleet }
+	}
+	
+	immediate = {
+		fromfrom = {
+			owner = {
+				random_owned_fleet = {
+					limit = {
+						is_ship_size = constructor
+						exists = solar_system
+						NOT = { has_fleet_flag = nep_Krahen_following_target_constructor }
+					}
+					set_fleet_flag = nep_Krahen_following_target_constructor
+					save_event_target_as = nep_Krahen_following_target_constructor_1240
+					root = { fromfrom = { auto_follow_fleet = { target = event_target:nep_Krahen_following_target_constructor_1240 attack_fleet = no } } }
+				}
+			}
+		}
+	}
+}
+
 ########################################
 #Construtor
 ########################################
 #on_entering_system
-ship_event = {
+#2001:krahen cluster
+#2002:normal system without starbase without flags
+#2003:normal system without starbase with flags/normal system with starbase owner krahen
+
+fleet_event = {
+	id = nep_kai.2000
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		is_ship_size = constructor
+		owner = { has_country_flag = nep_Krahen_country }
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_fleet_order = evade_hostiles_order }
+			set_fleet_stance = passive
+			clear_fleet_actions = this
+		}
+		from = {
+			switch = {
+				trigger = has_star_flag
+				nep_Krahen_cluster = {
+					if = {
+						limit = {
+							NOT = { exists = starbase }
+						}
+						root = {
+							clear_fleet_actions = this
+							fleet_event = { id = nep_kai.2001 } 
+						}
+					}
+				}
+				nep_Krahen_constructor_starbase_building = {
+					root = {
+						clear_fleet_actions = this
+						fleet_event = { id = nep_kai.2003 }
+					}
+				}
+				default = {
+					if = {
+						limit = {
+							OR = {
+								any_ship_in_system = {
+									is_ship_class = shipclass_military
+									owner = { is_hostile = event_target:nep_Krahen_country }
+								}
+								AND = {
+									exists = starbase
+									starbase = { owner = { is_hostile = event_target:nep_Krahen_country } }
+								}
+							}
+						}
+						root = { set_fleet_stance = evasive }
+					}
+					else_if = {
+						limit = {
+							NOT = { exists = starbase }
+						}
+						root = {
+							clear_fleet_actions = this
+							fleet_event = { id = nep_kai.2002 } 
+						}
+					}
+					else = {
+						root = {
+							queue_actions = {
+								find_closest_system = {
+									trigger = {
+										id = nep_Krahen.trigger.2000.1
+										NOT = { is_same_value = solar_system }
+										space_owner = { is_same_value = event_target:nep_Krahen_country }
+									}
+									found_system = { move_to = this }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
 	id = nep_kai.2001
 	hide_window = yes
 
@@ -920,108 +1701,26 @@ ship_event = {
 	}
 	
 	immediate = {
-		if = {
-			limit = { 
-				solar_system = {
-					NOT = { exists = starbase }
-					NOT = { has_star_flag = nep_Krahen_starbase_building }
+		queue_actions = {
+			find_closest_planet = {
+				trigger = {
+					id = "nep_Krahen.trigger.2001.1"
+					is_star = yes
 				}
-			}
-			solar_system = { set_star_flag = nep_Krahen_starbase_building }
-			fleet = {
-				queue_actions = {
-					find_closest_planet = {
-						trigger = {
-							id = "nep_Krahen_constructor.1"
-							is_star = yes
-						}
-						found_planet = {
-							orbit_planet = THIS
-						}					
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				solar_system = {
-					OR = {
-						AND = {
-							exists = starbase
-							starbase = { owner = { has_country_flag = nep_Krahen_country } }
-						}
-						has_star_flag = nep_Krahen_starbase_building
-					}
-				}
-			}
-			closest_system = {
-				limit = {
-					NOT = { exists = starbase }
-					is_neighbor_of = event_target:nep_Krahen_country
-					NOR = {
-						has_star_flag = nep_Krahen_starbase_building
-						any_ship_in_system = {
-							exists = owner
-							owner = { is_hostile = root.owner }
-						}
-						any_planet = {
-							exists = owner
-							owner = { is_hostile = root.owner }
-						}
-					}
-				}
-				save_event_target_as = nep_Krahen_constructor_target
-			}
-		}
-		else = {
-			closest_system = {
-				min_steps = 2
-				limit = { is_inside_border = event_target:nep_Krahen_country }
-				save_event_target_as = nep_Krahen_constructor_target_1
-			}
-			if = {
-				limit = { exists = event_target:nep_Krahen_constructor_target_1 }
-				root = {
-					queue_actions = {
-						move_to = event_target:nep_Krahen_constructor_target_1
-					}
-				}
-			}
-			else = {
-				random_system = {
-					limit = { has_star_flag = nep_inva_system }
-					random_system_planet = {
-						root = { fleet = { set_location = prev } }
-					}
+				found_planet = {
+					move_to = this
+					orbit_planet = this
 				}
 			}
 		}
 	}
 	
 	after = {
-		if = {
-			limit = { 
-				solar_system = {
-					NOT = { exists = starbase }
-				}
-			}
-			ship_event = { id = nep_kai.2002 days = 120 }
-		}
-		else_if = {
-			limit = { exists = event_target:nep_Krahen_constructor_target }
-			fleet = {
-				queue_actions = {
-					move_to = event_target:nep_Krahen_constructor_target
-				}
-			}
-		}
-		else = {
-			ship_event = { id = nep_kai.2001 days = 10 random = 10 }
-		}
+		fleet_event = { id = nep_kai.2011 days = 75 }
 	}
 }
 
-ship_event = {
+fleet_event = {
 	id = nep_kai.2002
 	hide_window = yes
 
@@ -1034,43 +1733,246 @@ ship_event = {
 	}
 	
 	immediate = {
-		solar_system = {
-			create_starbase = {
-				size = nep_heavy_spacebase
-				owner = event_target:nep_Krahen_country
+		solar_system = { set_star_flag = nep_Krahen_constructor_starbase_building }
+		queue_actions = {
+			find_closest_planet = {
+				trigger = {
+					id = "nep_Krahen.trigger.2002.1"
+					is_star = yes
+				}
+				found_planet = {
+					move_to = this
+					orbit_planet = this
+				}
 			}
-			remove_star_flag = nep_Krahen_starbase_building
+		}
+	}
+	
+	after = {
+		fleet_event = { id = nep_kai.2011 days = 75 }
+	}
+}
+
+fleet_event = {
+	id = nep_kai.2003
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = nep_Krahen_crisis
+		is_ship_size = constructor
+		owner = { has_country_flag = nep_Krahen_country }
+	}
+	
+	immediate = {
+		solar_system = {
+			random_neighbor_system = {
+				ignore_hyperlanes = no
+				limit = {
+					NOR = {
+						exists = starbase
+						has_star_flag = nep_Krahen_constructor_starbase_building
+						any_ship_in_system = {
+							is_ship_class = shipclass_military
+							exists = owner
+							owner = { is_hostile = event_target:nep_Krahen_country }
+						}
+					}
+				}
+				save_event_target_as = nep_2003_temp_poi
+			}
 		}
 		if = {
-			limit = {
-				solar_system = {
+			limit = { exists = event_target:nep_2003_temp_poi }
+			queue_actions = {
+				move_to = event_target:nep_2003_temp_poi
+			}
+		}
+		else = {
+			closest_system = {
+				limit = {
+					is_neighbor_of = event_target:nep_Krahen_country
+					NOR = {
+						exists = starbase
+						has_star_flag = nep_Krahen_constructor_starbase_building					
+					}
+				}
+				save_event_target_as = nep_2003_temp_poi_2
+			}
+			if = {
+				limit = { exists = event_target:nep_2003_temp_poi_2 }
+				clear_fleet_actions = this
+				queue_actions = {
+					move_to = event_target:nep_2003_temp_poi_2
+				}
+			}
+			else = {
+				queue_actions = {
+					find_closest_system = {
+						trigger = {
+							id = nep_Krahen.trigger.2003
+							NOT = { is_same_value = root.from }
+							space_owner = { is_same_value = event_target:nep_Krahen_country }
+						}
+						found_system = { move_to = this }
+					}
+				}
+			}
+		}
+	}
+}
+
+# ship_event = {
+	# id = nep_kai.2004
+	# hide_window = yes
+
+	# is_triggered_only = yes
+	
+	# trigger = {
+		# has_global_flag = nep_Krahen_crisis
+		# is_ship_size = constructor
+		# owner = { has_country_flag = nep_Krahen_country }
+		# from = {
+			# NOT = { has_star_flag = nep_Krahen_cluster }
+			# OR = {
+				# any_ship_in_system = {
+					# is_ship_class = shipclass_military
+					# exists = owner
+					# owner = { is_hostile = event_target:nep_Krahen_country }
+				# }
+				# AND = {
+					# exists = starbase
+					# starbase = { owner = { is_hostile = event_target:nep_Krahen_country } }
+				# }
+			# }
+		# }
+	# }
+	
+	# immediate = {
+		# fleet = {
+			# clear_order = yes
+			# clear_fleet_actions = this
+			# closest_system = {
+				# limit = {
+					# NOT = { has_star_flag = nep_Krahen_cluster }
+					# OR = {
+						# any_ship_in_system = {
+							# is_ship_class = shipclass_military
+							# exists = owner
+							# owner = { is_hostile = event_target:nep_Krahen_country }
+						# }
+						# AND = {
+							# exists = starbase
+							# starbase = { owner = { is_hostile = event_target:nep_Krahen_country } }
+						# }
+					# }
+					# space_owner = { is_same_value = event_target:nep_Krahen_country }
+				# }
+				# save_event_target_as = nep_2004_temp_poi
+			# }
+			# if = {
+				# limit = { exists = event_target:nep_2004_temp_poi }
+				# fleet = {
+					# queue_actions = {
+						# move_to = event_target:nep_2004_temp_poi 
+					# }
+				# }
+			# }
+			# else = {
+				# fleet = { set_fleet_stance = evasive }
+			# }
+		# }
+	# }
+# }
+
+fleet_event = {
+	id = nep_kai.2011
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		solar_system = {
+			create_starbase = {
+				owner = event_target:nep_Krahen_country
+				size = nep_heavy_spacebase
+			}
+			remove_star_flag = nep_Krahen_constructor_starbase_building
+			if = {
+				limit = {
 					any_planet = {
-						is_colony = no
 						can_colonize = { who = event_target:nep_Krahen_country status = yes }
 					}
 				}
-			}
-			ship_event = { id = nep_kai.2001 days = 10 random = 5 }
-			random = {
-				chance = 50
-				solar_system = {
-					random_system_planet = {
-						limit = { 
-							is_colony = no
-							can_colonize = { who = event_target:nep_Krahen_country status = yes } 
-						}
-						save_event_target_as = nep_Krahen_colonizer_target
+				random_system_planet = {
+					limit = {
+						can_colonize = { who = event_target:nep_Krahen_country status = yes }
 					}
+					save_event_target_as = nep_2011_temp_poi_colonize
 				}
-				owner = {
+				event_target:nep_Krahen_country = {
 					random_owned_ship = {
-						limit = {
-							is_ship_size = colonizer
-						}
+						limit = { is_ship_size = colonizer }
 						auto_move_to_planet = {
-							target = event_target:nep_Krahen_colonizer_target
+							target = event_target:nep_2011_temp_poi_colonize
 							clear_auto_move_on_arrival = yes
 						}
+					}
+				}
+			}
+		}
+		solar_system = {
+			random_neighbor_system = {
+				ignore_hyperlanes = no
+				limit = {
+					NOR = {
+						exists = starbase
+						has_star_flag = nep_Krahen_constructor_starbase_building
+						any_ship_in_system = {
+							is_ship_class = shipclass_military
+							exists = owner
+							owner = { is_hostile = event_target:nep_Krahen_country }
+						}
+					}
+				}
+				save_event_target_as = nep_2011_temp_poi
+			}
+		}
+		if = {
+			limit = { exists = event_target:nep_2011_temp_poi }
+			clear_fleet_actions = this
+			queue_actions = {
+				move_to = event_target:nep_2011_temp_poi
+			}
+		}
+		else = {
+			closest_system = {
+				limit = {
+					is_neighbor_of = event_target:nep_Krahen_country
+					NOR = {
+						exists = starbase
+						has_star_flag = nep_Krahen_constructor_starbase_building					
+					}
+				}
+				save_event_target_as = nep_2011_temp_poi_2
+			}
+			if = {
+				limit = { exists = event_target:nep_2011_temp_poi_2 }
+				clear_fleet_actions = this
+				queue_actions = {
+					move_to = event_target:nep_2011_temp_poi_2
+				}
+			}
+			else = { 
+				queue_actions = {
+					find_closest_system = {
+						trigger = {
+							id = nep_Krahen.trigger.2011
+							NOT = { is_same_value = root.from }
+							space_owner = { is_same_value = event_target:nep_Krahen_country }
+						}
+						found_system = { move_to = this }
 					}
 				}
 			}
@@ -1100,6 +2002,7 @@ country_event = {
 					trigger = {
 						id = nep_Krahen_colonizer.1
 						is_colony = no
+						is_under_colonization = no
 						can_colonize = { who = event_target:nep_Krahen_country status = yes }
 					}
 					found_planet = {
@@ -1139,19 +2042,95 @@ event = {
 			every_owned_ship = {
 				limit = {
 					is_ship_size = constructor
-					is_fleet_idle = yes
-					exists = solar_system
-					NOT = { solar_system = { has_star_flag = nep_Krahen_starbase_building } }
+					OR = {
+						AND = {
+							exists = orbit
+							orbit = { NOT = { is_star = yes } }
+						}
+						AND = {
+							has_fleet_order = orbit_planet_order
+							NOT = { exists = orbit }
+						}
+						AND = {
+							NOT = { exists = orbit }
+							is_fleet_idle = yes
+						}
+					}
 				}
-				ship_event = { id = nep_kai.2001 days = 3 random = 30 }
+				fleet = {
+					if = {
+						limit = {
+							solar_system = {
+								has_star_flag = nep_Krahen_cluster
+							}
+						}
+						queue_actions = {
+							find_random_system = {
+								trigger = {
+									id = nep_Krahen.trigger.4001.0
+									has_star_flag = nep_inva_system
+								}
+								found_system = { move_to = this }
+							}
+						}
+					}
+					else = {
+						queue_actions = {
+							find_closest_system = {
+								trigger = {
+									id = nep_Krahen.trigger.4001.1
+									NOT = { is_same_value = solar_system }
+									space_owner = { is_same_value = event_target:nep_Krahen_country }
+								}
+								found_system = { move_to = this }
+							}
+						}
+					}
+				}
 			}
 			every_owned_fleet = {
 				limit = {
 					has_fleet_flag = nep_inva_fleet
 					is_fleet_idle = yes
-					NOT = { exists = orbit }
+					NOT = {
+						exists = orbit 
+						orbit = {
+							exists = owner
+							owner = { is_hostile = prev }
+						}
+					}
 				}
 				fleet_event = { id = nep_kai.1011 days = 3 random = 30 }
+			}
+			every_owned_fleet = {
+				limit = {
+					has_fleet_flag = nep_Krahen_follower
+					is_fleet_idle = yes
+				}
+				owner = {
+					random_owned_fleet = {
+						limit = {
+							is_ship_size = constructor
+							exists = solar_system
+							solar_system = {
+								NOT = {
+									any_ship_in_system = {
+										fleet = { has_fleet_flag = nep_Krahen_follower }
+									}
+									any_neighbor_system = {
+										ignore_hyperlanes = no
+										any_ship_in_system = {
+											fleet = { has_fleet_flag = nep_Krahen_follower }
+										}
+									}
+								}
+							}
+							NOT = { has_fleet_flag = nep_Krahen_following_target_constructor }
+						}
+						set_fleet_flag = nep_Krahen_following_target_constructor
+						prevprev = { auto_follow_fleet = { target = prev attack_fleet = no } }
+					}
+				}
 			}
 		}
 	}

@@ -296,7 +296,7 @@ create_Krahen_defender = {
 				count = 60
 				create_ship = {
 					name = "NAME_Krahen_Defender"
-					design = "NAME_Krahen_Battleship"
+					design = "NAME_Krahen_Battleship_defender"
 				}
 			}
 			assign_leader = last_created_leader
@@ -384,6 +384,63 @@ create_Krahen_invader = {
 	}
 }
 
+create_Krahen_follower = {
+	event_target:nep_Krahen_country = {
+		create_leader = {
+			type = admiral
+			species = event_target:nep_Krahen_country
+			name = random
+			skill = 10
+			traits = {
+				trait = leader_trait_Krahen_admiral
+				trait = leader_trait_aggressive
+			}
+		}
+	}
+	create_fleet = {
+		name = "NAME_Krahen_Defender"
+		effect = {		
+			set_owner = event_target:nep_Krahen_country
+			while = {
+				count = 60
+				create_ship = {
+					name = "NAME_Krahen_Defender"
+					design = "NAME_Krahen_Battleship_follower"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = prev
+				distance = 150
+				angle = random
+			}
+			set_formation_scale = 2.0
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			
+			set_fleet_flag = nep_Krahen_follower
+			
+			owner = {
+				random_owned_fleet = {
+					limit = {
+						is_ship_size = constructor
+						exists = solar_system
+						has_fleet_flag = nep_Krahen_following_target_constructor
+					}
+					save_event_target_as = nep_follower_temp_target
+					set_fleet_flag = nep_Krahen_following_target_constructor
+				}
+			}
+			auto_follow_fleet = { target = event_target:nep_follower_temp_target attack_fleet = no }
+		}
+		settings = {
+			can_change_leader = no
+			uses_naval_capacity = no
+		}
+	}
+}
+
 create_Krahen_buildings = {
 	random_tile = {
 		limit = {
@@ -431,58 +488,6 @@ create_Krahen_buildings = {
 	}
 }
 
-# create_Krahen_transport = {
-	# event_target:nep_Krahen_country = {
-		# create_leader = {
-			# type = general
-			# species = event_target:nep_Krahen_country
-			# name = random
-			# skill = 10
-			# traits = {
-				# trait = leader_trait_Krahen_general
-			# }
-		# }
-	# }
-	# create_fleet = {
-		# name = "NAME_Krahen_Armies"
-		# effect = {
-			# set_owner = event_target:nep_Krahen_country
-			# while = {
-				# count = 20
-				# create_army_transport = {
-					# ship_name = "NAME_nep_Krahen_Transport"
-					# army_name = "NAME_nep_Krahen_Invaders"
-					# army_type = "nep_Krahen_anti_grav"
-					# species = event_target:nep_Krahen_country
-				# }
-			# }
-			# set_leader = last_created_leader
-			# set_location = {
-				# target = PREV
-				# distance = 20
-				# angle = random 
-			# }
-			# set_fleet_flag = nep_inva_armies
-			# queue_actions = {
-				# find_random_system = {
-					# trigger = {
-						# id = "nep_Krahen.trigger.0.0"
-						# has_star_flag = nep_inva_system
-					# }
-					# found_system = {
-						# move_to = this
-					# }
-				# }
-			# }
-		# }
-		# settings = {
-			# #can_change_leader = no
-			# uses_naval_capacity = no
-			# spawn_debris = no
-		# }
-	# }
-# }
-
 create_Krahen_constructor = {
 	create_fleet = {
 		effect = {
@@ -491,7 +496,7 @@ create_Krahen_constructor = {
 				design = "NAME_nep_Krahen_Constructor"
 			}
 			set_owner = event_target:nep_Krahen_country
-			set_fleet_stance = evasive
+			set_fleet_stance = passive
 			set_location = {
 				target = PREV
 				distance = 20

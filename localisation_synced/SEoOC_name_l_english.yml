@@ -3,7 +3,7 @@
  #country
  #############################
  NAME_Malfunctioning_Guards_country:0 "Malfunctioning Guards"
- NAME_nep_Seal_Evil_country:0 "Seal Evil"
+ NAME_nep_Seal_Evil_country:0 "Sealed Evil"
 
  NAME_Legnahcras:0 "Legnahcras"
  NAME_Heptagram_Dragon_country:0 "Heptagram Dragon"
@@ -18,7 +18,7 @@
  #fleet&army
  #############################
  NAME_Malfunctioning_Guards:0 "Malfunctioning Guards"
- NAME_nep_Seal_Evil:0 "Seal Evil"
+ NAME_nep_Seal_Evil:0 "Sealed Evil"
 
  NAME_Heptagram_Dragon:0 "Heptagram Dragon"
  NAME_Pentacle:0 "Pentacle"
@@ -45,7 +45,7 @@
  NAME_Tes:0 "Tes"
  NAME_Xeoh:0 "Xeoh"
 
- NAME_nep_Seal_evil:0 "Seal Evil"
+ NAME_nep_Seal_evil:0 "Sealed Evil"
 
  NAME_Heptagram_Dragon_design:0 "Heptagram Dragon"
  NAME_Summoned_Babys_design:0 "Summoned Babys"
@@ -53,11 +53,13 @@
  NAME_Heptagram_Dragon_Kai_design:0 "Heptagram Dragon Kai"
 
  NAME_Krahen_Battleship:0 "Krah'en Battleship"
+ NAME_Krahen_Battleship_defender:0 "Krah'en Battleship(Defender)"
+ NAME_Krahen_Battleship_follower:0 "Krah'en Battleship(Follower)"
  NAME_nep_planetary_gun_design:0 "Planetary Gun"
  NAME_nep_Krahen_portal:0 "Portal"
  NAME_Krahen_heavy_spacebase:0 "Krah'en Heavy Spacebase"
- NAME_nep_Krahen_Constructor:1 "Krah;en Constructor"
- NAME_nep_Krahen_Colonizer:0 "Krah'en Colonizer"
+ NAME_nep_Krahen_Constructor:1 "$constructor$"
+ NAME_nep_Krahen_Colonizer:0 "$colonizer$"
 
  NAME_nep_finalweapon_design:0 "Finalweapon"
  NAME_nep_star_bomb_design:0 "Star Bomb"
@@ -152,10 +154,9 @@
  NAME_Aurora:0 "Aurora"
  NAME_Andromeda:0 "Andromeda"
  NAME_Persei:0 "Persei"
- NAME_Trantor:0 "Trantor"
  NAME_Exterior:0 "Exterior"
  
  ###############################
  #misc
  ###############################
- NAME_nep_Krahen_invasion_war:0 "Krahen Invasion War"
+ NAME_nep_Krahen_invasion_war:0 "Krah'en Invasion War"
