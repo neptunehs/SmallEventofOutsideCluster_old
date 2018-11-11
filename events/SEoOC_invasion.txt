@@ -2121,11 +2121,11 @@ country_event = {
 	}
 	
 	after = {
-		fromfrom = { fleet_event = nep_inva.470 }
+		fromfrom = { fleet_event = { id = nep_inva.470 } }
 	}
 }
 
-country_event = {
+fleet_event = {
 	id = nep_inva.470
 	hide_window = yes
 
@@ -2597,7 +2597,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+country_event = {
 	id = nep_inva.6
 	title = nep_inva.6.name
 	desc = nep_inva.6.desc
@@ -2606,7 +2606,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		owner = { set_country_flag = nep_Krahen_orb_get }
+		set_country_flag = nep_Krahen_orb_get
 	}
 	
 	option = {

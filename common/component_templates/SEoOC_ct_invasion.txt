@@ -469,7 +469,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 	
 	prerequisites = { "tech_nep_destructor_ray" }
-	component_set = "DESTRUCTOR_RAY"
+	component_set = "nep_DESTRUCTOR_RAY"
 	projectile_gfx = "focused_arc_emitter"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }

@@ -1275,7 +1275,7 @@ country_event = {
 		name = nep_dragon.8.b
 		custom_tooltip = nep_dragon.8.b.tooltip
 		hidden_effect = { 
-			remove_country_flag = nep_dragon_summoner
+			set_country_flag = nep_dragon_summoner_hold
 			if = {
 				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
 				set_country_flag = nep_dragon_8_notfirst
@@ -1288,7 +1288,7 @@ country_event = {
 	option = {
 		name = nep_dragon.8.c		
 		hidden_effect = { 
-			remove_country_flag = nep_dragon_summoner
+			set_country_flag = nep_dragon_summoner_hold
 			if = {
 				limit = { NOT = { has_country_flag = nep_dragon_8_notfirst } }
 				set_country_flag = nep_dragon_8_notfirst
@@ -1304,7 +1304,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = nep_dragon_summoner
+		remove_country_flag = nep_dragon_summoner_hold
 		country_event = { id = nep_dragon.8 }
 	}
 }
@@ -1327,6 +1327,35 @@ country_event = {
 	
 	immediate = {
 		country_event = { id = nep_dragon.8 }
+	}
+}
+
+event = {
+	id = nep_dragon.83
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			has_country_flag = nep_dragon_summoner_summoned
+			NOT = { has_country_flag = nep_dragon_summoner_hold }
+			NOT = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = nep_dragon_reward 
+						is_ship_size = nep_dragon_reward_kai			
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = { has_country_flag = nep_dragon_summoner }
+			country_event = { id = nep_dragon.8 }
+		}
 	}
 }
 
@@ -1449,6 +1478,7 @@ country_event = {
 				}
 			}
 		}
+		set_country_flag = nep_dragon_summoner_summoned
 		country_event = { id = nep_dragon.92 days = 1800 }
 	}
 	
@@ -1583,7 +1613,7 @@ country_event = {
 		event_target:nep_Anael_planet = {
 			add_modifier = {
 				modifier = "nep_Anael_modifier"
-				days = 1800
+				days = -1
 			}
 		}
 		random_country = {

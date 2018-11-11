@@ -103,7 +103,7 @@ entity = {
 
 entity = {
 	name = "nep_star_bomb_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = "technosphere_mesh"
 	
 	locator = { name = "part1"			position = {  0 0 0	} }
 	game_data = {

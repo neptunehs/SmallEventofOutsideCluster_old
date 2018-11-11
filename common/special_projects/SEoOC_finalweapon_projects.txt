@@ -9,7 +9,7 @@ special_project = {
 	event_scope = ship_event
 	
 	requirements = {
-		fleet_power = 500000
+		fleet_power = 50000
 		leader = admiral
 	}
 	

@@ -302,7 +302,7 @@ ship_design = {
 	ship_size = nep_star_bomb
 
 	section = {
-		template = "technosphere_key"
+		template = "nep_star_bomb_key"
 		slot = "mid"		
 	}
 	required_component="nep_FINALWEAPON_SENSOR"

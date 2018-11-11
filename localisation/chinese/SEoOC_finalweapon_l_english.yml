@@ -6,7 +6,7 @@
  nep_star_bomb_plural:0 "星爆弹"
  
  nep_finalweapon_chain_title:0 "最终兵器"
- nep_finalweapon_chain_desc:0 "我们总算可以解开这个最大的封印了。里面是不是真的有之前说的最终兵器呢？"
+ nep_finalweapon_chain_desc:0 ""
   
  nep_finalweapon.1.name:0 "时间到了"
  nep_finalweapon.1.desc:0 "我们已经集齐了之前祭坛上面要求的所有要素。现在也许是时候解开大封印了。"
@@ -53,7 +53,16 @@
  
  nep_finalweapon.9.name:0 "最终兵器"
  nep_finalweapon.9.desc:0 "我们总算将这个兵器启动起来了。为了启动它，我们进行了系统骇入、更换零件等行为，所以它应该比原来弱————比如它现在无法在整个宇宙跃迁了，因为原来的跃迁引擎已损坏，使用的是备用的————另外，星爆弹功能貌似需要2台机以上一起才能毫无危险的使用，我们现在只能确保一台，基本上是无法使用。"
- nep_finalweapon.9.a:0 "很好。" 
+ nep_finalweapon.9.a:0 "很好。"
+
+ nep_finalweapon_poi:0 "最终封印"
+ nep_finalweapon_poi_desc:0 "让龙前往这儿，也许我们就能解开最后的封印了。里面是不是真的有之前说的最终兵器呢？"
+ nep_finalweapon_poi_2:0 "暴走的兵器"
+ nep_finalweapon_poi_2_desc:0 "我们必须毁掉这些“玩意儿”，否则会有灭顶之灾。"
+ nep_grand_seal_final_answer_2:0 "最终确认"
+ nep_grand_seal_final_answer_2_DESC:0 "我们不知道封印最深的地方到底有些什么样的“最终兵器”，最好做好准备再解开。另外请注意，解开封印会导致我们失去龙————虽然我们可以立刻召唤一只新的。"
+ nep_finalweapon_reward_project:0 "启动最后的兵器"
+ nep_finalweapon_reward_project_DESC:0 "将所有的危险排除后，将它启动起来一定能作为我们的战力。"
  
  nep_FINALWEAPON_LANCE:0 "最终兵器-光枪"
  nep_FINALWEAPON_LANCE_DESC:0 "详细完全不明。" 

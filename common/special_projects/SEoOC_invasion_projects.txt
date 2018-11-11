@@ -8,7 +8,7 @@ special_project = {
 	event_scope = planet_event
 	
 	on_success = {
-		planet_event = { id = nep_inva.6 }
+		owner = { country_event = { id = nep_inva.6 } }
 	}
 	
 	on_fail = {
