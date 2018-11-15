@@ -2444,7 +2444,6 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = nep_highway_used
-		remove_global_flag = nep_highway_begin
 		country_event = { id = nep_seal.1 days = 90 random = 15} #A link to the seal
 	}
 	
