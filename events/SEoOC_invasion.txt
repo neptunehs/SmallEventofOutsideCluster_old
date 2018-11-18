@@ -335,7 +335,10 @@ fleet_event = {
 		remove_global_flag = nep_sealgate_appeared
 		FROM = {
 			random_system_planet = {
-				create_Krahen_defender = yes
+				create_Krahen_follower = yes
+			}
+			last_created_fleet = {
+				auto_follow_fleet = { target = root attack_fleet = yes }
 			}
 		}
 	}
@@ -772,6 +775,10 @@ country_event = {
 						any_system = {
 							is_neighbor_of = prev
 							is_rim_system = yes
+							any_neighbor_system = {
+								ignore_hyperlanes = no
+								is_within_borders_of = prevprev
+							}
 						}
 					}
 				}
@@ -782,6 +789,10 @@ country_event = {
 					any_system = {
 						is_neighbor_of = prev
 						is_rim_system = yes
+						any_neighbor_system = {
+							ignore_hyperlanes = no
+							is_within_borders_of = prevprev
+						}
 					}	
 				}
 				save_event_target_as = nep_Krahen_victim_1
@@ -793,6 +804,10 @@ country_event = {
 						any_system = {
 							is_neighbor_of = prev
 							is_rim_system = yes
+							any_neighbor_system = {
+								ignore_hyperlanes = no
+								is_within_borders_of = prevprev
+							}
 						}
 					}
 					save_event_target_as = nep_Krahen_victim_1
@@ -804,6 +819,10 @@ country_event = {
 					any_system = {
 						is_neighbor_of = prev
 						is_rim_system = yes
+						any_neighbor_system = {
+							ignore_hyperlanes = no
+							is_within_borders_of = prevprev
+						}
 					}
 				}
 				save_event_target_as = nep_Krahen_victim_2
@@ -815,6 +834,10 @@ country_event = {
 					any_system = {
 						is_neighbor_of = prev
 						is_rim_system = yes
+						any_neighbor_system = {
+							ignore_hyperlanes = no
+							is_within_borders_of = prevprev
+						}
 					}
 				}
 				save_event_target_as = nep_Krahen_victim_3
@@ -827,6 +850,10 @@ country_event = {
 					any_system = {
 						is_neighbor_of = prev
 						is_rim_system = yes
+						any_neighbor_system = {
+							ignore_hyperlanes = no
+							is_within_borders_of = prevprev
+						}
 					}
 				}
 				save_event_target_as = nep_Krahen_victim_4
@@ -834,6 +861,10 @@ country_event = {
 			random_rim_system = {
 				limit = {
 					is_neighbor_of = event_target:nep_Krahen_victim_1
+					any_neighbor_system = {
+						ignore_hyperlanes = no
+						is_within_borders_of = event_target:nep_Krahen_victim_1
+					}
 					NOR = {
 						is_fe_cluster = YES 
 						has_star_flag = lcluster
@@ -869,6 +900,10 @@ country_event = {
 			random_rim_system = {
 				limit = {
 					is_neighbor_of = event_target:nep_Krahen_victim_2
+					any_neighbor_system = {
+						ignore_hyperlanes = no
+						is_within_borders_of = event_target:nep_Krahen_victim_2
+					}
 					NOR = {
 						is_fe_cluster = YES 
 						has_star_flag = lcluster
@@ -892,12 +927,10 @@ country_event = {
 						has_star_flag = nep_Step_to_the_Void_10
 						has_star_flag = lex_garden_cluster
 						has_star_flag = mem_sadrell_extant_cluster
-					}
-					NOT = {
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}
 					}
 				}
@@ -912,6 +945,10 @@ country_event = {
 			random_rim_system = {
 				limit = {
 					is_neighbor_of = event_target:nep_Krahen_victim_3
+					any_neighbor_system = {
+						ignore_hyperlanes = no
+						is_within_borders_of = event_target:nep_Krahen_victim_3
+					}
 					NOR = {
 						is_fe_cluster = YES 
 						has_star_flag = lcluster
@@ -935,17 +972,15 @@ country_event = {
 						has_star_flag = nep_Step_to_the_Void_10
 						has_star_flag = lex_garden_cluster
 						has_star_flag = mem_sadrell_extant_cluster
-					}
-					NOT = {
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}
 						distance = {
 							source = event_target:nep_inva_temp_2
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}
 					}
 				}
@@ -960,6 +995,10 @@ country_event = {
 			random_rim_system = {
 				limit = {
 					is_neighbor_of = event_target:nep_Krahen_victim_4
+					any_neighbor_system = {
+						ignore_hyperlanes = no
+						is_within_borders_of = event_target:nep_Krahen_victim_4
+					}
 					NOR = {
 						is_fe_cluster = YES 
 						has_star_flag = lcluster
@@ -983,22 +1022,20 @@ country_event = {
 						has_star_flag = nep_Step_to_the_Void_10
 						has_star_flag = lex_garden_cluster
 						has_star_flag = mem_sadrell_extant_cluster
-					}
-					NOT = {
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}
 						distance = {
 							source = event_target:nep_inva_temp_2
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}					
 						distance = {
 							source = event_target:nep_inva_temp_3
 							min_distance >= 1
-							max_distance < 100
+							max_distance < 150
 						}
 					}
 				}
@@ -1038,6 +1075,10 @@ country_event = {
 				random_rim_system = {
 					limit = {
 						is_neighbor_of = event_target:nep_Krahen_victim_1
+						any_neighbor_system = {
+							ignore_hyperlanes = no
+							is_within_borders_of = event_target:nep_Krahen_victim_1
+						}
 						NOR = {
 							is_fe_cluster = YES 
 							has_star_flag = lcluster
@@ -1095,8 +1136,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1137,8 +1176,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1184,8 +1221,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1271,8 +1306,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1313,8 +1346,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1360,8 +1391,6 @@ country_event = {
 							has_star_flag = nep_Step_to_the_Void_10
 							has_star_flag = lex_garden_cluster
 							has_star_flag = mem_sadrell_extant_cluster
-						}
-						NOT = {
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1575,47 +1604,11 @@ country_event = {
 		}
 		every_country = {
 			limit = {
-				is_ai = no
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+				}
 				is_subject = no
-			}
-			event_target:nep_Krahen_country	= {
-				declare_war = {
-					target = prev
-					name = "NAME_nep_Krahen_invasion_war"
-					attacker_war_goal = wg_nep_Krahen_invasion_war
-				}
-			}
-		}
-		every_country = {
-			limit = {
-				is_ai = no
-				is_subject = yes				
-				NOT = { is_at_war_with = event_target:nep_Krahen_country }
-			}
-			event_target:nep_Krahen_country	= {
-				declare_war = {
-					target = prev
-					name = "NAME_nep_Krahen_invasion_war"
-					attacker_war_goal = wg_nep_Krahen_invasion_war
-				}
-			}
-		}
-		every_country = {
-			limit = {
-				is_overlord = yes
-				NOT = { is_at_war_with = event_target:nep_Krahen_country }
-			}
-			event_target:nep_Krahen_country	= {
-				declare_war = {
-					target = prev
-					name = "NAME_nep_Krahen_invasion_war"
-					attacker_war_goal = wg_nep_Krahen_invasion_war
-				}
-			}
-		}
-		every_country = {
-			limit = {
-				is_subject = yes
 				NOT = { is_at_war_with = event_target:nep_Krahen_country }
 			}
 			event_target:nep_Krahen_country	= {
@@ -1632,6 +1625,7 @@ country_event = {
 					is_country_type = default
 					is_country_type = fallen_empire
 				}
+				is_subject = yes
 				NOT = { is_at_war_with = event_target:nep_Krahen_country }
 			}
 			event_target:nep_Krahen_country	= {
@@ -1785,6 +1779,7 @@ country_event = {
 	
 	option = {
 		name = nep_inva.31.c
+		default_hide_option = yes
 		begin_event_chain = {
 			event_chain = "nep_Krahen_invasion_chain"
 			target = this

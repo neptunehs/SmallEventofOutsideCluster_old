@@ -22,7 +22,7 @@ nep_Krahen_invasion_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_evil_fleet
 	counter = {
-		annexed_worlds = {
+		occupied_worlds = {
 		}
 		liberated_worlds = {
 		}

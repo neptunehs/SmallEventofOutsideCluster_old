@@ -74,7 +74,7 @@
  nep_Krahen_invasion_chain_title:0 "卡恩帝国入侵"
  nep_Krahen_invasion_chain_desc:0 "外宇宙的侵略者——卡恩帝国正式开始入侵我们的银河系。对方的军力超乎想象，我们必须立刻反击并把它们的势力驱逐出我们的银河系！我们必须摧毁在他们的前哨基地的四个传送门，这样就可以避免更多的部队涌入我们的银河系。只要失去了传送门，他们就应该难以再攻击我们的银河系。" 
  
- annexed_worlds:0 "被占领的星球"
+ occupied_worlds:0 "被占领的星球"
  liberated_worlds:0 "被解放的星球"
  Krahen_overrun_us:0 "我们驱逐的卡恩帝国舰队"
  Krahen_overrun_others:0 "其他国家驱逐的卡恩帝国舰队"
