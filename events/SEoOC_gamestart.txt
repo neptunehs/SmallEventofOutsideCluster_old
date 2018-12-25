@@ -1,0 +1,63 @@
+namespace = nep_game_start
+
+event = {
+	id = nep_game_start.1
+	hide_window = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		random_country = {
+			limit = { is_ai = no }
+			country_event = { id = nep_game_start.2 days = 3 }
+			country_event = { id = nep_game_start.3 days = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = nep_game_start.2
+	hide_window = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_flag = has_nsc_active } }
+			set_global_flag = nep_SEoOC_easy
+		}
+	}
+}
+
+country_event = {
+	id = nep_game_start.3
+	hide_window = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = has_nsc_active
+	}
+	
+	immediate = {
+		every_country = {
+			set_policy = {
+				policy = nep_SEoOC_diff_policy
+				option = SEoOC_diff_diff_policy_default
+				cooldown = no
+			}
+		}
+	}
+}
