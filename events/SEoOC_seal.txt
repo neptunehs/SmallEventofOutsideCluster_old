@@ -22,7 +22,7 @@ country_event = {
 		set_global_flag = nep_seal_ambient_created
 		random_system = {
 			limit = {
-				has_star_flag = nep_highway_note_system
+				has_star_flag = highway_note_system
 			}
 			create_ambient_object = {
 				type = "small_debris_object"
@@ -75,11 +75,7 @@ ship_event = {
 	
 	option = {
 		name = nep_seal.2.b
-		OWNER = { 
-			add_resource = {
-				energy = -100
-			}
-		}
+		OWNER = { add_energy = -100 }
 		event_target:nep_seal_ambient = {
 			clear_global_event_target = nep_seal_ambient
 			destroy_ambient_object = this
@@ -128,7 +124,7 @@ country_event = {
 	immediate = {
 		every_system = {
 			limit = {
-				has_star_flag = nep_highway_note_system
+				has_star_flag = highway_note_system
 			}
 			random_system_planet = {
 				limit = { is_star = yes }

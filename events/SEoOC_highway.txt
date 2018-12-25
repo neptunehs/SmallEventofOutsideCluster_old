@@ -90,9 +90,7 @@ country_event = {
 		name = nep_highway.21.b
 		custom_tooltip = nep_highway.21.b.tooltip
 		owner = { 
-			add_resource = {
-				minerals = 3000
-			}
+			add_minerals = 3000
 		}
 	}
 	
@@ -104,11 +102,9 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_resource = {
-				energy = 3000
-				unity = 9999
-				influence = 100
-			}
+			add_energy = 3000		
+			add_unity = 9999
+			add_influence = 100
 		}
 	}
 }
@@ -150,10 +146,8 @@ country_event = {
 	option = {
 		name = nep_highway.22.b
 		custom_tooltip = nep_highway.22.b.tooltip
-		owner = {
-			add_resource = {
-				minerals = 3000
-			}
+		owner = { 
+			add_minerals = 3000
 		}
 	}
 	
@@ -165,11 +159,9 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_resource = {
-				energy = 3000
-				unity = 9999
-				influence = 100
-			}
+			add_energy = 3000	
+			add_unity = 9999
+			add_influence = 100
 		}
 	}
 }
@@ -211,10 +203,8 @@ country_event = {
 	option = {
 		name = nep_highway.23.b
 		custom_tooltip = nep_highway.23.b.tooltip
-		owner = {
-			add_resource = {
-				minerals = 3000
-			}
+		owner = { 
+			add_minerals = 3000
 		}
 	}
 	
@@ -226,11 +216,9 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_resource = {
-				energy = 3000
-				unity = 9999
-				influence = 100
-			}
+			add_energy = 3000		
+			add_unity = 9999
+			add_influence = 100
 		}
 	}
 }
@@ -273,9 +261,7 @@ country_event = {
 		name = nep_highway.24.b
 		custom_tooltip = nep_highway.24.b.tooltip
 		owner = { 
-			add_resource = {
-				minerals = 3000
-			}
+			add_minerals = 3000
 		}
 	}
 	
@@ -287,11 +273,9 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_resource = {
-				energy = 3000
-				unity = 9999
-				influence = 100
-			}
+			add_energy = 3000	
+			add_unity = 9999
+			add_influence = 100
 		}
 	}
 }
@@ -335,9 +319,7 @@ country_event = {
 		name = nep_highway.25.b
 		custom_tooltip = nep_highway.25.b.tooltip
 		owner = { 
-			add_resource = {
-				minerals = 3000
-			}
+			add_minerals = 3000
 		}
 	}
 	
@@ -349,11 +331,9 @@ country_event = {
 			has_ethic = "ethic_fanatic_xenophobe"
 		}
 		owner = {
-			add_resource = {
-				energy = 3000
-				unity = 9999
-				influence = 100
-			}
+			add_energy = 3000	
+			add_unity = 9999
+			add_influence = 100
 		}
 	}
 }
@@ -382,11 +362,9 @@ ship_event = {
 	option = {
 		name = nep_highway.31.b
 		owner = {
-			add_resource = {
-				physics_research = 50
-				society_research = 50
-				engineering_research = 50
-			}
+			add_physics_research = 50
+			add_society_research = 50
+			add_engineering_research = 50
 		}
 	}
 }
@@ -415,11 +393,9 @@ ship_event = {
 	option = {
 		name = nep_highway.32.b
 		owner = {
-			add_resource = {
-				physics_research = 50
-				society_research = 50
-				engineering_research = 50
-			}
+			add_physics_research = 50
+			add_society_research = 50
+			add_engineering_research = 50
 		}
 	}
 }
@@ -448,11 +424,9 @@ ship_event = {
 	option = {
 		name = nep_highway.33.b
 		owner = {
-			add_resource = {
-				physics_research = 50
-				society_research = 50
-				engineering_research = 50
-			}
+			add_physics_research = 50
+			add_society_research = 50
+			add_engineering_research = 50
 		}
 	}
 }
@@ -481,11 +455,9 @@ ship_event = {
 	option = {
 		name = nep_highway.34.b
 		owner = {
-			add_resource = {
-				physics_research = 50
-				society_research = 50
-				engineering_research = 50
-			}
+			add_physics_research = 50
+			add_society_research = 50
+			add_engineering_research = 50
 		}
 	}
 }
@@ -514,11 +486,9 @@ ship_event = {
 	option = {
 		name = nep_highway.35.b
 		owner = {
-			add_resource = {
-				physics_research = 50
-				society_research = 50
-				engineering_research = 50
-			}
+			add_physics_research = 50
+			add_society_research = 50
+			add_engineering_research = 50
 		}
 	}
 }
@@ -747,7 +717,7 @@ country_event = {
 		set_country_flag = first_station_found
 		random_system = {
 			limit = {
-				has_star_flag = nep_highway_station_system 
+				has_star_flag = highway_station_system 
 			}
 			save_event_target_as = first_highway_station_system 
 		}
@@ -996,7 +966,7 @@ country_event = {
 		set_country_flag = first_station_found
 		random_system = {
 			limit = {
-				has_star_flag = nep_highway_station_system 
+				has_star_flag = highway_station_system 
 			}
 			save_event_target_as = first_highway_station_system 
 		}
@@ -1041,7 +1011,7 @@ ship_event = {
 			has_event_chain = "nep_highway_chain"
 		}
 		FROM = {
-			has_star_flag = nep_highway_station_system
+			has_star_flag = highway_station_system
 		}
 	}
 	
@@ -1087,7 +1057,7 @@ ship_event = {
 			limit = {
 				NOT = { has_global_flag = malfunctioning_guards_created }
 			}
-			create_malfunctioning_guards_country = yes
+		create_malfunctioning_guards_country = yes
 		}
 		malfunctioning_guards_spawn = yes
 	}
@@ -1129,7 +1099,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_N
+						has_star_flag = highway_station_N
 					}
 				}
 			}
@@ -1149,7 +1119,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_NNE
+						has_star_flag = highway_station_NNE
 					}
 				}
 			}
@@ -1169,7 +1139,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_NE
+						has_star_flag = highway_station_NE
 					}
 				}
 			}
@@ -1189,7 +1159,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_ENE
+						has_star_flag = highway_station_ENE
 					}
 				}
 			}
@@ -1209,7 +1179,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_E
+						has_star_flag = highway_station_E
 					}
 				}
 			}
@@ -1229,7 +1199,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_ESE
+						has_star_flag = highway_station_ESE
 					}
 				}
 			}
@@ -1249,7 +1219,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_SE
+						has_star_flag = highway_station_SE
 					}
 				}
 			}
@@ -1269,7 +1239,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_SSE
+						has_star_flag = highway_station_SSE
 					}
 				}
 			}
@@ -1289,7 +1259,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_S
+						has_star_flag = highway_station_S
 					}
 				}
 			}
@@ -1309,7 +1279,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_SSW
+						has_star_flag = highway_station_SSW
 					}
 				}
 			}
@@ -1329,7 +1299,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_SW
+						has_star_flag = highway_station_SW
 					}
 				}
 			}
@@ -1349,7 +1319,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_WSW
+						has_star_flag = highway_station_WSW
 					}
 				}
 			}
@@ -1369,7 +1339,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_W
+						has_star_flag = highway_station_W
 					}
 				}
 			}
@@ -1389,7 +1359,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_WNW
+						has_star_flag = highway_station_WNW
 					}
 				}
 			}
@@ -1409,7 +1379,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_NW
+						has_star_flag = highway_station_NW
 					}
 				}
 			}
@@ -1429,7 +1399,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_station_NNW
+						has_star_flag = highway_station_NNW
 					}
 				}
 			}
@@ -1449,7 +1419,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_N
+						has_star_flag = highway_note_N
 					}
 				}
 			}
@@ -1469,7 +1439,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_NNE
+						has_star_flag = highway_note_NNE
 					}
 				}
 			}
@@ -1489,7 +1459,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_NE
+						has_star_flag = highway_note_NE
 					}
 				}
 			}
@@ -1509,7 +1479,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_ENE
+						has_star_flag = highway_note_ENE
 					}
 				}
 			}
@@ -1529,7 +1499,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_E
+						has_star_flag = highway_note_E
 					}
 				}
 			}
@@ -1549,7 +1519,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_ESE
+						has_star_flag = highway_note_ESE
 					}
 				}
 			}
@@ -1569,7 +1539,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_SE
+						has_star_flag = highway_note_SE
 					}
 				}
 			}
@@ -1589,7 +1559,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_SSE
+						has_star_flag = highway_note_SSE
 					}
 				}
 			}
@@ -1609,7 +1579,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_S
+						has_star_flag = highway_note_S
 					}
 				}
 			}
@@ -1629,7 +1599,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_SSW
+						has_star_flag = highway_note_SSW
 					}
 				}
 			}
@@ -1649,7 +1619,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_SW
+						has_star_flag = highway_note_SW
 					}
 				}
 			}
@@ -1669,7 +1639,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_WSW
+						has_star_flag = highway_note_WSW
 					}
 				}
 			}
@@ -1689,7 +1659,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_W
+						has_star_flag = highway_note_W
 					}
 				}
 			}
@@ -1709,7 +1679,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_WNW
+						has_star_flag = highway_note_WNW
 					}
 				}
 			}
@@ -1729,7 +1699,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_NW
+						has_star_flag = highway_note_NW
 					}
 				}
 			}
@@ -1749,7 +1719,7 @@ ship_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						has_star_flag = nep_highway_note_NNW
+						has_star_flag = highway_note_NNW
 					}
 				}
 			}
@@ -1766,132 +1736,132 @@ ship_event = {
 		}
 		
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_N }
+			limit = { has_star_flag = highway_station_N }
 			save_global_event_target_as = highway_station_N
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_NNE }
+			limit = { has_star_flag = highway_station_NNE }
 			save_global_event_target_as = highway_station_NNE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_NE }
+			limit = { has_star_flag = highway_station_NE }
 			save_global_event_target_as = highway_station_NE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_ENE }
+			limit = { has_star_flag = highway_station_ENE }
 			save_global_event_target_as = highway_station_ENE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_E }
+			limit = { has_star_flag = highway_station_E }
 			save_global_event_target_as = highway_station_E
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_ESE }
+			limit = { has_star_flag = highway_station_ESE }
 			save_global_event_target_as = highway_station_ESE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_SE }
+			limit = { has_star_flag = highway_station_SE }
 			save_global_event_target_as = highway_station_SE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_SSE }
+			limit = { has_star_flag = highway_station_SSE }
 			save_global_event_target_as = highway_station_SSE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_S }
+			limit = { has_star_flag = highway_station_S }
 			save_global_event_target_as = highway_station_S
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_SSW }
+			limit = { has_star_flag = highway_station_SSW }
 			save_global_event_target_as = highway_station_SSW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_SW }
+			limit = { has_star_flag = highway_station_SW }
 			save_global_event_target_as = highway_station_SW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_WSW }
+			limit = { has_star_flag = highway_station_WSW }
 			save_global_event_target_as = highway_station_WSW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_W }
+			limit = { has_star_flag = highway_station_W }
 			save_global_event_target_as = highway_station_W
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_WNW }
+			limit = { has_star_flag = highway_station_WNW }
 			save_global_event_target_as = highway_station_WNW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_NW }
+			limit = { has_star_flag = highway_station_NW }
 			save_global_event_target_as = highway_station_NW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_station_NNW }
+			limit = { has_star_flag = highway_station_NNW }
 			save_global_event_target_as = highway_station_NNW
 		}
 		
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_N }
+			limit = { has_star_flag = highway_note_N }
 			save_global_event_target_as = highway_note_N
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_NNE }
+			limit = { has_star_flag = highway_note_NNE }
 			save_global_event_target_as = highway_note_NNE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_NE }
+			limit = { has_star_flag = highway_note_NE }
 			save_global_event_target_as = highway_note_NE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_ENE }
+			limit = { has_star_flag = highway_note_ENE }
 			save_global_event_target_as = highway_note_ENE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_E }
+			limit = { has_star_flag = highway_note_E }
 			save_global_event_target_as = highway_note_E
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_ESE }
+			limit = { has_star_flag = highway_note_ESE }
 			save_global_event_target_as = highway_note_ESE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_SE }
+			limit = { has_star_flag = highway_note_SE }
 			save_global_event_target_as = highway_note_SE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_SSE }
+			limit = { has_star_flag = highway_note_SSE }
 			save_global_event_target_as = highway_note_SSE
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_S }
+			limit = { has_star_flag = highway_note_S }
 			save_global_event_target_as = highway_note_S
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_SSW }
+			limit = { has_star_flag = highway_note_SSW }
 			save_global_event_target_as = highway_note_SSW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_SW }
+			limit = { has_star_flag = highway_note_SW }
 			save_global_event_target_as = highway_note_SW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_WSW }
+			limit = { has_star_flag = highway_note_WSW }
 			save_global_event_target_as = highway_note_WSW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_W }
+			limit = { has_star_flag = highway_note_W }
 			save_global_event_target_as = highway_note_W
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_WNW }
+			limit = { has_star_flag = highway_note_WNW }
 			save_global_event_target_as = highway_note_WNW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_NW }
+			limit = { has_star_flag = highway_note_NW }
 			save_global_event_target_as = highway_note_NW
 		}
 		random_system = {
-			limit = { has_star_flag = nep_highway_note_NNW }
+			limit = { has_star_flag = highway_note_NNW }
 			save_global_event_target_as = highway_note_NNW
 		}
 		add_hyperlane = {
@@ -1958,7 +1928,7 @@ ship_event = {
 			from = event_target:highway_note_NNW
 			to = event_target:highway_note_N
 		}
-		add_hyperlane = {
+				add_hyperlane = {
 			from = event_target:highway_station_N
 			to = event_target:highway_note_N
 		}
@@ -2022,13 +1992,271 @@ ship_event = {
 			from = event_target:highway_station_NNW
 			to = event_target:highway_note_NNW
 		}
-		every_system = {
-			limit = {
-				has_star_flag = nep_highway_station_system
-			}
+		event_target:highway_station_N = {
 			random_neighbor_system = { 
 				limit = { 
-					nep_st_is_not_outer_system = yes
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_NNE = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_NE = {
+
+			random_neighbor_system = {
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_ENE = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_E = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_ESE = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_SE = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_SSE = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_S = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_SSW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_SW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_WSW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_W = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_WNW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_NW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
+				}
+				ignore_hyperlanes = yes 
+				add_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+		event_target:highway_station_NNW = {
+			random_neighbor_system = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							has_star_flag = highway_station_system 
+							has_star_flag = highway_note_system
+						} 
+					}
 				}
 				ignore_hyperlanes = yes 
 				add_hyperlane = {
@@ -2091,8 +2319,8 @@ country_event = {
 			every_system = {
 				limit = { 
 					OR = {
-						has_star_flag = nep_highway_station_system
-						has_star_flag = nep_highway_note_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
 					}					
 				}
 				every_fleet_in_system = {

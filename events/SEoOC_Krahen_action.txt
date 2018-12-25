@@ -27,7 +27,7 @@ fleet_event = {
 							owner = { NOT = { has_country_flag = nep_Krahen_country } }
 						}
 					}
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						OR = {
 							is_colony = yes
@@ -39,7 +39,7 @@ fleet_event = {
 			}
 			if = {
 				limit = {
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						OR = {
 							is_colony = yes
@@ -113,7 +113,7 @@ fleet_event = {
 									owner = { NOT = { has_country_flag = nep_Krahen_country } }
 								}
 							}
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -125,7 +125,7 @@ fleet_event = {
 					}
 					if = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -173,7 +173,7 @@ fleet_event = {
 				solar_system = {
 					if = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -216,7 +216,7 @@ fleet_event = {
 							}
 							if = {
 								limit = {
-									any_system_planet = {
+									any_planet = {
 										exists = owner
 										OR = {
 											is_colony = yes
@@ -268,7 +268,7 @@ fleet_event = {
 				solar_system = {
 					if = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -389,7 +389,7 @@ country_event = {
 				from = {
 					has_fleet_flag = nep_Krahen_fleet_no_tanks
 					solar_system = {
-						any_system_planet = {
+						any_planet = {
 							is_colony = yes
 							exists = owner
 							owner = { has_country_flag = nep_Krahen_country }
@@ -428,7 +428,7 @@ country_event = {
 			limit = {
 				From = {
 					solar_system = {
-						any_system_planet = {
+						any_planet = {
 							exists = owner
 							OR = {
 								is_colony = yes
@@ -491,7 +491,7 @@ fleet_event = {
 			limit = { 
 				has_fleet_flag = nep_Krahen_fleet_no_tanks
 				solar_system = {
-					any_system_planet = {
+					any_planet = {
 						is_colony = yes
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
@@ -520,7 +520,7 @@ fleet_event = {
 		else_if = {
 			limit = {
 				solar_system = {
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						OR = {
 							is_colony = yes
@@ -700,7 +700,7 @@ country_event = {
 			solar_system = {
 				if = {
 					limit = {
-						any_system_planet = {
+						any_planet = {
 							exists = owner
 							OR = {
 								is_colony = yes
@@ -751,7 +751,7 @@ country_event = {
 					orbit = { remove_planet_flag = nep_Krahen_invading_planet }
 					closest_system = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								is_colony = yes
 								exists = owner
 								owner = { has_country_flag = nep_Krahen_country }
@@ -854,7 +854,7 @@ fleet_event = {
 									owner = { NOT = { has_country_flag = nep_Krahen_country } }
 								}
 							}
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -866,7 +866,7 @@ fleet_event = {
 					}
 					if = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -926,7 +926,7 @@ fleet_event = {
 							}
 							if = {
 								limit = {
-									any_system_planet = {
+									any_planet = {
 										exists = owner
 										OR = {
 											is_colony = yes
@@ -1073,7 +1073,7 @@ fleet_event = {
 									owner = { NOT = { has_country_flag = nep_Krahen_country } }
 								}
 							}
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -1085,7 +1085,7 @@ fleet_event = {
 					}
 					if = {
 						limit = {
-							any_system_planet = {
+							any_planet = {
 								exists = owner
 								OR = {
 									is_colony = yes
@@ -1145,7 +1145,7 @@ fleet_event = {
 							}
 							if = {
 								limit = {
-									any_system_planet = {
+									any_planet = {
 										exists = owner
 										OR = {
 											is_colony = yes
@@ -1273,7 +1273,7 @@ fleet_event = {
 			}
 			closest_system = {
 				limit = {
-					any_system_planet = {
+					any_planet = {
 						is_colony = yes
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
@@ -1321,7 +1321,7 @@ fleet_event = {
 			}
 			closest_system = {
 				limit = {
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						OR = {
 							is_colony = yes
@@ -1949,7 +1949,7 @@ fleet_event = {
 			remove_star_flag = nep_Krahen_constructor_starbase_building
 			if = {
 				limit = {
-					any_system_planet = {
+					any_planet = {
 						can_colonize = { who = event_target:nep_Krahen_country status = yes }
 					}
 				}

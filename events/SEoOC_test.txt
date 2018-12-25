@@ -577,7 +577,7 @@ country_event = {
 			}
 		}
 			create_leader = {
-				class = admiral
+				type = admiral
 				species = prev.owner_species
 				name = random
 				skill = 10
@@ -649,7 +649,18 @@ planet_event = {
 	trigger = { always = no }
 	
 	immediate = {
-		add_deposit = "d_nep_unknown_vortex"
+		random_tile = {
+			limit = {
+				has_building = no
+				num_adjacent_tiles = 2
+			}
+			if = {
+				limit = { has_blocker = yes }
+				remove_blocker = yes				
+			}
+			set_building = "nep_ruin_temple"
+			save_global_event_target_as = nep_Anael_temple
+		}
 	}
 }
 
@@ -712,205 +723,3 @@ planet_event = {
 		create_Krahen_invader = yes
 	}
 }
-
-country_event = {
-	id = nep_test.15
-    hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = { always = no }
-	
-	immediate = {
-		set_global_flag = nep_SEoOC_easy
-	}
-}
-	
-country_event = {
-	id = nep_test.16
-    hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = { always = no }
-	
-	immediate = {
-		set_global_flag = nep_dragon_end
-		set_country_flag = nep_dragon_summoner
-		country_event = { id = nep_inva.1 }
-		create_species = {
-			name = "NAME_nep_Krahen"
-			class = random_non_machine
-			portrait = mol4
-			traits = {
-				trait = trait_Krahen
-			}
-		}
-		create_country = {
-			name = "NAME_nep_Krahen_Empire"
-			species = last_created
-			type = nep_Krahen_country
-			auto_delete = no
-			name_list = MOL_Krahen
-			authority = auth_imperial
-			ethos = {
-				ethic = ethic_militarist
-				ethic = ethic_fanatic_xenophobe
-			}
-			civics = {
-				civic = civic_fanatic_purifiers
-				civic = civic_cutthroat_politics
-			}
-			flag = {
-				icon = {
-					category = "domination"
-					file = "domination_12.dds"
-				}
-				background= {
-					category = "backgrounds"
-					file = "new_dawn.dds"
-				}
-				colors={
-					"red"
-					"black"
-					"null"
-					"null"
-				}
-			}
-		}
-		last_created_country = {
-			create_leader = {
-				class = ruler
-				species = owner_main_species
-				name = "NAME_nep_Imperator"
-				traits = {
-					trait = random_trait
-					trait = random_trait
-				}
-				skill = 10
-			}
-			set_leader = last_created_leader
-			set_policy = {
-				policy = orbital_bombardment
-				option = orbital_bombardment_armageddon
-				cooldown = no
-			}
-			set_country_flag = nep_Krahen_country
-			save_global_event_target_as = nep_Krahen_country
-			if = {
-				limit = { NOT = { has_global_flag = nep_SEoOC_easy } }
-				add_modifier = {
-					modifier = nep_Krahen_buff
-					days = -1
-				}
-			}
-			if = {
-				limit = {
-					any_country = {
-						OR = {
-							has_tradition = tr_plentiful_assault_5
-							has_tradition = tr_est_militarism_finish
-							always = no
-						}						
-					}
-				}
-				add_modifier = {
-					modifier = nep_Krahen_buff_plentiful
-					days = -1
-				}
-			}
-			nep_easy_mod = yes
-		}
-		set_global_flag = nep_Krahen_begin
-		remove_global_flag = nep_sealgate_appeared
-		random_country = {
-			limit = { has_country_flag = nep_Krahen_country }
-			country_event = { id = nep_inva.21 }
-		}
-	}
-}
-
-country_event = {
-	id = nep_test.17
-    hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = { 
-			any_system = {
-				is_fe_cluster = NO
-				any_system_planet = {
-					AND = {
-						OR = {
-							is_colony = yes
-							is_under_colonization = yes
-							is_colonizable = yes
-						}
-						OR = {
-							is_capital = no
-							AND = {
-								is_capital = yes
-								exists = owner
-								owner = {
-									if = {
-										limit = {
-											count_system = {
-												limit = {
-													any_system_planet = {
-														is_colony = yes
-													}
-													owner = { is_same_value = prev }
-												}
-												count > 1
-											}
-										}
-										always = no
-									}
-									else = { 
-										always = yes
-									}
-								}
-							}
-						}
-					}
-				}		
-			}
-	}
-	
-	immediate = {
-	
-	}
-}
-
-country_event = {
-	id = nep_test.18
-    hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		always = no
-	}
-	
-	immediate = {
-		every_planet = {
-			limit = {
-				OR = {
-					is_colony = yes
-					is_under_colonization = yes
-					is_colonizable = yes
-				}
-			}
-			root = {
-				change_variable = { which = 1_num value = 1 }
-			}
-		}
-		every_planet = {
-			limit = {
-				colonizeable_planet = yes
-			}
-			root = {
-				change_variable = { which = 2_num value = 1 }
-			}
-		}
-		log = "[This.1_num]"
-		log = "[This.2_num]"
-	}
-}
-	

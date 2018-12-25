@@ -294,7 +294,7 @@ fleet_event = {
 		}
 		last_created_country = {
 			create_leader = {
-				class = ruler
+				type = ruler
 				species = owner_main_species
 				name = "NAME_nep_Imperator"
 				traits = {
@@ -311,12 +311,9 @@ fleet_event = {
 			}
 			set_country_flag = nep_Krahen_country
 			save_global_event_target_as = nep_Krahen_country
-			if = {
-				limit = { NOT = { has_global_flag = nep_SEoOC_easy } }
-				add_modifier = {
-					modifier = nep_Krahen_buff
-					days = -1
-				}
+			add_modifier = {
+				modifier = nep_Krahen_buff
+				days = -1
 			}
 			if = {
 				limit = {
@@ -333,7 +330,6 @@ fleet_event = {
 					days = -1
 				}
 			}
-			nep_easy_mod = yes
 		}
 		set_global_flag = nep_Krahen_begin
 		remove_global_flag = nep_sealgate_appeared
@@ -371,7 +367,7 @@ country_event = {
 	}
 }
 
-#Krah'en crisis begin (Warning,to debug using nep_test.16)
+#Krah'en crisis begin (HIDDEN)
 country_event = {
 	id = nep_inva.21
 	hide_window = yes
@@ -441,6 +437,36 @@ country_event = {
 						change_planet_size = 12
 						reroll_planet = yes
 					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
@@ -459,6 +485,36 @@ country_event = {
 						change_planet_size = 12
 						reroll_planet = yes
 					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
+					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
 						species = event_target:nep_Krahen_country
@@ -476,6 +532,36 @@ country_event = {
 						limit = { planet_size < 12 }
 						change_planet_size = 12
 						reroll_planet = yes
+					}
+					while = {
+						count = 5
+						if = {
+							limit = {
+								count_tile = {
+									count < 5
+									limit = {
+										has_building = no
+										has_blocker = no
+									}
+								}
+							}
+							random_tile = {
+								limit = {
+									OR = {
+										has_building = yes
+										has_blocker = yes
+									}
+								}
+								if = {
+									limit = { has_building = yes }
+									remove_building = yes
+								}
+								if = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+						}
 					}
 					create_colony = {
 						owner = event_target:nep_Krahen_country
@@ -779,7 +865,29 @@ country_event = {
 						ignore_hyperlanes = no
 						is_within_borders_of = event_target:nep_Krahen_victim_1
 					}
-					nep_st_is_not_outer_or_fe_system = yes
+					NOR = {
+						is_fe_cluster = YES 
+						has_star_flag = lcluster
+						has_star_flag = sealed_system
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
+						has_star_flag = mem_sadrell_extant_cluster
+					}
 				}
 				spawn_system = {
 					min_distance >= 10
@@ -796,8 +904,29 @@ country_event = {
 						ignore_hyperlanes = no
 						is_within_borders_of = event_target:nep_Krahen_victim_2
 					}
-					nep_st_is_not_outer_or_fe_system = yes
-					NOT = {
+					NOR = {
+						is_fe_cluster = YES 
+						has_star_flag = lcluster
+						has_star_flag = sealed_system
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_inva_system
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
+						has_star_flag = mem_sadrell_extant_cluster
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
@@ -820,8 +949,29 @@ country_event = {
 						ignore_hyperlanes = no
 						is_within_borders_of = event_target:nep_Krahen_victim_3
 					}
-					nep_st_is_not_outer_or_fe_system = yes
 					NOR = {
+						is_fe_cluster = YES 
+						has_star_flag = lcluster
+						has_star_flag = sealed_system
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_inva_system
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
+						has_star_flag = mem_sadrell_extant_cluster
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
@@ -849,8 +999,29 @@ country_event = {
 						ignore_hyperlanes = no
 						is_within_borders_of = event_target:nep_Krahen_victim_4
 					}
-					nep_st_is_not_outer_or_fe_system = yes
 					NOR = {
+						is_fe_cluster = YES 
+						has_star_flag = lcluster
+						has_star_flag = sealed_system
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_inva_system
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
+						has_star_flag = mem_sadrell_extant_cluster
 						distance = {
 							source = event_target:nep_inva_temp_1
 							min_distance >= 1
@@ -908,7 +1079,29 @@ country_event = {
 							ignore_hyperlanes = no
 							is_within_borders_of = event_target:nep_Krahen_victim_1
 						}
-						nep_st_is_not_outer_or_fe_system = yes
+						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
+						}
 					}
 					spawn_system = {
 						min_distance >= 10
@@ -920,8 +1113,29 @@ country_event = {
 				}
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
-						NOT = {
+						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -939,8 +1153,29 @@ country_event = {
 				}
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
 						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -963,8 +1198,29 @@ country_event = {
 				}		
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
 						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -993,7 +1249,29 @@ country_event = {
 			else = {
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
+						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
+						}
 					}
 					spawn_system = {
 						min_distance >= 10
@@ -1005,8 +1283,29 @@ country_event = {
 				}
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
-						NOT = {
+						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1024,8 +1323,29 @@ country_event = {
 				}
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
 						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1048,8 +1368,29 @@ country_event = {
 				}		
 				random_rim_system = {
 					limit = {
-						nep_st_is_not_outer_or_fe_system = yes
 						NOR = {
+							is_fe_cluster = YES 
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
 							distance = {
 								source = event_target:nep_inva_temp_1
 								min_distance >= 1
@@ -1125,8 +1466,30 @@ country_event = {
 							}
 						}
 					}
-					NOT = {	has_hyperlane_to = prev }
-					nep_st_is_not_outer_system = yes
+					NOR = {
+						has_hyperlane_to = prev 
+						has_star_flag = lcluster
+						has_star_flag = sealed_system
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_inva_system
+						has_star_flag = nep_dragon_system
+						has_star_flag = nep_heptagram_cluster
+						has_star_flag = nep_seal_system
+						has_star_flag = highway_station_system
+						has_star_flag = highway_note_system
+						has_star_flag = nep_Step_to_the_Void_1
+						has_star_flag = nep_Step_to_the_Void_2
+						has_star_flag = nep_Step_to_the_Void_3
+						has_star_flag = nep_Step_to_the_Void_4
+						has_star_flag = nep_Step_to_the_Void_5
+						has_star_flag = nep_Step_to_the_Void_6
+						has_star_flag = nep_Step_to_the_Void_7
+						has_star_flag = nep_Step_to_the_Void_8
+						has_star_flag = nep_Step_to_the_Void_9
+						has_star_flag = nep_Step_to_the_Void_10
+						has_star_flag = lex_garden_cluster
+						has_star_flag = mem_sadrell_extant_cluster
+					}
 				}
 				add_hyperlane = { from = this to = prev }
 			}
@@ -1135,8 +1498,31 @@ country_event = {
 				random_neighbor_system = {
 					ignore_hyperlanes = yes
 					limit = {
-						NOT = { has_hyperlane_to = prev }
-						nep_st_is_not_outer_system = yes
+						NOR = {
+							has_hyperlane_to = prev
+							is_fe_cluster = YES
+							has_star_flag = lcluster
+							has_star_flag = sealed_system
+							has_star_flag = nep_Krahen_cluster
+							has_star_flag = nep_inva_system
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+							has_star_flag = nep_seal_system
+							has_star_flag = highway_station_system
+							has_star_flag = highway_note_system
+							has_star_flag = nep_Step_to_the_Void_1
+							has_star_flag = nep_Step_to_the_Void_2
+							has_star_flag = nep_Step_to_the_Void_3
+							has_star_flag = nep_Step_to_the_Void_4
+							has_star_flag = nep_Step_to_the_Void_5
+							has_star_flag = nep_Step_to_the_Void_6
+							has_star_flag = nep_Step_to_the_Void_7
+							has_star_flag = nep_Step_to_the_Void_8
+							has_star_flag = nep_Step_to_the_Void_9
+							has_star_flag = nep_Step_to_the_Void_10
+							has_star_flag = lex_garden_cluster
+							has_star_flag = mem_sadrell_extant_cluster
+						}
 					}
 					add_hyperlane = { from = this to = prev }
 				}
@@ -1463,17 +1849,10 @@ country_event = {
 				category = nep_Krahen_doors_cat
 				location = event_target:nep_Krahen_doors_4
 			}
-			event_target:nep_Krahen_country = {
-				every_owned_planet = {
-					limit = { is_colony = yes }
-					root = {
-						add_event_chain_counter = {
-							event_chain = "nep_Krahen_invasion_chain"
-							counter = "occupied_worlds"
-							amount = 1			
-						}
-					}
-				}
+			add_event_chain_counter = {
+				event_chain = "nep_Krahen_invasion_chain"
+				counter = "annexed_worlds"
+				amount = 27				
 			}
 			add_event_chain_counter = {
 				event_chain = "nep_Krahen_invasion_chain"
@@ -1588,12 +1967,42 @@ country_event = {
 				limit = { NOT = { is_same_species = event_target:nep_Krahen_country } }
 				kill_pop = yes
 			}
+			while = {
+				count = 5
+				if = {
+					limit = {
+						count_tile = {
+							count < 5
+							limit = {
+								has_building = no
+								has_blocker = no
+							}
+						}
+					}
+					random_tile = {
+						limit = {
+							OR = {
+								has_building = yes
+								has_blocker = yes
+							}
+						}
+						if = {
+							limit = { has_building = yes }
+							remove_building = yes
+						}
+						if = {
+							limit = { has_blocker = yes }
+							remove_blocker = yes
+						}
+					}
+				}
+			}
 			create_Krahen_buildings = yes
 			every_country = {
 				limit = { has_event_chain = "nep_Krahen_invasion_chain" }
 				add_event_chain_counter = {
 					event_chain = "nep_Krahen_invasion_chain"
-					counter = "occupied_worlds"
+					counter = "annexed_worlds"
 					amount = 1
 				}
 			}
@@ -1620,62 +2029,51 @@ country_event = {
 				limit = { is_same_species = event_target:nep_Krahen_country } 
 				kill_pop = yes
 			}
-			remove_building = nep_adv_tank_factory
-			remove_building = nep_heavy_fortress
-			remove_building = nep_heavy_fortress_2
-			remove_building = nep_planetary_gun
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
-			every_country = {
-				limit = { has_event_chain = "nep_Krahen_invasion_chain" }
-				add_event_chain_counter = {
-					event_chain = "nep_Krahen_invasion_chain"
-					counter = "occupied_worlds"
-					amount = -1
+			every_tile = {
+				limit = {
+					OR = {
+						has_building = nep_adv_tank_factory
+						has_building = nep_heavy_fortress
+						has_building = nep_heavy_fortress_2
+						has_building = nep_planetary_gun
+					}
 				}
-				add_event_chain_counter = {
-					event_chain = "nep_Krahen_invasion_chain"
-					counter = "liberated_worlds"
-					amount = 1
+				remove_building = yes
+				set_blocker = "tb_bomb_crater"
+				every_country = {
+					limit = { has_event_chain = "nep_Krahen_invasion_chain" }
+					add_event_chain_counter = {
+						event_chain = "nep_Krahen_invasion_chain"
+						counter = "annexed_worlds"
+						amount = -1
+					}
+					add_event_chain_counter = {
+						event_chain = "nep_Krahen_invasion_chain"
+						counter = "liberated_worlds"
+						amount = 1
+					}
 				}
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_country_flag = nep_krahan_kill_themselves_met }
+				NOT = { has_country_flag = nep_krahan_kill_themselves_meet }
 			}
-			FromFrom = { planet_event = { id = nep_inva.421 } }
+			FromFrom = { planet_event = { id = nep_inva.420 } }
 		}
 	}
 }
 
 planet_event = {
-	id = nep_inva.421
-	hide_window = yes
-
-	is_triggered_only = yes
-	
-	immediate = {
-		From = {
-			set_country_flag = nep_krahan_kill_themselves_met
-			country_event = { id = nep_inva.420 }
-		}
-	}
-}
-
-country_event = {
-	id = nep_inva.420	
+	id = nep_inva.420
 	title = "nep_inva.420.name"
 	desc = "nep_inva.420.desc"	
-	picture = GFX_evt_burning_settlement
+	picture = GFX_evt_drifting_gateway
 	
 	is_triggered_only = yes
 	
 	immediate = {
-		log = "inva.420 fired"
-		print_scope_effect = yes
+		owner = { set_country_flag = nep_krahan_kill_themselves_meet }
 	}
 	
 	option = {
@@ -1768,7 +2166,7 @@ planet_event = {
 			limit = { has_event_chain = "nep_Krahen_invasion_chain" }
 			add_event_chain_counter = {
 				event_chain = "nep_Krahen_invasion_chain"
-				counter = "occupied_worlds"
+				counter = "annexed_worlds"
 				amount = 1
 			}
 		}
@@ -2046,13 +2444,22 @@ event = {
 					is_colony = yes
 					has_ground_combat = no
 					OR = {
-						has_building = "nep_heavy_fortress"
-						has_building = "nep_heavy_fortress_2"
+						any_tile = { 
+							has_building = "nep_heavy_fortress"
+							has_pop = yes
+						}
+						any_tile = { 
+							has_building = "nep_heavy_fortress_2"
+							has_pop = yes
+						}
 					}
 				}
 				if = {
 					limit = {
-						has_building = "nep_heavy_fortress"
+						any_tile = { 
+							has_building = "nep_heavy_fortress"
+							has_pop = yes
+						}
 						count_armies = {
 							limit = { army_type = nep_Krahen_heavy_fortress }
 							count < 8
@@ -2075,7 +2482,10 @@ event = {
 				}
 				if = {
 					limit = {
-						has_building = "nep_heavy_fortress_2"
+						any_tile = { 
+							has_building = "nep_heavy_fortress_2"
+							has_pop = yes
+						}
 						count_armies = {
 							limit = { army_type = nep_Krahen_heavy_fortress_2 }
 							count < 8
@@ -2101,7 +2511,10 @@ event = {
 				limit = {
 					is_colony = yes
 					has_ground_combat = no
-					has_building = "nep_planetary_gun"
+					any_tile = { 
+						has_building = "nep_planetary_gun"
+						has_pop = yes
+					}
 					NOT = { any_fleet_in_orbit = { is_ship_size = nep_planetary_gun_invisible } }
 				}
 				create_fleet = {
@@ -2168,27 +2581,30 @@ event = {
 				create_Krahen_colonizer = yes
 			}
 		}
-		# while = {
-			# count = 5
-			# random_planet = {
-				# limit = {
-					# is_colony = yes
-					# exists = owner
-					# owner = { has_country_flag = nep_Krahen_country }
-					# has_ground_combat = no
-					# solar_system = {
-						# NOT = {
-							# any_ship_in_system = {
-								# exists = owner
-								# owner = { NOT = { has_country_flag = nep_Krahen_country } }
-							# }
-						# }
-					# }
-					# has_building = nep_adv_tank_factory
-				# }
+		while = {
+			count = 5
+			random_planet = {
+				limit = {
+					is_colony = yes
+					exists = owner
+					owner = { has_country_flag = nep_Krahen_country }
+					has_ground_combat = no
+					solar_system = {
+						NOT = {
+							any_ship_in_system = {
+								exists = owner
+								owner = { NOT = { has_country_flag = nep_Krahen_country } }
+							}
+						}
+					}
+					any_tile = {
+						has_building = nep_adv_tank_factory
+						has_pop = yes
+					}
+				}
 				# create_Krahen_transport = yes
-			# }
-		# }
+			}
+		}
 	}
 }
 
@@ -2207,7 +2623,7 @@ country_event = {
 				has_star_flag = nep_Krahen_portal_system
 				NOR = { 
 					has_star_flag = nep_Krahen_portal_system_unlocked
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
 						is_colony = yes
@@ -2278,7 +2694,7 @@ country_event = {
 					any_ship_in_system = {
 						is_ship_size = nep_Krahen_battleship
 					}
-					any_system_planet = {
+					any_planet = {
 						NOT = { is_same_value = root.fromfrom }
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
@@ -2325,7 +2741,7 @@ planet_event = {
 				any_ship_in_system = {
 					is_ship_size = nep_Krahen_battleship
 				}
-				any_system_planet = {
+				any_planet = {
 					NOT = { is_same_value = root }
 					exists = owner
 					owner = { has_country_flag = nep_Krahen_country }
@@ -2373,7 +2789,7 @@ event = {
 					any_ship_in_system = {
 						is_ship_size = nep_Krahen_battleship
 					}
-					any_system_planet = {
+					any_planet = {
 						exists = owner
 						owner = { has_country_flag = nep_Krahen_country }
 						is_colony = yes
@@ -2450,7 +2866,7 @@ event = {
 					is_ship_size = nep_Krahen_battleship
 					is_in_combat = no
 				}
-				any_system_planet = {
+				any_planet = {
 					exists = owner
 					owner = { has_country_flag = nep_Krahen_country }
 					is_colony = yes
@@ -2594,14 +3010,18 @@ country_event = {
 			every_owned_pop = {
 				kill_pop = yes
 			}
-			remove_building = nep_adv_tank_factory
-			remove_building = nep_heavy_fortress
-			remove_building = nep_heavy_fortress_2
-			remove_building = nep_planetary_gun
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
-			add_deposit = "d_bomb_crater"
+			every_tile = {
+				limit = {
+					OR = {
+						has_building = nep_adv_tank_factory
+						has_building = nep_heavy_fortress
+						has_building = nep_heavy_fortress_2
+						has_building = nep_planetary_gun
+					}
+				}
+				remove_building = yes
+				set_blocker = "tb_bomb_crater"
+			}
 			destroy_colony = yes
 		}
 		destroy_country = yes
@@ -2760,7 +3180,7 @@ country_event = {
 		event_target:nep_Krahen_country	= {
 			kill_leader = { type = ruler }
 			create_leader = {
-				class = ruler
+				type = ruler
 				species = owner_main_species
 				name = "NAME_nep_Imperator"
 				traits = {
